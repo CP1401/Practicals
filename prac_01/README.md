@@ -1,10 +1,9 @@
-Practical 01 - Problem solving and algorithms 
-==============================================
+# Practical 01 - Problem solving and algorithms 
 
-**Welcome everyone!**
+**Welcome to practicals!**
 
 If you haven't read the introduction to pracs and marking, please [read this now](../README.md).  
-**Note: All students, please submit your prac via LearnJCU each week by the due date.**
+**Note: All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
 
 ## Community
 In pracs, we'll sometimes get you to work together with others, so you're going to start getting to know your IT@JCU community a bit more...  
@@ -47,7 +46,8 @@ If you are ever working in a group on these and you already know the answer (or 
 -   One of them is a project manager, one is a consultant, and the other is a programmer.
 -   The programmer, who is an only child, earns the least money.
 -   Smith, who married Brown\'s sister, earns more than the consultant.
--   **What is each person's job?**
+
+**What is each person's job?**
 
 ## Algorithms
 
@@ -70,7 +70,7 @@ We can't just say: `if uv index < 5` without knowing what `uv index` is, so we h
 
 ### Algorithm with I, P, O 
 Write an algorithm to calculate the brew ratio of coffee, given the dose (quantity of coffee beans in grams) and the yield (brewed coffee in grams).  
-Example: Dose of 18g and yield of 45g is a 1 to 2.5 brew ratio.
+Example: A dose of 18g and yield of 45g is a 1 to 2.5 brew ratio.
 
 This algorithm doesn't have any control structures, but just uses **input, processing and output**.
 
@@ -122,7 +122,8 @@ We are not going to write any substantial programs in this prac, but we are goin
 If you have your own computer, you can [follow these instructions to install Python 3 and PyCharm Professional](https://github.com/CP1404/Starter/wiki/Software-Setup). 
 
 Let's start by getting used to working with the PyCharm IDE
-(Integrated Development Environment).
+(Integrated Development Environment).  
+Note: Your screens may look different than our images or descriptions below depending on versions used.
 
 1.  Run PyCharm.  
     When PyCharm first starts you should have a window with a link to
@@ -136,8 +137,8 @@ Let's start by getting used to working with the PyCharm IDE
 
 2.  Click on **Create New Project**. and choose **Pure Python**. PyCharm
     asks you where to store your new project and to choose an
-    interpreter. Your screen may look different than our image below,
-    but name your new project (folder) for your **cp1401practicals**.
+    interpreter.  
+    Name your new project (folder)  `cp1401practicals`
 
     -   the **location** can be changed to any place you have access to. Use a folder that you will be able to find later
 
@@ -172,15 +173,14 @@ Let's start by getting used to working with the PyCharm IDE
     ```
 
 7.  To **run** this first program, **right-click** in the code
-    editor window and select the **run** option.  
+    editor window and select **run**.  
     (If it didn't work, please check for what the problem might be, and ask the nearest person for help if you need.)
 
 
 ### Project Structure: Use one project for all practicals
 
-PyCharm doesn't just work with individual code files, but with *projects*. You now have a project for our practicals, and this is the only one you'll need for all pracs.  
-
-So in order to keep your work organised, you will have one well-named folder (directory) for each prac.
+PyCharm doesn't just work with individual code files, but with *projects*. You now have a project for your practicals, and this is the only one you'll need for all pracs.  
+So in order to keep your work organised, you will have one well-named folder (directory) for each prac, with well-named files inside the relevant folder.
 
 Let's get used to following best practice (remember that's one of our goals), and create the first folder...  
 
@@ -191,8 +191,8 @@ Name this folder/directory
 prac_01
 ``` 
 
-This conforms with Python module/package naming conventions, using underscore_lowercase (no spaces), 
-and by naming it `01` instead of just `1`, when we get to `prac_10`, our alphanumeric sorting will work as we expect (otherwise, prac2 comes _after_ prac10). 
+This conforms with Python module/package naming conventions, using underscore_lowercase (no spaces).   
+Also, by naming it `01` instead of just `1`, when we get to `prac_10`, our alphanumeric sorting will work as we expect (otherwise, prac2 comes _after_ prac10). 
 
 Now that you have the folder, drag your **hello.py** file into it.
 
@@ -202,14 +202,23 @@ Now that you have the folder, drag your **hello.py** file into it.
 
 ### Example program
 
-For fun, let's now copy all of the code from our [catering calculator example program](https://raw.githubusercontent.com/CP1401/subject/master/cateringcalculator.py)  
+For fun, let's now copy all of the code from our [catering calculator example program](https://raw.githubusercontent.com/CP1401/subject/master/cateringcalculator.py) 
+(Use Ctrl+click to open links in new tabs)  
 and paste that into a **new Python file** with the same name, `cateringcalculator.py`.
 
 **Run it**... play with it, change it, break it, see what happens...  
 (Don't worry if you don't understand it yet, we've still got a long way to go.)
 
 ## Save your work
-If you are using a JCU computer, not your own, please **copy your work** (the whole project directory) onto your portable/cloud storage so you can access it again in the future.  
-Keep every file you ever write in this subject.
+If you did your algorithms from earlier in this prac using the computer, you can copy and paste the text into your new PyCharm project.  
+PyCharm lets you create text files, so right-click the project folder and choose **New > File** and name this one `algorithms.txt`  
 
-Now **submit your work to LearnJCU**.
+Note that this is a **text file**, not a Python file (or a Word document or whatever).  
+Just put normal (unformatted) text in here and make sure you have simple headings for each question to help you (and us) find the questions that match the answers.   
+
+If you are using a JCU computer, not your own, please **copy your work** (the whole project directory) onto your portable/cloud storage so you can access it again in the future.  
+_Keep every file you ever write in this subject._
+
+## Submit
+Now **submit all of your work to LearnJCU**.  
+We do not need the project, only the files in this week's folder.
