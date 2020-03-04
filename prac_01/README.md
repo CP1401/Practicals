@@ -5,6 +5,7 @@
 If you haven't read the introduction to pracs and marking, please [read this now](../README.md).  
 **Note: All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
 
+
 ## Community
 In pracs, we'll sometimes get you to work together with others, so you're going to start getting to know your IT@JCU community a bit more...  
 
@@ -69,30 +70,32 @@ Notice the first line...
 We can't just say: `if uv index < 5` without knowing what `uv index` is, so we have to get it first. 
 
 ### Algorithm with I, P, O 
-Write an algorithm to calculate the brew ratio of coffee, given the dose (quantity of coffee beans in grams) and the yield (brewed coffee in grams).  
+**Write an algorithm** to calculate the brew ratio of coffee, given the dose (quantity of coffee beans in grams) and the yield (brewed coffee in grams).  
 Example: A dose of 18g and yield of 45g is a 1 to 2.5 brew ratio.
 
 This algorithm doesn't have any control structures, but just uses **input, processing and output**.
 
 ### Algorithm with Selection
-Write an algorithm to determine if you can afford to buy an item based on its price and a collection of coins you have in your pocket.
+**Write an algorithm** to determine if you can afford to buy an item based on its price and a collection of coins you have in your pocket.
 
 This algorithm should have included the **selection** (or decision) control structure. We will learn more about that soon.
 
 ### Algorithm with Repetition
-Write an algorithm to instruct a teenager how to clean their room. They have lots of things on the floor, and need to pick them up until there are no more things on the floor.
+**Write an algorithm** to instruct a teenager how to clean their room. They have lots of things on the floor, and need to pick them up until there are no more things on the floor.
 
 This algorithm should have included the **repetition** (or iteration or loop) control structure. We will learn more about that later.
 
 
 ## Problem Decomposition
 
-For the following 3 problem descriptions, identify the **nouns** and **verbs** in each.   
-(Don't get too hung up on what's a noun and what's a verb.)   
-Then go through the set of nouns and verbs and work out which
-ones are irrelevant or duplicated and remove them from the list.  
+For the following 3 problem descriptions, identify the **nouns** and **verbs** (separately) in each.   
+You could copy the text and highlight each kind of word in different colours, or write two separate lists.  
+(Don't get hung up on the exact details of the words.)   
 
-See if what's remaining is what you would need to know to write an algorithm.
+Then go through the set of nouns and verbs and work out which
+ones are irrelevant or duplicated and remove them from the lists.  
+
+See if what's remaining is what you need to know to write an algorithm.
 
 1.  A doctor needs to be able to calculate the total amount of a drug
     that has been administered to a patient. The system will get the
@@ -110,19 +113,23 @@ See if what's remaining is what you would need to know to write an algorithm.
     travelled (in km) and the travel time in minutes. The user will then
     be shown the average speed (in km/hour) over the trip.
 
-When you've decomposed these small problems into their parts, plan solutions to each of them using either pseudocode or flowcharts.  
+When you've decomposed these small problems into their parts, **write algorithms** for each of them using either pseudocode or flowcharts.  
 At this stage, we're not too worried about getting the details 'perfect', we just want to get used to problem solving processes.
 
+As you do this, think about what **assumptions** you're making.  
+Good assumptions are an important part of IT and problem solving.
+
+Potentially, you found it easier to write the algorithms after the "decomposition" step.  
+As problems get bigger, we need to be more systematic about our methods.
 
 ## Python and PyCharm
-(Individual work now)  
+(Individual work now. This section does not need to be submitted.)  
 
 We are not going to write any substantial programs in this prac, but we are going to run PyCharm and see how it works.  
 
-If you have your own computer, you can [follow these instructions to install Python 3 and PyCharm Professional](https://github.com/CP1404/Starter/wiki/Software-Setup). 
+If you have your own computer, you can [follow these instructions to install Python 3 and PyCharm Professional](https://github.com/CP1404/Starter/wiki/Software-Setup) remembering you only need Python and PyCharm. 
 
-Let's start by getting used to working with the PyCharm IDE
-(Integrated Development Environment).  
+Let's start by getting used to working with the PyCharm IDE (Integrated Development Environment).  
 Note: Your screens may look different than our images or descriptions below depending on versions used.
 
 1.  Run PyCharm.  
