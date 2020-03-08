@@ -233,7 +233,7 @@ There is a list of common mathematical operators in your notes.
 Write a program that asks the user for two floats called `lhs` and `rhs`, then prints the outputs for the expressions that use those numbers and a maths operator.  
 Note that we are OK with a variable name like `lhs` here because: 
 
-- it's a very [https://en.wikipedia.org/wiki/Sides_of_an_equation](common abbreviation for "left hand side") 
+- it's a very [common abbreviation for "left hand side"](https://en.wikipedia.org/wiki/Sides_of_an_equation) 
 - it is unambiguous in this context
 - there is no better, more obvious name (e.g. it doesn't mean `age` or `score` or anything else)
 
@@ -259,5 +259,5 @@ Write as many programs as you can handle that convert values in one unit of meas
 
 ## Extension
 
-If you're cruising and want more of a challenge, look up how to do string formatting so that you can produce neatly lined up output with a fixed number of decimal positions for the above programs, especially the i-stop one.  
+If you're cruising and want more of a challenge, look up [how to do string formatting](https://docs.python.org/3/library/stdtypes.html#str.format) so that you can produce neatly lined up output with a fixed number of decimal positions for the above programs, especially the i-stop one.  
  
