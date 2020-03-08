@@ -13,7 +13,7 @@ As you do the early non-coding questions, you can write your answers in a simple
 
 ## Teamwork 
 External students can do the group activities individually.   
-Internal students, **form a pair or group of 3** to do the next few exercises (until we get to the programming parts when you can work individually but help each other out if needed).  
+Internal students, **form a group of 2 or 3** to do the next two sections (until we get to the programming parts when you can work individually but help each other out if needed).  
 Try and remember your new friends' names and use them when you can to help reinforce them in your memory. What do they like that starts with the first letter of their name?   
 
 ## Quick Questions
@@ -57,8 +57,8 @@ When you break it down and remove the irrelevant parts, you can see this is a si
 ### Algorithm
 
 ```
-get original_price and surcharge_percentage
-extra_charge = original_price * surcharge_percentage
+get original_price and surcharge_rate
+extra_charge = original_price * surcharge_rate
 total_price = original_price + extra_charge
 display total_price  
 ```
@@ -66,15 +66,20 @@ display total_price
 We could have done the processing calculation either in one step or two.  
 Using more steps with good variable names is usually more readable and extensible, but either way is mostly OK.  
   
-Also note that here we have used terms like `original_price`, written as a valid variable name.  
-It's fine if you want to use `original price` or something similar, but doing it like variables means that you can copy-and-paste your pseudocode and then convert it to Python without rewriting your terms. 
+Also note that here we have used terms written like `original_price`, valid variable names.  
+It's fine if you want to use `original price` or something similar, but doing it like variables means that you can copy-and-paste your pseudocode and then convert it to Python without rewriting your terms.  
+
+Note also that we used the term, `surcharge_rate` and not just `surcharge`.  
+We could have used something like `surcharge_percentage`, but if we had used just `surcharge`, we might find it hard to 
+remember if it means surcharge like 15% (0.15) or like $15 (amount).  
+**Variable names should be unambiguous.**
 
 ### Code
 
 ```python
 original_price = float(input("Original price: $"))
-surcharge_percentage = float(input("Surcharge % (e.g. 0.15 is 15%): "))
-extra_charge = original_price * surcharge_percentage
+surcharge_rate = float(input("Surcharge % (e.g. 0.15 is 15%): "))
+extra_charge = original_price * surcharge_rate
 total_price = original_price + extra_charge
 print("The total meal price is $", total_price, sep="")
 ```
@@ -95,13 +100,14 @@ Looks good.
 
 Create a new Python file, `warmup.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with some other values.  
-The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE, type code, and develop an eye for detail.
+The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g. use autocomplete!), 
+type code accurately, and develop an eye for detail.
 
 
 ## Exercises
  
 Write all of your answers to the following questions in a single Python file called `programs.py`  
-At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from here) so you/we know what the exercise is.  
+At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from here) so you/we know what the program is for later.  
 Example:
 
 ```python
@@ -120,7 +126,8 @@ new_price = original_price – discount
 print new_price
 ```
 
-Once you have tested this (use good meaningful test data), adjust your program so that `0.2` is a **named constant** instead of a **magic number**.  
+**Test** this using meaningful test data that you can understand.  
+Once you have done this, adjust your program so that `0.2` is a **named constant** instead of a **magic number**.  
 Test it again.  
 Always test your programs after you modify them. You might have broken something.  
 
@@ -130,7 +137,7 @@ To do this, select the lines of code (doesn't need to be exact characters, just 
 
 ### 2. Miles to Kilometres
 
-Joseph has recently moved to Australia from the United States. He understands that the distances are given in kilometres rather than the miles he is used to.  
+Joseph has recently moved to Australia from the United States. He understands that distances are given in kilometres rather than the miles he is used to.  
 Create a program that will request a distance in kilometres and output the same distance in miles. 
 
 - 1 mile = 1.60934 kilometres
@@ -178,19 +185,20 @@ This will help us focus on the core of the program before we figure out customis
 - Use the same example above to test, so 62 seconds on, 161 seconds stopped should give 0.3509... (don't worry about formatting the output neatly)  
 
 When you have that working, you can then focus on enhancing the program.  
-Keep the inputs the same, but write the output so it appears as above.
+Keep the inputs the same, but write the output so it appears as above... How?  
 
 Remember how the **modulo** operation works, and is useful for repeating cycles like time in minutes and seconds?  
-How do we know:  
-`161 seconds is 2 minutes and 41 seconds`?  
+We know:  
+`161 seconds is 2 minutes and 41 seconds`  
+Because:    
 `161 // 60 = 2`  
 `161 % 60 = 41`  
 
-Also, 0.385 isn't the percentage we want. We want something more like 38.5%. We think you can figure that one out.    
+Also, 0.385 isn't the percentage we want. We want something more like 38.5%. So, what do we need to do to get from 0.385 to 38.5?    
 (Don't worry about the number of decimal places at this stage; we'll learn about handling that later using string formatting.)
 
 Knowing this, complete your program so that it outputs like we want. As always, use good variable names.  
-Here's a full sample output:
+Here's a full sample output (with the user inputs 62 and 161 we've been testing with):
 
 ```
 i-stop on in seconds: 62
@@ -201,8 +209,9 @@ Time Stopped:   2m 41s
 Percentage:     38.50931677018634%
 ```
 
-Before you finish with this file, "uncomment" your previous code. Leave the comments for headings, but make the code back to normal.  
-To do this, select the lines of code and press `Ctrl+/`
+Before you finish with this file, "uncomment" your previous code for all programs.  
+Leave the comments for headings, but return the code back to normal.  
+To do this, select the lines of code and press `Ctrl+/` for each program.  
 
 # Practice and Extension
 
@@ -214,19 +223,41 @@ Create a new file, `practice.py` to complete these tasks in:
 ### BMI
 Implement the following algorithm for calculating BMI (body mass index):
 
-1.	get height 
-2.	get weight
-3.	bmi = weight / (height ** 2)
-4.	display bmi
+- get height 
+- get weight
+- bmi = weight / (height ** 2)
+- display bmi
 
 ### Maths Operators
 There is a list of common mathematical operators in your notes.   
-Write a program that asks the user for two floats called number1 and number2, then prints the outputs for the expressions that use those numbers and a maths operator, e.g. if the user enters 2.5 and 3, it would print:
+Write a program that asks the user for two floats called `lhs` and `rhs`, then prints the outputs for the expressions that use those numbers and a maths operator.  
+Note that we are OK with a variable name like `lhs` here because: 
+
+- it's a very [https://en.wikipedia.org/wiki/Sides_of_an_equation](common abbreviation for "left hand side") 
+- it is unambiguous in this context
+- there is no better, more obvious name (e.g. it doesn't mean `age` or `score` or anything else)
+
+Example, if the user enters 2.5 and 3, it would print:
 
 ```
 2.5 + 3.0 is 5.5
 2.5 * 3.0 is 7.5
 2.5 // 3.0 is 0.0
+...
 ```
 
 Use as many operators as you can - not just these ones.
+
+### Number Conversions
+
+Write as many programs as you can handle that convert values in one unit of measurement to another, such as (and the reverse):
+
+- kilograms to pounds
+- fahrenheit to celsius
+- feet and inches to metres and centimetres
+- currencies...
+
+## Extension
+
+If you're cruising and want more of a challenge, look up how to do string formatting so that you can produce neatly lined up output with a fixed number of decimal positions for the above programs, especially the i-stop one.  
+ 
