@@ -2,14 +2,14 @@
 
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
-As you do the early non-coding questions, you can write your answers in a simple text file (`questions.txt`):  
+## Read and Understand
+Make sure you read the instructions carefully.  
+Do not make the easy bits hard by not reading the instructions.  
+We want the challenge to be in the new things you're learning and trying, not in the reading and paying attention to what the questions ask.  
+Don't waste time by trying to save time skim-reading. Just read... and understand... then do.  
 
-- Run PyCharm 
-- Open your existing Practicals project (made last prac), or if you don't have it with you for some reason, create a new one following the instructions in the last prac.
-- Create a new folder (directory) for `prac_02` (remember not to use spaces, and do not make a new project per prac, only new folders).
-- Now create a new text file: Choose **File > New... > File** 
-- Name your file `questions.txt` (the `.txt` extension means PyCharm won't try and correct your Python code... it's just text)
-- Make sure your new file is inside the prac_02 folder. If it isn't, just drag it in.  
+As you do the early non-coding questions, you can write your answers in a simple text file (`questions.txt`).  
+Use whatever text editor you can get to the fastest so you don't waste any time before starting.
 
 ## Teamwork 
 External students can do the group activities individually.   
@@ -37,12 +37,21 @@ Is there a meaningful way that you can explain your answer, perhaps a diagram th
 As you do individual work on your computer, if you need help, start by talking to your peers.  
 External students are encouraged to use Slack to ask questions of others in the class (but you don't need to post your answers there).
 
+To use PyCharm as your text editor:
+
+- Run PyCharm 
+- Open your existing Practicals project (made last prac), or if you don't have it with you for some reason, create a new one following the instructions in the last prac.
+- Create a new folder (directory) for `prac_02` (remember not to use spaces, and do not make a new project per prac, only new folders).
+- Now create a new text file: Choose **File > New... > File**  (not Python file)  
+- Name your file `questions.txt` (the `.txt` extension means PyCharm won't try and correct your Python code... it's just text)
+- Make sure your new file is inside the prac_02 folder. If it isn't, just drag it in.  
+
 
 ## Python Coding - Input, Processing and Output
 
 ### Example
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  
-Read along and understand. Then type (don't copy) the code for the final program and test it yourself.
+Just read along and understand. Do not "do" any of this, just read it and make sure you understand.  
  
 #### Problem Description:
 Leia and her friend Han are enjoying a nice meal at a restaurant when they realise it's a public holiday and there's a surcharge.  
@@ -117,8 +126,8 @@ number_of_miles = int(input("Miles: "))
 ``` 
 
 ### 1. Discount Price
-Write a program that calculates the discounted price of an item given an original price and a fixed discount of 20%.  
-Here is the algorithm done for you in pseudocode:
+**Write a complete Python program** that calculates the discounted price of an item given an original price and a fixed discount of 20%.  
+Here is the algorithm already done for you in pseudocode:
 ```
 get original_price
 discount = original_price * 0.2
@@ -131,6 +140,7 @@ Once you have done this, adjust your program so that `0.2` is a **named constant
 Test it again.  
 Always test your programs after you modify them. You might have broken something.  
 
+#### Commenting Out Code
 Now that you want to move on to the next exercise, you _could_ start a new file, but just going to keep using the same one.  
 However, you don't want to _run_ the old programs as well as the new one, so you can "comment out" the previous program code.  
 To do this, select the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
@@ -165,14 +175,14 @@ The trip will cost: $758.0
 #### 4. i-stop Calculation (Percentage)
 
 A certain car brand has a feature called **i-stop**, where the car's engine is turned off to increase fuel economy.  
-The car's display shows the current percentage of stoppage time that i-stop has been engaged. E.g.
+The car's display shows the current percentage of stoppage time that i-stop has been engaged. E.g. this is what the car's display might show:  
 ```
 i-stop ON:       1m 2s
 Time Stopped:    2m 41s
 Percentage:      38.5%
 ```
 
-Are you seeing how this works? I, P, O...  
+Are you seeing how this works? Looks like our I, P, O pattern...  
 Write a program to produce the percentage based on the time on and the time stopped. This should be easy enough for you by now.  
 **But wait...**  
 It's not so easy dealing with minutes and seconds like in the example. How do we handle that?  
@@ -182,7 +192,7 @@ For our first version, let's just use total seconds and ignore the minutes+secon
 This will help us focus on the core of the program before we figure out customising the outputs.   
  
 - Write a program that asks for the **time on** and the **time stopped** in seconds, then displays the percentage.  
-- Use the same example above to test, so 62 seconds on, 161 seconds stopped should give 0.3509... (don't worry about formatting the output neatly)  
+- Use the same example above to test, so 62 seconds on, 161 seconds stopped should give 0.38509... (don't worry about formatting the output neatly)  
 
 When you have that working, you can then focus on enhancing the program.  
 Keep the inputs the same, but write the output so it appears as above... How?  
