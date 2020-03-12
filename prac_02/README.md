@@ -1,4 +1,4 @@
-# Practical 02 - Input, Output and Processing 
+# Practical 02 - Input, Processing and Output 
 
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
@@ -11,7 +11,7 @@ Don't waste time by trying to save time skim-reading. Just read... and understan
 As you do the early non-coding questions, you can write your answers in a simple text file (`questions.txt`).  
 Use whatever text editor you can get to the fastest so you don't waste any time before starting.
 
-## Teamwork 
+# Collaboration 
 External students can do the group activities individually.   
 Internal students, **form a group of 2 or 3** to do the next two sections (until we get to the programming parts when you can work individually but help each other out if needed).  
 Try and remember your new friends' names and use them when you can to help reinforce them in your memory. What do they like that starts with the first letter of their name?   
@@ -47,13 +47,13 @@ To use PyCharm as your text editor:
 - Make sure your new file is inside the prac_02 folder. If it isn't, just drag it in.  
 
 
-## Python Coding - Input, Processing and Output
+# Python Coding - Input, Processing and Output
 
-### Example
+## Example
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  
 Just read along and understand. Do not "do" any of this, just read it and make sure you understand.  
  
-#### Problem Description:
+### Problem Description:
 Leia and her friend Han are enjoying a nice meal at a restaurant when they realise it's a public holiday and there's a surcharge.  
 She wants to find out what the cost of the meal will be including the surcharge.  
 Leia wants to write a program on her laptop to figure this out but complains that her hands are dirty. Han says, "My hands are dirty too; what are you afraid of?"
@@ -107,13 +107,13 @@ The total meal price is $115.0
 
 Looks good.
 
-Create a new Python file, `warmup.py` (File > New > Python File)    
+Create a new Python file, `example.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with some other values.  
 The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g. use autocomplete!), 
 type code accurately, and develop an eye for detail.
 
 
-## Exercises
+# Coding Exercises
  
 Write all of your answers to the following questions in a single Python file called `programs.py`  
 At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from here) so you/we know what the program is for later.  
@@ -125,7 +125,7 @@ number_of_miles = int(input("Miles: "))
 ...
 ``` 
 
-### 1. Discount Price
+## 1. Discount Price
 **Write a complete Python program** that calculates the discounted price of an item given an original price and a fixed discount of 20%.  
 Here is the algorithm already done for you in pseudocode:
 ```
@@ -140,12 +140,12 @@ Once you have done this, adjust your program so that `0.2` is a **named constant
 Test it again.  
 Always test your programs after you modify them. You might have broken something.  
 
-#### Commenting Out Code
+### Commenting Out Code
 Now that you want to move on to the next exercise, you _could_ start a new file, but just going to keep using the same one.  
 However, you don't want to _run_ the old programs as well as the new one, so you can "comment out" the previous program code.  
 To do this, select the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
 
-### 2. Miles to Kilometres
+## 2. Miles to Kilometres
 
 Joseph has recently moved to Australia from the United States. He understands that distances are given in kilometres rather than the miles he is used to.  
 Create a program that will request a distance in kilometres and output the same distance in miles. 
@@ -154,7 +154,7 @@ Create a program that will request a distance in kilometres and output the same 
 - 1 kilometre = 0.621371 miles
 
 
-### 3. Holiday Cost
+## 3. Holiday Cost
 
 Sonje has been invited on a holiday by her friends, but she is not sure how much it will cost in total.  
 She knows the cost of the hotel will be $75 per night.  
@@ -171,8 +171,7 @@ Number of days: 4
 The trip will cost: $758.0
 ```
 
-
-#### 4. i-stop Calculation (Percentage)
+## 4. i-stop Calculation (Percentage)
 
 A certain car brand has a feature called **i-stop**, where the car's engine is turned off to increase fuel economy.  
 The car's display shows the current percentage of stoppage time that i-stop has been engaged. E.g. this is what the car's display might show:  
@@ -230,7 +229,7 @@ The more practice you do, the more you develop and "lock in" your new skills.
 
 Create a new file, `practice.py` to complete these tasks in:
 
-### BMI
+## BMI
 Implement the following algorithm for calculating BMI (body mass index):
 
 - get height 
@@ -238,7 +237,7 @@ Implement the following algorithm for calculating BMI (body mass index):
 - bmi = weight / (height ** 2)
 - display bmi
 
-### Maths Operators
+## Maths Operators
 There is a list of common mathematical operators in your notes.   
 Write a program that asks the user for two floats called `lhs` and `rhs`, then prints the outputs for the expressions that use those numbers and a maths operator.  
 Note that we are OK with a variable name like `lhs` here because: 
@@ -258,7 +257,7 @@ Example, if the user enters 2.5 and 3, it would print:
 
 Use as many operators as you can - not just these ones.
 
-### Number Conversions
+## Number Conversions
 
 Write as many programs as you can handle that convert values in one unit of measurement to another, such as (and the reverse):
 
