@@ -9,6 +9,7 @@ E.g. some subject offerings run in 10 weeks, some in 13 weeks.
 
 * [Practical 01 - Problem Solving](./prac_01)
 * [Practical 02 - Input, Processing and Output](./prac_02)
+* [Practical 03 - Decision Structures](./prac_03)
 
 ## Practicals are assessed
 
@@ -25,7 +26,7 @@ everything correct). You will be marked as follows:
 0. not attempted at all
 1. some of the work attempted with minimal effort
 2. some of the work attempted with reasonable effort
-3. most or all of the work successfully attempted
+3. most or all of the work attempted with good effort
 
 Note that to get full marks, you must have attempted every part of every question. Make sure you read the questions carefully, and do everything required.
 
