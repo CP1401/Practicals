@@ -12,7 +12,8 @@ Try and remember your new friends' names and use them when you can to help reinf
 What do they like that starts with the first letter of their name?   
 
 ## Quick Questions
-For some of the questions below, use the following set values to calculate the result of the expression:  
+Answer these quick questions in your `questions.txt` file.  
+For questions 3-6, calculate the result of the expression using the following as the variable values:  
 ```python
 a = 2
 b = 3
