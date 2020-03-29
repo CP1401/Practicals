@@ -70,17 +70,17 @@ Example:
 if age < 0 or age > 100	 # OK
 ```
 
-## Python Coding - Decision Structures
+# Python Coding - Decision Structures
 
 As you do individual work on your computer, if you need help, start by talking to your peers.  
 External students are encouraged to use Slack to ask questions of others in the class.
 
-### Example
+## Example
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  
 Just read along and understand. Do not "do" any of this, just read it and make sure you understand. Ask your peers if you need any help.    
 Use this example (and the lecture teaching) as a reference when you do your own work.
  
-#### Problem Description:
+### Problem Description:
 The Automated Steakhouse needs a program to tell customers how long they can expect to wait for their steak.  
 The customer has three options: "rare", "medium" and "well-done" - 
 if they enter anything else, they receive an error message. Rare steaks take 2 minutes to cook, medium steaks take 4 minutes to cook, and well-done steaks require 6 minutes.
