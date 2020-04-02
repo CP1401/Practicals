@@ -10,6 +10,7 @@ E.g. some subject offerings run in 10 weeks, some in 13 weeks.
 * [Practical 01 - Problem Solving](./prac_01)
 * [Practical 02 - Input, Processing and Output](./prac_02)
 * [Practical 03 - Decision Structures](./prac_03)
+* [Practical 04 - Repetition Structures](./prac_04)
 
 ## Practicals are assessed
 
