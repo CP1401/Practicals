@@ -271,7 +271,7 @@ But whatever the result, you print `Age in dog years is ...` so the only differe
 Calculate the value in the paths - multiple calculation lines, 
 but do the printing only once - _outside_ the paths - no matter what the result of the condition/s.
 
-## 5. Rock Of Ages
+## 5. Rock of Ages
 
 Ask the user for their age, then tell them what you think of them.
 
@@ -371,6 +371,7 @@ questions.txt  with:
 - Quick Questions
 - Patterns
 - Logic Exercise
+
 programs.py with:
 
 - Automated Steakhouse (updates from example)
@@ -378,5 +379,5 @@ programs.py with:
 - Car Insurance
 - Simple Password Checker
 - Dog Years
-- Rock Of Ages
+- Rock of Ages
 - Speeding Fines
