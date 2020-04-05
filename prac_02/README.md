@@ -269,4 +269,18 @@ Write as many programs as you can handle that convert values in one unit of meas
 ## Extension
 
 If you're cruising and want more of a challenge, look up [how to do string formatting](https://docs.python.org/3/library/stdtypes.html#str.format) so that you can produce neatly lined up output with a fixed number of decimal positions for the above programs, especially the i-stop one.  
- 
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+questions.txt  with:
+
+- Quick Questions
+- Logic Exercise
+
+programs.py with:
+
+- Discount Price
+- Miles to Kilometres
+- Holiday Cost
+- i-stop Calculation (Percentage)

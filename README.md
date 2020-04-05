@@ -11,6 +11,7 @@ E.g. some subject offerings run in 10 weeks, some in 13 weeks.
 * [Practical 02 - Input, Processing and Output](./prac_02)
 * [Practical 03 - Decision Structures](./prac_03)
 * [Practical 04 - Repetition Structures](./prac_04)
+* Practical 05 - Assignment Work and [Coding Checkpoint 1](./checkpoints/checkpoint_01.md) 
 
 ## Practicals are assessed
 

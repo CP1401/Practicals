@@ -501,3 +501,23 @@ Columns: 10
 1 2 3 4 5 0 1 2 3 4 
 1 2 3 4 5 6 0 1 2 3 
 ```
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+questions.txt with:
+
+- Quick Questions
+- range a) output &  b) parameters
+- Patterns
+- Logic Exercise
+
+programs.py with:
+
+- Birth Month (updates from example)
+- Error Checking
+- Number Sequences: a, b, c
+- Menu for Smiley/Frowny
+- Accumulation: Average Age, Smileys Count, Total Numbers
+- Guessing Game
+- Nested Loops

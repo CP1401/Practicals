@@ -12,11 +12,11 @@ In pracs, we'll sometimes get you to work together with others, so you're going 
 In lecture 1, we established that it was **not OK** to work together with others on your assignments for this subject, including the simple rules:  
 - Never give someone a copy of your work
 - Never get a copy of someone else’s work
-- ... This includes looking at theirs or having someone look at yours
+- This includes looking at theirs or having someone look at yours
 
 You have to do your own work in order to achieve the learning outcomes.  
 However, it's still really helpful and good practice to work with others to understand problems and to discuss solutions.  
-You *are* allowed to talk with others about these things... you just can't go too far.  
+You **are allowed** to talk with others about these things... you just can't go too far.  
 Communication is a big part of IT and it helps to know a little about who you are communicating with. It also shows respect for someone if you can learn their name, so we're going to work on that now.
 
 **External students:** it's a bit different when you're not in the same room, but you can join in on Slack for some things (see below). You may also be able to find other people around to join with you physically as appropriate.  
@@ -51,6 +51,9 @@ If you are ever working in a group on these and you already know the answer (or 
 **What is each person's job?**
 
 ## Algorithms
+
+Record your answers to the following questions in a file called `algorithms.txt`.  
+If creating this file takes you more than 30 seconds, then just start the questions, recording them any way you can.
 
 The following exercises are focused on the logic of algorithms, rather than the exact formatting of pseudocode or flowcharts to describe them.  
 We're not really interested in writing programs for these, just the basics of writing a set of understandable and clear instructions.  
@@ -227,5 +230,6 @@ If you are using a JCU computer, not your own, please **copy your work** (the wh
 _Keep every file you ever write in this subject._
 
 ## Submit
-Now **submit all of your work to LearnJCU**.  
-We do not need the project, only the files in this week's folder.
+Now **submit your work to LearnJCU**.
+For the first week, we're flexible with how you record your work - photos of hand written work on paper, Word documents, text files... whatever you did.  
+In future practicals, we'll specify the files for you to create and submit.  

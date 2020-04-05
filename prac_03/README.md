@@ -362,3 +362,21 @@ Automated Steak House wants version 2 of their program.
 - handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes, a rare steak will take 5.
 
 You should notice that to handle this properly, you will need to replace your fixed outputs with a calculation (e.g. not "2 minutes", but 3 + 2).  
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+questions.txt  with:
+
+- Quick Questions
+- Patterns
+- Logic Exercise
+programs.py with:
+
+- Automated Steakhouse (updates from example)
+- Tax
+- Car Insurance
+- Simple Password Checker
+- Dog Years
+- Rock Of Ages
+- Speeding Fines
