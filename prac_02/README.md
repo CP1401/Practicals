@@ -232,10 +232,12 @@ Create a new file, `practice.py` to complete these tasks in:
 ## BMI
 Implement the following algorithm for calculating BMI (body mass index):
 
-- get height 
-- get weight
-- bmi = weight / (height ** 2)
-- display bmi
+```
+get height 
+get weight
+bmi = weight / (height ** 2)
+display bmi
+```
 
 ## Maths Operators
 There is a list of common mathematical operators in your notes.   
