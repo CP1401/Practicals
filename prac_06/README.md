@@ -31,7 +31,7 @@ age = get_age()
 Variables should be named using nouns. `age` sounds like a *noun*, so it's a thing, so it's a variable.  
 Functions should be named using verbs. `get_age()` sounds like a *verb*, so it's a function.
 
-Good function names usually complete the sentence:"This function will..."  
+Good function names usually complete the sentence: "This function will..."  
 Examples:  
 - This function will `calculate_circle_area()`
 - This function will `get_age()`
@@ -45,9 +45,6 @@ Write good names for the following functions:
 5. determine if a number is even
 6. get a user's salary, making sure that it is not negative
 
-## Logic Exercise
-
-xx?
 
 # Python Coding - Functions 
 
@@ -310,7 +307,51 @@ We did quite a number of steps along the way with this example program.
 - Add to your main to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use the age in the final output of main.
 - Look at your code. Do you see any grey underlines in PyCharm? If you do, move your mouse over them (don't click, just move) and read the popup message. You might see a PEP8 warning - probably a missing line break or space. Press the shortcut key **Ctrl+Alt+L** (Windows) or **Cmd+Opt+L** (Mac) and watch all of your formatting problems get fixed! Smile :)  
 
+###### CATCH-ALL
+`print_reversed_words` – takes two string parameters and prints them in the reverse order.   
+E.g. calling `print_reversed_words("hi", "ho")` would print `ho hi`
+ 
+Parity
+Write a function to print the parity of a number (parity is the number % 2  and is either 0 or 1). 
+E.g. the parity of 4 is 0 and the parity of 41 is 1.
+xx maybe do print, then return, then Boolean
 
-# More to come...
+###### ...
 
-This prac is incomplete, but there's enough here to get you started.
+# Coding Exercises
+ 
+Write all of your answers to the following questions in a single Python file called `programs.py`  
+At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from here) so you/we know what the program is for later.  
+Example:
+
+```python
+# 2. Miles to Kilometres
+number_of_miles = int(input("Miles: "))
+...
+``` 
+
+## 1. Sth
+**Write a complete Python program** that 
+Here is the algorithm already done for you in pseudocode:
+```
+get 
+print 
+```
+
+**Test** this using meaningful test data that you can understand.  
+
+Remember that you can **comment out** code so it doesn't run by selecting the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
+
+## 2. 
+
+# Practice and Extension
+
+These final sections in practicals are not _required_ to be completed for marks, but you will definitely find benefit in completing them for extra practice and to extend yourself.  
+The more practice you do, the more you develop and "lock in" your new skills.  
+
+Create a new file, `practice.py` to complete these tasks in:
+
+
+### Extension
+
+ 

@@ -14,21 +14,6 @@ def main():
     print(f"This BMI is {bmi}, which is considered {category}")
 
 
-def run_tests():
-    bmi = calculate_bmi(2, 60)
-    print(bmi)  # This should be 15.0
-    bmi = calculate_bmi(1.5, 100)
-    print(bmi)  # This should be 44.4
-
-    print(determine_weight_category(16))  # This should be underweight
-    print(determine_weight_category(25))  # This should be overweight
-
-    height = get_valid_number("Height (m): ", 0, 3)
-    print(height)
-    weight = get_valid_number("Weight (kg): ", 0, 300)
-    print(weight)
-
-
 def get_valid_number(prompt, low, high):
     number = float(input(prompt))
     while number < low or number > high:
@@ -50,6 +35,21 @@ def determine_weight_category(bmi):
         return "overweight"
     else:
         return "obese"
+
+
+def run_tests():
+    bmi = calculate_bmi(2, 60)
+    print(bmi)  # This should be 15.0
+    bmi = calculate_bmi(1.5, 100)
+    print(bmi)  # This should be 44.4
+
+    print(determine_weight_category(16))  # This should be underweight
+    print(determine_weight_category(25))  # This should be overweight
+
+    height = get_valid_number("Height (m): ", 0, 3)
+    print(height)
+    weight = get_valid_number("Weight (kg): ", 0, 300)
+    print(weight)
 
 
 main()
