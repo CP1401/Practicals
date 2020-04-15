@@ -8,6 +8,9 @@ If you're here trying to this practical and you have not watched all of the lect
 
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date for your situation.**  
 
+In your PyCharm practicals project, you should be using a new folder for each prac.  
+For this practical, create a new folder called `prac_06` to store all of the files.
+
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
 
 ## Quick Questions
@@ -29,12 +32,12 @@ age = get_age()
 ```  
 
 Variables should be named using nouns. `age` sounds like a *noun*, so it's a thing, so it's a variable.  
-Functions should be named using verbs. `get_age()` sounds like a *verb*, so it's a function.
+Functions should be named using verbs. `get_age` sounds like a *verb*, so it's a function.
 
 Good function names usually complete the sentence: "This function will..."  
 Examples:  
-- This function will `calculate_circle_area()`
-- This function will `get_age()`
+- This function will `calculate_circle_area`
+- This function will `get_age`
 
 Write good names for the following functions:
 
@@ -63,7 +66,7 @@ Just read along and understand. Do not "do" any of this until you are asked. Rea
 According to [cancer.org](https://www.cancer.org/cancer/cancer-causes/diet-physical-activity/body-weight-and-cancer-risk/adult-bmi.html):  
 > BMI is used to broadly define different weight groups in adults 20 years old or older. The same groups apply to both men and women.
 
-BMI can be calculated by the formula:
+BMI (Body Mass Index) can be calculated by the formula:
 
 ```
 weight in kg / (height in m ** 2)
@@ -307,42 +310,127 @@ We did quite a number of steps along the way with this example program.
 - Add to your main to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use the age in the final output of main.
 - Look at your code. Do you see any grey underlines in PyCharm? If you do, move your mouse over them (don't click, just move) and read the popup message. You might see a PEP8 warning - probably a missing line break or space. Press the shortcut key **Ctrl+Alt+L** (Windows) or **Cmd+Opt+L** (Mac) and watch all of your formatting problems get fixed! Smile :)  
 
-###### CATCH-ALL
-`print_reversed_words` – takes two string parameters and prints them in the reverse order.   
-E.g. calling `print_reversed_words("hi", "ho")` would print `ho hi`
- 
-Parity
-Write a function to print the parity of a number (parity is the number % 2  and is either 0 or 1). 
-E.g. the parity of 4 is 0 and the parity of 41 is 1.
-xx maybe do print, then return, then Boolean
-
-###### ...
 
 # Coding Exercises
- 
-Write all of your answers to the following questions in a single Python file called `programs.py`  
-At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from here) so you/we know what the program is for later.  
+
+Until now, it's been fairly easy to fit our programs into one file. But now that we have multiple functions and each program should usually have a `main` function, we will use separate files for each exercise.   
+Write your answers in Python files named as instructed  
+At the top of each program, put a short **docstring comment** with the exercise number/name (copy-and-paste it from here) so you/we know what the program is for later.  
 Example:
 
 ```python
-# 2. Miles to Kilometres
-number_of_miles = int(input("Miles: "))
-...
+"""1. Coffee Brew Ratio"""
+
+def main():
+    ...
 ``` 
 
-## 1. Sth
-**Write a complete Python program** that 
-Here is the algorithm already done for you in pseudocode:
+**Note:** In any questions that ask you to write a function, you are expected to write test code to show that it works as expected. In some cases, you will be told how to test, and in others it is assumed. Get used to writing simple tests, as in our example.  
+
+
+## 1. Coffee Brew Ratio
+File: `coffee_ratio.py`
+
+In practical 1 you wrote an algorithm for calculating a coffee brew ratio based on dose and yield, something like:  
+
 ```
-get 
-print 
+get dose, yield
+ratio = yield / dose
+print ratio
+``` 
+
+Here, "ratio" is the number of grams of yield (brewed coffee) per 1 gram of dose (ground coffee), expressed as a float, e.g. 2.5.
+
+[According to La Marzocco](https://au.lamarzoccohome.com/brew-ratios-around-world/):
+> Using traditional Italian espresso nomenclature, we’ll refer to a brew ratio of 1:1 (18 grams in / 18 grams out, for example) to 1:2 (18 grams in / 36 grams out) as a “ristretto” espresso; a 1:2 to a 1:3 ratio as a “normale” espresso; and a 1:3 to 1:4 ratio as a “lungo” espresso.
+
+**Write an algorithm** to determine the coffee "style" based on the brew ratio.  
+E.g. a ratio of 2.5 (1:2.5) would be a "normale".  
+Note: We will consider anything outside the ranges defined above to match the nearest style,   
+E.g. 1:0.1 wouldn't be good coffee, but we'd call it a "ristretto" and 1:100 would be dishwater, but let's call it a "lungo".
+
+Now, that looks like the sort of thing we could use a function for in our code, doesn't it?  
+We _pass in_ a number like 2.5 and the function _returns_ a string like "normale".  
+This is a very common style of function, converting one value to another.
+
+**Write a second algorithm** (it will be very similar, so copy-and-paste then modify) for a **function** that takes in ratio and returns the style.  
+Use the above examples as a reference. This is very much like the function for determining a weight category based on a BMI value.  
+
+**Now write this function in Python**. Think of a good verb-phrase name.
+  
+Next, like we did with the example, let's write another function to test it:
+
+```python
+def test_coffee():
+    style = determine_coffee_style(1)
+    print(style)  # This should be ristretto
+    style = determine_coffee_style(2)
+    print(style)  # This should be normale
+    style = determine_coffee_style(3.5)
+    print(style)  # This should be lungo
+``` 
+
+Notice that we tested at least one of each style and some boundary conditions. (You could do more complete testing if you want.)
+
+**Now write a main program** that asks the user for the dose and yield, works out the brew ratio then uses your function to determine the coffee style.  
+Remember that `main()` should always be your first function in any program file.  
+Note: `yield` is a Python statement (keyword) so you can't use it as a variable.  
+As a general rule, never use Python keywords as variables, even if you're allowed to (e.g. `sum` is a Python function but you're allowed to use it as a variable name... but don't.)
+
+Sample output:
+```
+Dose: 18
+Yield: 36
+1:2.0 is considered normale
 ```
 
-**Test** this using meaningful test data that you can understand.  
+How did you go? Got it? Use the examples above and the teaching in the lectures if you get stuck on anything. Ask for help if you still need more support.  
 
-Remember that you can **comment out** code so it doesn't run by selecting the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
+One more thing. In the BMI example program, we had a nice helpful function for getting a valid number.  
+Copy and paste this into your program (near the bottom) and then use it (call it) when you get the dose and yield.
 
-## 2. 
+Your final program should look quite a lot like our BMI example. 
+Don't forget that our examples are some of the most helpful resources you have. Use them!  
+
+## 2. Parity
+File: `parity.py`
+
+One of the most important points with this question is about function *naming*. In each case, think about what is the most meaningful name you can come up with.  
+Remember: "This function will..." 
+
+Write a function to _print_ the parity of a number.  
+Parity is the number % 2  and is either 0 or 1.   
+E.g. the parity of 4 is 0 and the parity of 41 is 1.  
+
+After you have written this and tested it (e.g. with 4 and 41), write a new function that _returns_ the parity instead of printing it.   
+
+After you have written and tested that one, write a third function that returns a Boolean for whether the value passed in is odd.  
+Recall from the lecture, that an excellent and common convention for naming Boolean-returning functions is to start their names with is.  
+Example, the built-in string method `isupper()` determines if a string is uppercase.  
+
+When you have finshed all 3 of these functions, review their names and see how you did.  
+Are the names clear and unambiguous? Would a programmer know how to use them based on their names?
+
+## 3. Add Functions to Previous Pracs
+File: `previous_pracs.py`
+
+Rewrite each of the following programs from your previous practicals with functions.  
+Do not rewrite those files, but copy the code into this prac and rewrite it here.  
+In each case, think about what sections can logically become functions and what should stay in main.  
+In some cases, you may be able to reuse functions that you can share between programs in the same file.
+
+- [Calculate salary for worker level](https://github.com/CP1401/Practicals/tree/master/prac_04#1-error-checking)
+- [Print grid(rows, columns)](https://github.com/CP1401/Practicals/tree/master/prac_04#6-nested-loop)
+
+## 4. JCU Grades
+File: `jcu_grades.py`
+
+According to [JCU Policy](https://www.jcu.edu.au/policy/learning-and-teaching/learning-teaching-and-assessment-policy), if you score 86% in a JCU subject, you will receive an HD grade; 40% will get you an N, etc.
+
+Write a function that takes a subject total score (0-100) and returns the corresponding JCU grade.
+
+Test it, then write a program that asks the user for their score and prints their grade until they enter a sentinel of < 0.
+
 
 # Practice and Extension
 
@@ -351,7 +439,62 @@ The more practice you do, the more you develop and "lock in" your new skills.
 
 Create a new file, `practice.py` to complete these tasks in:
 
+## A. Coffee Ratio Calculation
+Update your coffee brew ratio program with a new function to do your ratio calculation.
+
+Write a test for it, then use it in your main program. 
+
+## B. Random Coffee
+Suppose you have a dodgy espresso machine that's hard to control, so you get a random yield each time you brew.  
+Write a new version of your coffee program that asks the user for their dose but sets the yield to a random number between some realistic values that you set.
+
+## C. Reverse Words
+Write a function called `print_reversed_words` that takes two string parameters and prints them in the reverse order.   
+E.g. calling `print_reversed_words("hi", "ho")` would print `ho hi`
+ 
 
 ### Extension
 
- 
+## i. Coffee Test with Loop
+
+Write another function for testing your coffee style determining function.  
+This time, use a loop to run through at least one of each of the styles.  
+Try and produce output like the following:
+
+```
+1:0.5 is considered ristretto
+1:1.5 is considered ristretto
+1:2.5 is considered normale
+1:3.5 is considered lungo
+1:4.5 is considered lungo
+``` 
+
+## ii. Steakhouse 2
+Write a new version of the [Automated Steakhouse from prac 3](https://github.com/CP1401/Practicals/tree/master/prac_03#example) but:  
+Instead of asking the user for their steak style (e.g. medium rare), ask the chef for a number of minutes and print what the style will be (e.g. 1 minute is rare, 20 minutes is burned).  
+Think about the functions that make sense, including reusing your function for getting a number. 
+
+## iii. Tax Calculation
+ Rewrite the [calculate tax(income) program from prac 3](https://github.com/CP1401/Practicals/tree/master/prac_03#1-tax) but note:  
+The calculation function should return 2 values (`total_tax` and `take_home_pay`).   
+We did not learn about how to do this in the lecture, but you can return as many values as you want from a function.  
+To store these values, use multiple variables, like:
+
+```python
+x, y = function_that_returns_2_values()
+```  
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+questions.txt  with:
+
+- Quick Questions
+- Good Names
+
+Exercises, each in their own file:
+
+- cofee_ratio.py
+- parity.py
+- previous_pracs.py
+- jcu_grades.py
