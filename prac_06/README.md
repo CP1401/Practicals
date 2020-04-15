@@ -2,11 +2,12 @@
 
 ## Important! Learn then Do
 Do not attempt this practical without learning from the lectures.  
-If you're here trying to this practical and you have not watched all of the lecture videos + attempted all of the "do this now" exercises from those, then...  
-*Stop* and do that now. Go learn what we are trying to teach you - then, and only then - come back and do the practical exercises, using that knowledge.
+If you're here trying to complete this practical and you have not watched all of the lecture videos + attempted all of the "do this now" exercises from those, then...  
+**Stop and do that now!**  
+Go learn what we are trying to teach you - then, and only then - come back and do the practical exercises, using that knowledge.
 
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date for your situation.**  
+**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
 In your PyCharm practicals project, you should be using a new folder for each prac.  
 For this practical, create a new folder called `prac_06` to store all of the files.
@@ -20,7 +21,7 @@ Write your answers for the early non-coding questions in a simple text file call
 3. What is the Python keyword for returning a value from a function?
 4. What are arguments and parameters? What is the difference between them? 
 5. What is the Python function call for generating a random number between 1 and 100? 
-6. Name 4 functions we've used (called) in the subject so far.
+6. Name 4 functions we've used in the subject so far (functions we've "called").
 7. How many grams of freshly-ground specialty coffee did Lindsay make his coffee with in the lecture video?
 
 
@@ -222,7 +223,7 @@ How are you going? If any of this is not making sense, it might be a good idea t
 
 Before we write our nicely reusable function for getting valid inputs, how about we try a complete main program without it. We'll then add that function as an enhancement.
 
-**Type this main function at the top of your program**
+**Type this main function at the top of your program**:
 
 ```python
 def main():
@@ -247,7 +248,7 @@ Good? As usual, if you're stuck with something, make sure you've followed and un
 
 So, we've got a complete program, don't we? Nice... but what happens if we use invalid values like height=10 and weight=-50? Is a BMI of -0.5 really OK?  
 
-Looks like we want to error-check those inputs. Both of them. Wait... both of them...? The same way? Like, repeating code? <insert scream>  
+Looks like we want to error-check those inputs. Both of them. Wait... both of them...? The same way? Like, repeating code? \<insert scream>  
 
 Remember, that any time we're repeating ourselves in code, we should stop and ask if there's a better way.  
 Reusable functions to the rescue!
@@ -280,10 +281,10 @@ print(weight)
 If that worked, go on. Otherwise, fix your function.  
 This is important, so we'll say it again. You can't use a broken function! You should not use an untested function. Test it, fix it if needed, then use it.
 
-We're in the final stretch now (<insert music>).  
+We're in the final stretch now (\<insert exciting music>).  
 You may have noticed that we chose tests that exactly match what we want to use for our main program.  
 Comment out the two lines in main that get height and width now, and add the two lines from our tests.    
-Swap comments for the last two lines of the program so that you're running main and let's see it in action
+Change the last two lines of the program so that you're running/calling `main` and let's see it in action:
 
 ```
 Height (m): 10
@@ -303,7 +304,8 @@ If you don't have it completed from each of the steps above, [here is the comple
 
 ### Things to do
 
-We did quite a number of steps along the way with this example program. 
+We did quite a number of steps along the way with this example program.  
+Here are a few more things to extend it just a bit more: 
 
 - See if you can change the printing of BMI (NOT the calculation) in main so that it is limited to 1 decimal place (e.g. 44.4 not 44.44444... as above).
 - If you have not done so already, complete your `run_tests` function so that it covers each logical possibility of output. 
@@ -315,7 +317,7 @@ We did quite a number of steps along the way with this example program.
 
 Until now, it's been fairly easy to fit our programs into one file. But now that we have multiple functions and each program should usually have a `main` function, we will use separate files for each exercise.   
 Write your answers in Python files named as instructed  
-At the top of each program, put a short **docstring comment** with the exercise number/name (copy-and-paste it from here) so you/we know what the program is for later.  
+At the top of each program, put a short **module docstring comment** with the exercise number/name (copy-and-paste it from here) so you/we know what the program is for later.  
 Example:
 
 ```python
@@ -366,7 +368,7 @@ def test_coffee():
     print(style)  # This should be ristretto
     style = determine_coffee_style(2)
     print(style)  # This should be normale
-    style = determine_coffee_style(3.5)
+    style = determine_coffee_style(13.5)
     print(style)  # This should be lungo
 ``` 
 
@@ -390,7 +392,7 @@ One more thing. In the BMI example program, we had a nice helpful function for g
 Copy and paste this into your program (near the bottom) and then use it (call it) when you get the dose and yield.
 
 Your final program should look quite a lot like our BMI example. 
-Don't forget that our examples are some of the most helpful resources you have. Use them!  
+Don't forget that our examples are some of the most helpful resources you have. **Use them!**  
 
 ## 2. Parity
 File: `parity.py`
@@ -398,31 +400,23 @@ File: `parity.py`
 One of the most important points with this question is about function *naming*. In each case, think about what is the most meaningful name you can come up with.  
 Remember: "This function will..." 
 
+**Part 1**  
 Write a function to _print_ the parity of a number.  
 Parity is the number % 2  and is either 0 or 1.   
 E.g. the parity of 4 is 0 and the parity of 41 is 1.  
 
+**Part 2**  
 After you have written this and tested it (e.g. with 4 and 41), write a new function that _returns_ the parity instead of printing it.   
 
+**Part 3**  
 After you have written and tested that one, write a third function that returns a Boolean for whether the value passed in is odd.  
 Recall from the lecture, that an excellent and common convention for naming Boolean-returning functions is to start their names with is.  
 Example, the built-in string method `isupper()` determines if a string is uppercase.  
 
 When you have finshed all 3 of these functions, review their names and see how you did.  
-Are the names clear and unambiguous? Would a programmer know how to use them based on their names?
+Are the names clear and unambiguous? Would a programmer know how to use these functions based on their names?
 
-## 3. Add Functions to Previous Pracs
-File: `previous_pracs.py`
-
-Rewrite each of the following programs from your previous practicals with functions.  
-Do not rewrite those files, but copy the code into this prac and rewrite it here.  
-In each case, think about what sections can logically become functions and what should stay in main.  
-In some cases, you may be able to reuse functions that you can share between programs in the same file.
-
-- [Calculate salary for worker level](https://github.com/CP1401/Practicals/tree/master/prac_04#1-error-checking)
-- [Print grid(rows, columns)](https://github.com/CP1401/Practicals/tree/master/prac_04#6-nested-loop)
-
-## 4. JCU Grades
+## 3. JCU Grades
 File: `jcu_grades.py`
 
 According to [JCU Policy](https://www.jcu.edu.au/policy/learning-and-teaching/learning-teaching-and-assessment-policy), if you score 86% in a JCU subject, you will receive an HD grade; 40% will get you an N, etc.
@@ -430,6 +424,36 @@ According to [JCU Policy](https://www.jcu.edu.au/policy/learning-and-teaching/le
 Write a function that takes a subject total score (0-100) and returns the corresponding JCU grade.
 
 Test it, then write a program that asks the user for their score and prints their grade until they enter a sentinel of < 0.
+
+**After** you have finished and tested that program, add to it (same main) so that the program asks the user for a number of scores, then generates that many random scores and shows their grades.  
+Example output: 
+
+```
+Score: 65
+65.0 = C
+Score: 89.5
+89.5 = HD
+Score: -1
+How many random scores: 5
+16 = N
+15 = N
+75 = D
+53 = P
+13 = N
+```
+
+
+## 4. Add Functions to Previous Pracs
+File: `previous_pracs.py`
+
+Rewrite each of the following programs from your previous practicals with functions.  
+Do not rewrite those files, but copy the code into this prac and rewrite it here.  
+
+In each case, think about what sections can logically become functions and what should stay in main.  
+In some cases, you may be able to reuse functions that you can share between programs in the same file.
+
+- [Calculate salary for worker level](https://github.com/CP1401/Practicals/tree/master/prac_04#1-error-checking)
+- [Print grid(rows, columns)](https://github.com/CP1401/Practicals/tree/master/prac_04#6-nested-loop)
 
 
 # Practice and Extension
