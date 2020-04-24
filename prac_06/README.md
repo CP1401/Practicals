@@ -423,7 +423,7 @@ According to [JCU Policy](https://www.jcu.edu.au/policy/learning-and-teaching/le
 
 Write a function that takes a subject total score (0-100) and returns the corresponding JCU grade.
 
-Test it, then write a program that asks the user for their score and prints their grade until they enter a sentinel of < 0.
+Test it, then write a program that asks the user for their score and prints their grade until they enter a score of < 0.
 
 **After** you have finished and tested that program, add to it (same main) so that the program asks the user for a number of scores, then generates that many random scores and shows their grades.  
 Example output: 
