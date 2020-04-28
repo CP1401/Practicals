@@ -121,7 +121,7 @@ function main
 Remember that you've done some of this before, so copy your previous work:  
 
 - [Prac 2 where we calculated km -> m](../prac_02/README.md#2-miles-to-kilometres) 
-- [Prac 3 where we determined speeding fines](../prac_02/README.md#6-speeding-fines)
+- [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)
 
 **Test** this using meaningful test data that you can understand.  
 
