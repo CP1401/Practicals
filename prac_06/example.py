@@ -52,5 +52,5 @@ def run_tests():
     print(weight)
 
 
-main()
+# main()
 # run_tests()
