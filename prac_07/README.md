@@ -120,8 +120,8 @@ function main
 
 Remember that you've done some of this before, so copy your previous work:  
 
-- [Prac 2 where we calculated km -> m](../prac_02/README.md#6-speeding-fines) 
-- [Prac 3 where we determined speeding fines](../prac_02/README.md#2-miles-to-kilometres)
+- [Prac 2 where we calculated km -> m](../prac_02/README.md#2-miles-to-kilometres) 
+- [Prac 3 where we determined speeding fines](../prac_02/README.md#6-speeding-fines)
 
 **Test** this using meaningful test data that you can understand.  
 
@@ -189,7 +189,7 @@ In this case, `.1f` means to produce only 1 decimal place for our **f**loat.
 Another common format specifier is just a number, like:
 ```python
 value = 17
-print(f"-{value:4}-")  # prints -  17- (that is, 17 takes up 4 spaces)
+print(f"!{value:4}!")  # prints !  17! (that is, 17 takes up 4 spaces)
 ```
 
 OK, let's do this:
@@ -224,7 +224,8 @@ Height 1.75m, Weight 100kg = BMI 32.7, considered obese
 
 Got it? Good. Now, let's try it with varying heights as well as weights, like:  
 
-Hint: 1.5m is 150cm; useful to know since `range` only works with integers. 
+Hint: 1.5m is 150cm; useful to know since `range` only works with integers.  
+Notice also that the values line up nicely. You don't have to do this, but see if you can. 
 ```
 Height 1.5m, Weight  50kg = BMI 22.2, considered normal
 Height 1.5m, Weight  60kg = BMI 26.7, considered overweight
