@@ -477,7 +477,7 @@ Write a function called `print_reversed_words` that takes two string parameters 
 E.g. calling `print_reversed_words("hi", "ho")` would print `ho hi`
  
 
-### Extension
+# Extension
 
 ## i. Coffee Test with Loop
 

@@ -350,7 +350,7 @@ Review the 5 patterns and the programs you've written. Which programs use which 
 Think of more situations and more programs to write for each pattern.   
 Practise the patterns you've used the least by implementing some or all of these.
 
-## Extension
+# Extension
 
 ### Divisibility
 Write a program that takes two numbers, and prints "Divisible" if the first is divisible by the second, and "Not divisible" otherwise. 

@@ -438,7 +438,7 @@ Then print either "the light is on" or "the light is off".
 Note: Think about your condition carefully before you run your program to test it.
 
 
-### Extension
+# Extension
 
 #### 1. Times Tables
 Write a program to generate the 15*15 multiplication table.  

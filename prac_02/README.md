@@ -268,7 +268,7 @@ Write as many programs as you can handle that convert values in one unit of meas
 - feet and inches to metres and centimetres
 - currencies...
 
-## Extension
+# Extension
 
 If you're cruising and want more of a challenge, look up [how to do string formatting](https://docs.python.org/3/library/stdtypes.html#str.format) so that you can produce neatly lined up output with a fixed number of decimal positions for the above programs, especially the i-stop one.  
 
