@@ -14,6 +14,7 @@ E.g. some subject offerings run in 10 weeks, some in 13 weeks.
 * Practical 05 - Assignment Work and [Coding Checkpoint 1](./checkpoints/checkpoint_01.md) 
 * [Practical 06 - Functions 1](./prac_06)
 * [Practical 07 - Functions 2](./prac_07)
+* [Practical 08 - Lists](./prac_08)
 
 ## Practicals are assessed
 
