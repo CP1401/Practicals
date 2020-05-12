@@ -18,8 +18,10 @@ Example:
 
 2. Ask the user for the time of day (0-23 hours) and if they are *coming* or *going*.  
 Then print a statement about their situation like:  
-> It is before noon and you are coming. Hi!  
-> It is after noon and you are going. Bye!
+```
+It is before noon and you are coming. Hi!  
+It is after noon and you are going. Bye!
+```
 
 3. Coffee orders made simple.  
 
