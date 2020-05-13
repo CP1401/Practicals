@@ -5,6 +5,20 @@ You DO need to submit your (own) work, even though solutions are provided.
 
 Solutions for these checkpoint questions are provided as worked solution demonstration videos in your LearnJCU site (or live lecture/recording).
 
+### Use Docstrings
+Please watch the checkpoint 2 video lecture on docstrings before starting this work.  
+
+For each of your functions, write a brief function **docstring**.  
+Here's a good example for a function that checks to see if a password is valid:
+
+```python
+def is_valid_password(password):
+    """Determine if password is considered valid or not."""
+    if len(password) < 6 or " " in password:
+        return False
+    return True
+```
+
 ## Functions
 1. **Print a line**  
 Write a function that prints a line of 40 hyphens.  
@@ -76,6 +90,13 @@ All valid subject codes contain 6 characters, so reject any invalid subject code
     Note: As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative development**.  
     So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the program works...  
     _Then_ add error checking using the normal pattern you know and love.
+
+## Strings
+
+6. Processing Strings  
+
+COMING SOON...
+
 
 ## All Together Now
 IT@JCU are expanding into the coffee business, and of course they need a Python program to help them, and they need you to write it...
