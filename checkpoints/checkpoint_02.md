@@ -3,7 +3,9 @@
 **This checkpoint IS an assessed practical, but is also a collection of practice exercises for self-evaluation based on things you should know by now (nothing new).**  
 You DO need to submit your (own) work, even though solutions are provided.  
 
-Solutions for these checkpoint questions are provided as worked solution demonstration videos in your LearnJCU site (or live lecture/recording).
+Solutions for these checkpoint questions are (will be) provided as 
+worked solution demonstration videos in your LearnJCU site (or live lecture/recording).  
+But please do your own solutions before watching ours!
 
 ### Use Docstrings
 Please watch the checkpoint 2 video lecture on docstrings before starting this work.  
@@ -20,6 +22,12 @@ def is_valid_password(password):
 ```
 
 ## Functions
+Note that a program that uses a function means we need a `main` function as well.  
+
+A good general principle is that you should never write programs that use only one function.  
+If you're using a function (like those asked for below), then you also want a main.  
+If you only have main, then you don't really need it (but there's nothing wrong with a program that's entirely in a main).  
+
 1. **Print a line**  
 Write a function that prints a line of 40 hyphens.  
 
@@ -36,13 +44,6 @@ Then use the _same_ function for getting their birthplace, and then display a me
     Hi Martin from New Zealand!
     ```
     So, if you need to use the same function for getting two different things and you want the user to know what you're asking, then you might need a function that can be customised... which is one thing we use _parameters_ for.  
-
-    Note also, that a program that uses a function means we need a main function as well.  
-
-    A good general principle is that you should never write programs that use only one function.  
-    If you're using a function like this, then you also want a main.  
-    If you only have main, then you don't really need it (but there's nothing wrong with a program that's entirely in a main).  
-
 
 ## Lists
 
@@ -107,7 +108,7 @@ In the functions lecture, Barista Lindsay showed you how to make coffee using 4 
 ```
 Welcome to the IT@JCU Coffee Shop
 (O)rder - (D)rink - (R)andom choice - (Q)uit
->>> W
+>>> C
 Invalid option
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> d
@@ -115,61 +116,48 @@ Oh... where's my coffee?
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> o
 Please choose from: 
-Flat White - Espresso - Long Black - Babyccino - ? Black
+Flat White - Espresso - Long Black - Babyccino - ? capuccino
 Invalid order
-? Long black
-Here's how to make Long Black: 
-- Turn on grinder
+? I'd like to confuse you with a double shot half-strength machiato with extra milk
+Invalid order
+? Long BLACK
+Here's how to make a/n Long Black: 
 - Insert portafilter into grinder
-- Grind beans into portafilter
+- Press grind button to grind beans into portafilter
 - Add hot water to cup
 
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> d
 Mmmm, nice Long Black
 (O)rder - (D)rink - (R)andom choice - (Q)uit
->>> r
-Here's how to make Espresso: 
-- Turn on grinder
+>>> R
+Here's how to make a/n Flat White: 
 - Insert portafilter into grinder
-- Grind beans into portafilter
+- Press grind button to grind beans into portafilter
+- Distribute grounds
+- Tamp grounds
 - Insert full portafilter into group head
-- Press shot button
+- Press shot button to pour espresso into cup
+- Fill jug with milk
+- Steam milk until nice microfoam formed and milk up to temperature
+- Swirl milk gently in jug
+- Pour milk into cup... carefully, artistically :)
+
+(O)rder - (D)rink - (R)andom choice - (Q)uit
+>>> o
+Please choose from: 
+Flat White - Espresso - Long Black - Babyccino - ? espresso
+Here's how to make a/n Espresso: 
+- Insert portafilter into grinder
+- Press grind button to grind beans into portafilter
+- Distribute grounds
+- Tamp grounds
+- Insert full portafilter into group head
+- Press shot button to pour espresso into cup
 
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> d
 Mmmm, nice Espresso
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> o
-Please choose from: 
-Flat White - Espresso - Long Black - Babyccino - ? flat WHITE
-Here's how to make Flat White: 
-- Turn on grinder
-- Insert portafilter into grinder
-- Grind beans into portafilter
-- Insert full portafilter into group head
-- Press shot button
-- Fill milk jug
-- Steam milk until nice microfoam and up to temperature
-- Pour steamed milk into cup...
-- Carefully
-
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> d
-Mmmm, nice Flat White
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> r
-Here's how to make Flat White: 
-- Turn on grinder
-- Insert portafilter into grinder
-- Grind beans into portafilter
-- Insert full portafilter into group head
-- Press shot button
-- Fill milk jug
-- Steam milk until nice microfoam and up to temperature
-- Pour steamed milk into cup...
-- Carefully
-
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> q
 Thanks for drinking coffee
@@ -187,6 +175,13 @@ You should remember that main should "look like the whole program", that is, mai
 You should be able to clearly follow how the program runs by reading just the main function.
 You should recognise that when you display the coffees and when you check for a valid coffee order, you're working with a list of valid coffees
 
+Note: The instructions are not meant to be complete or perfect. They're simplistic.  
+You should write simple functions for each step (like in the video). E.g. 
+```python
+def grind_beans():
+    print("- Insert portafilter into grinder")
+    print("- Press grind button to grind beans into portafilter")
+``` 
 ## Strings
 
 Please make sure you have watched the Strings lecture before completing this section.  
@@ -257,7 +252,7 @@ In that lecture, you were shown what you need to know for these exercises, inclu
     Who knows what the last 3 characters mean? :)  
 
     Write a program that asks for subject codes until the user enters a blank one...   
-    Hey, sounds familiar... just copy what you've already got, BUT this question does not use lists!   
+    Hey, sounds familiar... just copy what you've already got, BUT this question does not use lists, so you have to change it!   
     After they type each one, print what year it is and whether it's an IT subject.  
     
     Sample Output (Consider carefully your decision structures here)
