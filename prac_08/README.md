@@ -164,10 +164,11 @@ File: `random_numbers.py`
 When you've got this part working, add the following interesting additions:
 - minimum
 - maximum
-- random choice (hint if there are 7 numbers it will be a number at a random index 0-6) 
+- random choice (Hint: if there are 7 numbers it will be a number at a random index 0-6) 
 - the list reversed*
 - the list sorted*
-Note: Python's list methods `.reverse()` and `.sort()` DO NOT return the reversed and sorted lists... they modify the list.  
+
+* Note: Python's list methods `.reverse()` and `.sort()` do NOT **return** the reversed or sorted list... they modify the list in place.  
 So, if you write something like:
 ```python
 print(numbers.sort())
@@ -175,7 +176,7 @@ print(numbers.sort())
 You will not get what you expect. You'll sort the list, but the method will return `None`, which is what you'll see printed.  
 You need to do this in two steps (or discover new functions that we haven't explicitly taught you :).
 
-Sample output:
+### Sample Output
 ```
 How many random numbers: 7
 Maximum number: 100
@@ -197,7 +198,7 @@ When you have written the pseudocode for main, implement your solution in Python
 
 Remember that we've done the [JCU grades](../prac_06/README.md#3-jcu-grades) question before, so copy your function from that practical code file. 
 
-### Example Output
+### Sample Output
 ```
 Score: 3
 Score: 50.5
@@ -215,7 +216,8 @@ When you have that working...
 
 - We asked for **4** scores. Have a look at your code... did you use 4 as a numeric literal or a constant?  
 Change 4 to 3... Did you have to change the program in more than one place?  
-If so, then you've missed one of the things we've taught. As a guideline, if you need to use the same literal more than once, you turn it into a constant.  
+If so, then you've missed one of the things we've taught...  
+As a **strong guideline**: if you need to use the same literal more than once, you turn it into a **constant**.  
 Do this now if you haven't already. 
 
 - Add error-checking to the test score inputs to ensure they are between 0 and 100.  
