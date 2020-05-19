@@ -1,6 +1,8 @@
 """
 CP1401 - Checkpoint 2
+https://github.com/CP1401/Practicals/blob/master/checkpoints/checkpoint_02.md
 Suggested Solutions
+Please do not use/view these solutions until you have attempted the checkpoint challenges yourself!
 """
 
 # Docstrings:
@@ -23,6 +25,7 @@ def is_valid_password(password):
 def print_line(length):
     """Print a line of length hyphens."""
     print("-" * length)
+
 
 # 2. Is it even?
 def is_even(number):
@@ -66,6 +69,7 @@ for number in range(minimum, maximum + 1):
 print(numbers)
 
 # 5. Subject List
+# See the other subject list file for a more advanced version of this program
 subjects = []
 subject = input("Enter subject code: ")
 while subject != "":
@@ -92,10 +96,22 @@ for string in data_strings:
     value = float(string[start_index + 2:-1])
     print(value)
 
+
 # 7. Date Strings
+"""
+DOB: 13/07/1995
+You were born in 1995
+You turn/ed 25 in 2020.
+"""
+dob_string = input("DOB: ")
+birth_year = int(dob_string[-4:])  # Extract the last 4 characters
+REFERENCE_YEAR = 2020
+age = REFERENCE_YEAR - birth_year
+print(f"You were born in {birth_year}")
+print(f"You turn/ed {age} in {REFERENCE_YEAR}")
+
 
 # 8. Subject Code Strings
-
 subject = input("Enter subject code: ")
 while subject != "":
     while len(subject) != 6:
