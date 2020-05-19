@@ -124,6 +124,10 @@ Invalid order
 Here's how to make a/n Long Black: 
 - Insert portafilter into grinder
 - Press grind button to grind beans into portafilter
+- Distribute grounds
+- Tamp grounds
+- Insert full portafilter into group head
+- Press shot button to pour espresso into cup
 - Add hot water to cup
 
 (O)rder - (D)rink - (R)andom choice - (Q)uit
