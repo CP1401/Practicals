@@ -64,7 +64,7 @@ Note: **Never** use variable names that are the same as Python built-ins, e.g. `
 
 5. **Subject List**  
 Write a program to ask the user for their subject codes until they enter a blank one.    
-(Are you getting good at spotting words like 'until' and recognise that's the definite iteration pattern?)  
+(Are you getting good at spotting words like **'until'** and recognising that's the **indefinite iteration pattern**?)  
 All valid subject codes contain 6 characters, so reject any invalid subject code and ask again if needed.  
 
     When you have a list of subject codes, print them in sorted order and tell them how many subjects they have.  
