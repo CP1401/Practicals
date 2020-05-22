@@ -1,0 +1,532 @@
+Decision Structures: 
+If you want to learn how to be a good programmer, you're going to need
+to understand decision structures. So I would suggest if you want to
+be a good programmer, you pay attention to this section. See what we
+did there. We started with the word "if" because I wanted you to make
+a decision right now that you're going to pay attention and start
+thinking very clearly about decision structures and how we come up
+with solutions to problems. 
+ 
+So here's another one. Again, I'm going to ask you to pause and I want you to write the algorithm for this and then go on and try writing the Python code. Press pause and do this
+now. Welcome back. So you might have gone through this and thought
+about it again in terms of problem decomposition, going slow enough to
+pay attention very clearly to the words in the problem and what it's
+going to do. 
+ 
+So that process that we looked at before, decomposition,
+is going to grow as we write solutions to problems. Because we're
+going to get larger problems, we're going to have to break them into
+sections. So when we get to functions for example, we're going to be
+decomposing a larger program into smaller little programs called
+functions. Here, what we're doing is using words like nouns and verbs
+to look for what things we're going to handle and what verbs, what
+actions we're going to do. What we want to add to this now that we're
+looking at decisions is words that imply some decision; if, then;
+otherwise. So "if", the words imply that there's a decision, then
+we're probably going to need that in our solution.
+ 
+So let's do an example before we get back to the one we just wrote ourselves. So
+we've got a program, asks the user to enter a number. So we're
+starting to think in terms of verbs and nouns. If the number is less
+than zero, then this message is displayed, so displayed is the verb,
+that's the message. Otherwise, now the new words that we're looking
+for when we're thinking about decisions are if, then, otherwise, else,
+in the situation "when", all of those kind of words. There is no
+implication here that we need to do something more than once and we'll
+see similar words when we break down problems that involve repetition.
+ So we've got decision structures to use here. So let's go back and
+help our bouncer what words can you find here. Let's evaluate this. So
+I'm going to grab my highlighter and we know what the nouns and verbs
+are I think. We're going to look for where we see words like "if". If
+the guest is allowed into a nightclub, bouncer should ask the guest
+for their age than tell them either allowed or denied, depending on,
+if. So we've got the word "if", that's really obvious, it's hard to
+avoid that when you're using English for this. But you also notice
+we've got "either", which means it's one thing or another, so "or"
+might even help, and then depending on "if". So all of these words
+imply that we've got decisions to make. 
+ 
+So you've probably come up with an algorithm like this. We want to get the age. If the age is 18 plus, then we're going to print allowed. Otherwise, else, we print
+denied. Now, remember with pseudocode, it's not a fixed language. So
+if we use "else" here or "otherwise", there's no difference. That is
+just fine. So in the past, I would have tried to avoid coding words
+just to help students see that it's different and so they don't get
+into the habit of putting colons and brackets and commas and stuff
+where they don't need to, which is why this is "print" without
+brackets because it could be "display" or "show on the screen" or
+anything like that. But usually, we can use generic words. Because
+Python is such a simple and low syntax-heavy language, it means
+actually our pseudocode looks a lot like Python. So what we're going
+to do is write the Python code for this. So if we switch back to
+PyCharm. 
+ 
+Now, I want to show you that we've got our previous program
+here. I'm going to comment that out. So I select this, any part of it,
+press Command Slash because I'm on a Mac, it'll be Control Slash, and
+that's the forward Slash key that looks like this, not the back Slash
+which looks like this. That means when I run this program again, I'm
+not going to get my previous outputs. So now I'm going to paste in
+that pseudocode that I had and reformat it as code and do this fairly
+similarly before. So I've got age is equal to, and we want to get the
+input which is enter your age. But we also know that age is a number
+so I'm going to go "int", open brackets. Now, notice that I'm jumping
+to the end of the line with the End key or Command to the right if
+you're on a Mac. Please don't have your cursor here and then go right,
+right, right, right, right, right. You see how boring it is? Right,
+right, right, right, right. Stick with me, right, right, right, right.
+There is a shortcut key that let you get to the start of that line and
+the end of the line. Get used to using those because life will be
+better with it. So the syntax that we want now, we know about these
+print statements. Just for interest, I'm going to do something fun.
+Pycharm and a bunch of other editors let you use multiple cursors. I
+want to do the exact same thing to these two print lines. So I'm going
+to hold down the Option key or Alt and I'm going to click in exactly
+the same corresponding situation. What you should see is I've got a
+cursor flashing here, goes to flashing here. I can put in my bracket,
+take away my space, press that shortcut key to jump to the end of the
+line, which I couldn't do if I was going right, right, right, because
+it's different, add my brackets, and I've now got two functioning
+print lines. It's fancy. I am going to press the up arrow which takes
+me to the end of the previous lines, and syntax-wise, I need to press
+the colon. Now, if you did all of that by manually using your arrows
+or your mouse, you'd still get the same result. It's just once you
+start seeing patterns in your code, you might find some quick ways to
+do it. Still got two lines, so if I start typing, I'm going to get
+something weird. What I want to do is press the Escape and that'll get
+me back to a single one, and I'm going to run it. What should I do
+next? I want to test it of course. Once you've written code, you need
+to test it. Now, previously, what we said we wanted to do with testing
+was we needed to choose good values that we knew the answers for. Now,
+what we're seeing is with a decision structure, I've got the
+possibility of getting allowed or denied. So how many things do I need
+to use to test it? The simple answer looks like two, but as we're
+going to see in our notes shortly, the real answer is three. I want to
+see allowed and denied. So you are allowed in if you are an old
+person, so 30 is allowed. Going to run it again with my shortcut key,
+Control F5. The young person's at three, three is denied. Great. So it
+looks like the program works. The thing we need to get used to
+testing, we'll talk about this quite a bit more later, is what's
+called the boundary condition. I also need to see 18. Now, if you are
+18 and you went to this nightclub, you would hope that you were
+allowed in. Looks like our algorithm and our code is correct for this.
+We'll talk more about testing decisions a bit later, but that's a good
+start. 
+ 
+So we've written the code and what we've seen is that  our code
+included a decision which always includes what's called a condition.
+So the condition we were asking was comparing the variable age and the
+number 18. So whether we're designing an algorithm or writing code,
+all decisions will have this condition or conditions evaluate to
+either true or false. When we say that something evaluates to another
+thing, it's an expression. So 3 plus 4 is an expression that evaluates
+to 7. If we have four, let me change my pen, 4 minus 1 is an
+expression that evaluates to 3. Now, an assignment statement isn't an
+expression. So when I say x equals 3, that is putting three into the
+variable x. But the three itself is an expression, it evaluates to
+three. What I might have is something like on the previous screen
+where I say age and then some operator is greater than 18 or greater
+than equal to, we'll talk about those later, that's an expression that
+evaluates to either true or false. So all expressions evaluate to
+something. All conditions are expressions that evaluate to either true
+or false, which makes them what type? They are all Boolean
+expressions. So all Boolean expressions are either true or false.
+Remember that Boole is a type, and when we write it in words, we
+usually use a capital because it's named after someone, George Boole,
+and the type has a lowercase, but that's a Boolean variable or type.
+ 
+What we saw on the previous example was comparing age and 18, and we
+specifically used greater than or equal to. There are all of these
+common relational operators. So this is comparing or comparison
+operators, comparing two values. We should be used to these in normal
+English use, less than, greater than, and if you struggle with which
+one is less than, which one is greater than, my eight-year-old
+daughter loves a cartoon song on YouTube called The Hungry Alligator,
+it's the number that's greater. So feel free to watch that and get
+that song stuck in your head like I have. So that's the less than,
+greater than that we're used to. What you might notice is that the
+greater than or equal to is a character or a sequence of characters
+that we can type. So this character here doesn't exist in the ASCII
+set, so don't write that character or look for it, it doesn't exist.
+You see it's two characters, the greater than then the equal to.
+Notice also that the equals always comes after, there's no equal to or
+less than, there's only less than or equal to. Equals when we're
+comparing is two equal signs. The reason it's two equals signs and not
+just one is because one is already taken. It is the character we use
+for assignment. X equals Y with one equal sign would mean X now has
+the value that Y evaluates too. Then not equal to, again, there is no
+character like that, so we type the exclamation mark and then the
+equals. So you'll see exclamation in some other languages as well to
+refer to not, so that's the not equal to. So get used to those
+operators, and what I would suggest you do is play with them. Where?
+In the console. So let's do that. Again, I'm demonstrating this on
+purpose because I want you to get used to how this works. 
+ 
+So this is my run window where I ran my previous one. Down the bottom here, you
+see that I've got the Python console. I click that and it starts to
+interpret, it gets ready for my output, and if I type something like X
+less than Y, I'm going to get a, what is it? A name error because it
+doesn't know what X actually is. So I can use these operators with
+known values instead of variables. So you can use them with variables
+as long as you define them. So I'm going to do here, is four less than
+five? What should I see? True. Remember, all conditions evaluate to
+true or false. If I go 6 plus 7, is that going to be true or false?
+Well, it's going to be 13, because I used an arithmetic operator like
+we saw last time when we looked at processing. What about is 6 plus 7
+greater than 10. What's that going to be? It's going to be true
+because, and we'll see this soon, where it does the precedence and it
+adds them first before doing that. What about is 10 equal to 10? Yes,
+it is. Press the up key to get it again, 10 equal to 10.0? Yes, it is,
+they're the same value even though they're actually different types,
+that works here. Is 10 less than or equal to 10? What's that? True or
+false? It's true because 10 is equal to 10 which means it's less than
+or equal to 10. Cool. You can play around with those operators. Is 10
+not equal to 10? That's false. Is 10 not equal to 11? That's true. So
+make sure you're comfortable with those because you're going to be
+using them quite a bit and you don't want to be going, "What's that?
+What do I need for that?" Just get used to that. 
+ 
+We can compare strings. So we just did all of our examples there with numbers but we
+can do that with strings as well, and these are compared based on
+their ASCII values. So there's some examples on the screen. We're now
+going to do exactly what we did before because we want to get used to
+this and test and get interactive with it. 
+ 
+So I am going to compare is a greater than b? What do you think? The answer is false. Why? Because a comes before b in the alphabet. So sorting wise, it goes the other
+way. Well, let's test that. Is a less than b? The answer is true. Is a
+less than or equal to b? Yeah. Okay. What about something like this?
+Is abe less than or equal to ab? That's false, right? Because abe
+comes after just like phone book sorting. What about less than all
+capital here? So that goes the other way. Okay, that's good to know. I
+see that capitals come before a lowercase, and so you can learn all of
+those things. What about is Abe less than Bob? Yes, it is. No
+surprises there. Then you might want to compare things like we just
+had before. What about case sensitivity? Is Abe and lowercase abe the
+same? No, they're not because they're case sensitive. So play around
+in the console till you feel comfortable with those comparing strings.
+ 
+Relational operators, all those ones we've seen. Same in most
+languages, so they're pseudocode. Python looks the same but we've got
+the colon on the end. Java and C++ looks similar. We'll learn other
+languages later. These ones use brackets around the expressions that
+are the conditions. You can do that in Python but they would be
+redundant. You don't need them. 
+ 
+We just saw a flow chart on the previous screen, the way that we denote decisions, and we'll see it's the same for repetitions because those are really special kinds of
+decisions is with a diamond. I've talked briefly before I think about
+flow charts being a little bit difficult sometimes because of fitting
+the words in the boxes, but you're absolutely welcome to use them.
+They're just a lot harder to produce and create. They're often really
+easy to understand when you look at them. So what we can see with this
+is that the normal flow of the program comes in and then we ask a
+question. Is it cold outside? If it is, then we wear a coat. What do
+we do otherwise? Well, nothing. We just do whatever comes next anyway.
+Notice that in this example, we're wearing a coat. In this one here,
+you can see there are multiple statements that we do if it is cold
+outside because we're wearing gloves and hat as well. 
+ 
+So in Python, we've seen the syntax for this now, let's just break it down a bit, we
+have the if statement followed by a condition. That condition can be
+anything as long as it evaluates to true or false. It can be a
+variable, it can be a relational operator comparison, it can be an
+expression that has maths in it and a relational operator. All those
+kind of things we'll see, Boolean operators coming later. So this if
+clause has the if, the condition, and then this colon at the end, so
+that is something to remember to type. Then we indent. Now, good
+editors help you with this kind of coding. 
+ 
+So I did some conversion before from pseudocode directly to Python, but if we were to do it
+from scratch, so let me show you an example, not in the console
+because it's not the best I find for multiple lines. I'm going to
+select that. What was the shortcut key to come on out? Command Slash
+or Control Slash if you're on Windows. So if I start typing, if, and
+I'm just going to use numbers, I wouldn't normally do this. Let me
+just put the age back in. So if age, you see it auto-completes, if the
+age is less than, let's say this is the seniors discount, less than
+65, if I press Enter, PyCharm is starting to tell me I've got some
+problems. If I'm asking, it says, "I think you needed a colon," see,
+it knows what's going on. So I come back and press the colon. Now, I
+want you to watch what's happening. I've still got a syntax error even
+though I haven't gotten to the next line yet because PyCharm is
+saying, "Well, you actually need to," what's the problem? We need to
+indent. We need to have something else that follows. If I press Enter,
+watch what happens, it automatically indents for me. That's really
+useful. If you find when you press Enter, it doesn't go where you
+expect, just check that you've got the right stuff in place. So I'm
+going to say print, no seniors discount for you. I might just run that
+and test it with, if I were only 30, then there's no seniors discount
+for me. What if I was? Well, if I was 66, then it doesn't do anything.
+We're going to talk about different patterns for these shortly. So
+that's the syntax that we need for our if statement. Again, use the IDE
+to help you write good code.
+When a builder or a construction worker builds a house, they don't go to each new project and go, "I wonder if I should use a nail gun here or a screwdriver, or maybe I should be using the jackhammer for this."They know what their tools are and they know what situations they use them, and they use the appropriate tool for the job. Programming is
+much the same. There are what we call patterns. These patterns apply
+in the same kind of situation over and over again. So when you're
+writing a program, just like a builder would know what tools to use,
+you'll see problems that say, "I should be solved using this kind of
+pattern because it always works."
+So our goal is to learn five common patterns for decisions. Get familiar with these and don't reinvent the wheel. It's quicker because you don't have to think about it, and you
+just see where they are and you go, "Yeah, I've done this before.
+Here's one I prepared earlier," and you just modify it. Doesn't mean
+you need to actually have the code already written and you copy and
+paste and change the variables. It just means you're used to seeing
+that kind of problem and know how to solve that kind of problem with
+the tools that we're learning. So you're focusing as you practice on
+these on what we call clean cut it or good naming, formatting, those
+sort of thing, and testing. So in your practice, what we're saying
+about practising patterns is you should be so familiar with them
+because you have done them over and over again. In our practicals,
+that's what we're trying to do. I encourage you to, like I said, play
+in the console or write program after program until it sticks. That's
+what we're trying to do.
+So we've already seen, just like we did with the earlier example about whether it's cold outside or the one that I just wrote for whether you got a seniors discount or not. Actually,
+that was just what we call an if statement with no else. So this is
+the pattern that we use when we don't actually want to do anything
+different if the condition is false. So here you can see we ask the
+user for their age potentially, we print what their age actually is,
+but only in one case do we handle something different, which is if
+they are over 100, we say, "Wow, that's amazing." So that's pretty
+cool. If someone is that old, so we print that message, but we're not
+going to also say you are not over 100 or something like that. So this
+is the pattern for when we want to do something in one case, but we
+don't actually mind about the other. We don't do anything different,
+same as the cold outside one.
+The second pattern is the if-else statement. This is really common and we did see this earlier when we were looking at the bound set because there were two possible
+outcomes: you could either be allowed in or you were denied. So if the
+condition we ask is true, then we do the true path and skip the false
+path. You see what we're talking about, true and false paths? These
+are the blocks. So inside the if, the first thing is the true path,
+inside the else indented is the false path. We will always do one or
+the other. So if an else are mutually exclusive and there is no third
+option, we will always do one of them. So that's why it's if and else.
+You'll notice that there's no condition after an else. It's just if
+this is true, we do it. Otherwise, we do something else.
+So we use if else when we want to have two possible outcomes and that will cover
+every case. So get ready to press pause. I want you to write the
+Python code for this. Now, notice by the way that this flow chat isn't
+an algorithm so much as code that's been put into the boxes. You
+wouldn't normally write print, open bracket, quotes, you would just
+write the words without the syntax for that. That's okay. Write the
+code for this now.
+Press pause. Okay. Probably you came up with
+something like this. You can tell this isn't using Celsius
+temperatures because it's not really a little cold when it's 39
+degrees. But these are the two possibilities we've got. If it's less
+than 40 degrees Fahrenheit, then it prints that a little cold.
+Otherwise, it's always going to print that. So no matter what value
+you put in for temperature as a valid number, it's going to do one or
+the other. It didn't need to ask the question for the else. It just
+moved on and said if it's not true the condition, it'll do the else.
+So it's what we call an anti-pattern if we have a second condition. So
+there are two possibilities. The temperature is either less than 40 or
+it's not. What we see a lot is that people, when they're getting used
+to this, will just be a bit verbose and they'll add this second value
+here. So that's if and then an elif, which we'll see later, where we
+ask a second question. Some people even have an else, and then inside
+of that I have another if. So this has a couple of problems. We might
+have actually made a mistake.
+So in this situation, it sounds like the right thing to say if it's less than 40, it's a little cold. Well, if it's greater than 40, it's nice weather. But what about if it's equal
+to 40? That's the boundary condition. I've seen that literally
+hundreds of times watching students writing code. They think they
+needed the extra questions. So they put it in. They think less than is
+the opposite of greater than, but it's not. Less than isn't the
+opposite of greater than. It's the opposite of greater than or equal
+to because what happens with 40? So not less than 40 includes 40, 40
+is not less than 40. Okay. That's true. So there's too much work to do
+because the computer is calculating that question when it already
+knows the answer to it. Now, the only time this would be okay is if we
+intentionally want to do nothing when the temperature is 40. That's
+actually what this program is doing. It's saying it's either a little
+cold, or it's nice weather, or it's 40 and we don't print anything on
+the screen. That's almost never what you actually wanted when you
+write this, how do they read for the user and for the computer. So
+that's an anti-pattern. Don't do an if, if you just need an else. I
+often ask a question like, are you awake or something like that. So a
+binary, a boolean. It's either yes, you're awake or not. We don't need
+to then ask, well, if you're not awake, are you asleep? Why would we
+ask if you're sleeping? If you're not awake, you must be asleep. So
+there is no second question, it's just the else or the otherwise.
+We can ask more complex questions by nesting decision structures. In
+fact, after we enter a colon and we indent, we can just do anything we
+want there. Sometimes people say, "Well, can we have a loop inside an
+if statement? Is it possible to have an if statement inside an if
+statement inside a loop, inside a function and if?" Yes, all of those
+things, the answer is yes.
+So we can nest anything inside anything else, and a common thing we might do is a nested decision structure.
+So here's an example. The problem is we want to see if someone
+qualifies for a loan or not. Two possibilities. They either do or they
+don't. Well, there are two conditions in this case. We haven't seen
+this before. So we have two questions we do need to ask. They must
+earn at least 30,000 a year in this context, and they must have been
+employed for at least two years. So we need to check that first
+condition. There's no point asking the second question if the answer
+to the first one was false. So we can do this by nesting. So we can
+say ask the first question, if the salary is greater than 30,000, then
+we bother asking the second question. If it's not greater than 30,000,
+then we just already know the answer. You do not qualify for a loan
+because you don't earn at least 30,000 in this particular example. So
+if it's true that the first one passes, so salary is greater than or
+equal to 30,000, then we ask the second question. If that's true, we
+print that you qualify. Otherwise, now we have the second kind of
+message that says you don't qualify because you need to be employed
+for at least two years. So that's nesting. So here's the code for
+that. You can see that after the first column, we indent because we
+always indent after a colon at the end of the line. So now we've got a
+second if statement, just like we were writing from scratch. There it
+is, another colon, we indent else. So these are the paths that we
+handle. Notice something important here, and that is the indenting
+lines up. The if matches the else. If we were to put these slightly
+out, it wouldn't know which one it matches. If we put this first else
+down here, it would match with the first if and then this else would
+have no if to match with. So you got to get your indenting right.
+Again, Python does this for you, or PyCharm does it.
+Indentation in Python is actually, it's functional. It actually makes a difference to
+the running of your code. There are other languages like Java or C
+that you can write almost entirely on one line if you wanted. In fact,
+sometimes JavaScript code, which has to be loaded by your web browser,
+does gets what's called minified. and it gets to made really, really
+small text and all of the breaks, and lines, and indents, and all that
+sort of thing just so that it's a smaller file to download so it goes
+faster. In languages like those, you don't use indenting to denote
+your blocks, what's true path, what's false path. You use squiggly
+braces usually depending on the language, but it's still best practice
+when you are writing code to be read not by a computer, but by another
+programmer that you do indenting. So when I used to teach this kind of
+subject that was using C++ and I used to have to encourage students,
+"Make sure you indent. "Make sure after squiggly braces, make sure you
+indent." With Python, you just have to. You have to actually get it
+right. So your if and your else must have to line up, and then you
+just line up those blocks consistently.
+So if you get this wrong in Python, you're actually going to get a syntax error. So here's an
+example where when not indenting after the if, and so we get an
+indentation error.
+Here's another one where there is an indent, but it doesn't quite line up. So this print, where is it meant to be? Well, it's actually doesn't match any other level of indentation. So that's the error that you get there. You can try this, get some code in your
+PyCharm. Put it out, see what your error messages are. Again, you'll
+get the preemptive warning. So it's going to try and tell you before
+you get to run it, and you'll get these actual exceptions that occur
+when you do try and run.
+So right now I want you to write your Python coding. You can skip the algorithm in this case. Using your knowledge so far, do a menu style programs. So we're going to ask the user for
+their choice. Then that's either H for hello, G for goodbye, W for
+wazzzup, and anything else we print whatever. Do this now. Press
+pause. Okay. Now, I don't know exactly how you've done it. But we
+talked about nested decision structures, and you might have done it
+that way.
+But the next patent that we've got is going to help us very
+much with that sort of problem, where we have multiple decisions, and
+really one question and multiple cases that we want to handle. So
+something like a menu is best done with an if-elif-else statements. I
+like saying elif. It just makes me feel like the little elif is
+helping me with my programming. You're going to have as many as you
+want. So we call it if-elif-else, but it could be if-elif-elif-elif,
+elif-elif-elif-else. It could be any of those.
+So here is the code that would help us with that many program that we have. What you can
+see again is that the indenting matches. But now instead of if-else,
+we're matching if, elif, elif, see how fun it is to say that, and then
+else at the end. So that else still matches this if, but actually it
+matches this one, and this one, and this one. So this is like a
+waterfall sequence where we say, if the choice is H, we do this and
+we're done. It skips everything else. All of this would get skipped,
+if it was H. If it wasn't H, it goes onto the next question. We could
+have done that using nesting. We'll see an example of that a little
+bit later. But this is a common pattern. In other languages, this
+thing is called a switch or a case statement. So if we're writing this
+in C or something we wouldn't have lots of ifs, we would have a
+switch. But if you've seen that in other languages, then here is
+Python's version of it.
+{blank examples first} So here's an example of a program done using the structure of nested if-else statements. We might use this, for example, to determine what a grade would be. So if someone gets less than 50, we got to be careful of our boundary conditions. We might
+have to get an N, you got to get over 64 to get a pass, is that right?
+No, over 64 means we ask the next question. There's different ways to
+ask this. In fact, I'm not going to focus on this example too much
+because we're going to do it later on in our subject work.
+But that's the version that's nested if statements, and here's the version that's
+if-elif-else. You can see it looks simpler. It's easy to see the flow
+of it and certainly how it fits. So we could ask the same order of
+questions or a different order, but you can see the structure and how
+that actually works.
+So that was our if-elif-else. There is a pattern that we looked at before by accident, which is the if-elif but with no else intentionally. So sometimes we have mutually exclusive cases that cover all the bases. Like you can either come into the nightclub, your
+access granted or denied. That covers all the bases. That's an
+if-else. Sometimes we have something like the previous one, which was
+the menu. We want to handle all cases, If there's a default, then
+that's invalid entry or it's whatever, or whatever that what actually
+was. In some cases, we have a situation where we want to handle one or
+more cases, but there's no default case. So here's something where you
+might have someone got a score, it's graduation, or it's any kind of
+result where we got a score. Your score could be very good, it could
+be good, or it could just be a score. There is no other case. We're
+not going to say the third situation is that we say anything. So
+imagine you are walking across the graduation to shake hands, and I
+would say this person graduated. Next person, this person graduated.
+This person's score was very good. This person graduated, this person.
+This person graduated and this person's score is good. So everyone
+graduates. That's not the default case, that's the everyone case. But
+only some people get their scores highlighted because they're very
+good or good. So that's the if-elif with intentionally no trailing
+else. This is actually really uncommon. If you do this in your code
+and you find yourself with an if-elif and no else, just check that you
+haven't made a mistake. Because the example we had before with the
+temperature greater than 40, elif temperature less than 40, that was a
+mistake and we saw that. So it's not wrong to have this pattern, it's
+just not very common, which means it might be the wrong choice of
+pattern. It might be like trying to use a star-head or a Phillips-head
+screwdriver, when actually what we wanted was a flat-head. It's
+similar, but not actually what we wanted.
+The last about five patterns is if, if, if, and obviously as many ifs as we want. So in all the
+previous patterns, every path was mutually exclusive, that you
+couldn't have a very good score and a good score. You are old and you
+are young, or the temperature was cold, and the temperature was nice.
+In the menu, it was only one of those. We do have some situations
+where our conditions and therefore our paths are not mutually
+exclusive. So in this case, similar to what we were talking about
+before, graduation, here's your final score. If you've got over 50,
+you pass. That's great. If you got over 90, well, you still passed, so
+that happens and you win a car. Maybe if you got a score of between 80
+and 90, you win a horse. But if it's over 90, you win a car as well.
+So in this case, somebody with a score of 99 passes, wins a car, and
+wins a horse. What about the other cases if they are under 40? Well,
+that's still handled. We might have that later on or we just don't
+have the words you pass on the screen. It's up to us how we handle it.
+But what you can see, if we have multiple ifs with no else or no elif,
+the point is, the reason we choose this pattern is because we might
+want to do more than one of those paths together. We want to do not
+just one, but more than one. Again, if you find yourself writing an if
+followed by an if, just check you haven't made a mistake. If you are
+looking at something like the grade determination so you could get a
+P, or an N, or HD, or something, well, you can't get an N and an HD
+for the same subject. That doesn't make any sense. So you would not
+use if, if, if for this. If you did get it to work that way, you've
+probably asked too many questions of the computer and made it work too
+hard. So that's our last of the five patterns. Remember all of these
+ones and learn when you would use them.
+So here's some like a summary sheet. Feel free to print this out and stick it on your fridge or
+whatever. But these are our five patterns. We've got an if with no
+else on purpose. So we just want to do something when it's true, but
+we're not handling the false case. There's no path for that. We've got
+a very common one, which is if-else, It's Boolean or binary. There's
+only two possibilities, and that covers all cases. If-elif-else is our
+switch or case statement or something we might use for a menu, and
+we're handling a range but we're handling everything in there. The
+if-elif with no else, again there could be as many elifs as we want,
+but there's no else, means there is no default path. There's a last
+possibility that might occur, but we're not handling it. If there is
+no last possibility and we've actually just written if-elifs and
+handled every case, then the last one should have just been an else.
+Like this example here, you wouldn't use this pattern to achieve this.
+You could have had an elif score is less than 50, print bad, but
+that's not what we use that pattern for. Because if we want to handle
+all cases, we want the last one to be an else, so it's more efficient.
+Then the fifth case that we're looking at is when the paths might more
+than one of them happened, which means those conditions might actually
+overlap. So that's a really good cheat sheet. It's a good summary,
+hopefully, of what all of these patterns are. Again, the point is like
+a builder chooses the right tool for the right thing that he or she
+wants to build, you as a programmer now have five new tools and you
+know when to use them.
+Last thing for this section, I want you to take
+this partial algorithm, which is saying if I've got a pool pH level,
+I've measured the pH of my pool, then what do I do with that? If it's
+between 7.4 and 7.6, that's ideal and I don't need to change anything.
+Then there's the other two situations. If it's too acidic, we add
+soda. If it's above the point where it's too alkaline, then we add
+acid. So first thing you want to do is look at the problem and think
+about what tool do I have that applies best to solve this kind of
+problem, which of those five patents do you use, and then actually
+turn that into an algorithm and code. Let's go.

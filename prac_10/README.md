@@ -141,7 +141,7 @@ Put your own name in the file.
  
 Write a simple program that _reads_ this `name.txt` file and greets you, example:
 ```
-Greetings Lindsay
+Greetings Lindsay!
 ```
 
 Note that since we want the entire contents of the file in one string, we don't need any kind of loop, 
@@ -151,6 +151,19 @@ in_file = open("name.txt", "r")
 text = in_file.read()
 ```
 
+Did it work?  
+If you got something like
+```
+Greetings Lindsay
+!
+```
+Then what's happened is the `text` variable includes the new line in your file.  
+You can solve this problem in two ways.  
+- Edit the file so there's no line break
+- Strip the new line character (any whitespace from the ends of the line) from text with:
+```python
+text = in_file.read().strip()
+```
 
 ## 2. Write Numbers to a File
 **Write a complete Python program** that _writes_ a range of numbers to a file.  
@@ -203,9 +216,9 @@ Processing...
 
 
 ## 4. BMI File
-File: `bmifiles.py`
+File: `bmi_files.py`
 
-Write a program that writes and reads from `bmis.txt` (not at the same time).  
+Write a program that writes to and reads from `bmis.txt` (not at the same time).  
 Reuse your code from [Prac 6](../prac_06/README.md#example) (and 7) where you calculated a person's BMI based on height and weight.
 
 The first part of your program should ask the user for a number of people, 
@@ -224,6 +237,33 @@ BMI 24.2, considered normal
 BMI 16.3, considered underweight
 BMI 32.0, considered obese
 ```
+
+## 5. File Filter
+File: `file_filter.py` 
+
+Write a program that reads a file and "filters" it, writing only certain lines to another file.  
+In the lecture, we wrote a program that read [letter.txt](./letter.txt) and printed every line that started with a capital.  
+
+For this program, write a program that asks the user for three things:   
+- input file name 
+- output file name
+- a search string to look for lines that start with
+
+Read the input file, and then for each line that starts with the search string, write those to the output file.
+
+### Interesting Examples:
+
+- This file is a "Markdown" text file. The headings all start with '#'.  
+    If the user chose this file and searched for '#', then the output file would contain all of the headings.
+- Similarly, HTML headings are `<h1>`, `<h2>` etc. so you could filter/strip those.
+- Python comments use `#` or `"""`, so why not try writing getting your program to extract just the comments.
+    You would need to `strip()` the lines to account for indenting.    
+
+### Extensions (Optional):
+
+- Get your program to simply search for lines that have the search string _anywhere_
+    Lindsay starts a lot of sentences with "So". If you had a [transcript file](./transcript.txt) of one of his lectures and searched for "So", you could make a new file that contained those sentences.  
+- Filter in other ways (not based on a user string), like lines that start with numbers or vowels or white space, etc.
 
 ### How are you going with the fundamentals?
 
@@ -247,7 +287,7 @@ Create a new file, `practice.py` to complete these tasks in:
 - Write a program that asks the user for a filename, opens that file and then simply prints how many lines are in the file.
 - Write a program that asks the user for a filename, opens that file and then simply prints the number of characters in the file.
 - Write a program that asks the user for a phrase and a filename, opens that file and then searches the file for the phrase, printing either "Found" or "Not found".
-
+- Write the programs from the "Do this now" in the lecture, including the one that prints only the lines of [letter.txt](./letter.txt) that start with a capital. 
 
 # Extension
 
@@ -296,5 +336,6 @@ questions.txt  with:
 Exercises:
 
 - example.py
-- programs.py with each exercise 
-- bmifiles.py
+- programs.py with exercises 1, 2, 3 
+- bmi_files.py
+- file_filter.py
