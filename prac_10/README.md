@@ -7,12 +7,12 @@ Write your answers for the early non-coding questions in a simple text file call
 
 ## Quick Questions
 
-1. Explain the difference between the 'r' and 'w' modes when opening a file.
-2. Why is it necessary to close a file after it has been opened and used?  
-3. 
-4. 
-5. 
-6. 
+1. Explain the difference between the `'r'` and `'w'` modes when opening a file.
+2. What is a **file object** and how is it different from a file name or the file's contents? 
+3. Why is it necessary to close a file after it has been opened and used?  
+4. What is a good principle for deciding whether a literal value should be stored in a CONSTANT?
+5. Write a single Python expression that would evaluate to the file extension (e.g. `txt`) of a variable like `filename = "this_is_a_name.txt"` or `filename = "document.docx"`  
+6. What is a good number of quick questions to have at the start of a practical?
 
 ## Logic Exercise
 
@@ -28,11 +28,11 @@ How many false statements are there in the list; 0, 1, 2 or 3?
 # Python Coding - Files
 
 As you do individual work on your computer, if you need help, start by talking to your peers.  
-External students are encouraged to use Slack to ask questions of others in the class (but you don't need to post your answers there).
+You are encouraged to use Slack to ask questions of others in the class (but you don't need to post your answers there).
 
 ## Example
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  
-Just read along and understand. Do not "do" any of this, just read it and make sure you understand.  
+Just read along and understand. Do not "do" any of this until asked, just read it and make sure you understand.  
  
 ### Problem Description:
 Geraldine Gamer likes to record her gaming scores, 
@@ -40,6 +40,11 @@ so each day she types her best score as a floating-point number into the file "s
 She wants to process this file and find out what her average score is.  
 
 ### Algorithm
+
+- We need to open the file for _reading_ and close it at the end.  
+- We know that each line is the same kind of data so we can process it with a definite loop, doing the same thing per line.  
+    We process _each_ line, so that's definite (for loop), not _until_ some condition happens.
+- We should know the "accumulation pattern" by now, so the total and average should be easy. 
 
 ```
 total = 0.0
@@ -54,14 +59,13 @@ average = total / count
 print average
 ```
 
-Notice that we choose to use a for loop (definite iteration), because:
-
-- We know how many times we want to run the loop - once for each line in the file
-- We will do the same thing with each line
-
-
 ### Code
 
+Note: we don't usually use the variable name `file` because we'd like to know whether it's for 
+reading input from (`in_file`) or writing output to (`out_file`).  
+These are not world-standard kind of names, but they are more meaningful than `file` or `f`, etc. 
+and should help us avoid trying to write output to an input file or vice versa. 
+  
 ```python
 total = 0.0
 count = 0
@@ -75,11 +79,13 @@ average = total / count
 print(f"Average = {average:.1f}")
 ```
 
+Notice also that we `close` the file as soon as we've finished with it (not after the average part).
+
 ### Testing
 
 Test data for this kind of program is stored in a file.  
-Copy this text into a new file (not Python file) called "scores.txt", saved in the same folder as this prac's program files,   
-You can also [download it here](./scores.txt), remembering to click *Raw* before copying.
+Copy this text into a new file (not Python file) called `scores.txt`, saved in the same folder as this prac's program files,   
+You can also [download it here](./scores.txt).
 ```
 56.8
 34.0
@@ -100,8 +106,8 @@ The reason you want to _type_ instead of _copy_ this code is because it helps yo
 type code accurately, and develop an eye for detail.
 
 - The filename in the program is a literal, but we can easily make it a variable and ask the user for the file name.  
-    Do this now. Note that if the file doesn't exist, the program will crash and that's fine for now.  
-    We'll learn how to handle exceptions in Programming 2. 
+    Do this now. Note that if the file doesn't exist, the program will crash and that's fine for now...  
+    We'll learn how to handle exceptions in Programming 2.  
     Test it with a different file (maybe the [recentrain.txt](./recentrain.txt) file from below).
 
 - Currently, the program just prints the final average.  
@@ -129,8 +135,25 @@ number_of_miles = int(input("Miles: "))
 ...
 ``` 
 
-## 1. Writing Numbers To A File
-**Write a complete Python program** that writes a range of numbers to a file.  
+## 1. Read a String from a File
+Create a new text file in your prac_10 directory called `name.txt`.  
+Put your own name in the file.
+ 
+Write a simple program that _reads_ this `name.txt` file and greets you, example:
+```
+Greetings Lindsay
+```
+
+Note that since we want the entire contents of the file in one string, we don't need any kind of loop, 
+we can just `read` the file, like:  
+```python
+in_file = open("name.txt", "r")
+text = in_file.read()
+```
+
+
+## 2. Write Numbers to a File
+**Write a complete Python program** that _writes_ a range of numbers to a file.  
 Here is the algorithm partly done for you in pseudocode:
 ```
 open file "range.txt" for writing as out_file
@@ -147,16 +170,15 @@ Try these, and some of your own ideas:
 - 20, 19, 18... 0
 
 Run your program each time with different ranges - commenting out the range line when you make a new one (so you keep the old one).  
-You should write each number to a new line.
 
 
-## 2. Greater-Than Counter
-Write a program that reads a file of floating-point numbers, 
+## 3. Greater-Than Counter
+Write a program that _reads_ a file of floating-point numbers, 
 and counts how many of those numbers are larger than a user-specified lower limit.  
 
 ### Example file:
-Copy this text into a new file called "recentrain.txt",  
-or [download it here](./recentrain.txt) remembering to click *Raw* before copying.
+Copy this text into a new file called `recentrain.txt`,  
+or [download it here](./recentrain.txt).
 ```
 12.4
 10.0
@@ -173,17 +195,17 @@ or [download it here](./recentrain.txt) remembering to click *Raw* before copyin
 ### Example output: 
 
 ```
-Enter filename: recentrain.txt
-Enter lower limit: 10
+Filename: recentrain.txt
+Threshold: 10
 Processing...
 6 out of 10 (60.0%) of values are greater than 10.0.
 ```
 
 
-## 3. BMI File
+## 4. BMI File
 File: `bmifiles.py`
 
-Write a program that writes and reads from "bmis.txt" (not at the same time).  
+Write a program that writes and reads from `bmis.txt` (not at the same time).  
 Reuse your code from [Prac 6](../prac_06/README.md#example) (and 7) where you calculated a person's BMI based on height and weight.
 
 The first part of your program should ask the user for a number of people, 
@@ -193,7 +215,7 @@ Don't forget to close the file when you have finished.
 
 Test this and confirm it works as you expect.  
 
-Then, write the second part, which should read the file and display the BMI and weight category similarly to how we've done it before:  
+Then, write the second part, which should read the file and display the BMI and weight category similar to how we've done it before:  
 
 ```
 BMI 23.5, considered normal
@@ -202,6 +224,8 @@ BMI 24.2, considered normal
 BMI 16.3, considered underweight
 BMI 32.0, considered obese
 ```
+
+### How are you going with the fundamentals?
 
 In *all* of your programs by now, you should have clear ideas about the fundamental principles we've learned, so (example):  
 
@@ -229,7 +253,7 @@ Create a new file, `practice.py` to complete these tasks in:
 
 ## i. Generating A File Of Random Floating-Point Numbers
 Write a program that writes a customised collection of random integers to a file.  
-Ask the user for the 4 values below, then generate the file. 
+Ask the user for the inputs as below, then generate the file.  
 So,
 ```
 Enter the filename: RandomNumbers.txt
