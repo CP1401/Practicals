@@ -7,7 +7,7 @@ If you haven't read the introduction to pracs and marking, please [read this now
 
 
 ## Community
-In pracs, we'll sometimes get you to work together with others, so you're going to start getting to know your IT@JCU community a bit more...  
+It's a good idea to start getting to know your IT@JCU community a bit more...  
 
 In lecture 1, we established that it was **not OK** to work together with others on your assignments for this subject, including the simple rules:  
 - Never give someone a copy of your work
@@ -17,20 +17,13 @@ In lecture 1, we established that it was **not OK** to work together with others
 You have to do your own work in order to achieve the learning outcomes.  
 However, it's still really helpful and good practice to work with others to understand problems and to discuss solutions.  
 You **are allowed** to talk with others about these things... you just can't go too far.  
-Communication is a big part of IT and it helps to know a little about who you are communicating with. It also shows respect for someone if you can learn their name, so we're going to work on that now.
+Communication is a big part of IT and it helps to know a little about who you are communicating with. 
 
-**External students:** it's a bit different when you're not in the same room, but you can join in on Slack for some things (see below). You may also be able to find other people around to join with you physically as appropriate.  
-*Introduce yourself in Slack* including your name and what you like that starts with the same first letter and also add where you are studying from.
+So, we're going to do this together **on Slack**.  
+*Introduce yourself in Slack* including your name and what you like that starts with the same first letter (e.g. "I'm Yasmin and I like yachting") and also add where you are studying from.
 
-**Internal students**: Form a small group of 4 or 5 people near you (get away from in front of the computers if possible) and play the **"name game"**.  
-This exercise for learning names will involve you saying your own name and something you like that starts with the same letter as your name (e.g. "I'm Yasmin and I like Yachting").  
-Then, the second person in the group starts with the first person ("This is Yasmin and she likes yachting") before saying their own details.  
-Then, the third person starts with the first person, then the second, then their own.  
-And so on...  
-*Repetition* and *association* will help you remember names, so you'll get to say and hear other people's names more than once. Try memorising as many names (and associations) as you can, then use people's names in the group work. Repetition will help you lock them in.  
 
-Now work together on the following exercises...  
-For now, record these in any way that works for you - pen & paper, notes in a text file... something easy to submit to LearnJCU is preferable.
+Record your answers for the below questions in a simple text file, `questions.txt`.
 
 ## Logic Exercise
 
@@ -52,7 +45,7 @@ If you are ever working in a group on these and you already know the answer (or 
 
 ## Algorithms
 
-Record your answers to the following questions in a file called `algorithms.txt`.  
+Record your answers to the following questions in your text file called `questions.txt`.  
 If creating this file takes you more than 30 seconds, then just start the questions, recording them any way you can.
 
 The following exercises are focused on the logic of algorithms, rather than the exact formatting of pseudocode or flowcharts to describe them.  
@@ -221,7 +214,7 @@ and paste that into a **new Python file** with the same name, `cateringcalculato
 
 ## Save your work
 If you did your algorithms from earlier in this prac using the computer, you can copy and paste the text into your new PyCharm project.  
-PyCharm lets you create text files, so right-click the project folder and choose **New > File** and name this one `algorithms.txt`  
+PyCharm lets you create text files, so right-click the project folder and choose **New > File** and name this one `questions.txt`  
 
 Note that this is a **text file**, not a Python file (or a Word document or whatever).  
 Just put normal (unformatted) text in here and make sure you have simple headings for each question to help you (and us) find the questions that match the answers.   
@@ -231,5 +224,6 @@ _Keep every file you ever write in this subject._
 
 ## Submit
 Now **submit your work to LearnJCU**.
-For the first week, we're flexible with how you record your work - photos of hand written work on paper, Word documents, text files... whatever you did.  
-In future practicals, we'll specify the files for you to create and submit.  
+For the first week, we're flexible with how you record your work.  
+Ideally, upload your answers in a text file called `questions.txt`.  
+But for this week only, we'll accept anything that works for you: photos of hand written work on paper, Word documents, text files... whatever you did.  
