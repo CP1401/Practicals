@@ -1,8 +1,8 @@
 # Practical 08 - Lists 
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date for your situation.**  
+**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 As you do individual work on your computer, if you need help, start by talking to your peers.  
-You can use Slack to ask questions of others in the class (but you don't need to post your answers there).
+You can use Slack to ask questions of others in the class.
 
 This practical builds on the **Lists lecture** as well as previous practicals.  
 If you haven't learned from those, then go back and do so before continuing with this practical work.

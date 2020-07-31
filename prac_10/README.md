@@ -1,6 +1,6 @@
 # Practical 10 - Files 
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date for your situation.**  
+**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
 
@@ -28,7 +28,7 @@ How many false statements are there in the list; 0, 1, 2 or 3?
 # Python Coding - Files
 
 As you do individual work on your computer, if you need help, start by talking to your peers.  
-You are encouraged to use Slack to ask questions of others in the class (but you don't need to post your answers there).
+You are encouraged to use Slack to ask questions of others in the class.
 
 ## Example
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  

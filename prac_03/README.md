@@ -1,15 +1,9 @@
 # Practical 03 - Decision Structures 
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date for your situation.**  
+**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
 By now you should be able to use PyCharm easily enough to edit text files. Get started straight away.
-
-## Collaboration 
-External students can do the group activities individually.   
-Internal students, **form a group of 2 or 3** to do the next two sections (until we get to the programming parts when you can work individually but help each other out if needed).  
-Try and remember your new friends' names and use them when you can to help reinforce them in your memory.  
-What do they like that starts with the first letter of their name?   
 
 ## Quick Questions
 Answer these quick questions in your `questions.txt` file.  

@@ -1,10 +1,7 @@
-# Coding Checkpoint 2
+# Practical 09 - Coding Checkpoint 2 & Strings
 
-**This checkpoint IS an assessed practical, but is also a collection of practice exercises for self-evaluation based on things you should know by now (nothing new).**  
-You DO need to submit your (own) work, even though solutions are provided.  
-
-Solutions for these checkpoint questions are (will be) provided as 
-worked solution demonstration videos in your LearnJCU site (or live lecture/recording).  
+Solutions for these checkpoint questions are provided as 
+worked solution demonstration videos.  
 But please do your own solutions before watching ours!
 
 ### Use Docstrings

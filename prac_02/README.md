@@ -8,13 +8,8 @@ Do not make the easy bits hard by not reading the instructions.
 We want the challenge to be in the new things you're learning and trying, not in the reading and paying attention to what the questions ask.  
 Don't waste time by trying to save time skim-reading. Just read... and understand... then do.  
 
-As you do the early non-coding questions, you can write your answers in a simple text file (`questions.txt`).  
-Use whatever text editor you can get to the fastest so you don't waste any time before starting.
-
-# Collaboration 
-External students can do the group activities individually.   
-Internal students, **form a group of 2 or 3** to do the next two sections (until we get to the programming parts when you can work individually but help each other out if needed).  
-Try and remember your new friends' names and use them when you can to help reinforce them in your memory. What do they like that starts with the first letter of their name?   
+As you do the early non-coding questions, you can write your answers in a simple text file called `questions.txt`.  
+Use whatever text editor you like, but you can use PyCharm to edit text files.
 
 ## Quick Questions
 
@@ -35,7 +30,7 @@ If you have a different answer, try and figure out why/how you arrived at differ
 Is there a meaningful way that you can explain your answer, perhaps a diagram that would help?  
 
 As you do individual work on your computer, if you need help, start by talking to your peers.  
-External students are encouraged to use Slack to ask questions of others in the class (but you don't need to post your answers there).
+External students are encouraged to use Slack to ask questions of others in the class.
 
 To use PyCharm as your text editor:
 

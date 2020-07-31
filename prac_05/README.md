@@ -1,10 +1,11 @@
-# Coding Checkpoint 1 
+# Practical 05 - Coding Checkpoint 1 
 
-**This is not an assessed practical, but a collection of practice exercises for self-evaluation.**  
-You do not need to submit anything for this work.  
+**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
 Please note that you already have plenty of practice questions in the first 4 practicals. Do these!  
-Solutions for these checkpoint questions are provided as worked solution demonstration videos in your LearnJCU site (or live lecture/recording).
+Solutions for these checkpoint questions are provided as worked solution demonstration videos.
+
+Do the numbered questions in a file called `programs.py`
 
 ## Input, Processing, Output
 
@@ -46,6 +47,7 @@ Example, if the inputs were `10` and `20`, you would print:
     10 11 12 13 14 15 16 17 18 19 20 totals: 165 
 
 ## All Together Now
+File: `happy_products.py`
 
 Happy Products is an exciting new company that provides happy products to people who use their awesome new software...  
 But it's up to you to write this awesome new software.
@@ -70,3 +72,15 @@ The instructions are:
 > Enter the number of products you want to buy and your chosen price.
 > If you buy 0-5 items, they're full price, over 5 items and each one is 10% off!
 
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+- programs.py with all of the numbered checkpoint questions: 
+
+1. Percentage program (I, P, O)
+2. Time of day (Decisions)
+3. Coffee orders (Decisions)
+4. Coffee order error-checking (Repetitions)
+5. Low-high printing (Repetitions)
+
+- happy_products.py (The All Together Now question)
