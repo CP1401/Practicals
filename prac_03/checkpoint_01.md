@@ -3,7 +3,7 @@
 **This is not an assessed practical, but a collection of practice exercises for self-evaluation.**  
 You do not need to submit anything for this work.  
 
-Please note that you already have plenty of practice questions in the first 4 practicals. Do these!  
+Please note that you already have plenty of practice questions in the first 3 practicals. Do these!  
 Solutions for these checkpoint questions are provided as worked solution demonstration videos in your LearnJCU site (or live lecture/recording).
 
 ## Input, Processing, Output
