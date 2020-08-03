@@ -1,4 +1,4 @@
-# Practical 01 - Problem solving and algorithms 
+# Practical 01 - Problem Solving and Algorithms
 
 **Welcome to practicals!**
 

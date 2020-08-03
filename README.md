@@ -3,20 +3,16 @@
 This repository contains instructions and resources for practicals for the subjects CP1401, CP1801 and CP5639 at James Cook University.  
 Complete instructions are found in each prac folder.
 
-## Practical Content
-Practical numbers do not necessarily correspond to weeks.
-E.g. some subject offerings run in 10 weeks, some in 13 weeks.
+**These practicals are for six-week offerings of CP1401. If you are enrolled in a 10 or 13-week offering, please go [here](https://github.com/CP1401/Practicals/tree/master).**
 
-* [Practical 01 - Problem Solving](./prac_01)
-* [Practical 02 - Input, Processing and Output](./prac_02)
-* [Practical 03 - Decision Structures](./prac_03)
-* [Practical 04 - Repetition Structures](./prac_04)
-* Practical 05 - Assignment Work and [Coding Checkpoint 1](./checkpoints/checkpoint_01.md) 
-* [Practical 06 - Functions 1](./prac_06)
-* [Practical 07 - Functions 2](./prac_07)
-* [Practical 08 - Lists](./prac_08)
-* [Practical 09 - Coding Checkpoint 2 & Strings](./checkpoints/checkpoint_02.md) 
-* [Practical 10 - Files](./prac_10)
+## Practical Content
+
+* [Practical 1 - Problem Solving and Algorithms](./prac_01)
+* [Practical 2 - Decision Structures](./prac_02)
+* [Practical 3 - Repetition Structures and Coding Checkpoint 1](./prac_03)
+* [Practical 4 - Functions](./prac_04)
+* [Practical 5 - Lists and Coding Checkpoint 2](./prac_05)
+* [Practical 6 - Files and Strings](./prac_06) 
 
 ## Practicals are assessed
 
