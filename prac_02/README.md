@@ -1,117 +1,173 @@
-# Practical 02 - Input, Processing and Output 
+# Practical 03 - Decision Structures 
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
+**All students (internal and external), please submit your prac work via LearnJCU each week by the due date for your situation.**  
 
-## Read and Understand
-Make sure you read the instructions carefully.  
-Do not make the easy bits hard by not reading the instructions.  
-We want the challenge to be in the new things you're learning and trying, not in the reading and paying attention to what the questions ask.  
-Don't waste time by trying to save time skim-reading. Just read... and understand... then do.  
+Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
+By now you should be able to use PyCharm easily enough to edit text files. Get started straight away.
 
-As you do the early non-coding questions, you can write your answers in a simple text file (`questions.txt`).  
-Use whatever text editor you can get to the fastest so you don't waste any time before starting.
-
-# Collaboration 
+## Collaboration 
 External students can do the group activities individually.   
 Internal students, **form a group of 2 or 3** to do the next two sections (until we get to the programming parts when you can work individually but help each other out if needed).  
-Try and remember your new friends' names and use them when you can to help reinforce them in your memory. What do they like that starts with the first letter of their name?   
+Try and remember your new friends' names and use them when you can to help reinforce them in your memory.  
+What do they like that starts with the first letter of their name?   
 
 ## Quick Questions
+Answer these quick questions in your `questions.txt` file.  
+For questions 3-6, calculate the result of the expression using the following as the variable values:  
+```python
+a = 2
+b = 3
+c = 4
+```
 
-1.	Write two variable names that would be valid and well-named.
-2.	Write two variable names that would be valid but not well-named.
-3.	Write two variable names that would not be valid.
-4.	What is the naming convention for variables in Python?
-5.	What is a constant? Give an example of when you would use one.
-6.	What is the naming convention for constants?
+1. What is the "not equal to" operator in Python?
+2. What is the "less than or equal to" operator in Python?	
+3. b + c * a > a ** b  
+4. True or (c ** b - a % b > c ** c)  
+5. not True and False or True  
+6. (a * b + c) % 2 == 0  
+
+## Patterns
+We have learned 5 common **decision patterns** and when to use them (the "best tool for the job"):
+
+1. if, no else
+2. if-else
+3. if-elif-else
+4. if-elif no else
+5. if, if, if...
+  
+**Which pattern** would be the most appropriate choice for each of the following situations: 
+
+1. Deciding what coffee to make based on a customer's order (flat white, cappuccino, piccolo, long black, espresso...)
+2. Deciding whether to toast a customer's sandwich  
+3. Recording what foods a customer is allergic to (ask for each allergen)
+4. Calculating tax based on income - could be one of several tax brackets 
+5. Handling the "play again?" question at the end of a computer game level
+6. Determining if a frog is poisonous based on its colour
+7. Determining if a frog is poisonous based on its colour, tongue length and number of eyes
+
 
 ## Logic Exercise
-A drawer contains 10 black and 10 white socks that are all mixed up.
-What is the fewest number of socks you can take from the drawer _without looking_ 
-and be sure to get a pair of the same colour?
 
-When you've decided on an answer for this, discuss it with a group near you.  
-If you have a different answer, try and figure out why/how you arrived at different answers.  
-Is there a meaningful way that you can explain your answer, perhaps a diagram that would help?  
+When asked her 3 children's ages, Mrs. Muddled said that Alice is the youngest unless Bill is, and that if Carl isn't the youngest then Alice is the oldest.  
+Who is the oldest and who is the youngest?
+
+## Note
+
+Before we get on to writing code, we need to highlight a very common error.
+
+When using compound Boolean expressions (sounds fancy doesn't it?) with **and** and/or **or**, you need to make each side of the expression complete.  
+Example:
+```
+if age < 0 or > 100  # not OK
+```
+This is NOT OK, because the right side (after the or) is just `> 100`
+which is incomplete and cannot be determined.  
+In English, we often shortcut this when we speak (e.g. the above could be said "if age is less than zero or greater than one hundred") – makes sense to us, but in pseudocode and code, you can't take that shortcut.  
+You need to restate the variable to make the expression complete so that the code can run (and so pseudocode makes sense).  
+Example:
+```
+if age < 0 or age > 100	 # OK
+```
+
+# Python Coding - Decision Structures
 
 As you do individual work on your computer, if you need help, start by talking to your peers.  
-External students are encouraged to use Slack to ask questions of others in the class (but you don't need to post your answers there).
-
-To use PyCharm as your text editor:
-
-- Run PyCharm 
-- Open your existing Practicals project (made last prac), or if you don't have it with you for some reason, create a new one following the instructions in the last prac.
-- Create a new folder (directory) for `prac_02` (remember not to use spaces, and do not make a new project per prac, only new folders).
-- Now create a new text file: Choose **File > New... > File**  (not Python file)  
-- Name your file `questions.txt` (the `.txt` extension means PyCharm won't try and correct your Python code... it's just text)
-- Make sure your new file is inside the prac_02 folder. If it isn't, just drag it in.  
-
-
-# Python Coding - Input, Processing and Output
+External students are encouraged to use Slack to ask questions of others in the class.
 
 ## Example
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  
-Just read along and understand. Do not "do" any of this, just read it and make sure you understand.  
+Just read along and understand. Do not "do" any of this, just read it and make sure you understand. Ask your peers if you need any help.    
+Use this example (and the lecture teaching) as a reference when you do your own work.
  
 ### Problem Description:
-Leia and her friend Han are enjoying a nice meal at a restaurant when they realise it's a public holiday and there's a surcharge.  
-She wants to find out what the cost of the meal will be including the surcharge.  
-Leia wants to write a program on her laptop to figure this out but complains that her hands are dirty. Han says, "My hands are dirty too; what are you afraid of?"
+The Automated Steakhouse needs a program to tell customers how long they can expect to wait for their steak.  
+The customer has three options: "rare", "medium" and "well-done" - 
+if they enter anything else, they receive an error message. Rare steaks take 2 minutes to cook, medium steaks take 4 minutes to cook, and well-done steaks require 6 minutes.
 
-When you break it down and remove the irrelevant parts, you can see this is a simple problem that follows the basic pattern:
-- Input
-- Processing
-- Output 
+When we decompose the problem, looking for nouns, verbs and "decision" words, we can see things like "options" and "if", so we're going to be using decisions.  
+We can see multiple cases/paths and their conditions.  
+Also, we can tell that there is a default case - the error message. 
+
+What pattern will we use?  
+This looks like a menu-style problem and has multiple cases with a default, so...  
+It's clearly the **if-elif-else** pattern.
 
 ### Algorithm
 
+Notice that in pseudocode we use "else if", not "elif", since "elif" is code specific to Python, and it means "else if".  
+
 ```
-get original_price and surcharge_rate
-extra_charge = original_price * surcharge_rate
-total_price = original_price + extra_charge
-display total_price  
+get choice
+if choice == "rare"
+    display "2 minutes"
+else if choice == "medium"
+    display "4 minutes"
+else if choice == "well-done"
+    display "6 minutes"
+else
+   display error message
 ```
 
-We could have done the processing calculation either in one step or two.  
-Using more steps with good variable names is usually more readable and extensible, but either way is mostly OK.  
-  
-Also note that here we have used terms written like `original_price`, valid variable names.  
-It's fine if you want to use `original price` or something similar, but doing it like variables means that you can copy-and-paste your pseudocode and then convert it to Python without rewriting your terms.  
-
-Note also that we used the term, `surcharge_rate` and not just `surcharge`.  
-We could have used something like `surcharge_percentage`, but if we had used just `surcharge`, we might find it hard to 
-remember if it means surcharge like 15% (0.15) or like $15 (amount).  
-**Variable names should be unambiguous.**
 
 ### Code
 
 ```python
-original_price = float(input("Original price: $"))
-surcharge_rate = float(input("Surcharge % (e.g. 0.15 is 15%): "))
-extra_charge = original_price * surcharge_rate
-total_price = original_price + extra_charge
-print("The total meal price is $", total_price, sep="")
+choice = input("Steak choice (rare, medium or well-done): ")
+if choice == "rare":
+    print("2 minutes")
+elif choice == "medium":
+    print("4 minutes")
+elif choice == "well-done":
+    print("6 minutes")
+else:
+    print("Ain't no steak like that here")
 ```
 
 ### Testing
+Remember that when testing decision structures, we should use test data to produce each path/output.  
+There are 4 possible paths here, so we need to test each one, like:  
 
-Just because the code is written, doesn't mean it works, so we need to test it. How?  
-Put in some meaningful/easy inputs so you can evaluate if the output matches what you expect.  
-E.g. We can easily calculate that 15% of 100 is 15, so a $100 meal with a 0.15 (15%) surcharge should cost $115.
+| Input | Expected Output | Actual Output |
+|---|---|---|
+| rare | 2 minutes | ? |
+| medium | 4 minutes | ? |
+| well-done | 6 minutes | ? |
+| anything | Ain't no steak like that here | ? |
 
-```
-Original price: $100
-Surcharge % (e.g. 0.15 is 15%): 0.15
-The total meal price is $115.0
-```
 
-Looks good.
+### Things to do
 
 Create a new Python file, `example.py` (File > New > Python File)    
-**Now, you type this code in (don't copy it)**, and **test it** with some other values.  
-The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g. use autocomplete!), 
-type code accurately, and develop an eye for detail.
+**Now, you type this code in (don't copy it)**, and **test it** with the planned test values.  
+As you type into PyCharm, watch how the IDE helps you complete the task. E.g. when you press Enter after a colon, it automatically indents.  
+You should also try typing your `elif` or `else` statements completely before you indent/outdent and watch to see that PyCharm automatically puts them in the right position!
 
+**Now, make these changes** to help you understand the code:
+
+- Add another case: "burnt" should take 8 minutes
+- Try testing with "Rare" instead of "rare". What happens?  Apparently `"Rare" != "rare"`, but you knew that already.
+
+We could handle this using something like:
+```python
+if choice == "rare" or choice == "Rare":
+```
+**but** what about `"RARE"`, isn't that also the same thing?  
+
+We are going to jump ahead to some string processing and learn to use the `lower()` method...  
+
+We can essentially ignore the upper/lower case by converting our choice string to lower case.  
+We can either do this for each and every condition, or (better), just when we get the input.  
+**Try this** in your code now:  
+
+```python
+choice = input("Steak choice (rare, medium or well-done): ").lower()
+```
+
+So, we get the input string and immediately convert it to lower case, which means inputs like "Rare" or "RARE" or "RaRe" all become "rare".  
+Nice!
+
+Test this and see if it works.
 
 # Coding Exercises
  
@@ -120,157 +176,192 @@ At the top of each program, put a **comment** (starts with a `#`) with the exerc
 Example:
 
 ```python
-# 2. Miles to Kilometres
-number_of_miles = int(input("Miles: "))
+# 1. Tax
 ...
 ``` 
 
-## 1. Discount Price
-**Write a complete Python program** that calculates the discounted price of an item given an original price and a fixed discount of 20%.  
-Here is the algorithm already done for you in pseudocode:
-```
-get original_price
-discount = original_price * 0.2
-new_price = original_price – discount
-print new_price
-```
+## 1. Tax
+The following problem is partly done for you. Complete your parts:
 
-**Test** this using meaningful test data that you can understand.  
-Once you have done this, adjust your program so that `0.2` is a **named constant** instead of a **magic number**.  
-Test it again.  
-Always test your programs after you modify them. You might have broken something.  
+The Python Party wins government at the next election and introduce a simpler tax system that works like this:
 
-### Commenting Out Code
-Now that you want to move on to the next exercise, you _could_ start a new file, but just going to keep using the same one.  
-However, you don't want to _run_ the old programs as well as the new one, so you can "comment out" the previous program code.  
-To do this, select the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
+- If you earn under $100, you pay no tax
+- If you earn between $100 and $1000, you pay 5% tax on the total amount
+- If you earn over $1000, you pay 10% tax on the total amount
 
-## 2. Miles to Kilometres
+First, think of what decision pattern applies.  
+Write the pseudocode for this (in comments), then code up the solution, some of which is started for you below.  
+Note the use of meaningful constants.   
+Get used to using the IDE to finish off these names, so you don't have to type them completely.  
 
-Joseph has recently moved to Australia from the United States. He understands that distances are given in kilometres rather than the miles he is used to.  
-Create a program that will request a distance in kilometres and output the same distance in miles. 
+Make sure to only put your calculation for `take_home_pay` in one spot - it doesn't need to go in each path of the if-elif-else statement.
 
-- 1 mile = 1.60934 kilometres
-- 1 kilometre = 0.621371 miles
+```python
+TAX_RATE_LOW = 0.05  # 5%
+TAX_RATE_HIGH = 0.1  # 10%
+TAX_THRESHOLD_LOW = 100
+TAX_THRESHOLD_HIGH = 1000
 
+print("Python Party Tax Program - Where Tax is a Party")
+income = float(input("Income: $"))
+# TODO: complete this part of the program here
+total_tax = 0
+take_home_pay = 0
 
-## 3. Holiday Cost
-
-Sonje has been invited on a holiday by her friends, but she is not sure how much it will cost in total.  
-She knows the cost of the hotel will be $75 per night.  
-She would like to be able to enter estimates for daily food cost and daily activity cost and then work out the total based on the number of days for the trip.  
-For simplicity, assume that each day's costs are the same.  
-Help Sonje by writing a program that will figure out the total cost for the holiday.  
-Here is some sample output with user entry:
-
-```
-Daily food cost: $65.50
-Daily activities cost: $49
-Number of days: 4
-
-The trip will cost: $758.0
+print("Total tax is: $", total_tax, sep="")
+print("Take home pay is: $", take_home_pay, sep="")
 ```
 
-## 4. i-stop Calculation (Percentage)
-
-A certain car brand has a feature called **i-stop**, where the car's engine is turned off to increase fuel economy.  
-The car's display shows the current percentage of stoppage time that i-stop has been engaged. E.g. this is what the car's display might show:  
-```
-i-stop ON:       1m 2s
-Time Stopped:    2m 41s
-Percentage:      38.5%
-```
-
-Are you seeing how this works? Looks like our I, P, O pattern...  
-Write a program to produce the percentage based on the time on and the time stopped. This should be easy enough for you by now.  
-**But wait...**  
-It's not so easy dealing with minutes and seconds like in the example. How do we handle that?  
-The answer is to develop this program **iteratively** - not trying to solve the whole thing in one go. So...  
-
-For our first version, let's just use total seconds and ignore the minutes+seconds output.  
-This will help us focus on the core of the program before we figure out customising the outputs.   
- 
-- Write a program that asks for the **time on** and the **time stopped** in seconds, then displays the percentage.  
-- Use the same example above to test, so 62 seconds on, 161 seconds stopped should give 0.38509... (don't worry about formatting the output neatly)  
-
-When you have that working, you can then focus on enhancing the program.  
-Keep the inputs the same, but write the output so it appears as above... How?  
-
-Remember how the **modulo** operation works, and is useful for repeating cycles like time in minutes and seconds?  
-We know:  
-`161 seconds is 2 minutes and 41 seconds`  
-Because:    
-`161 // 60 = 2`  
-`161 % 60 = 41`  
-
-Also, 0.385 isn't the percentage we want. We want something more like 38.5%. So, what do we need to do to get from 0.385 to 38.5?    
-(Don't worry about the number of decimal places at this stage; we'll learn about handling that later using string formatting.)
-
-Knowing this, complete your program so that it outputs like we want. As always, use good variable names.  
-Here's a full sample output (with the user inputs 62 and 161 we've been testing with):
+Here is some sample output for two runs of the program, so you know what to test it with ("known-good" data).  
 
 ```
-i-stop on in seconds: 62
-Time stopped in seconds: 161
-
-i-stop ON:      1m 2s
-Time Stopped:   2m 41s
-Percentage:     38.50931677018634%
+Python Party Tax Program - Where Tax is a Party
+Income: $10000
+Total tax is: $1000.00
+Take home pay is: $9000.00
 ```
 
-Before you finish with this file, "uncomment" your previous code for all programs.  
-Leave the comments for headings, but return the code back to normal.  
-To do this, select the lines of code and press `Ctrl+/` for each program.  
+```
+Python Party Tax Program - Where Tax is a Party
+Income: $595
+Total tax is: $29.75
+Take home pay is: $565.25
+```
+
+Again, don't worry about the 2 decimal place currency formatting. We will get to that later.
+
+### Comment out temporarily
+Remember that you can **comment out** code so it doesn't run by selecting the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).  
+Remember also to do this shortcut again when you're finished so that it looks like normal code again - all programs will run - before you submit your work.
+
+## 2. Car Insurance
+
+Car rental company Painz determines whether a renter requires special insurance based on their age.    
+Applicants under 18 are refused hire altogether.  
+Applicants under 25 are required to purchase special insurance.  
+Applicants 25 years and over are not required to purchase insurance.  
+
+Painz needs you to write a program that gets the applicant's age, and outputs "Insurance required", "Insurance not required", or "Hire refused" as appropriate.
+
+## 3. Simple Password Checker
+
+Write a program that has a secret password stored as a constant, and checks a user's password against it.  
+Use string comparison to print either "Access granted" or "Access denied" depending on if the user's password matches the secret.
+
+
+## 4. Dog Years
+Write a Python program to calculate a dog's age in dog years.  
+
+How?  
+Each year of the first two human years is equal to 10.5 dog years.
+After that, each human year equals 4 dog years.
+
+Expected Output:
+```
+Age in human years: 15
+Age in dog years is 73
+```
+
+Start by choosing the decision pattern that best applies to this problem...
+
+### Don't Repeat Yourself
+**Note:** "Don't Repeat Yourself" (DRY) is an important programming principle.  
+In this program, and many of your others, you will have a single output that depends on the True/False value of one or more conditions.  
+But whatever the result, you print `Age in dog years is ...` so the only difference is the numeric value.  
+Calculate the value in the paths - multiple calculation lines, 
+but do the printing only once - _outside_ the paths - no matter what the result of the condition/s.
+
+## 5. Rock of Ages
+
+Ask the user for their age, then tell them what you think of them.
+
+- Use a **compound Boolean expression** to test if the age is valid (between 0 and 120 inclusive) and print "Invalid age" if it's invalid.
+- Then print your own personal response for how old they are. You decide how many different responses you want.
+
+## 6. Speeding Fines
+
+[Current penalties for individuals caught speeding in Queensland](https://www.tmr.qld.gov.au/Safety/Driver-guide/Speeding/Speeding-fines-and-demerit-points.aspx) are: 
+
+| Infringement                                                   | Penalty amount | Demerit points |
+|----------------------------------------------------------------|----------------|----------------|
+| Less than 13km/h over the speed limit                          | $177           | 1              |
+| At least 13km/h but not more than 20km/h over the speed limit  | $266           | 3              |
+| More than 20km/h but not more than 30km/h over the speed limit | $444           | 4              |
+| More than 30km/h but not more than 40km/h over the speed limit | $622           | 6              |
+| More than 40km/h over the speed limit                          | $1,245         | 8              |
+
+Avoid a 6 month suspension by writing a program to ask for the user's **speed** and the **speed limit** and then tell them their penalties/result.
+
 
 # Practice and Extension
 
-These final sections in practicals are not _required_ to be completed for marks, but you will definitely find benefit in completing them for extra practice and to extend yourself.  
+These final sections in practicals are _not required_ to be completed for marks, but you will definitely find benefit in completing them for extra practice and to extend yourself.  
 The more practice you do, the more you develop and "lock in" your new skills.  
 
 Create a new file, `practice.py` to complete these tasks in:
 
-## BMI
-Implement the following algorithm for calculating BMI (body mass index):
+## Coffee Pour and Grind
 
-```
-get height 
-get weight
-bmi = weight / (height ** 2)
-display bmi
-```
+As all good baristas know (right, Raven?), the length of time a shot of coffee pours indicates if the grind level is right:  
 
-## Maths Operators
-There is a list of common mathematical operators in your notes.   
-Write a program that asks the user for two floats called `lhs` and `rhs`, then prints the outputs for the expressions that use those numbers and a maths operator.  
-Note that we are OK with a variable name like `lhs` here because: 
+- 25-35 seconds = OK, leave it
+- under 25 seconds = grind finer (so it pours slower)
+- over 35 seconds = grind courser (so it pours faster)
 
-- it's a very [common abbreviation for "left hand side"](https://en.wikipedia.org/wiki/Sides_of_an_equation) 
-- it is unambiguous in this context
-- there is no better, more obvious name (e.g. it doesn't mean `age` or `score` or anything else)
+Write an algorithm, then a program, to help create a robot that replaces the barista.  
+Give it a cool beard, maybe some tattoos and engaging conversation so the customer still feels the love.   
 
-Example, if the user enters 2.5 and 3, it would print:
+## Good morning, good evening and good night.
 
-```
-2.5 + 3.0 is 5.5
-2.5 * 3.0 is 7.5
-2.5 // 3.0 is 0.0
-...
-```
+Write 4 different versions of a time-based greeting program.  
+(You will use different decision patterns for some of these, as appropriate.)  
 
-Use as many operators as you can - not just these ones.
+In each case, ask the user for the hour of day (0-23).
 
-## Number Conversions
+1. If it is morning, print "Good morning" (otherwise do nothing) 
+2. If it is morning, print "Good morning"; if night time, print "Good night"
+3. Print either: Good morning / good afternoon / good night
+4. Print either: Good morning / good afternoon / good evening / good night
 
-Write as many programs as you can handle that convert values in one unit of measurement to another, such as (and the reverse):
+## Pool pH
 
-- kilograms to pounds
-- fahrenheit to celsius
-- feet and inches to metres and centimetres
-- currencies...
+Given pool pH level:
+
+- 7.4 - 7.6 is ideal, no change
+- Below 7.4, is too acidic, add soda
+- Above 7.6 is too alkaline, add acid
+
+## JCU Grades
+[Grades at JCU work like this](https://www.jcu.edu.au/students/exams-and-results/subject-results-explained) depending on your final percentage for a subject.  
+
+I think you know what to do...  
+Write a program to tell a student what their grade is based on their input subject percentage. 
+
+| Grade | Percentage |
+|-------|------------|
+| HD    | 85%-100%   |
+| D     | 75%-84%    |
+| C     | 65%-74%    |
+| P     | 50%-64%    |
+| N     | < 50%      |
+
+## More...
+Review the 5 patterns and the programs you've written. Which programs use which patterns?  
+Think of more situations and more programs to write for each pattern.   
+Practise the patterns you've used the least by implementing some or all of these.
 
 # Extension
 
-If you're cruising and want more of a challenge, look up [how to do string formatting](https://docs.python.org/3/library/stdtypes.html#str.format) so that you can produce neatly lined up output with a fixed number of decimal positions for the above programs, especially the i-stop one.  
+### Divisibility
+Write a program that takes two numbers, and prints "Divisible" if the first is divisible by the second, and "Not divisible" otherwise. 
+
+## Steak++
+Automated Steak House wants version 2 of their program.
+
+- add a default minimum order time as a constant 
+- handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes, a rare steak will take 5.
+
+You should notice that to handle this properly, you will need to replace your fixed outputs with a calculation (e.g. not "2 minutes", but 3 + 2).  
 
 # Deliverables
 This section summarises the expectations for marking in this practical.
@@ -278,11 +369,15 @@ This section summarises the expectations for marking in this practical.
 questions.txt  with:
 
 - Quick Questions
+- Patterns
 - Logic Exercise
 
 programs.py with:
 
-- Discount Price
-- Miles to Kilometres
-- Holiday Cost
-- i-stop Calculation (Percentage)
+- Automated Steakhouse (updates from example)
+- Tax
+- Car Insurance
+- Simple Password Checker
+- Dog Years
+- Rock of Ages
+- Speeding Fines
