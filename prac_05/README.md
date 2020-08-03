@@ -1,4 +1,4 @@
-# Practical 08 - Lists 
+# Practical 05 - Lists 
 
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date for your situation.**  
 As you do individual work on your computer, if you need help, start by talking to your peers.  
