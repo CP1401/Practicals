@@ -1,4 +1,4 @@
-# Practical 06 - Functions  
+# Practical 04 - Functions  
 
 ## Important! Learn then Do
 Do not attempt this practical without learning from the lectures.  
@@ -10,7 +10,7 @@ Go learn what we are trying to teach you - then, and only then - come back and d
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
 In your PyCharm practicals project, you should be using a new folder for each prac.  
-For this practical, create a new folder called `prac_06` to store all of the files.
+For this practical, create a new folder called `prac_04` to store all of the files.
 
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
 
@@ -494,12 +494,12 @@ Try and produce output like the following:
 ``` 
 
 ## ii. Steakhouse 2
-Write a new version of the [Automated Steakhouse from prac 3](https://github.com/CP1401/Practicals/tree/master/prac_03#example) but:  
+Write a new version of the [Automated Steakhouse from prac 2](https://github.com/CP1401/Practicals/tree/six-weeks/prac_02#example) but:  
 Instead of asking the user for their steak style (e.g. medium rare), ask the chef for a number of minutes and print what the style will be (e.g. 1 minute is rare, 20 minutes is burned).  
 Think about the functions that make sense, including reusing your function for getting a number. 
 
 ## iii. Tax Calculation
- Rewrite the [calculate tax(income) program from prac 3](https://github.com/CP1401/Practicals/tree/master/prac_03#1-tax) but note:  
+ Rewrite the [calculate tax(income) program from prac 3](https://github.com/CP1401/Practicals/tree/six-weeks/prac_02#1-tax) but note:  
 The calculation function should return 2 values (`total_tax` and `take_home_pay`).   
 We did not learn about how to do this in the lecture, but you can return as many values as you want from a function.  
 To store these values, use multiple variables, like:
