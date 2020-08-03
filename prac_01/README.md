@@ -212,7 +212,7 @@ and paste that into a **new Python file** with the same name, `cateringcalculato
 **Run it**... play with it, change it, break it, see what happens...  
 (Don't worry if you don't understand it yet, we've still got a long way to go.)
 
-## *Intermission*
+# *Intermission*
 Because we only have six weeks, our practicals are quite large. If you've done all of the above in one sitting - well done! Now would be a good time to take a break because completing the rest our work.
 
 ## Quick Questions - Variables
