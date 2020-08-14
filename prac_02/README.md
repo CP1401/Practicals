@@ -152,7 +152,7 @@ Create a program that will request a distance in kilometres and output the same 
 ## 3. Holiday Cost
 
 Sonje has been invited on a holiday by her friends, but she is not sure how much it will cost in total.  
-She knows the cost of the hotel will be $75 per night.  
+She knows the cost of the hotel will be $75 per day. (Let's keep it simple and assume days == nights.)   
 She would like to be able to enter estimates for daily food cost and daily activity cost and then work out the total based on the number of days for the trip.  
 For simplicity, assume that each day's costs are the same.  
 Help Sonje by writing a program that will figure out the total cost for the holiday.  

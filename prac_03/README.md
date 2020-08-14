@@ -196,15 +196,23 @@ TAX_RATE_HIGH = 0.1  # 10%
 TAX_THRESHOLD_LOW = 100
 TAX_THRESHOLD_HIGH = 1000
 
+total_tax = 0
+take_home_pay = 0
 print("Python Party Tax Program - Where Tax is a Party")
 income = float(input("Income: $"))
 # TODO: complete this part of the program here
-total_tax = 0
-take_home_pay = 0
 
 print("Total tax is: $", total_tax, sep="")
 print("Take home pay is: $", take_home_pay, sep="")
 ```
+
+Note: with a situation like this, you should see that in all cases, you want to end up with three properly-set variables: 
+
+- total_tax (if you pay no tax, then $0 is the correct total tax)
+- income (don't change this from what the user enters)
+- take_home_pay (this will ALWAYS be income - total_tax)
+
+With that in mind, make sure you **don't repeat yourself (DRY)**. 
 
 Here is some sample output for two runs of the program, so you know what to test it with ("known-good" data).  
 
