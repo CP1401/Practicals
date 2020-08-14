@@ -5,7 +5,7 @@ Complete instructions are found in each prac folder.
 
 ## Practical Content
 Practical numbers do not necessarily correspond to weeks.
-E.g. some subject offerings run in 10 weeks, some in 13 weeks.
+E.g. some subject offerings run in 10 weeks, some in 13 weeks. **If you are enrolled in a six-week offering please go [here for your pracs](https://github.com/CP1401/Practicals/tree/six-weeks).**
 
 * [Practical 01 - Problem Solving](./prac_01)
 * [Practical 02 - Input, Processing and Output](./prac_02)
