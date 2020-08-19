@@ -328,14 +328,16 @@ e.	the median (harder - you will need to use a list)
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-questions.txt  with:
+`questions.txt`  with:
 
 - Quick Questions
 - Logic Exercise
 
+`example.py` with updates
+
 Exercises:
 
-- example.py
-- programs.py with exercises 1, 2, 3 
-- bmi_files.py
-- file_filter.py
+- `example.py`
+- `programs.py` with exercises 1, 2, 3 
+- `bmi_files.py`
+- `file_filter.py`

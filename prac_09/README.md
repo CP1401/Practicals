@@ -326,3 +326,9 @@ Example, if the inputs were `10` and `20`, you would print:
     10 11 12 13 14 15 16 17 18 19 20 totals: 165 
 
 > Do this with a list (much like the earlier question) and use `sum` to calculate the total.
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+- `checkpoint_02.py` with programs 1-8
+- `checkpoint_02_coffee_orders.py` (All Together Now)

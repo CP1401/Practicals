@@ -368,13 +368,15 @@ You should notice that to handle this properly, you will need to replace your fi
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-questions.txt  with:
+`questions.txt` with:
 
 - Quick Questions
 - Patterns
 - Logic Exercise
 
-programs.py with:
+`example.py` with updates
+
+`programs.py` with:
 
 - Automated Steakhouse (updates from example)
 - Tax

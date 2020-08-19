@@ -270,12 +270,12 @@ If you're cruising and want more of a challenge, look up [how to do string forma
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-questions.txt  with:
+`questions.txt` with:
 
 - Quick Questions
 - Logic Exercise
 
-programs.py with:
+`programs.py` with:
 
 - Discount Price
 - Miles to Kilometres

@@ -504,14 +504,16 @@ Columns: 10
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-questions.txt with:
+`questions.txt` with:
 
 - Quick Questions
 - range a) output &  b) parameters
 - Patterns
 - Logic Exercise
 
-programs.py with:
+`example.py` with updates
+
+`programs.py` with:
 
 - Birth Month (updates from example)
 - Error Checking

@@ -75,7 +75,7 @@ The instructions are:
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-- programs.py with all of the numbered checkpoint questions: 
+- `programs.py` with all of the numbered checkpoint questions: 
 
 1. Percentage program (I, P, O)
 2. Time of day (Decisions)

@@ -511,14 +511,16 @@ x, y = function_that_returns_2_values()
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-questions.txt  with:
+`questions.txt` with:
 
 - Quick Questions
 - Good Names
 
+`example.py` with updates
+
 Exercises, each in their own file:
 
-- cofee_ratio.py
-- parity.py
-- previous_pracs.py
-- jcu_grades.py
+- `cofee_ratio.py`
+- `parity.py`
+- `previous_pracs.py`
+- `jcu_grades.py`

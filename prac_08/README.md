@@ -412,6 +412,8 @@ This section summarises the expectations for marking in this practical.
 - Quick Questions
 - List expressions
 
+`example.py` with updates
+
 Exercises, each in their own file:
 
 - `random_numbers.py`

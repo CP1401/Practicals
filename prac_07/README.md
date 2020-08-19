@@ -299,15 +299,15 @@ When you've done that, try adding more string formatting to other questions in t
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-questions.txt with:
+`questions.txt` with:
 
 - Quick Questions
 - Debugging problems and solutions
 
 Exercises, each in their own file:
 
-- debugging.py with code fixed (solutions) if you could figure them out
-- jerry.py
-- dog_years.py
-- seconds.py
-- bmis.py
+- `debugging.py` with code fixed (solutions) if you could figure them out
+- `jerry.py`
+- `dog_years.py`
+- `seconds.py`
+- `bmis.py`
