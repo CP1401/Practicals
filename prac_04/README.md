@@ -82,7 +82,7 @@ What is the fewest number of marbles you could remove from the boxes and look at
 *Note*: This is a very interesting exercise, and one you might not get correct without thinking about it carefully (of course).  
 *Hint*: Make sure you are using all the information you have been provided with, and think about which is the best choice to start with.
 
-# Python Coding - Decision Structures
+# Python Coding - Repetition Structures
 
 ## Example
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  
