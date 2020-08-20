@@ -1,4 +1,4 @@
-# Practical 04 - Decision Structures 
+# Practical 04 - Repetition Structures 
 
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
