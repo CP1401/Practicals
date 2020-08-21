@@ -515,7 +515,6 @@ This section summarises the expectations for marking in this practical.
 
 `programs.py` with:
 
-- Birth Month (updates from example)
 - Error Checking
 - Number Sequences: a, b, c
 - Menu for Smiley/Frowny

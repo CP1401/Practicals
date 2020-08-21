@@ -378,7 +378,6 @@ This section summarises the expectations for marking in this practical.
 
 `programs.py` with:
 
-- Automated Steakhouse (updates from example)
 - Tax
 - Car Insurance
 - Simple Password Checker
