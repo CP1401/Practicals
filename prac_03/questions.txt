@@ -1,0 +1,38 @@
+CP1401 Practical 03 - Decision Structures - Suggested Solutions
+
+## Quick Questions
+Given:
+a = 2
+b = 3
+c = 4
+
+1. What is the "not equal to" operator in Python?  # !=
+2. What is the "less than or equal to" operator in Python?  # <=
+3. b + c * a > a ** b  # True
+4. True or (c ** b - a % b > c ** c)  # True (you don't need to determine right operand, since True or anything is True)
+5. not True and False or True  # True
+6. (a * b + c) % 2 == 0  # True - this is determining if the value (a * b + c), which is 10, is even (% 2 == 0), which it is.
+
+## Patterns
+
+NOTE: It is SO SO important that you do your own work and learn about these patterns.
+It's a complete waste of time and a missed learning opportunity to simply copy these answers.
+You must THINK about these so you can understand and be able to choose the right pattern.
+
+We have learned 5 common **decision patterns** and when to use them (the "best tool for the job"):
+
+1. if, no else
+2. if-else
+3. if-elif-else
+4. if-elif no else
+5. if, if, if...
+
+**Which pattern** would be the most appropriate choice for each of the following situations:
+
+1. Deciding what coffee to make based on a customer's order (flat white, cappuccino, piccolo, long black, espresso...)  # 3. if-elif-else (menu)
+2. Deciding whether to toast a customer's sandwich  # 1. if, no else (you don't do anything if the answer is no)
+3. Recording what foods a customer is allergic to (ask for each allergen)  # 5. if, if, if... each decision is independent of the others
+4. Calculating tax based on income - could be one of several tax brackets  # 3. if-elif-else
+5. Handling the "play again?" question at the end of a computer game level  # 2. if-else
+6. Determining if a frog is poisonous based on its colour  # 2. if-else (two paths - either is or isn't poisonous)
+7. Determining if a frog is poisonous based on its colour, tongue length and number of eyes  # 2. if-else (same as above but with a compound Boolean condition)

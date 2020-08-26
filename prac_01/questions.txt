@@ -1,0 +1,72 @@
+CP1401 Practical 01 - Problem Solving - Suggested Solutions
+
+(Remember that only selected solutions are provided, not all.)
+
+Algorithms
+
+Don't forget to follow both our examples and our guide:
+https://github.com/CP1404/Starter/wiki/Pseudocode-Guide
+
+Algorithm with I, P, O
+
+get dose, yield
+ratio = yield / dose
+display ratio
+
+Algorithm with Selection (Decision)
+
+get money, price
+if money >= price
+    display can afford
+else
+    display can not afford
+
+Note: we could write lots of different things to figure out how much money we have in our collection of coins, e.g.
+money = add up value of coins
+or
+money = 0
+for each coin in collection
+    money = money + value of coin
+etc.
+But let's just keep it simple...
+
+Algorithm with Repetition
+
+get thing from floor
+while there are things on the floor
+    get thing from floor
+or
+repeat until floor is clean
+    get thing from floor
+
+This is a pretty "loose" question, and would not be turned into code, so we don't need a very "tight" (specific) answer.
+If we were writing code to instruct a cleaning robot, then we'd need something much more complete and specific.
+
+
+Problem Decomposition
+
+"A road trip planning system will ask the user for the distance travelled (in km) and the travel time in minutes. The user will then be shown the average speed (in km/hour) over the trip."
+Nouns: system, user, distance, time in minutes, average speed
+Verbs: ask, shown
+
+Algorithm
+
+get distance, time in minutes
+speed in kilometres per minute = distance / time in minutes
+speed in kilometres per hour = in kilometres per hour * 60
+display in kilometres per hour
+
+Note: To help evaluate your own work, you should always TEST using values you understand.
+If I were doing 25 km/hr then in 2 hours, I'd drive 50 km.
+So,
+distance = 50
+time in minutes = 120 (2 hours)
+speed in kilometres per minute = 50 / 120 (0.4166666667)
+speed in kilometres per hour = 0.4166666667 * 60
+speed in kilometres per hour = 25
+Good.
+
+If we had incorrectly written
+speed in kilometres per hour = in kilometres per hour * 60
+Then we could find out this was wrong by testing and getting 0.006944443333 hm/hr!
+If we didn't test it... we wouldn't know

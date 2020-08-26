@@ -1,0 +1,7 @@
+CP1401 Practical 02 - I, P, O - Suggested Solutions
+
+Quick Questions
+2. Anything terse like a, b or inconsistent like this_Variable or misleading/unclear like num_xs
+4. underscore_case
+6. ALL_CAPS
+
