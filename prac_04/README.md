@@ -351,7 +351,8 @@ E.g. calculating the average test score of the class - we know how many students
 
 ### Average Age
 Write a program to calculate the average age of a group of unknown size.  
-Use the sentinel pattern from above. Hint: you will need to keep track of the total age, and the number of people, separately.
+Use the **sentinel** pattern from above.  
+Hint: you will need to keep track of the total age, and the number of people, separately.
 
 ### Smileys Count
 Add to your smiley/frowny program so that when the user quits the program tells them how many smileys and how many frownies they printed. (Don't keep track of invalid choices.)

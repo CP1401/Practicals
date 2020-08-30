@@ -24,12 +24,23 @@ It is before noon and you are coming. Hi!
 It is after noon and you are going. Bye!
 ```
 
+### Note: 
+Remember the **DRY (Don't Repeat Yourself)** principle?  
+The intention with this exercise is for you to see that what the user inputs for these 2 questions are unrelated.  
+You can store the results to be printed in string variables and then print a _SINGLE_ output using those variables.  
+You do _NOT_ want to handle this with 4 separate print statements; one for each possible outcome.  
+Why not?  
+Because in _ALL_ cases, you print one thing. So, only print once... but customise what you print based on the 2 user inputs.  
+Also, there's no such thing as "noon" :) As soon as you hit 12, it's "after noon".
+
 3. Coffee orders made simple.  
 
 - Ask the user for white or black coffee  
 - Ask for their chosen size: small, medium or large
 - Then print the cost: For Black, Small = $3, Medium = $4, Large = $5. White coffee costs $1 more per size.  
-- If a user makes a mistake with their order, just pick the more expensive option :)  
+- If a user makes a mistake with either part of their order, just pick the more expensive option in each case :)  
+E.g. a purple small coffee would cost $4 and a black tiny coffee would cost $5.  
+(This can be done by thinking about the default case for each user input.)    
 Note: You can use the string methods `.upper()` or `.lower()` to make your string comparisons case insensitive, e.g.  
 
 ```python
