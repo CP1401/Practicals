@@ -520,7 +520,7 @@ This section summarises the expectations for marking in this practical.
 
 Exercises, each in their own file:
 
-- `cofee_ratio.py`
+- `coffee_ratio.py`
 - `parity.py`
 - `previous_pracs.py`
 - `jcu_grades.py`
