@@ -83,15 +83,65 @@ The instructions are:
 > Enter the number of products you want to buy and your chosen price.
 > If you buy 0-5 items, they're full price, over 5 items and each one is 10% off!
 
+## Sample Output
+Here is some sample output from a run of the program:
+
+```
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: w
+Invalid choice
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: I
+Enter the number of products you want to buy and your chosen price.
+If you buy 0-5 items, they're full price, over 5 items and each one is 10% off!
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: c
+Number of products: -1
+Invalid input
+Number of products: 0
+Price: 450.32
+0 x $450.32 products = $0.00
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: C
+Number of products: 3
+Price: 12.34
+3 x $12.34 products = $37.02
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: c
+Number of products: 6
+Price: 100
+6 x $100.00 products = $540.00
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: q
+Farewell
+```
+
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
 - `programs.py` with all of the numbered checkpoint questions: 
+    1. Percentage program (I, P, O)
+    2. Time of day (Decisions)
+    3. Coffee orders (Decisions)
+    4. Coffee order error-checking (Repetitions)
+    5. Low-high printing (Repetitions)
 
-1. Percentage program (I, P, O)
-2. Time of day (Decisions)
-3. Coffee orders (Decisions)
-4. Coffee order error-checking (Repetitions)
-5. Low-high printing (Repetitions)
-
-- happy_products.py (The All Together Now question)
+- `happy_products.py` (The All Together Now question)
