@@ -11,7 +11,7 @@ def main():
     score = float(input("Score: "))
     while score >= 0:
         grade = determine_grade(score)
-        print(f"{score} = {grade}")
+        print(f"The score {score} is {grade}")
         score = float(input("Score: "))
 
     number_of_scores = int(input("How many random scores: "))
