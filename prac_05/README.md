@@ -24,12 +24,23 @@ It is before noon and you are coming. Hi!
 It is after noon and you are going. Bye!
 ```
 
+### Note: 
+Remember the **DRY (Don't Repeat Yourself)** principle?  
+The intention with this exercise is for you to see that what the user inputs for these 2 questions are unrelated.  
+You can store the results to be printed in string variables and then print a _SINGLE_ output using those variables.  
+You do _NOT_ want to handle this with 4 separate print statements; one for each possible outcome.  
+Why not?  
+Because in _ALL_ cases, you print one thing. So, only print once... but customise what you print based on the 2 user inputs.  
+Also, there's no such thing as "noon" :) As soon as you hit 12, it's "after noon".
+
 3. Coffee orders made simple.  
 
 - Ask the user for white or black coffee  
 - Ask for their chosen size: small, medium or large
 - Then print the cost: For Black, Small = $3, Medium = $4, Large = $5. White coffee costs $1 more per size.  
-- If a user makes a mistake with their order, just pick the more expensive option :)  
+- If a user makes a mistake with either part of their order, just pick the more expensive option in each case :)  
+E.g. a purple small coffee would cost $4 and a black tiny coffee would cost $5.  
+(This can be done by thinking about the default case for each user input.)    
 Note: You can use the string methods `.upper()` or `.lower()` to make your string comparisons case insensitive, e.g.  
 
 ```python
@@ -72,15 +83,66 @@ The instructions are:
 > Enter the number of products you want to buy and your chosen price.
 > If you buy 0-5 items, they're full price, over 5 items and each one is 10% off!
 
+## Sample Output
+Here is some sample output from a run of the program:
+
+```
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: w
+Invalid choice
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: I
+Enter the number of products you want to buy and your chosen price.
+If you buy 0-5 items, they're full price, over 5 items and each one is 10% off!
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: c
+Number of products: -1
+Invalid input
+Number of products: 0
+Price: 450.32
+0 x $450.32 products = $0.00
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: C
+Number of products: 3
+Price: 12.34
+3 x $12.34 products = $37.02
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: c
+Number of products: 6
+Price: 100
+6 x $100.00 products = $540.00
+Menu:
+(I)nstructions
+(C)alculate
+(Q)uit
+Choice: q
+Farewell
+```
+
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-- `programs.py` with all of the numbered checkpoint questions: 
-
+- `programs.py` with all of the numbered checkpoint questions:
+ 
 1. Percentage program (I, P, O)
 2. Time of day (Decisions)
 3. Coffee orders (Decisions)
 4. Coffee order error-checking (Repetitions)
 5. Low-high printing (Repetitions)
 
-- happy_products.py (The All Together Now question)
+- `happy_products.py` (The All Together Now question)
