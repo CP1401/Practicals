@@ -137,11 +137,12 @@ Farewell
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-- `programs.py` with all of the numbered checkpoint questions: 
-    1. Percentage program (I, P, O)
-    2. Time of day (Decisions)
-    3. Coffee orders (Decisions)
-    4. Coffee order error-checking (Repetitions)
-    5. Low-high printing (Repetitions)
+- `programs.py` with all of the numbered checkpoint questions:
+ 
+1. Percentage program (I, P, O)
+2. Time of day (Decisions)
+3. Coffee orders (Decisions)
+4. Coffee order error-checking (Repetitions)
+5. Low-high printing (Repetitions)
 
 - `happy_products.py` (The All Together Now question)
