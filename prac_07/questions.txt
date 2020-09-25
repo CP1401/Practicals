@@ -1,0 +1,20 @@
+"""CP1401 Practical 7 - Suggested Solution - Questions"""
+
+1. Where should global constants be placed in a program?
+At the top - after import statements
+
+2. What are two reasons why you should not use global variables?
+They make the program harder to debug since they could be changed anywhere by any function.
+They make functions (which use those globals) harder to reuse.
+
+3. When you have two variables with the same name but in different functions, these said to have different ____?
+Scopes
+
+4. What do you call the red dot in the margin in PyCharm that pauses the program running when using the debugger?
+Break point
+
+5. Briefly explain what would be wrong if you had a line of code like SOME_VALUE += 1 (assume that SOME_VALUE is actually a meaningful name).
+Since the name is ALL_CAPS, it must be a constant... but it's being changed, so it should remain constant or be a (lowercase name) variable.
+
+6. What is the single most important design principle for designing functions?
+Single Responsibility Principle (SRP), or loosely, "Do one thing"
