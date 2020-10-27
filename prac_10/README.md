@@ -253,27 +253,28 @@ Read the input file, and then for each line that starts with the search string, 
 
 ### Interesting Examples:
 
-- This file is a "Markdown" text file. The headings all start with '#'.  
+- The practical instructions file you are reading now is a "Markdown" text file. The headings all start with '#'.  
     If the user chose this file and searched for '#', then the output file would contain all of the headings.
 - Similarly, HTML headings are `<h1>`, `<h2>` etc. so you could filter/strip those.
-- Python comments use `#` or `"""`, so why not try writing getting your program to extract just the comments.
+- Python comments use `#` or `"""`, so why not try getting your program to extract just the comments.
     You would need to `strip()` the lines to account for indenting.    
 
 ### Extensions (Optional):
 
-- Get your program to simply search for lines that have the search string _anywhere_
-    Lindsay starts a lot of sentences with "So". If you had a [transcript file](./transcript.txt) of one of his lectures and searched for "So", you could make a new file that contained those sentences.  
+- Get your program to simply search for lines that have the search string _anywhere_  
+  E.g. Lindsay starts a lot of sentences with "So". If you had a [transcript file](./transcript.txt) of one of his lectures and searched for "So", you could make a new file that contained those sentences.  
 - Filter in other ways (not based on a user string), like lines that start with numbers or vowels or white space, etc.
 
 ### How are you going with the fundamentals?
 
-In *all* of your programs by now, you should have clear ideas about the fundamental principles we've learned, so (example):  
+In *all* of your programs by now, you should have clear ideas about the fundamental principles we've learned, so how would these principles apply to this exercise/program?  
 
 - You know if you have to refer to the filename (literal) more than once, then it should be a... CONSTANT,
-- You know SRP... your functions should not (usually) print, when they should return... so you can reuse the exact same function from prac 6 for this program,
-- You know your names must be meaningful,
+- You know SRP... your functions should not (usually) print, when they should return... so you can reuse the exact same (bmi) function from prac 6 for this program,
+- The above is also an example of DRY - don't repeat yourself with a function that is really similar to one you already have,
 - You know you use definite iteration (for loop) for things like a fixed number of times,
 - You know every time you open a file, you should close it as soon as you're finished,
+- You know your names must be meaningful,
 - You know programming is fun...
 
 
