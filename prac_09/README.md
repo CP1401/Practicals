@@ -30,8 +30,19 @@ Write a function that prints a line of 40 hyphens.
 
 2. **Is it even?**  
 Write a function to determine if an integer passed into it is even.  
-Note: In prac 6 we did this for if the number was odd, so it's nearly identical.  
-Don't copy that code unless you need help. Remember, we should know this now... so notice if you don't know how to do what you've already done before...
+Note: In prac 6 we did this for if a number was odd, so it's nearly identical.  
+Don't copy that code unless you need help.  
+Remember, we should know this now... so notice if you don't know how to do what you've already done before...
+
+Remember **SRP**? This function has ONE job... NOT printing, NOT asking for user input, NOT returning a string...  
+If you have written this function correctly, then the following test code should work (copy it and see):
+```
+age = int(input("Age: "))
+if is_even(age):
+    print("Your age is even!")
+else:
+    print("Your age is not even")
+```
 
 3. **Get Non-empty String**  
 Write a function to get a non-empty string. That is, you should be able to enter any string as long as it's not "".  
