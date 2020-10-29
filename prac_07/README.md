@@ -103,7 +103,7 @@ File: `jerry.py`
 
 In the Functions 2 lecture, you had a "Do this now" question:
 
-> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine if he will get any speeding fine. 
+> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine if he will get any speeding fine.  
 
 You (we) wrote the pseudocode for the main function for this:
 
@@ -116,12 +116,24 @@ function main
     print fine
 ```
 
+**Note**: The value of the fine as a **number** is much better to return than a string, or a whole message.  
+What if we wanted to determine a new bank balance after paying the fine?
+
+```
+bank_balance -= fine
+```
+
+This is an example of **SRP**. It is the `determine_fine` function's job ONLY (single responsibility) to determine/calculate the actual fine as an actual number.  
+It is counter-productive for this function to print the fine or to format with a '$' or anything else.  
+< insert "you had one job" meme here ;) > 
+
 **Write the complete Python program** for this in `jerry.py`.
 
 Remember that you've done some of this before, so copy your previous work:  
 
 - [Prac 2 where we calculated km -> m](../prac_02/README.md#2-miles-to-kilometres) 
-- [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)
+- [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)  
+Note that we only want to know the fine as a number, not the demerit points or any other messages.
 
 **Test** this using meaningful test data that you can understand.  
 
@@ -154,9 +166,12 @@ i-stop ON:      1m 2s
 Time Stopped:   2m 41s
 Percentage:     38.50931677018634%
 ```
+Note: the original program from prac 2 was about i-stop values, but this has nothing to do with that.  
+The technique for figuring out minutes and seconds from just seconds is the same, so you can copy your work, 
+but do change any references to the old context. 
 
 Rewrite this program using a function that **takes in a number** of seconds and **returns a string** to display that value in minutes and seconds.  
-Write a main program that simply displays a bunch of different seconds values in minutes and seconds using a loop.  
+Write a main program that displays a bunch of different seconds values in minutes and seconds using a loop.  
 Example output: 
 ```
 0 seconds is 0m 0s
@@ -167,9 +182,30 @@ Example output:
 3175 seconds is 52m 55s
 ```
 
-Note: the original program from prac 2 was about i-stop values, but this has nothing to do with that.  
-The technique for figuring out minutes and seconds from just seconds is the same, so you can copy your work, 
-but do change any references to the old context. 
+To help you understand **SRP** even more, let's think about what this function should `return`.  
+Should it return something like?
+
+`635 seconds is 10m 35s`
+
+Well, what if we wanted to use the _same_ function for different kinds of tasks?  
+Let's do that now.
+
+Add another small part to this same program - after the loop - that asks the user for their favourite duration in seconds, 
+then prints it in minutes and seconds, like
+
+```
+Favourite duration in seconds: 639
+You love 10m 39s
+```
+
+So... if our function returned something like `635 seconds is 10m 35s`, then we could NOT use it for this task, even though it's really similar.  
+Do we need a second function that returns something like `You love ...`?  
+NO! That would be repeating ourselves and we know... **DRY**.  
+
+So... we need to remember SRP.  
+This function has **one job**, and it's not printing or returning a whole "n seconds ...", it's ONLY the bit that formats the seconds (argument) in minutes and seconds...  
+which we can now reuse in different situations!  
+SRP leads to function reusability and helping us not repeat ourselves :).
 
 ## 4. BMIs
 File: `bmis.py`  
