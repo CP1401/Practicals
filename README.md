@@ -25,11 +25,11 @@ the **start** of the next practical. After that, it's too late.
 Assessment will be based on completing the tasks up to but not including
 the practice/extension section. You will be marked as follows:
 
-4. Excellent response to all questions (Always aim for this!)
-3. Good response to most or all questions, but some omissions or problems
-2. Reasonable response to some questions, but some significant omissions or problems
-1. Reasonable response to at least one question
-0. Minimal or no attempt
+- 4 = Excellent response to all questions (Always aim for this!)
+- 3 = Good response to most or all questions, but some omissions or problems
+- 2 = Reasonable response to some questions, but some significant omissions or problems
+- 1 = Reasonable response to at least one question
+- 0 = Minimal or no attempt
 
 **Note**: This subject is all about learning best practices and patterns for solving problems using programming (in Python) and it is important that you learn these important foundations according to the teaching philosophy of the subject. For this reason (to help you learn properly!), you will not achieve full marks for working/complete practicals that are not done in the way that we prescribe. Here are some reasons that you might lose marks for your practicals (and assignments):
 
