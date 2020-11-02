@@ -213,7 +213,12 @@ and paste that into a **new Python file** with the same name, `cateringcalculato
 (Don't worry if you don't understand it yet, we've still got a long way to go.)
 
 # *Intermission*
-Because we only have six weeks, our practicals are quite large. If you've done all of the above in one sitting - well done! Now would be a good time to take a break because completing the rest our work.
+Because we only have six weeks, our practicals are quite large.  
+If you've done all of the above in one sitting - well done!  
+Now would be a good time to **take a break** before completing the rest our work.  
+
+Seriously, taking regular breaks helps you to maintain (or restore) a positive and active state of mind so you can work effectively and efficiently.  
+Make a habit of it.
 
 ## Quick Questions - Variables
 
