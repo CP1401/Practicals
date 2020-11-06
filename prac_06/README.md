@@ -11,7 +11,9 @@ Write your answers for the early non-coding questions in a simple text file call
 2. What is a **file object** and how is it different from a file name or the file's contents? 
 3. Why is it necessary to close a file after it has been opened and used?  
 4. What is a good principle for deciding whether a literal value should be stored in a CONSTANT?
-5. Write a single Python expression that would evaluate to the file extension (e.g. `txt`) of a variable like `filename = "this_is_a_name.txt"` or `filename = "document.docx"`  
+5. Write a **single Python expression** that would evaluate to the file extension of a variable like  
+   `filename = "this_is_a_name.txt"` or `filename = "document.docx"`  
+   In those two examples, the result of the expression would be `txt` and `docx` respectively.
 6. What is a good number of quick questions to have at the start of a practical?
 
 ## Logic Exercise
@@ -186,8 +188,10 @@ Run your program each time with different ranges - commenting out the range line
 
 
 ## 3. Greater-Than Counter
-Write a program that _reads_ a file of floating-point numbers, 
-and counts how many of those numbers are larger than a user-specified lower limit.  
+Write a program that _reads_ a user-specified file of floating-point numbers, 
+and counts how many of those numbers are larger than a user-specified threshold.  
+You can see from the example output below that the program determines the number of numbers/lines from reading the file.  
+Your program should work for any file of numbers (one per line) of any size.  
 
 ### Example file:
 Copy this text into a new file called `recentrain.txt`,  
@@ -209,9 +213,9 @@ or [download it here](./recentrain.txt).
 
 ```
 Filename: recentrain.txt
-Threshold: 10
+Threshold: 13.9
 Processing...
-6 out of 10 (60.0%) of values are greater than 10.0.
+3 out of 10 (30.0%) values in recentrain.txt are greater than 13.9.
 ```
 
 
@@ -219,16 +223,19 @@ Processing...
 File: `bmi_files.py`
 
 Write a program that writes to and reads from `bmis.txt` (not at the same time).  
-Reuse your code from [Prac 6](../prac_06/README.md#example) (and 7) where you calculated a person's BMI based on height and weight.
-
+Reuse your functions from earlier where you calculated a person's BMI based on height and weight.  
+Notice this: since you wrote good, well designed (SRP) functions, you can simply reuse them for this different scenario!
 The first part of your program should ask the user for a number of people, 
-then repeatedly ask for the details for that many people. (You did just think of what kind of loop to use, didn't you?)  
-For each person, calculate their BMI, but don't print it to the screen... write it to the file "bmis.txt".  
+then repeatedly ask for the details (height and weight) for that many people.  
+(You did just think of what kind of loop to use, didn't you?)  
+
+For each person, calculate their BMI, but don't print it to the screen... write it (and only it) to the file "bmis.txt".  
+Your file should simply contain one BMI value per line.  
 Don't forget to close the file when you have finished.  
 
-Test this and confirm it works as you expect.  
+Test this and confirm it works as you expect by opening and checking the file in PyCharm.  
 
-Then, write the second part, which should read the file and display the BMI and weight category similar to how we've done it before:  
+**Then (only after the first part works)**, write the second part, which should read the file and display the BMI and weight category similar to how we've done it before:  
 
 ```
 BMI 23.5, considered normal
@@ -237,43 +244,47 @@ BMI 24.2, considered normal
 BMI 16.3, considered underweight
 BMI 32.0, considered obese
 ```
+Note that we do not want to write the above to the file - that's what we see on the screen. The file only contains the BMI values.
 
 ## 5. File Filter
 File: `file_filter.py` 
 
-Write a program that reads a file and "filters" it, writing only certain lines to another file.  
+Write a program that _reads_ a file and "filters" it, _writing_ only certain lines to another file.  
 In the lecture, we wrote a program that read [letter.txt](./letter.txt) and printed every line that started with a capital.  
 
-For this program, write a program that asks the user for three things:   
+For this exercise, write a program that asks the user for three things:   
 - input file name 
 - output file name
-- a search string to look for lines that start with
+- a search string to look for lines that contain it
 
-Read the input file, and then for each line that starts with the search string, write those to the output file.
-
-### Interesting Examples:
-
-- This file is a "Markdown" text file. The headings all start with '#'.  
-    If the user chose this file and searched for '#', then the output file would contain all of the headings.
-- Similarly, HTML headings are `<h1>`, `<h2>` etc. so you could filter/strip those.
-- Python comments use `#` or `"""`, so why not try writing getting your program to extract just the comments.
-    You would need to `strip()` the lines to account for indenting.    
+Read the input file, and then for each line that contains the search string, write that line to the output file.
 
 ### Extensions (Optional):
 
-- Get your program to simply search for lines that have the search string _anywhere_
-    Lindsay starts a lot of sentences with "So". If you had a [transcript file](./transcript.txt) of one of his lectures and searched for "So", you could make a new file that contained those sentences.  
+- Get your program to search for lines that start with the search string.  
+  Python has a very helpful string method for this: `startswith`.  
+  `"hello".startswith("he")  # this is True`    
+  E.g. Lindsay starts a lot of sentences with "So". So, if you had a [transcript file](./transcript.txt) of one of his lectures and searched for "So", you could make a new file that contained those sentences.  
 - Filter in other ways (not based on a user string), like lines that start with numbers or vowels or white space, etc.
+
+### Interesting Examples:
+You would need to `strip()` the lines to account for indenting in some of these.
+
+- The practical instructions file you are reading now is a "Markdown" text file. The headings all start with '#'.  
+    If the user chose this file and searched for '#', then the output file would contain all of the headings.
+- Similarly, HTML headings are `<h1>`, `<h2>` etc. so you could filter/strip those.
+- Python comments use `#` or `"""`, so why not try getting your program to extract just the comments.
 
 ### How are you going with the fundamentals?
 
-In *all* of your programs by now, you should have clear ideas about the fundamental principles we've learned, so (example):  
+In *all* of your programs by now, you should have clear ideas about the fundamental principles we've learned, so how would these principles apply to this exercise/program?  
 
 - You know if you have to refer to the filename (literal) more than once, then it should be a... CONSTANT,
-- You know SRP... your functions should not (usually) print, when they should return... so you can reuse the exact same function from prac 6 for this program,
-- You know your names must be meaningful,
+- You know SRP... your functions should not (usually) print, when they should return... so you can reuse the exact same (bmi) function from prac 6 for this program,
+- The above is also an example of DRY - don't repeat yourself with a function that is really similar to one you already have,
 - You know you use definite iteration (for loop) for things like a fixed number of times,
 - You know every time you open a file, you should close it as soon as you're finished,
+- You know your names must be meaningful,
 - You know programming is fun...
 
 ## 6. Strings
