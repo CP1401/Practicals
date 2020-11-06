@@ -10,7 +10,7 @@ But please do your own solutions before watching ours!
 ### Use Docstrings
 Please watch the checkpoint 2 video lecture on docstrings before starting this work.  
 
-For each of your functions, write a brief function **docstring**.  
+**For each and ALL of your functions from now on, write a brief function docstring**.  
 Here's a good example for a function that checks to see if a password is valid:
 
 ```python
@@ -33,8 +33,20 @@ Write a function that prints a line of 40 hyphens.
 
 2. **Is it even?**  
 Write a function to determine if an integer passed into it is even.  
-Note: In prac 6 we did this for if the number was odd, so it's nearly identical.  
-Don't copy that code unless you need help. Remember, we should know this now... so notice if you don't know how to do what you've already done before...
+Note: In a previous prac question we did this for if the number was odd, so it's nearly identical.  
+Don't copy that code unless you need help. 
+
+Remember, we should know this now... so notice if you don't know how to do what you've already done before...
+
+Remember **SRP**? This function has ONE job... NOT printing, NOT asking for user input, NOT returning a string...  
+If you have written this function correctly, then the following test code should work (copy it and see):
+```
+age = int(input("Age: "))
+if is_even(age):
+    print("Your age is even!")
+else:
+    print("Your age is not even")
+```
 
 3. **Get Non-empty String**  
 Write a function to get a non-empty string. That is, you should be able to enter any string as long as it's not "".  
@@ -99,7 +111,7 @@ IT@JCU are expanding into the coffee business, and of course they need a Python 
 This program includes lists, functions, decision structures, repetition structures and the usual input and output.  
 As always, the point is to apply what you have learned in terms of "best practice" (as best you know to date) and use the most appropriate code constructs to solve the problem.
 
-We want a coffee ordering program with a menu, a fixed list of valid coffees to check user orders against, and to print the instructions for making the selected coffee.  
+We want a coffee-ordering program with a menu, a fixed list of valid coffees to check user orders against, and to print the instructions for making the selected coffee.  
 Of course we want to be able to drink our coffee (virtually), and because some people can't decide, we'd like to be able to choose randomly from the menu.
 
 In the functions lecture, Barista Lindsay showed you how to make coffee using 4 'functions'. This program will use those... so make sure you've watched that video.  
@@ -133,6 +145,15 @@ Here's how to make a/n Long Black:
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> d
 Mmmm, nice Long Black
+(O)rder - (D)rink - (R)andom choice - (Q)uit
+>>> o
+Please choose from: 
+Flat White - Espresso - Long Black - Babyccino - ? Babyccino
+Here's how to make a/n Babyccino
+- Fill jug with milk
+- Steam milk until nice microfoam formed and milk up to temperature
+- Swirl milk gently in jug
+- Pour milk into cup... carefully, artistically :)
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> R
 Here's how to make a/n Flat White: 
