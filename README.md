@@ -16,12 +16,6 @@ Complete instructions are found in each prac folder.
 
 ## Practicals are assessed
 
-You should aim to complete the work in the practical session, but you
-have one additional week to complete each of these tasks and still earn
-your mark. If you do not finish a practical in the scheduled week, you
-can still get full marks if you show it to your practical supervisor at
-the **start** of the next practical. After that, it's too late.
-
 Assessment will be based on completing the tasks up to but not including
 the practice/extension section. You will be marked as follows:
 
