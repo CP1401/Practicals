@@ -450,9 +450,9 @@ Example output:
 
 ```
 Score: 65
-65.0 = C
+The score 65.0 is C
 Score: 89.5
-89.5 = HD
+The score 89.5 is HD
 Score: -1
 How many random scores: 5
 16 = N
@@ -461,6 +461,11 @@ How many random scores: 5
 53 = P
 13 = N
 ```
+
+You may notice that the display of scores and grades are different in the first part compared to the second (random).  
+Remember **SRP** - that functions should do one thing. So, it's not the function's job to format the score or the =/is,
+but rather it the function has ONLY ONE JOB and that's to... determine the grade.  
+How the grade is used, printed, or whatever, is up to the code that calls this function.
 
 
 ## 4. Add Functions to Previous Pracs
@@ -793,7 +798,7 @@ When you've done that, try adding more string formatting to other questions in t
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-questions.txt  with:
+`questions.txt`  with:
 
 - Quick Questions
 - Good Names
@@ -801,12 +806,12 @@ questions.txt  with:
 
 Exercises, each in their own file:
 
-- coffee_ratio.py
-- parity.py
-- previous_pracs.py
-- jcu_grades.py
-- debugging.py with code fixed (solutions) if you could figure them out
-- jerry.py
-- dog_years.py
-- seconds.py
-- bmis.py
+- `coffee_ratio.py`
+- `parity.py`
+- `previous_pracs.py`
+- `jcu_grades.py`
+- `debugging.py` with code fixed (solutions) if you could figure them out
+- `jerry.py`
+- `dog_years.py`
+- `seconds.py`
+- `bmis.py`
