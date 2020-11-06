@@ -71,14 +71,16 @@ Example: A dose of 18g and yield of 45g is a 1 to 2.5 brew ratio.
 
 This algorithm doesn't have any control structures, but just uses **input, processing and output**.
 
-### Algorithm with Selection
-**Write an algorithm** to determine if you can afford to buy an item based on its price and a collection of coins you have in your pocket.
+### Algorithm with Decision
+**Write an algorithm** to determine if you can afford to buy an item based on its price and the money you have in your pocket.  
 
-This algorithm should have included the **selection** (or decision) control structure. We will learn more about that soon.
+Notice how similar this question is to the UV index example above. Your pseudocode should be structurally very similar.  
+This algorithm should have included the **decision** (or selection) control structure. We will learn more about that soon.
 
 ### Algorithm with Repetition
 **Write an algorithm** to instruct a teenager how to clean their room. They have lots of things on the floor, and need to pick them up until there are no more things on the floor.
 
+Note: we are not trying to write code here, so just include simple instructions like you might say to a person or robotic assistant.  
 This algorithm should have included the **repetition** (or iteration or loop) control structure. We will learn more about that later.
 
 
