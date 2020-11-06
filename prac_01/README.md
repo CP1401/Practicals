@@ -302,8 +302,8 @@ At the top of each program, put a **comment** (starts with a `#`) with the exerc
 Example:
 
 ```python
-# 2. Miles to Kilometres
-number_of_miles = int(input("Miles: "))
+# 2. Kilometres to Miles
+number_of_kilometres = int(input("Kilometres: "))
 ...
 ``` 
 
@@ -327,10 +327,11 @@ Now that you want to move on to the next exercise, you _could_ start a new file,
 However, you don't want to _run_ the old programs as well as the new one, so you can "comment out" the previous program code.  
 To do this, select the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
 
-## 2. Miles to Kilometres
+## 2. Kilometres to Miles
 
-Joseph has recently moved to Australia from the United States. He understands that distances are given in kilometres rather than the miles he is used to.  
-Create a program that will request a distance in kilometres and output the same distance in miles. 
+Joseph has recently moved to Australia from the United States.  
+He understands that distances are given in kilometres rather than the miles he is used to.  
+Create a program that will request (input) a distance in kilometres and output that distance in miles. 
 
 - 1 mile = 1.60934 kilometres
 - 1 kilometre = 0.621371 miles
@@ -339,11 +340,11 @@ Create a program that will request a distance in kilometres and output the same 
 ## 3. Holiday Cost
 
 Sonje has been invited on a holiday by her friends, but she is not sure how much it will cost in total.  
-She knows the cost of the hotel will be $75 per night.  
+She knows the cost of the hotel will be $75 per day.  
 She would like to be able to enter estimates for daily food cost and daily activity cost and then work out the total based on the number of days for the trip.  
 For simplicity, assume that each day's costs are the same.  
 Help Sonje by writing a program that will figure out the total cost for the holiday.  
-Here is some sample output with user entry:
+Here is some sample output showing user entry (e.g. the user entered `65.50` for the daily food cost):
 
 ```
 Daily food cost: $65.50
@@ -400,8 +401,8 @@ Time Stopped:   2m 41s
 Percentage:     38.50931677018634%
 ```
 
-Before you finish with this file, "uncomment" your previous code for all programs.  
-Leave the comments for headings, but return the code back to normal.  
+**Before you finish** with this file, "uncomment" your previous code for all programs.    
+Leave the comments for headings, but return the rest of the code back to normal.    
 To do this, select the lines of code and press `Ctrl+/` for each program.  
 
 # Practice and Extension
@@ -474,7 +475,7 @@ questions.txt  with:
 programs.py with:
 
 - Discount Price
-- Miles to Kilometres
+- Kilometres to Miles
 - Holiday Cost
 - i-stop Calculation (Percentage)
 
