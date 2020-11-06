@@ -1,6 +1,6 @@
 # Coding Checkpoint 2
 
-**This checkpoint IS an assessed practical, but is also a collection of practice exercises for self-evaluation based on things you should know by now (nothing new).**  
+**This checkpoint is not an assessed practical, but is a collection of practice exercises for self-evaluation based on things you should know by now (nothing new).**  
 You DO need to submit your (own) work, even though solutions are provided.  
 
 Solutions for these checkpoint questions are (will be) provided as 
