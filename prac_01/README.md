@@ -142,19 +142,26 @@ Note: Your screens may look different than our images or descriptions below depe
 
 2.  Click on **Create New Project**. and choose **Pure Python**. PyCharm
     asks you where to store your new project and to choose an
-    interpreter.  
-    Name your new project (folder)  `cp1401practicals`
+    interpreter. Your screen may look different than our image below,
+    but name your new project (folder) for your **cp1401practicals**.
 
     -   the **location** can be changed to any place you have access to. Use a folder that you will be able to find later
 
-    -   use the **... button** to select the location
+    -   use the **... button** ("meatball menu") to select the location
 
     -   the **interpreter** is the version of Python we need to run our code on the computer.  
-        Use the *existing interpreter* for Python 3.  
-        **DO NOT use a virtual environment (venv).** They're cool but we don't
-        need them in this subject.
+        Use the *previously configured interpreter* for Python 3.  
+        **DO NOT use a virtual environment (Virtualenv).** They're cool, but we don't
+        need them in this subject... they make things harder for you.
 
-![New project window](../images/01image1.png)
+    ![New project window - choose previously configured interpreter](../images/Python-Windows-Install-3-Project-1.png)
+
+    - Click the ... menu button to choose a new interpreter and select the System Interpreter you installed earlier.  
+    (This is why it's useful to install Python in a directory you can find.)
+    Select the System Interpreter you have installed (not a Virtualenv).
+
+    ![Select system interpreter](../images/Python-Windows-Install-4-Project-2.png)
+
 
 3.  Next, let's add our first source code file to the project.  
     **Right-click** on the project name and select  
