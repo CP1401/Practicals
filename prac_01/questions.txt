@@ -53,7 +53,7 @@ Algorithm
 
 get distance, time in minutes
 speed in kilometres per minute = distance / time in minutes
-speed in kilometres per hour = in kilometres per hour * 60
+speed in kilometres per hour = in kilometres per minutes * 60
 display in kilometres per hour
 
 Note: To help evaluate your own work, you should always TEST using values you understand.
@@ -62,11 +62,10 @@ So,
 distance = 50
 time in minutes = 120 (2 hours)
 speed in kilometres per minute = 50 / 120 (0.4166666667)
-speed in kilometres per hour = 0.4166666667 * 60
-speed in kilometres per hour = 25
-Good.
+speed in kilometres per hour = 0.4166666667 * 60, which is 25
+Good :)
 
 If we had incorrectly written
-speed in kilometres per hour = in kilometres per hour * 60
-Then we could find out this was wrong by testing and getting 0.006944443333 hm/hr!
-If we didn't test it... we wouldn't know
+speed in kilometres per hour = in kilometres per minutes * 60
+Then we could find out this was wrong by testing and getting 0.006944443333 km/hr!
+If we didn't test it... we wouldn't know!
