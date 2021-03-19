@@ -13,7 +13,7 @@ print("Python Party Tax Program - Where Tax is a Party")
 income = float(input("Income: $"))
 if income > TAX_THRESHOLD_HIGH:
     total_tax = income * TAX_RATE_HIGH
-elif income >= TAX_RATE_LOW:
+elif income >= TAX_THRESHOLD_LOW:
     total_tax = income * TAX_RATE_LOW
 else:
     total_tax = 0
@@ -21,7 +21,6 @@ else:
 take_home_pay = income - total_tax
 print("Total tax is: $", total_tax, sep="")
 print("Take home pay is: $", take_home_pay, sep="")
-
 
 # 4. Dog years
 # Write a Python program to calculate a dog's age in dog's years.
