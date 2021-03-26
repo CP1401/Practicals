@@ -342,7 +342,7 @@ while not is_finished
     else
          get value
          total = total + value	
-print total
+display total
 ```
 
 You would use the *ask-the-user-to-quit* pattern when:
@@ -361,7 +361,7 @@ get count
 repeat count times
     get value
     total = total + value
-print total
+display total
 ```
 
 You would use the *definite count* pattern whenever the number of values can be entered beforehand.
