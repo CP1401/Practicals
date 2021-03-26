@@ -1,0 +1,52 @@
+CP1401 Practical 04 - Repetition Structures - Suggested Solutions
+
+## Quick Questions
+
+1. What is the PyCharm keyboard shortcut for commenting (out/in) a selection of code?
+    Ctrl (or Command) /
+2. What are the two kinds of loops available in Python?
+    Definite (for)
+    Indefinite (while)
+3. What is a "sentinel" (when dealing with loops)?
+    A sentinel is like a place/situation to stop a loop at.
+    Sentinels can be specific values, like -1 or "" (the empty string), or they can be a range, like < 0
+    Sentinels can NOT be normal/valid data
+4. What is wrong with this variable name: nothingWrong
+    It violates the PEP 8 naming convention by having a capital (instead of nothing_wrong)
+5. What are augmented assignment operators?
+    a += b is the same as a = a + b
+    a *= b is the same as a = a * b
+    etc.
+
+
+range
+a)
+33 34 35 36 37 38
+17 16 15 14 13 12
+1 0 1 0 1 0 1 0 1 0
+100>64>36>16>4>
+
+b)
+[0, 1, 2, 3, 4, 5]
+    range(6)
+[1, 5, 9, 13]
+    range(1, 14, 4)
+[3, 2, 1]
+    range(3, 0, -1)
+[7, 4, 1, -2, -5]
+    range(7, -6, -3)
+
+
+Patterns
+Which pattern would be the most appropriate choice for each of the following situations:
+
+1. Error-checking user input, looping until they enter a valid response
+    indefinite
+2. A menu with several options including 'quit'
+    indefinite
+3. Displaying all of the months in a year
+    definite
+4. Printing 5 random numbers
+    definite
+5. Printing n random numbers, where n is a user input
+    definite
