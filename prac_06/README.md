@@ -307,11 +307,46 @@ If you don't have it completed from each of the steps above, [here is the comple
 We did quite a number of steps along the way with this example program.  
 Here are a few more things to extend it just a bit more: 
 
-- See if you can change the printing of BMI (NOT the calculation) in main so that it is limited to 1 decimal place (e.g. 44.4 not 44.44444... as above).
-- If you have not done so already, complete your `run_tests` function so that it covers each logical possibility of output. 
+- Change the printing of BMI (NOT the calculation) in main so that it only shows 1 decimal place (e.g. 44.4 not 44.44444... as above).
+- If you have not done so already, complete your `run_tests` function so that you test each possible weight category (see note below). 
 - Add to your main to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use the age in the final output of main.
 - Look at your code. Do you see any grey underlines in PyCharm? If you do, move your mouse over them (don't click, just move) and read the popup message. You might see a PEP8 warning - probably a missing line break or space. Press the shortcut key **Ctrl+Alt+L** (Windows) or **Cmd+Opt+L** (Mac) and watch all of your formatting problems get fixed! Smile :)  
 
+#### Note: Test all the things
+
+If you write a program with code that looks something looks like:
+
+```
+if condition 1
+    do thing A
+else if condition 2
+    do thing B
+else
+    do thing C
+```
+
+Then there are 3 paths (A, B, C) that could possibly occur.  
+To test this properly, you need to write and run *at least* 3 tests, so you see things A, B and C.  
+Get into the habit of testing your code systematically and completely.  
+**Example/Motivation:**  
+Say you had something like:  
+
+```python
+value = int(input("Value: "))
+if value < 0:
+    print("Small value")
+elif value > -5:
+    print("Big value")
+else:
+    print("Other value")
+```
+
+If you never tested that you could see ALL 3 of "Small", "Big" and "Other", then you might think it works... 
+and you wouldn't know that it's broken!
+
+In the BMI question - look at how many possible outputs could occur and make sure your testing covers each one of them.  
+You don't need to test every single possible BMI... that would be infinite. 
+You need to test each weight category in this case.
 
 # Coding Exercises
 
