@@ -412,7 +412,8 @@ Notice that we tested at least one of each style and some boundary conditions. (
 **Now write a main program** that asks the user for the dose and yield, works out the brew ratio then uses your function to determine the coffee style.  
 Remember that `main()` should always be your first function in any program file.  
 Note: `yield` is a Python statement (keyword) so you can't use it as a variable.  
-As a general rule, never use Python keywords as variables, even if you're allowed to (e.g. `sum` is a Python function but you're allowed to use it as a variable name... but don't.)
+As a rule, never use Python builtin words as variables, even if you're allowed to 
+(e.g. `sum` and `print` are Python functions that it's possible to use as variable names... but don't!)
 
 Sample output:
 ```
@@ -421,10 +422,12 @@ Yield: 36
 1:2.0 is considered normale
 ```
 
-How did you go? Got it? Use the examples above and the teaching in the lectures if you get stuck on anything. Ask for help if you still need more support.  
+How did you go? Got it? Use the examples above and the teaching in the lectures if you get stuck on anything.  
+Ask for help if you still need more support.  
 
 One more thing. In the BMI example program, we had a nice helpful function for getting a valid number.  
-Copy and paste this into your program (near the bottom) and then use it (call it) when you get the dose and yield.
+Copy and paste this into your program (near the bottom) and then use it (call it) when you get the dose and yield. 
+Use estimates of maximum/high values, like 100. Or alternatively, you could rewrite the function to not take/check the maximum. 
 
 Your final program should look quite a lot like our BMI example. 
 Don't forget that our examples are some of the most helpful resources you have. **Use them!**  
@@ -432,33 +435,61 @@ Don't forget that our examples are some of the most helpful resources you have. 
 ## 2. Parity
 File: `parity.py`
 
-One of the most important points with this question is about function *naming*. In each case, think about what is the most meaningful name you can come up with.  
+This question requires 3 separate functions and a main to test them all.
+
+One of the most important parts of this question is to use good function *naming*.  
+In each case, think about what is the most meaningful name you can come up with.  
 Remember: "This function will..." 
 
 **Part 1**  
-Write a function to _print_ the parity of a number.  
-Parity is the number % 2  and is either 0 or 1.   
-E.g. the parity of 4 is 0 and the parity of 41 is 1.  
+Write a function to _print_ the parity of a number passed into it.  
+Parity is the number % 2 and is either 0 or 1.   
+E.g. the parity of 4 is 0, and the parity of 41 is 1.  
 
 **Part 2**  
-After you have written this and tested it (e.g. with 4 and 41), write a new function that _returns_ the parity instead of printing it.   
+After you have written this and tested it (e.g. with 4 and 41), write a new function that _returns_ the parity instead of printing it.  
+Test it.
 
 **Part 3**  
-After you have written and tested that one, write a third function that returns a Boolean for whether the value passed in is odd.  
-Recall from the lecture, that an excellent and common convention for naming Boolean-returning functions is to start their names with is.  
-Example, the built-in string method `isupper()` determines if a string is uppercase.  
+After you have written and tested that one, write a third function that returns a Boolean (True or False) for whether the value passed in is odd.  
+Recall from the lecture, that an excellent and common convention for naming Boolean-returning functions is to start their names with `is`.  
+Example, the built-in string method `isupper()` determines if a string is uppercase. 
+We can then use these functions in meaningful, easy-to-read code like: 
 
-When you have finshed all 3 of these functions, review their names and see how you did.  
-Are the names clear and unambiguous? Would a programmer know how to use these functions based on their names?
+```python
+def main():
+    my_age = int(input("Age: "))
+    if is_senior(my_age):
+        print("Have a cup of tea")
+    else:
+        print("Please mow the lawn")
+
+
+def is_senior(age):
+    return age > 65
+```
+
+When you have finished all 3 of these functions, review their names and see how you did.  
+Are the names clear and unambiguous? Would a programmer know how to use these functions based on their names?  
+
+**Note:** If you (ever) need to change the names, which you will have used more than once, 
+use PyCharm's excellent **refactoring**. Don't just edit in multiple places (and maybe forget one) or use 
+find-and-replace (and maybe change something else it matches). 
+Refactoring changes all the names correctly and is quick and safe.
 
 ## 3. JCU Grades
 File: `jcu_grades.py`
 
 According to [JCU Policy](https://www.jcu.edu.au/policy/learning-and-teaching/learning-teaching-and-assessment-policy), if you score 86% in a JCU subject, you will receive an HD grade; 40% will get you an N, etc.
 
-Write a function that takes a subject total score (0-100) and returns the corresponding JCU grade.
+Write a function that takes a subject total score (0-100) and returns the corresponding JCU grade.  
 
-Test it, then write a program that asks the user for their score and prints their grade until they enter a score of < 0.
+**Check**: Are you getting used to this kind of wording?  
+If the function "takes" a score, it means you must pass it into the function as a parameter.  
+If the function "returns" a grade, it means you don't print it, you... `return` it.
+
+Test it, then write a program that asks the user for their score and prints their grade until they enter a score of < 0.  
+Do not do any error-checking on the score.
 
 **After** you have finished and tested that program, add to it (same main) so that the program asks the user for a number of scores, then generates that many random scores and shows their grades.  
 Example output: 
