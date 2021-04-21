@@ -33,7 +33,7 @@ You need to continue to systematically build your attension to detail ;)
 # Debugging
 Debugging is the process of finding and fixing problems in code (yours or someone else's), and is an important skill to develop.  
 Like our fun logic exercises, it's not just about quickly finding the answer, but about learning to systematically figure it out.  
-It's great if you spot/fix an issue straight away, but what if you know there's a problem but can't see it immediately?  
+It's great if you spot/fix an issue straight away, but what if you know there's a problem and you can't see it immediately?  
 You need to develop attention to detail as well as be able to use debugging tools to help you.
 
 In the "Functions 2" lecture, we introduced the PyCharm debugger.  
@@ -70,10 +70,10 @@ You will need to switch between the "Console" (to see output and enter input) an
 
 ![PyCharm debugger screenshot](../images/debugger.png)
 
-There are four "main" programs in "debugging.py" for you to debug separately (use a new breakpoint at the start of each).  
+There are four "main" programs in `debugging.py` for you to debug separately (use a new breakpoint at the start of each).  
 Test/debug each, one at a time.  
 When you've finished one, "comment out" its main call and "uncomment" the next one.  
-Example, when testing main_3, the bottom of your code would look like:
+Example, when testing `main_3`, the bottom of your code would look like:
 ```python
 # main()
 # main_2()
@@ -81,9 +81,10 @@ main_3()
 # main_4()
 ``` 
 
-For each program write what you found to be the problem... and solution if you can figure it out.  
+For each program, write what you found to be the problem... and the solution if you can figure it out.  
 Note that *"problem"* and *"solution"* are different things.  
-Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not what problem was causing it to run slowly.
+Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not what problem was
+that caused it to run slowly in the first place.
 
 Write your answers at the bottom of `questions.txt` in a section like below:
 ```
@@ -95,13 +96,14 @@ Debugging:
 4. 
 ```
 
+If you haven't already, copy the code from [debugging.py](./debugging.py) and get debugging!
 
 # Python Coding - Functions 2 - Coding Exercises
  
 ## 1. Jerry the Driver
 File: `jerry.py`  
 
-In the Functions 2 lecture, you had a "Do this now" question:
+In the Functions 2 lecture, you had a "Do this now" question like:
 
 > Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine if he will get any speeding fine.  
 
@@ -123,15 +125,16 @@ What if we wanted to determine a new bank balance after paying the fine?
 bank_balance -= fine
 ```
 
-This is an example of **SRP**. It is the `determine_fine` function's job ONLY (single responsibility) to determine/calculate the actual fine as an actual number.  
-It is counter-productive for this function to print the fine or to format with a '$' or anything else.  
+This is an example of **SRP**. It is the `determine_fine` function's ONLY (single responsibility) job to determine/calculate the actual fine as an actual number.  
+It is counter-productive for this function to print the fine or to format with a '$' or anything else.
+`bank_balance -= fine` doesn't work if `fine` is something like `Your fine is $199`.  
 < insert "you had one job" meme here ;) > 
 
 **Write the complete Python program** for this in `jerry.py`.
 
 Remember that you've done some of this before, so copy your previous work:  
 
-- [Prac 2 where we calculated km -> m](../prac_02/README.md#2-miles-to-kilometres) 
+- [Prac 2 where we calculated km -> m](../prac_02/README.md#2-kilometres-to-miles) 
 - [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)  
 Note that we only want to know the fine as a number, not the demerit points or any other messages.
 
@@ -144,6 +147,7 @@ File: `dog_years.py`
 In [Prac 3](../prac_03/README.md#4-dog-years) you wrote a program to calculate a dog's age in dog years.  
 Rewrite this program using a function for the conversion.  
 Write a main function that repeatedly asks the user for an age in human years until the user enters a negative number.  
+Don't do any error checking on this age.
 
 Here's the calculation part already:  
 ```python
@@ -156,7 +160,7 @@ else:
 ## 3. Seconds Display
 File: `seconds.py`  
 
-In [Prac 2](../prac_02/README.md#4-i-stop-calculation-percentage) you wrote a program to calculate and display i-stop time/percentage.  
+In [Prac 2](../prac_02/README.md#4-i-stop-calculation-percentage) you wrote a program to calculate and display "i-stop" time/percentage.  
 In that, you displayed seconds as minutes and seconds, example: 
 ```
 i-stop on in seconds: 62
@@ -166,11 +170,12 @@ i-stop ON:      1m 2s
 Time Stopped:   2m 41s
 Percentage:     38.50931677018634%
 ```
-Note: the original program from prac 2 was about i-stop values, but this has nothing to do with that.  
+Note: the original program from prac 2 was about i-stop values for a car, but this has nothing to do with that context.  
 The technique for figuring out minutes and seconds from just seconds is the same, so you can copy your work, 
 but do change any references to the old context. 
 
-Rewrite this program using a function that **takes in a number** of seconds and **returns a string** to display that value in minutes and seconds.  
+Write a simple program using a function that **takes in a number** of seconds and **returns a string** that can be used to display that value in minutes and seconds.  
+Notice that the function DOES NOT PRINT. We want to use the string in different ways, so this function's job is simply to create/return a formatted string.  
 Write a main program that displays a bunch of different seconds values in minutes and seconds using a loop.  
 Example output: 
 ```
@@ -190,7 +195,7 @@ Should it return something like?
 Well, what if we wanted to use the _same_ function for different kinds of tasks?  
 Let's do that now.
 
-Add another small part to this same program - after the loop - that asks the user for their favourite duration in seconds, 
+**Add another small part to this same program** - after the loop - that asks the user for their favourite duration in seconds, 
 then prints it in minutes and seconds, like
 
 ```
@@ -200,7 +205,7 @@ You love 10m 39s
 
 So... if our function returned something like `635 seconds is 10m 35s`, then we could NOT use it for this task, even though it's really similar.  
 Do we need a second function that returns something like `You love ...`?  
-NO! That would be repeating ourselves and we know... **DRY**.  
+NO! That would be repeating ourselves, and we know... **DRY**.  
 
 So... we need to remember SRP.  
 This function has **one job**, and it's not printing or returning a whole "n seconds ...", it's ONLY the bit that formats the seconds (argument) in minutes and seconds...  
@@ -313,7 +318,7 @@ Do as many as you can, making sure to follow the principles you have learned in 
 # Extension
 
 ## i. Hours
-Extend your function that converts seconds to minutes and seconds so that it can also handle hours.
+Extend the function you wrote earlier that converts seconds to minutes and seconds so that it can also handle hours.
 Example:
 ```
 635 seconds is 0h 10m 35s
@@ -338,7 +343,7 @@ This section summarises the expectations for marking in this practical.
 `questions.txt` with:
 
 - Quick Questions
-- Debugging problems and solutions
+- Debugging problems (not solutions)
 
 Exercises, each in their own file:
 
