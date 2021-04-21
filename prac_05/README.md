@@ -41,11 +41,12 @@ Do not use any error-checking; just assume the user will enter correct inputs.
 
 - Ask the user for white or black coffee  
 - Ask for their chosen size: small, medium or large
-- Then print the cost: For Black, Small = $3, Medium = $4, Large = $5. White coffee costs $1 more per size.  
+- Then print the cost: For Black: Small = $3, Medium = $4, Large = $5.  
+  White coffee costs $1 more no matter what size is chosen, e.g., a white medium is $5.  
 - If a user makes a mistake with either part of their order, just pick the most expensive option in each case :)  
-E.g. a purple small coffee would cost $4, and a black tiny coffee would cost $5.  
+E.g., a purple small coffee would cost $4, a black tiny coffee would cost $5, and a green extra small would cost $6. 
 (This can be done by thinking about the default case for each user input.)    
-Note: You can use the string methods `.upper()` or `.lower()` to make your string comparisons case insensitive, e.g.  
+Note: You can use the string methods `.upper()` or `.lower()` to make your string comparisons case-insensitive, e.g.,  
 
 ```python
 string = input("Prompt: ").lower()
