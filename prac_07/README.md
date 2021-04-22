@@ -61,11 +61,11 @@ will *not* get proper formatting. OK?
 Follow the arrows in this screenshot to:
 1. Create a breakpoint on the first line that should run (click in the margin to create breakpoints).
 2. Run the debugger (if this is the first time you've run this program, which it will be, right-click your code and choose "Debug debugging").
-3. The program will run until it reaches the breakpoint. Click the "Step into my code" button to run line by line (click it once per line).
+3. The program will run until it reaches the breakpoint. Click the "Step Into My Code" button to run line by line (click it once per line).
 4. The debugger will stop responding when user input is being asked for, so click (4) to switch to the Console and enter your input.
-5. The debugger will continue to the next line, so switch back (5) to the Debugger window to see the state of your variables.
+5. The debugger will continue to the next line, so switch back (5) to the Debugger window to see the state of your variables. Notice also how it displays when your code is inside other functions.
 
-Keep clicking through "Step into my code" to see exactly how the program runs and what the values of variables are.  
+Keep clicking through "Step Into My Code" to see exactly how the program runs and what the values of variables are.  
 You will need to switch between the "Console" (to see output and enter input) and "Debugger" (to see program state) windows.
 
 ![PyCharm debugger screenshot](../images/debugger.png)
@@ -81,12 +81,15 @@ main_3()
 # main_4()
 ``` 
 
-For each program, write what you found to be the problem... and the solution if you can figure it out.  
+For each program, write what you found to be the problem (not the solution).  
 Note that *"problem"* and *"solution"* are different things.  
 Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not what problem was
 that caused it to run slowly in the first place.
 
-Write your answers at the bottom of `questions.txt` in a section like below:
+When you have found the problem, you should be able to fix it, so change the code to make it work.  
+You do not need to explain your solutions, just fix the code and submit the fixed file.  
+
+Write your descriptions of the problems at the bottom of `questions.txt` in a section like below:
 ```
 Debugging:
 
@@ -118,7 +121,7 @@ function main
     print fine
 ```
 
-**Note**: The value of the fine as a **number** is much better to return than a string, or a whole message.  
+**Note**: The value of the fine as a **number** type is much better to return than a string, or a whole message.  
 What if we wanted to determine a new bank balance after paying the fine?
 
 ```
@@ -146,7 +149,8 @@ File: `dog_years.py`
 
 In [Prac 3](../prac_03/README.md#4-dog-years) you wrote a program to calculate a dog's age in dog years.  
 Rewrite this program using a function for the conversion.  
-Write a main function that repeatedly asks the user for an age in human years until the user enters a negative number.  
+Write a main function that repeatedly asks the user for an age in human years, then displays it in dog years
+until the user enters a negative number.  
 Don't do any error checking on this age.
 
 Here's the calculation part already:  
@@ -161,7 +165,7 @@ else:
 File: `seconds.py`  
 
 In [Prac 2](../prac_02/README.md#4-i-stop-calculation-percentage) you wrote a program to calculate and display "i-stop" time/percentage.  
-In that, you displayed seconds as minutes and seconds, example: 
+In that program, you displayed seconds as minutes and seconds, example: 
 ```
 i-stop on in seconds: 62
 Time stopped in seconds: 161
@@ -177,7 +181,10 @@ but do change any references to the old context.
 Write a simple program using a function that **takes in a number** of seconds and **returns a string** that can be used to display that value in minutes and seconds.  
 Notice that the function DOES NOT PRINT. We want to use the string in different ways, so this function's job is simply to create/return a formatted string.  
 Write a main program that displays a bunch of different seconds values in minutes and seconds using a loop.  
-Example output: 
+**Example output:**  
+Note: Think about how this was generated... There's no user input; it starts at 0, goes to ? in steps of ?  
+Try and do the same in your program.  
+
 ```
 0 seconds is 0m 0s
 635 seconds is 10m 35s
@@ -193,7 +200,7 @@ Should it return something like?
 `635 seconds is 10m 35s`
 
 Well, what if we wanted to use the _same_ function for different kinds of tasks?  
-Let's do that now.
+Let's do that now...
 
 **Add another small part to this same program** - after the loop - that asks the user for their favourite duration in seconds, 
 then prints it in minutes and seconds, like
@@ -208,7 +215,7 @@ Do we need a second function that returns something like `You love ...`?
 NO! That would be repeating ourselves, and we know... **DRY**.  
 
 So... we need to remember SRP.  
-This function has **one job**, and it's not printing or returning a whole "n seconds ...", it's ONLY the bit that formats the seconds (argument) in minutes and seconds...  
+This function has **one job**, and it's not printing or returning a whole `n seconds is ...`, it's ONLY the bit that formats the seconds (argument) in minutes and seconds...  
 which we can now reuse in different situations!  
 SRP leads to function reusability and helping us not repeat ourselves :).
 
