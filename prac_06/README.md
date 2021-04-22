@@ -472,7 +472,8 @@ Oops... something needs fixing!
 **Part 2**  
 Now, in the same program, write a new function that _returns_ the parity instead of printing it.  
 Remember to think of a good verb-phrase name for this, but do not use "return" in your name.  
-100% of functions return something, so we don't use "return" in names.  
+Since 100% of functions return something, so we don't use "return" in names.  
+(Functions with no return statement actually implicitly return `None`.)
 
 Test your function similarly to the first one.  
 Leave your test code for the first version and just add new tests below these.
@@ -520,7 +521,7 @@ If you need to, go back and fix any problems with your function design.
 File: `jcu_grades.py`
 
 [JCU Subject results explained](https://www.jcu.edu.au/students/assessment-and-results/subject-results-explained) 
-show the percentage score you need to get different grades; e.g. 85+ is an HD, under 50 is an N (fail).
+shows the percentage score/result you need to get different grades:
 
 - Below 50% = N (fail)
 - 50 up to but not including 65 = P (pass)
@@ -529,19 +530,20 @@ show the percentage score you need to get different grades; e.g. 85+ is an HD, u
 - 85 and over = HD
 
 **Note**: think about the *boundary conditions* and don't miss anything. Remember to test your boundaries.  
-Suppose you used 84 as your boundary, e.g. `if score > 84: ...` Would that work?  
-What about if the score were 84.1? That should be a D, not an HD!  
-Our **strong recommendation** is that you always use the values in the question. 
+Suppose you used 84 as your boundary, e.g. `if score > 84 then HD` Would that work?  
+No, because what if the score were 84.1? That should be a D, but your code would make it an HD!  
+This is where bugs come from :(  
+Our **strong recommendation is that you always use the values in the question**.  
 In this case, use 50, 85, etc. not 49, 49.9, or whatever. This will help prevent mistakes.
 
-Write a function that takes a subject total score (0-100) and returns the corresponding JCU grade.  
+Write a function that takes a subject total score and returns the corresponding JCU grade.  
 
 **Check**: Are you getting used to this kind of wording?  
 If the function **"takes"** a score, it means you must pass it into the function as a **parameter**.  
 If the function **"returns"** a grade, it means you don't print it, you... `return` it.
 
-Test it, then write a program that asks the user for their score and prints their grade until they enter a score of < 0.  
-**Do not do any error-checking on the score.**  
+**Test it**, then write a program that asks the user for their score and prints their grade until they enter a score of < 0.  
+Do not do any error-checking on the score for this program.  
 
 **After** you have finished and tested that program, add to it (same main) so that the program asks the user for a number of scores, then generates that many random scores and shows their grades.  
 (We hope you realise that you do not need a new function for determining the grade - you've already got one!)  
