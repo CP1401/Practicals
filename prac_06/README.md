@@ -442,16 +442,43 @@ In each case, think about what is the most meaningful name you can come up with.
 Remember: "This function will..." 
 
 **Part 1**  
-Write a function to _print_ the parity of a number passed into it.  
+Write a function to _print_ the parity of a number passed into it (parameter).  
 Parity is the number % 2 and is either 0 or 1.   
 E.g. the parity of 4 is 0, and the parity of 41 is 1.  
+Write a main function that tests this with 4 and 41.  
+It's useful when testing to actually print the expected results as well as the actual, e.g.
+
+```
+The parity of 4 is 0 (expected 0) 
+The parity of 41 is 1 (expected 1) 
+```
+
+This way, instead of seeing something like: 
+
+```
+1
+0
+```
+
+... and thinking it didn't break, you might see something like: 
+
+```
+The parity of 4 is 1 (expected 0) 
+The parity of 41 is 1 (expected 1) 
+```
+
+Oops... something needs fixing!
 
 **Part 2**  
-After you have written this and tested it (e.g. with 4 and 41), write a new function that _returns_ the parity instead of printing it.  
-Test it.
+Now, in the same program, write a new function that _returns_ the parity instead of printing it.  
+Remember to think of a good verb-phrase name for this, but do not use "return" in your name.  
+100% of functions return something, so we don't use "return" in names.  
+
+Test your function similarly to the first one.  
+Leave your test code for the first version and just add new tests below these.
 
 **Part 3**  
-After you have written and tested that one, write a third function that returns a Boolean (True or False) for whether the value passed in is odd.  
+After you have written and tested the first two functions, write a third function that returns a Boolean (True or False) for whether the value passed in **is odd**.  
 Recall from the lecture, that an excellent and common convention for naming Boolean-returning functions is to start their names with `is`.  
 Example, the built-in string method `isupper()` determines if a string is uppercase. 
 We can then use these functions in meaningful, easy-to-read code like: 
@@ -477,21 +504,47 @@ use PyCharm's excellent **refactoring**. Don't just edit in multiple places (and
 find-and-replace (and maybe change something else it matches). 
 Refactoring changes all the names correctly and is quick and safe.
 
+### SRP Check!
+When you design and write functions, you should usually think about how they should be used and could be used.  
+So, imagine we want to use the above parity functions for the following tasks (just the parity bit, not the whole prorgrams!).  
+Could yours be used in these ways?
+
+- Read a file of numbers and write a second file containing the parities of those numbers
+- If the user's age is odd, print their name in capitals; if it's even, print their name in lowercase
+
+If you wrote functions that ask the user for the number INSIDE the function, then you can't do these things.  
+If your Boolean-returning function actually returns a string, then you can't (easily) do this.  
+If you need to, go back and fix any problems with your function design.
+
 ## 3. JCU Grades
 File: `jcu_grades.py`
 
-According to [JCU Policy](https://www.jcu.edu.au/policy/learning-and-teaching/learning-teaching-and-assessment-policy), if you score 86% in a JCU subject, you will receive an HD grade; 40% will get you an N, etc.
+[JCU Subject results explained](https://www.jcu.edu.au/students/assessment-and-results/subject-results-explained) 
+show the percentage score you need to get different grades; e.g. 85+ is an HD, under 50 is an N (fail).
+
+- Below 50% = N (fail)
+- 50 up to but not including 65 = P (pass)
+- 65 up to but not including 75 = C
+- 75 up to but not including 85 = D
+- 85 and over = HD
+
+**Note**: think about the *boundary conditions* and don't miss anything. Remember to test your boundaries.  
+Suppose you used 84 as your boundary, e.g. `if score > 84: ...` Would that work?  
+What about if the score were 84.1? That should be a D, not an HD!  
+Our **strong recommendation** is that you always use the values in the question. 
+In this case, use 50, 85, etc. not 49, 49.9, or whatever. This will help prevent mistakes.
 
 Write a function that takes a subject total score (0-100) and returns the corresponding JCU grade.  
 
 **Check**: Are you getting used to this kind of wording?  
-If the function "takes" a score, it means you must pass it into the function as a parameter.  
-If the function "returns" a grade, it means you don't print it, you... `return` it.
+If the function **"takes"** a score, it means you must pass it into the function as a **parameter**.  
+If the function **"returns"** a grade, it means you don't print it, you... `return` it.
 
 Test it, then write a program that asks the user for their score and prints their grade until they enter a score of < 0.  
-Do not do any error-checking on the score.
+**Do not do any error-checking on the score.**  
 
 **After** you have finished and tested that program, add to it (same main) so that the program asks the user for a number of scores, then generates that many random scores and shows their grades.  
+(We hope you realise that you do not need a new function for determining the grade - you've already got one!)  
 Example output: 
 
 ```
