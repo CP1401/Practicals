@@ -56,9 +56,9 @@ def print_instructions(current_coffee):
         grind_beans()
         pour_espresso()
     elif current_coffee == "Long Black":
+        print("- Add hot water to cup")
         grind_beans()
         pour_espresso()
-        print("- Add hot water to cup")
     elif current_coffee == "Flat White":
         grind_beans()
         pour_espresso()

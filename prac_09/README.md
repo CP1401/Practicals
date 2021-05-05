@@ -130,13 +130,13 @@ Invalid order
 Invalid order
 ? Long BLACK
 Here's how to make a/n Long Black: 
+- Add hot water to cup
 - Insert portafilter into grinder
 - Press grind button to grind beans into portafilter
 - Distribute grounds
 - Tamp grounds
 - Insert full portafilter into group head
 - Press shot button to pour espresso into cup
-- Add hot water to cup
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> d
 Mmmm, nice Long Black
