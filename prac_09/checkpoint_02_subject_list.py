@@ -17,6 +17,7 @@ def main():
         print("You do no subjects")
     else:
         if number_of_subjects > 1:
+            subjects.sort()
             print(f"You do these {number_of_subjects} subjects: ")
             for subject in subjects:
                 print(subject)
