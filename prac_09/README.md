@@ -89,10 +89,10 @@ All valid subject codes contain 6 characters, so reject any invalid subject code
     Enter subject code: CP1406
     Enter subject code: 
     You do these 4 subjects: 
-    MA1020
     CP1401
-    CP2403
     CP1406
+    CP2403
+    MA1020
     You are cool
     ```
 
