@@ -2,12 +2,13 @@
 
 Solutions for these checkpoint questions are provided as 
 worked solution demonstration videos.  
-But please do your own solutions before watching ours!
+Please do your own solutions before watching ours!
 
 ### Use Docstrings
 Please watch the checkpoint 2 video lecture on docstrings before starting this work.  
 
-**For each and ALL of your functions from now on, write a brief function docstring**.  
+For each of your functions, write a brief function **docstring**. Docstrings, like all comments, should be written in the imperative mood, e.g., "Print" not "Prints".  
+
 Here's a good example for a function that checks to see if a password is valid:
 
 ```python
@@ -25,80 +26,69 @@ A good general principle is that you should never write programs that use only o
 If you're using a function (like those asked for below), then you also want a main.  
 If you only have main, then you don't really need it (but there's nothing wrong with a program that's entirely in a main).  
 
-1. **Print a line**  
+### 1. Print a line  
 Write a function that prints a line of 40 hyphens.  
 
-2. **Is it even?**  
+### 2. Is it even? 
 Write a function to determine if an integer passed into it is even.  
-Note: In prac 6 we did this for if a number was odd, so it's nearly identical.  
-Don't copy that code unless you need help.  
-Remember, we should know this now... so notice if you don't know how to do what you've already done before...
+Note: In prac 6 we did this for if the number was odd, so it's nearly identical.  
+Don't copy that code unless you need help. Remember, we should know this now... so notice if you don't know how to do what you've already done before...
 
-Remember **SRP**? This function has ONE job... NOT printing, NOT asking for user input, NOT returning a string...  
-If you have written this function correctly, then the following test code should work (copy it and see):
-```
-age = int(input("Age: "))
-if is_even(age):
-    print("Your age is even!")
-else:
-    print("Your age is not even")
-```
-
-3. **Get Non-empty String**  
+### 3. Get Non-empty String 
 Write a function to get a non-empty string. That is, you should be able to enter any string as long as it's not "".  
 Use this in a program to ask the user for their name using your function...  
 Then use the _same_ function for getting their birthplace, and then display a message like: 
-    ```
-    Hi Martin from New Zealand!
-    ```
-    So, if you need to use the same function for getting two different things and you want the user to know what you're asking, then you might need a function that can be customised... which is one thing we use _parameters_ for.  
+```
+Hi Martin from New Zealand!
+```
+So, if you need to use the same function for getting two different things, and you want the user to know what you're asking, then you might need a function that can be customised... which is one thing we use _parameters_ for.  
 
 ## Lists
 
-4. **Number List**  
+### 4. Number List  
 Write a program that asks the user for a minimum and maximum number, then generates a list of integers between those two numbers, then prints it:  
 The maximum number must be greater than the minimum.  
 Note: **Never** use variable names that are the same as Python built-ins, e.g. `max`, `sum`, `print`, etc.  
 
-    ```
-    Minimum number: 10
-    Maximum number: 9
-    Your maximum must be greater than 10
-    Maximum number: 0
-    Your maximum must be greater than 10
-    Maximum number: 17
-    [10, 11, 12, 13, 14, 15, 16, 17]
-    ``` 
+```
+Minimum number: 10
+Maximum number: 9
+Your maximum must be greater than 10
+Maximum number: 0
+Your maximum must be greater than 10
+Maximum number: 17
+[10, 11, 12, 13, 14, 15, 16, 17]
+``` 
 
-5. **Subject List**  
+### 5. Subject List  
 Write a program to ask the user for their subject codes until they enter a blank one.    
 (Are you getting good at spotting words like **'until'** and recognising that's the **indefinite iteration pattern**?)  
 All valid subject codes contain 6 characters, so reject any invalid subject code and ask again if needed.  
 
-    When you have a list of subject codes, print them in sorted order and tell them how many subjects they have.  
-    Then, tell them if they are cool or not... In the lecture notes, we determine if a student is cool based on whether they do CP1401 :)  
+When you have a list of subject codes, print them in sorted order and tell them how many subjects they have.  
+Then, tell them if they are cool or not... In the lecture notes, we determine if a student is cool based on whether they do CP1401 :)  
 
-    ```
-    Enter subject code: CPaoirsetnrsatien
-    Invalid subject code
-    Enter subject code: C-P
-    Invalid subject code
-    Enter subject code: MA1020
-    Enter subject code: CP1401
-    Enter subject code: CP2403
-    Enter subject code: CP1406
-    Enter subject code: 
-    You do these 4 subjects: 
-    CP1401
-    CP1406
-    CP2403
-    MA1020
-    You are cool
-    ```
+```
+Enter subject code: CPaoirsetnrsatien
+Invalid subject code
+Enter subject code: C-P
+Invalid subject code
+Enter subject code: MA1020
+Enter subject code: CP1401
+Enter subject code: CP2403
+Enter subject code: CP1406
+Enter subject code: 
+You do these 4 subjects: 
+MA1020
+CP1401
+CP2403
+CP1406
+You are cool
+```
 
-    Note: As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative development**.  
-    So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the program works...  
-    _Then_ add error checking using the normal pattern you know and love.
+Note: As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative development**.  
+So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the program works...  
+_Then_ add error checking using the normal pattern you know and love.
 
 
 ## All Together Now
@@ -107,8 +97,8 @@ IT@JCU are expanding into the coffee business, and of course they need a Python 
 This program includes lists, functions, decision structures, repetition structures and the usual input and output.  
 As always, the point is to apply what you have learned in terms of "best practice" (as best you know to date) and use the most appropriate code constructs to solve the problem.
 
-We want a coffee-ordering program with a menu, a fixed list of valid coffees to check user orders against, and to print the instructions for making the selected coffee.  
-Of course we want to be able to drink our coffee (virtually), and because some people can't decide, we'd like to be able to choose randomly from the menu.
+We want a coffee ordering program with a menu, a fixed list of valid coffees to check user orders against, and to print the instructions for making the selected coffee.  
+Of course, we want to be able to drink our coffee (virtually), and because some people can't decide, we'd like to be able to choose randomly from the menu.
 
 In the functions lecture, Barista Lindsay showed you how to make coffee using 4 'functions'. This program will use those... so make sure you've watched that video.  
 
@@ -130,25 +120,16 @@ Invalid order
 Invalid order
 ? Long BLACK
 Here's how to make a/n Long Black: 
-- Add hot water to cup
 - Insert portafilter into grinder
 - Press grind button to grind beans into portafilter
 - Distribute grounds
 - Tamp grounds
 - Insert full portafilter into group head
 - Press shot button to pour espresso into cup
+- Add hot water to cup
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> d
 Mmmm, nice Long Black
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> o
-Please choose from: 
-Flat White - Espresso - Long Black - Babyccino - ? Babyccino
-Here's how to make a/n Babyccino
-- Fill jug with milk
-- Steam milk until nice microfoam formed and milk up to temperature
-- Swirl milk gently in jug
-- Pour milk into cup... carefully, artistically :)
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> R
 Here's how to make a/n Flat White: 
@@ -162,7 +143,6 @@ Here's how to make a/n Flat White:
 - Steam milk until nice microfoam formed and milk up to temperature
 - Swirl milk gently in jug
 - Pour milk into cup... carefully, artistically :)
-
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> o
 Please choose from: 
@@ -174,7 +154,6 @@ Here's how to make a/n Espresso:
 - Tamp grounds
 - Insert full portafilter into group head
 - Press shot button to pour espresso into cup
-
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> d
 Mmmm, nice Espresso
@@ -189,14 +168,15 @@ As you look at the description and the sample output, think about:
 - verbs (processing, functions)
 - sections, including repeated tasks (functions)
 - types (strings, lists, etc.)
+- constants
 
 You should see that each of the functions in the coffee making video will be a function :)  
 You should remember that main should "look like the whole program", that is, main should generally consist of function calls (high level overview tasks), and  
-You should be able to clearly follow how the program runs by reading just the main function.
-You should recognise that when you display the coffees and when you check for a valid coffee order, you're working with a list of valid coffees
+Anyone should be able to clearly understand how the program works by reading just the main function.
+You should recognise that when you display the coffees and when you check for a valid coffee order, you're working with a list of valid coffees.
 
-Note: The instructions are not meant to be complete or perfect. They're simplistic.  
-You should write simple functions for each step (like in the video). E.g. 
+Note: The coffee-making instructions are not meant to be complete or perfect. They're simplistic.  
+You should write simple functions for each step (like in the video). E.g., 
 ```python
 def grind_beans():
     print("- Insert portafilter into grinder")
@@ -207,94 +187,92 @@ def grind_beans():
 Please make sure you have watched the Strings lecture before completing this section.  
 In that lecture, you were shown what you need to know for these exercises, including good examples very similar to these tasks.
 
-6. **Processing Strings**  
-    First, let's see another quick example of using slicing and finding.  
-    Suppose we have data like:
+### 6. Processing Strings  
+First, let's see another quick example of using slicing and finding.  
+Suppose we have data like:
     
-    ```python
-    string = "Result = 95%"
+```python
+string = "Result = 95%"
+```
+and we want to extract just the percentage as a number.  
+If we know the format will be just like that, we can use:
+```python
+value = int(string[-3:-1])
+```
+But what if it might be different, like:
+```python
+string = "Final Score = 8%"
+# or 
+string = "Relative Value = 178.3%"
+```
+In those cases, our overly-simplistic approach would not work.  
     
-    ```
-    and we want to extract just the percentage as a number.  
-    If we know the format will be just like that, we can use:
-    ```python
-    value = int(string[-3:-1])
-    ```
-    But what if it might be different, like:
-    ```python
-    string = "Final Score = 8%"
-    # or 
-    string = "Relative Value = 178.3%"
-    ```
-    In those cases, our overly-simplistic approach would not work.  
-    
-    Ideally, we need a robust way of extracting the data, based on the possibilities the string could be.  
-    So, in this case, let's assume we want all of the characters between the `= ` and the `%` (which would be true in all 3 of these cases).
-    
-    One way to do this is to `find` the index of the space after the = and then slice all the characters from there to one before the end.  
-    Since we did this in the lecture, the rest is up to you now...
-    
-    Write a program that processes this list of strings (copy the data here) and prints the values you extract.
-    
-    ```python
-    data_strings = ["Result = 95%", "Final Score = 8%", "Relative Value = 178%",
-                    "Something else that's very important = 9.2%", "x = 42%"]
-    ```  
-    
-    **Hint**: Don't try and get your processing/extraction working at the same time as your for loop.  
-    Pick one string and work on that. When it works, add in your loop to see how it works with the others.  
-     
-    Sample output (keep it simple... but notice what types these outputs are):
-    ```
-    95.0
-    8.0
-    178.0
-    9.2
-    42.0
-    ```
-    
-    Last note: There's no obvious 'meaning' in this data, so you can use generic names.  
-    You're given _strings_ and you need to extract a _value_ from each.
+Ideally, we need a robust way of extracting the data, based on the possibilities the string could be.  
+So, in this case, let's assume we want all of the characters between the `= ` and the `%` (which would be true in all 3 of these cases).
 
-7. **Date Strings**  
-    (From the lecture)  
-    Write a program to get and display only the year from a date of birth stored as a string like `"13/07/1995"`  
-    Add a little interest to your program, by asking the user for their DOB, then printing like,  
-    ```
-    DOB: 13/07/1995
-    You were born in 1995
-    You turn/ed 25 in 2020.
-    ```
+One way to do this is to `find` the index of the space after the = and then slice all the characters from there to one before the end.  
+Since we did this in the lecture, the rest is up to you now...
 
-8. **Subject Code Strings**  
-    The first 3 characters in JCU Subject codes always follow a definite pattern:  
-    The first 2 characters are the discipline (MA = Maths, CP = IT, etc.) and the next character is the year level.  
-    Who knows what the last 3 characters mean? :)  
-
-    Write a program that asks for subject codes until the user enters a blank one...   
-    Hey, sounds familiar... just copy what you've already got, BUT this question does not use lists, so you have to change it!   
-    After they type each one, print what year it is and whether it's an IT subject.  
+Write a program that processes this list of strings (copy the data here) and prints the values you extract.
     
-    Sample Output (Consider carefully your decision structures here)
-    ```
-    Enter subject code: CP1401
-    That is a first-year IT subject.
-    Enter subject code: MA2403
-    That is a second-year subject.
-    Enter subject code: CP5639
-    That is a Masters or other IT subject.
-    Enter subject code: PH3456
-    That is a third-year subject.
-    Enter subject code: 
-    ```
+```python
+data_strings = ["Result = 95%", "Final Score = 8%", "Relative Value = 178%",
+                "Something else that's very important = 9.2%", "x = 42%"]
+```  
+    
+**Hint**: Don't try and get your processing/extraction working at the same time as your for loop.  
+Pick one string and work on that. When it works, add in your loop to see how it works with the others.  
+ 
+Sample output (keep it simple... but notice what types these outputs are):
+```
+95.0
+8.0
+178.0
+9.2
+42.0
+```
 
-    **Hint**: A nice way to do this is with a single print statement that uses variables.  
-    You do not want to repeat yourself (DRY), right? So don't use lots of different print statements...  
-    just look at what's different (different = variable).  
-    E.g.
-    ```python
-    print(f"That is a {year_string}{it_string} subject.")
-    ```
+Last note: There's no obvious 'meaning' in this data, so you can use generic names.  
+You're given _strings_, and you need to extract a _value_ from each.
+
+### 7. Date Strings  
+(From the lecture)  
+Write a program to get and display only the year from a date of birth stored as a string like `"13/07/1995"`  
+Add a little interest to your program, by asking the user for their DOB, then printing like,  
+```
+DOB: 13/07/1995
+You were born in 1995
+You turn/ed 25 in 2020.
+```
+
+### 8. Subject Code Strings  
+The first 3 characters in JCU Subject codes always follow a definite pattern:  
+The first 2 characters are the discipline (MA = Maths, CP = IT, etc.) and the next character is the year level.  
+Who knows what the last 3 characters mean? :)  
+
+Write a program that asks for subject codes until the user enters a blank one...   
+Hey, sounds familiar... just copy what you've already got, BUT this question does not use lists, so you have to change it!   
+After they type each one, print what year it is and whether it's an IT subject.  
+
+Sample Output (Consider carefully your decision structures here)
+```
+Enter subject code: CP1401
+That is a first-year IT subject.
+Enter subject code: MA2403
+That is a second-year subject.
+Enter subject code: CP5639
+That is a Masters or other IT subject.
+Enter subject code: PH3456
+That is a third-year subject.
+Enter subject code: 
+```
+
+**Hint**: A nice way to do this is with a single print statement that uses variables.  
+You do not want to repeat yourself (DRY), right? So don't use lots of different print statements... just look at what's different (different = variable).  
+E.g.,
+```python
+print(f"That is a {year_string}{it_string} subject.")
+```
 
 # Re-Revision Practice
 
@@ -303,8 +281,8 @@ Revisit these and rewrite them for practice.
 As you do, think about enhancing them with functions (where meaningful) and maybe lists.
 
 Note: We do NOT want you whacking in functions that are poor design -  
-e.g. violating SRP like a function that calculates _and_ prints.  
-Also, remember to include a main function if you use any other function in your program.  
+e.g., violating SRP like a function that calculates _and_ prints.  
+Also, remember to include a `main` function if you use any other function in your program.  
 When you're practising, always follow best practice!   
   
 See the new comments in each one for suggestions.
@@ -317,14 +295,14 @@ Example:
 - Original: 100, Change: 0.05, Result: 105
 - Original: 50.5, Change: -0.1, Result: 45.45
 
-> This program could use a function to "calculate" (think verb phrase) the result.
+This program could use a function to "calculate" (think verb phrase) the result.
 
 ## Decision Structures
 
 2. Ask the user for the time of day (0-23 hours) until they enter a negative.  
 Then print a list of all the hours and how many of them were after noon:  
 
-> (This program is quite different from checkpoint 1)
+(This program is quite different from checkpoint 1)
 
 3. Coffee orders made simple.  
 
@@ -333,18 +311,18 @@ Then print a list of all the hours and how many of them were after noon:
 - Then print the cost: For Black, Small = $3, Medium = $4, Large = $5. White coffee costs $1 more per size.  
 - If a user makes a mistake with their order, just pick the more expensive option :)  
 
-> For this program, you could have a function that gets the coffee order, not allowing mistakes.  
-> You could have a function that calculates the cost based on the two parameters the user chose.
+For this program, you could have a function that gets the coffee order, not allowing mistakes.  
+You could have a function that calculates the cost based on the two parameters the user chose.
 
 
 ## Repetition Structures
 
-5. Write a program to ask the user for a low value and a high value, then print all of the integers between those values inclusive and show the total of those numbers.  
+5. Write a program to ask the user for a low value and a high value, then print all the integers between those values inclusive and show the total of those numbers.  
 Example, if the inputs were `10` and `20`, you would print:  
 
     10 11 12 13 14 15 16 17 18 19 20 totals: 165 
 
-> Do this with a list (much like the earlier question) and use `sum` to calculate the total.
+Do this with a list (much like the earlier question) and use `sum` to calculate the total.
 
 # Deliverables
 This section summarises the expectations for marking in this practical.
