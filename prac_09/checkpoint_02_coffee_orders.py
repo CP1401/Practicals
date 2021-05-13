@@ -3,6 +3,14 @@ CP1401 - Checkpoint 2
 All Together Now - IT@JCU Coffee
 Suggested Solution
 See the demonstrations videos for all the details and explanations
+
+Pseudocode:
+
+VALID_COFFEES = ["Flat White", "Espresso", "Long Black", "Babyccino"]
+
+function main()
+
+main()
 """
 import random
 
