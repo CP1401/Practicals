@@ -15,32 +15,36 @@ Write your answers for the early non-coding questions in a simple text file call
 ### range
 
 *a)* Add a new heading "Loop outputs" to your questions.txt file, then:  
-Write the output of each of the following `for` loops that use `range`:
+Write the output of each of the following `for` loops that use `range`.
+
+Then, when you have finished writing your output - **not before!** - copy the code into a Python program and run these loops to check your answers.
 
 ```python
 # 1.	
 for i in range(6):
     print(i, end=' ')
+print()
 
 # 2.	
 for i in range(33, 39):
     print(i, end=' ')
+print()
 
 # 3.	
 for i in range(17, 11, -1):
     print(i, end=' ')
+print()
 
 # 4.	
 for i in range(1, 11):
     print(i % 2, end=' ')
+print()
 
 # 5.	
 for i in range(10, 0, -2):
     print(i ** 2, end='>')
+print()
 ```
-
-Then, when you have finished writing your output - not before! - copy the code into a Python program and run these loops
-to check your answers.
 
 *b)* Add a new heading "Range values" to your questions.txt file, then:  
 Write the range statements (just range and parameters, not the whole loop) equivalent to the following lists of numbers:
