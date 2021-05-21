@@ -24,6 +24,20 @@ while choice != "Q":
     choice = input("> ").upper()
 print("Farewell")
 
+# 4. Average Age
+total_age = 0
+number_of_people = 0
+age = int(input("Age: "))
+while age >= 0:
+    total_age += age
+    number_of_people += 1
+    age = int(input("Age: "))
+if number_of_people != 0:
+    average = total_age / number_of_people
+    print(average)
+else:
+    print("No valid average")
+
 # 6. Nested Loops
 # Write a program that asks the user for a number of rows and columns, then prints the numbers to mach, like:
 # Rows: 3
