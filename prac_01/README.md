@@ -17,13 +17,15 @@ In lecture 1, we established that it was **not OK** to work together with others
 You have to do your own work in order to achieve the learning outcomes.  
 However, it's still really helpful and good practice to work with others to understand problems and to discuss solutions.  
 You **are allowed** to talk with others about these things... you just can't go too far.  
-Communication is a big part of IT and it helps to know a little about who you are communicating with. 
+Communication is a big part of IT, and it helps to know a little about who you are communicating with. 
 
 So, we're going to do this together **on Slack**.  
-*Introduce yourself in Slack* including your name and what you like that starts with the same first letter (e.g. "I'm Yasmin and I like yachting") and also add where you are studying from.
+(If you're in a face-to-face practical class with other students, please work together and do this with one or two people near you!)  
+
+**Introduce yourself in Slack** including your name and what you like that starts with the same first letter (e.g. "I'm Yasmin and I like yachting") and also add where you are studying from and any other interesting details you're happy to share. Thanks!
 
 
-Record your answers for the below questions in a simple text file, `questions.txt`.
+Record your answers for each of the below questions in a simple text file, `questions.txt`. You can use Notepad or any suitable program for creating your work file.
 
 ## Logic Exercise
 
@@ -43,13 +45,14 @@ If you are ever working in a group on these and you already know the answer (or 
 
 **What is each person's job?**
 
+Note: record your answer for this question in your `questions.txt` file under the heading "Logic Exercise", so it's clear.
+
 ## Algorithms
 
-Record your answers to the following questions in your text file called `questions.txt`.  
-If creating this file takes you more than 30 seconds, then just start the questions, recording them any way you can.
+Record your answers to the following questions in your text file called `questions.txt`. Use a heading for each one.  
 
 The following exercises are focused on the logic of algorithms, rather than the exact formatting of pseudocode or flowcharts to describe them.  
-We're not really interested in writing programs for these, just the basics of writing a set of understandable and clear instructions.  
+We're not going to write computer programs for these, so we are just focused on the basics of writing a set of understandable instructions.  
 
 ### Example
 Here's an example of an algorithm (written in simple pseudocode) to determine if it's safe to go out and play based on the sun (uv index):
@@ -63,7 +66,7 @@ else
 ```
 
 Notice the first line...  
-We can't just say: `if uv index < 5` without knowing what `uv index` is, so we have to get it first. 
+We can't just say: `if uv index < 5` without knowing what `uv index` is, so we have to **get** it first. 
 
 ### Algorithm with I, P, O 
 **Write an algorithm** to calculate the brew ratio of coffee, given the dose (quantity of coffee beans in grams) and the yield (brewed coffee in grams).  
@@ -86,8 +89,11 @@ This algorithm should have included the **repetition** (or iteration or loop) co
 
 ## Problem Decomposition
 
-For the following 3 problem descriptions, identify the **nouns** and **verbs** (separately) in each.   
-You could copy the text and highlight each kind of word in different colours, or write two separate lists.  
+For the following 3 problem descriptions, identify the **nouns** and **verbs** (separately) in each.  
+
+Note: You will end up with 6 separate answers for this section - the nouns & verbs, then the algorithm, for each of the 3 problems.  
+
+Write two separate lists (with subheadings) for each.  If you're writing your answers using Word, you could copy the text and highlight each type of word in different colours or similar.  
 (Don't get hung up on the exact details of the words.)   
 
 Then go through the set of nouns and verbs and work out which
@@ -111,8 +117,8 @@ See if what's remaining is what you need to know to write an algorithm.
     travelled (in km) and the travel time in minutes. The user will then
     be shown the average speed (in km/hour) over the trip.
 
-When you've decomposed these small problems into their parts, **write algorithms** for each of them using either pseudocode or flowcharts.  
-At this stage, we're not too worried about getting the details 'perfect', we just want to get used to problem solving processes.
+When you've decomposed these small problems into their parts (word types), **write algorithms for each of them using either pseudocode or flowcharts**.  
+At this stage, we're not worried about getting the details 'perfect', we just want to get used to problem solving processes.
 
 As you do this, think about what **assumptions** you're making.  
 Good assumptions are an important part of IT and problem solving.
@@ -231,8 +237,16 @@ Just put normal (unformatted) text in here and make sure you have simple heading
 If you are using a JCU computer, not your own, please **copy your work** (the whole project directory) onto your portable/cloud storage so you can access it again in the future.  
 _Keep every file you ever write in this subject._
 
-## Submit
-Now **submit your work to LearnJCU**.
+# Deliverables
+This section summarises the expectations for marking in this practical.  
 For the first week, we're flexible with how you record your work.  
 Ideally, upload your answers in a text file called `questions.txt`.  
-But for this week only, we'll accept anything that works for you: photos of hand written work on paper, Word documents, text files... whatever you did.  
+But for this week only, we'll accept anything that works for you: photos of hand-written work on paper, Word documents, text files... whatever you did.  
+
+`questions.txt` (or similar) with:
+
+- Logic Exercise
+- Algorithms (IPO, Decision, Repetition)
+- Problem Decomposition (3 problems, each with word types and algorithms)
+
+Now **submit your work to LearnJCU** (click on the practical link inside the relevant weekly folder).
