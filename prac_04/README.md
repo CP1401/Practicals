@@ -59,7 +59,7 @@ Write the range statements (just range and parameters, not the whole loop) equiv
 
 ## Patterns
 
-We have learned that there are 2 main **repetition patterns** and when to use them (the "best tool for the job"):
+We have learned that there are 2 main [repetition patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#repetition-structures) and when to use them (the "best tool for the job"):
 
 - definite (for loops)
 - indefinite (while loops)
@@ -68,7 +68,7 @@ We have learned that there are 2 main **repetition patterns** and when to use th
 
 1. Error-checking user input, looping until they enter a valid response
 2. A menu with several options including 'quit'
-3. Displaying all of the months in a year
+3. Displaying all the months in a year
 4. Printing 5 random numbers
 5. Printing n random numbers, where n is a user input
 
@@ -80,7 +80,7 @@ There are three boxes which each contains two marbles:
 - one has two black, and
 - one has one white and one black marble.
 
-Each of the boxes also is labeled as to its contents, but each label is _incorrect_.  
+Each of the boxes also is labeled as to its contents, but the labels have been swapped around and each label is _incorrect_.  
 What is the fewest number of marbles you could remove from the boxes and look at in order to definitely determine the
 contents of all three boxes?
 
@@ -103,6 +103,8 @@ NOTE: When you see *"general patterns"* in programming, you need to learn these,
 again.  
 There may be other ways, but the general patterns are usually the best in most situations.  
 Pay attention to patterns like this!
+
+Here is our standard error-checking (while loop) pattern: 
 
 ```
 get input
@@ -443,7 +445,7 @@ for round_number in range(1, 4):
     print("---------------------")
 ```
 
-(Noting that this uses a list, which we haven't learned about yet - but you can hopefully see how it works.)
+(Note that the above example uses a list, which we haven't learned about yet - but hopefully you can see how it works. You should not use lists for this program.)
 
 Write a program that asks the user for a number of rows and columns, then prints the numbers to mach, like:
 
