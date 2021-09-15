@@ -46,6 +46,9 @@ Do not use any error-checking; just assume the user will enter correct inputs.
 - If a user makes a mistake with either part of their order, just pick the most expensive option in each case :)  
 E.g., a purple small coffee would cost $4, a black tiny coffee would cost $5, and a green extra small would cost $6. 
 (This can be done by thinking about the default case for each user input.)    
+
+Once again, please **DRY**. Do you see that white coffee costs $1 more than black? So, you don't need to handle these as many separate cases. You will only need one decision for size, then one decision for colour. Keep it simple!
+
 Note: You can use the string methods `.upper()` or `.lower()` to make your string comparisons case-insensitive, e.g.,  
 
 ```python
@@ -61,10 +64,12 @@ if string == "string":
    assume/choose the expensive option, because it won't be possibly to choose the colour "purple" or a wrong size. 
    Rewrite your code constructs to take this into consideration effectively if needed.
 
-5. Write a program to ask the user for a low value and a high value, then print all of the integers between those values inclusive and show the total of those numbers.  
+5. Write a program to ask the user for a low value and a high value, then print all the integers between those values inclusive and show the total of those numbers.  
 Example, if the inputs were `10` and `20`, you would print:  
 
     10 11 12 13 14 15 16 17 18 19 20 totals: 165 
+
+**Optional:** Add error-checking to ensure that the high value is actually higher than the low value. 
 
 ## All Together Now
 File: `happy_products.py`
@@ -154,4 +159,4 @@ This section summarises the expectations for marking in this practical.
 4. Coffee order error-checking (Repetitions)
 5. Low-high printing (Repetitions)
 
-- `happy_products.py` (The All Together Now question)
+- `happy_products.py` (All Together Now)

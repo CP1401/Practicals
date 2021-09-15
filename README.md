@@ -1,6 +1,6 @@
-# Practicals for IT@JCU CP1401/CP1801/CP5639 - Programming 1
+# Practicals for IT@JCU CP1401/CP5639 - Programming 1
 
-This repository contains instructions and resources for practicals for the subjects CP1401, CP1801 and CP5639 at James Cook University.  
+This repository contains instructions and resources for practicals for the subjects CP1401 and CP5639 at James Cook University.  
 Complete instructions are found in each prac folder.
 
 ## Solutions
@@ -12,7 +12,7 @@ Seriously, **never copy the solutions** as this will not help you learn as much 
 
 ## Practical Content
 Practical numbers do not necessarily correspond to weeks.
-E.g. some subject offerings run in 10 weeks, some in 13 weeks. **If you are enrolled in a six-week offering please go [here for your pracs](https://github.com/CP1401/Practicals/tree/six-weeks).**
+E.g., some subject offerings run in 10 weeks, some in 13 weeks. **If you are enrolled in a six-week offering please [go here for your pracs](https://github.com/CP1401/Practicals/tree/six-weeks).**
 
 * [Practical 01 - Problem Solving](./prac_01)
 * [Practical 02 - Input, Processing and Output](./prac_02)
@@ -48,7 +48,7 @@ the practice/extension section. You will be marked as follows:
 You need to save your work from every prac. Keep every file/script you write.  
 We suggest you use a USB disk and cloud storage (like OneDrive) and organise it using folders, like `CP1401/practicals/prac_01`.    
 
-Give each file a logical name so you can find it again. Also, when you need to make changes to an existing script for a separate question, make a copy of the old question first so you have a record of everything.  
+Give each file a logical name so that you can find it again. Also, when you need to make changes to an existing script for a separate question, make a copy of the old question first so that you have a record of everything.  
 Don't save your work to the JCU computers' local drives, but into your own storage area. You can use the local hard drive for temporary storage, then move your work onto your disk or cloud storage.  
 
 For important work like assignments, please make sure you have multiple backups.

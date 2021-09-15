@@ -47,13 +47,17 @@ print(new_value)
 # It is before noon and you are coming. Hi!
 # It is after noon and you are going. Bye!
 
-# Pseudcode:
+# Pseudocode:
 # get time, state
 # if time < 12
-#     print before
+#     noon_message = before
 # else
-#     print after
-# print state
+#     noon_message = after
+# if state == coming
+#     direction_message = Hi
+# else
+#     direction_message = Bye
+# print noon_message, direction_message
 
 time = int(input("Time: "))
 state = input("Coming or going? ").lower()
@@ -140,7 +144,7 @@ print("${}".format(cost))
 # Example, if the inputs were 10 and 20, you would print:
 # 10 11 12 13 14 15 16 17 18 19 20 totals: 165
 
-# Pseucode:
+# Pseudocode:
 # get low, high
 # total = 0
 # for i from low to high
