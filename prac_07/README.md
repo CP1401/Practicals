@@ -108,16 +108,16 @@ File: `jerry.py`
 
 In the Functions 2 lecture, you had a "Do this now" question like:
 
-> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine if he will get any speeding fine.  
+> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine his speeding fine.  
 
 You (we) wrote the pseudocode for the main function for this:
 
 ```
 function main
-    speed_in_m = get_valid_number("speed in m")
-    speed_in_km = convert_m_to_km(speed_in_m)
-    speed_limit_in_km = get_valid_number("speed limit in km")
-    fine = determine_fine(speed_in_km, speed_limit_in_km)
+    speed_in_mph = get_valid_number("speed in mph")
+    speed_limit_in_kph = get_valid_number("speed limit in kph")
+    speed_in_kph = convert_miles_to_km(speed_in_mph)
+    fine = determine_fine(speed_in_km, speed_limit_in_kph)
     print fine
 ```
 

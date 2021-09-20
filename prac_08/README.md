@@ -36,7 +36,7 @@ Then use the **Python Console** to see if you were correct.
     numbers[1] + numbers[2]
     len(numbers)
     
-Write Python expressions (write your answers in `questions.txt`; check them in the console) to achieve the following:
+Write Python statements or expressions (write your answers in `questions.txt`; check them in the console) to achieve the following:
 
 1. Change the first element of numbers to 1
 2. Change the last element of numbers to 4
