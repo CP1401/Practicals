@@ -32,17 +32,18 @@ You need to continue to systematically build your attension to detail ;)
 
 # Debugging
 Debugging is the process of finding and fixing problems in code (yours or someone else's), and is an important skill to develop.  
-Like our fun logic exercises, it's not just about quickly finding the answer, but about learning to systematically figure it out.  
+**IMPORTANT:** Debugging is not refactoring, or improving working code.  
+We are not looking for things like formatting issues or unclear variable naming. We don't want nicer code, we want working code. The problems with the provided code are **bugs**.  
+A poor variable name is not good, but it's not a bug.  
+Don't look for ways to improve the code... look for what's actually wrong with it... why it does not work properly.
+
+Like our logic exercises, it's not just about quickly finding the answer, but about learning to systematically figure it out.  
 It's great if you spot/fix an issue straight away, but what if you know there's a problem and you can't see it immediately?  
-You need to develop attention to detail as well as be able to use debugging tools to help you.
+You need to develop attention to detail and be able to use debugging tools to help you.
 
 In the "Functions 2" lecture, we introduced the PyCharm debugger.  
 (Again, if you haven't watched that lecture, *please* stop now and go back to the lecture!)
   
-Let's use the debugger now to try and systematically figure out what's wrong with the following programs.  
-In all cases, read the code and try and understand it, then 
-practise using the debugger as instructed to "step through" the program.
-
 Note: PyCharm does wonderful "on the fly" debugging by highlighting problems or potential issues in your code.  
 Get used to spotting the red/green/grey underlines and other warnings and potentially correcting the issues PyCharm tells you about.   
 
@@ -58,9 +59,13 @@ will *not* get proper formatting. OK?
 
 - [debugging.py](./debugging.py)
 
+Let's use the debugger now to systematically figure out what's wrong with the following programs.  
+In all cases, read the code and try and understand it, then 
+use the debugger to "step through" the program.
+
 Follow the arrows in this screenshot to:
-1. Create a breakpoint on the first line that should run (click in the margin to create breakpoints).
-2. Run the debugger (if this is the first time you've run this program, which it will be, right-click your code and choose "Debug debugging").
+1. Create a **breakpoint** on the first line that should run (click in the margin to create breakpoints).
+2. Right-click your code and choose "Debug debugging".
 3. The program will run until it reaches the breakpoint. Click the "Step Into My Code" button to run line by line (click it once per line).
 4. The debugger will stop responding when user input is being asked for, so click (4) to switch to the Console and enter your input.
 5. The debugger will continue to the next line, so switch back (5) to the Debugger window to see the state of your variables. Notice also how it displays when your code is inside other functions.
@@ -81,23 +86,21 @@ main_3()
 # main_4()
 ``` 
 
-For each program, write what you found to be the problem (not the solution).  
+For each program, write what you found to be the **problem** (not the solution) in the provided section of `debugging,py`, then write the fixed, working, code (solution) in the section below that.
+
+```
+# Problem(s) for program 1:
+# ?
+
+# Fixed code for program 1:
+```
+
 Note that *"problem"* and *"solution"* are different things.  
 Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not what problem was
 that caused it to run slowly in the first place.
 
 When you have found the problem, you should be able to fix it, so change the code to make it work.  
-You do not need to explain your solutions, just fix the code and submit the fixed file.  
-
-Write your descriptions of the problems at the bottom of `questions.txt` in a section like below:
-```
-Debugging:
-
-1. 
-2. 
-3. 
-4. 
-```
+You do not need to explain your solutions, just fix the code and submit the fixed file, `debugging.py`.
 
 If you haven't already, copy the code from [debugging.py](./debugging.py) and get debugging!
 
@@ -350,11 +353,10 @@ This section summarises the expectations for marking in this practical.
 `questions.txt` with:
 
 - Quick Questions
-- Debugging problems (not solutions)
 
 Exercises, each in their own file:
 
-- `debugging.py` with code fixed (solutions) if you could figure them out
+- `debugging.py` with both problems and solutions (fixed code)
 - `jerry.py`
 - `dog_years.py`
 - `seconds.py`

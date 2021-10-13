@@ -245,35 +245,13 @@ You figure out a good way to do and display this.
 ## 3. Debugging Lists
 File: `debugging.py`
 
-### Friends' names
-Consider and copy (don't type :) the following code:
-```python
-# Debug program 1 - friends' names
-names = ["Abby", "Jerome", "Olivia", "Monique"]
-print("My friends' names: ")
-for i in range(1, len(names)):
-    print(f"{i}. {names[i]}")
-last_number = len(names)
-print(f"The last name is {names[last_number]}")
-```
+Similar to the previous practical's debugging exercises:  
 
-- Run it and see what problems you can find.  
-- In your file, add comments to explain the problems you find.  
-- Then, comment-out all of this and include fixed code below.
-
-### Country names
-Consider and copy (don't type :) the following code into `debugging.py`:
-
-```python
-# Debug program 2 - title-casing country names
-countries = ("australia", "new zeaLAND", "USA")
-for i in range(len(countries)):
-    countries[i] = countries[i].title()
-```
-
-- Run it and see what problems you can find.  
-- In your file, add comments to explain the problems you find.  
-- Then, comment-out all of this and include fixed code below.
+- Copy the code from [debugging.py](./debugging.py)  
+- Run the code and see what problems you can find.  
+- Complete the template in this file, adding comments to explain the **problems** (bugs) you find.  
+- **Remember**: debugging is about finding bugs, not just generally improving code. We're not interested in formatting and style here, just functionality. 
+- Then, comment-out the broken code and include fixed code in the provided section.
 
 
 ## 4. Extract data
@@ -282,7 +260,7 @@ File: `extract_data.py`
 Often, we get list data that is not homogenous, so not a list of names or countries, etc. but a list that's like a database 'record' (row) where each 'field' (column) represents a different kind of value.  
 We can extract this data using indexing.
 
-Consider and copy the following code (with a very generic name):
+Consider and copy the following code:
 
 ```python
 record = ["Jimmy", "Smith", (8, 12, 1928), "Piano"]
@@ -291,9 +269,9 @@ record = ["Jimmy", "Smith", (8, 12, 1928), "Piano"]
 Write code to extract and print specific data, like (sample output): 
 
 ```
-Last name:  Smith
+Last name: Smith
 Born: (8, 12, 1928)
-Jimmy was born (8, 12, 1928) and was a great Piano player.
+Jimmy was born in 1928 and was a great Piano player.
 ```
 
 As ALWAYS, do this one step at a time. You don't want to write the whole thing before getting just the first line to work.
