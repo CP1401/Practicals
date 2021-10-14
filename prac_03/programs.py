@@ -44,15 +44,19 @@ else:
 print("Age in dog years is", age_in_dog_years)
 
 # 5. Rock of Ages
-# Ask the user for their age, then tell them what you think of them.
-# Use a compound Boolean expression to test if the age is valid
-# (between 0 and 120 inclusive) and print "Invalid age" if it's invalid.
-# Then print your own personal response for how old they are.
-# You decide how many different responses you want.
+# Ask the user for their age, then tell them something related to their age.
 #
 # NOTE: This is an important question, to get used to determining an item's place within the infinite numeric range.
 # Notice how we start by ruling out the largest portion of the number line (search space) and that we
 # DO NOT REPEAT questions we already know the answer to.
+# Notice the use of the if-elif-else pattern.
+# We DO NOT need to ask a last question (e.g., if age >= 60)
+# because we know that already.
+# The only possible way Python can get to that else is if all the first if/elifs were False,
+# so the number can only be >= 60.
+# We do not need a nested structure.
+# We do start at one end (in this case low, but it could have been high) and keep checking in the same direction
+# There are no "and" expressions.
 
 age = int(input("Age: "))
 if age < 0 or age > 120:
@@ -65,11 +69,3 @@ elif age < 60:
     print("Getting there...")
 else:
     print("Enjoy your senior discounts!")
-
-# Notice the use of the if-elif-else pattern. We DO NOT need to ask a last question
-# (e.g., if age >= 60 because we know that already.
-# The only possible way Python can get to that else is if all the first if/elifs were False,
-# so the number can only be >= 60.
-# We do not need a nested structure.
-# We do start at one end (in this case low, but it could have been high) and keep checking in the same direction
-# There are no "and" expressions.

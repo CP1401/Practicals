@@ -175,7 +175,7 @@ Example:
 ``` 
 
 ## 1. Tax
-The following problem is partly done for you. Complete your parts:
+The following problem is partly done for you. Complete your parts.
 
 The Python Party wins government at the next election and introduce a simpler tax system that works like this:
 
@@ -183,12 +183,14 @@ The Python Party wins government at the next election and introduce a simpler ta
 - If you earn between $100 and $1000, you pay 5% tax on the total amount
 - If you earn over $1000, you pay 10% tax on the total amount
 
-First, think of what decision pattern applies.  
-Write the pseudocode for this (in comments), then code up the solution, some of which is started for you below.  
-Note the use of meaningful constants.   
-Get used to using the IDE to finish off these names, so you don't have to type them completely.  
+Write the pseudocode for this (in comments), then copy the code below and complete it.  
+Note the use of meaningful constants provided.   
 
-Make sure to only put your calculation for `take_home_pay` in one spot - it doesn't need to go in each path of the if-elif-else statement.
+First, think of which decision pattern applies.  
+There are three mutually-exclusive categories of taxation.  
+As you write conditions to determine the category, DO NOT REPEAT questions you already know the answer to.
+
+Make sure to only put your calculation for `take_home_pay` in one spot - it does not need to be repeated in each path.
 
 ```python
 TAX_RATE_LOW = 0.05  # 5%
@@ -196,8 +198,6 @@ TAX_RATE_HIGH = 0.1  # 10%
 TAX_THRESHOLD_LOW = 100
 TAX_THRESHOLD_HIGH = 1000
 
-total_tax = 0
-take_home_pay = 0
 print("Python Party Tax Program - Where Tax is a Party")
 income = float(input("Income: $"))
 # TODO: complete this part of the program here
@@ -208,11 +208,12 @@ print("Take home pay is: $", take_home_pay, sep="")
 
 Note: with a situation like this, you should see that in all cases, you want to end up with three properly-set variables: 
 
-- total_tax (if you pay no tax, then $0 is the correct total tax)
-- income (don't change this from what the user enters)
-- take_home_pay (this will ALWAYS be income - total_tax)
+- `total_tax` (if you pay no tax, then $0 is the correct total tax)
+- `income` (don't change this from what the user enters)
+- `take_home_pay` (this will ALWAYS be income - total_tax)
 
-With that in mind, make sure you **don't repeat yourself (DRY)**. 
+With that in mind, make sure you **don't repeat yourself (DRY)**.  
+Seriously, don't... repeat... yourself!
 
 Here is some sample output for two runs of the program, so you know what to test it with ("known-good" data).  
 
@@ -233,8 +234,48 @@ Take home pay is: $565.25
 Again, don't worry about the 2 decimal place currency formatting. We will get to that later.
 
 ### Comment out temporarily
-Remember that you can **comment out** code so it doesn't run by selecting the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).  
+Remember that you can **comment out** code so that it doesn't run by selecting the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).  
 Remember also to do this shortcut again when you're finished so that it looks like normal code again - all programs will run - before you submit your work.
+
+## Don't Repeat Yourself (DRY)
+
+Hopefully you're starting to "get it" with not repeating yourself.  
+Here's a counter-example to show you what NOT to do.
+
+```python3
+score = int(input("Score: "))
+if score < 0:  # condition 1
+    result = score * 2
+    print("Bad score :(")
+elif score >= 0 and score < 20:  # condition 2
+    result = score * 2
+    print("Score is OK.")
+elif score > 20:  # condition 3
+    result = score * 2  
+    print("Your score is good!")
+print("Double your score is", result)
+```
+
+This program works, so what's the problem?
+
+- Remember, we don't _just_ want working code, we want _good_ code!
+- condition 2 is only checked if condition 1 is False. if condition 1 is False, this is because score must be not < 0, so `score >= 0 ` is redundant. It will _always_ be true. condition 2 should be replaced by just `score < 20`
+- condition 3 appears to check if condition 2 was False, which we already know, but because this code uses "elif no else" we might just make a mistake like getting the boundary condition wrong. What happens if the user enters `20`? Oops! The right choice of pattern is important! We can fix this by changing condition 3 to `score > 20` but then we ask a question we can guarantee will always be True when we get to it (since the first 2 were False), so that's repeating ourselves. DRY.
+- Lastly, in all three paths, we repeat the line `result = score * 2`. Again, this works, but is not good. Since we always want to do this, it should go _outside_ the decision structure.
+
+Here's the code with these problems fixed. Ah, that's better :)
+
+```python3
+score = int(input("Score: "))
+if score < 0:
+    print("Bad score :(")
+elif score < 20:
+    print("Score is OK.")
+else:
+    print("Your score is good!")
+result = score * 2
+print("Double your score is", result)
+```
 
 ## 2. Car Insurance
 
@@ -245,9 +286,11 @@ Applicants 25 years and over are not required to purchase insurance.
 
 Painz needs you to write a program that gets the applicant's age, and outputs "Insurance required", "Insurance not required", or "Hire refused" as appropriate.
 
+When you write your decision structure, remember to start at one end of the "number line". The only place you should _not_ start is with the "special insurance" (middle) category. Don't repeat yourself.
+
 ## 3. Simple Password Checker
 
-Write a program that has a secret password stored as a constant, and checks a user's password against it.  
+Write a program that has a secret password stored as a **constant**, and checks a user's password against it.  
 Use string comparison to print either "Access granted" or "Access denied" depending on if the user's password matches the secret.
 
 
@@ -255,13 +298,20 @@ Use string comparison to print either "Access granted" or "Access denied" depend
 Write a Python program to calculate a dog's age in dog years.  
 
 How?  
-Each year of the first two human years is equal to 10.5 dog years.
-After that, each human year equals 4 dog years.
+Each year of the first two human years is equal to 10.5 dog years.  
+After that, each human year equals 4 dog years.  
+(Note: That is two possible scenarios.)
 
 Expected Output:
 ```
 Age in human years: 15
 Age in dog years is 73
+```
+
+or 
+```
+Age in human years: 1
+Age in dog years is 10.5
 ```
 
 Start by choosing the decision pattern that best applies to this problem...
@@ -275,10 +325,14 @@ but do the printing only once - _outside_ the paths - no matter what the result 
 
 ## 5. Rock of Ages
 
-Ask the user for their age, then tell them what you think of them.
+Ask the user for their age, then tell them something related to their age.  
 
-- Use a **compound Boolean expression** to test if the age is valid (between 0 and 120 inclusive) and print "Invalid age" if it's invalid.
-- Then print your own personal response for how old they are. You decide how many different responses you want.
+You need to ensure you write your decision structures **efficiently**.  
+DO NOT REPEAT questions you already know the answer to.
+
+- *First*, use a single **compound Boolean expression** to test if the age is invalid (not between 0 and 120 inclusive) and print "Invalid age" if it's invalid.
+- Then, start at one end (highest or lowest) and work towards the other end
+- Print your own custom response for at least four different age categories.
 
 ## 6. Speeding Fines
 
@@ -292,8 +346,15 @@ Ask the user for their age, then tell them what you think of them.
 | More than 30km/h but not more than 40km/h over the speed limit | $622           | 6              |
 | More than 40km/h over the speed limit                          | $1,245         | 8              |
 
-Avoid a 6 month suspension by writing a program to ask for the user's **speed** and the **speed limit** and then tell them their penalties/result.
+Note: the way the government website has written this (and we've copied it) is NOT efficient in terms of decision structures. This has been written for each condition to stand alone (if, if, if) but we can tell its mutually exclusive and so know a better tool for the job, don't we?
 
+Avoid a 6-month suspension by writing a program to ask for the user's: 
+- **speed** and the 
+- **speed limit** 
+
+then tell them their fine in dollars (you can ignore the demerit points).
+
+After getting the inputs, you will want to calculate the speed over the limit. You do not want to calculate this again and again in each condition. DRY. 
 
 # Practice and Extension
 
@@ -347,7 +408,16 @@ Write a program to tell a student what their grade is based on their input subje
 | P     | 50%-64%    |
 | N     | < 50%      |
 
+
+## Speeding Fines 2.0
+
+If you do this, don't change your existing submission in `programs.py`, put it in your `practice.py` file.
+
+Upgrade your speeding fines program to include the demerit points as well.  
+Ask the user at the beginning for their **bank balance** and **number of points**, then tell them the updated balances if they lost money or points.
+
 ## More...
+
 Review the 5 patterns and the programs you've written. Which programs use which patterns?  
 Think of more situations and more programs to write for each pattern.   
 Practise the patterns you've used the least by implementing some or all of these.
