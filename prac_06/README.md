@@ -2,7 +2,7 @@
 
 ## Important! Learn then Do
 Do not attempt this practical without learning from the lectures.  
-If you're here trying to complete this practical and you have not watched all of the lecture videos + attempted all of the "do this now" exercises from those, then...  
+If you're here trying to complete this practical and you have not watched all the lecture videos + attempted all the "do this now" exercises from those, then...  
 **Stop and do that now!**  
 Go learn what we are trying to teach you - then, and only then - come back and do the practical exercises, using that knowledge.
 
@@ -10,7 +10,7 @@ Go learn what we are trying to teach you - then, and only then - come back and d
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
 In your PyCharm practicals project, you should be using a new folder for each prac.  
-For this practical, create a new folder called `prac_06` to store all of the files.
+For this practical, create a new folder called `prac_06` to store all the files.
 
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
 
@@ -307,11 +307,46 @@ If you don't have it completed from each of the steps above, [here is the comple
 We did quite a number of steps along the way with this example program.  
 Here are a few more things to extend it just a bit more: 
 
-- See if you can change the printing of BMI (NOT the calculation) in main so that it is limited to 1 decimal place (e.g. 44.4 not 44.44444... as above).
-- If you have not done so already, complete your `run_tests` function so that it covers each logical possibility of output. 
+- Change the printing of BMI (NOT the calculation) in main so that it only shows 1 decimal place (e.g. 44.4 not 44.44444... as above).
+- If you have not done so already, complete your `run_tests` function so that you test each possible weight category (see note below). 
 - Add to your main to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use the age in the final output of main.
 - Look at your code. Do you see any grey underlines in PyCharm? If you do, move your mouse over them (don't click, just move) and read the popup message. You might see a PEP8 warning - probably a missing line break or space. Press the shortcut key **Ctrl+Alt+L** (Windows) or **Cmd+Opt+L** (Mac) and watch all of your formatting problems get fixed! Smile :)  
 
+#### Note: Test all the things
+
+If you write a program with code that looks something looks like:
+
+```
+if condition 1
+    do thing A
+else if condition 2
+    do thing B
+else
+    do thing C
+```
+
+Then there are 3 paths (A, B, C) that could possibly occur.  
+To test this properly, you need to write and run *at least* 3 tests, so you see things A, B and C.  
+Get into the habit of testing your code systematically and completely.  
+**Example/Motivation:**  
+Say you had something like:  
+
+```python
+value = int(input("Value: "))
+if value < 0:
+    print("Small value")
+elif value > -5:
+    print("Big value")
+else:
+    print("Other value")
+```
+
+If you never tested that you could see ALL 3 of "Small", "Big" and "Other", then you might think it works... 
+and you wouldn't know that it's broken!
+
+In the BMI question - look at how many possible outputs could occur and make sure your testing covers each one of them.  
+You don't need to test every single possible BMI... that would be infinite. 
+You need to test each weight category in this case.
 
 # Coding Exercises
 
@@ -377,19 +412,22 @@ Notice that we tested at least one of each style and some boundary conditions. (
 **Now write a main program** that asks the user for the dose and yield, works out the brew ratio then uses your function to determine the coffee style.  
 Remember that `main()` should always be your first function in any program file.  
 Note: `yield` is a Python statement (keyword) so you can't use it as a variable.  
-As a general rule, never use Python keywords as variables, even if you're allowed to (e.g. `sum` is a Python function but you're allowed to use it as a variable name... but don't.)
+As a rule, never use Python builtin words as variables, even if you're allowed to 
+(e.g., `sum` and `print` are Python functions that it's possible to use as variable names... but don't!)
 
-Sample output:
+Sample:
 ```
 Dose: 18
 Yield: 36
 1:2.0 is considered normale
 ```
 
-How did you go? Got it? Use the examples above and the teaching in the lectures if you get stuck on anything. Ask for help if you still need more support.  
+How did you go? Got it? Use the examples above and the teaching in the lectures if you get stuck on anything.  
+Ask for help if you still need more support.  
 
 One more thing. In the BMI example program, we had a nice helpful function for getting a valid number.  
-Copy and paste this into your program (near the bottom) and then use it (call it) when you get the dose and yield.
+Copy and paste this into your program (near the bottom) and then use it (call it) when you get the dose and yield. 
+Use estimates of maximum/high values, like 100. Or alternatively, you could rewrite the function to not take/check the maximum. 
 
 Your final program should look quite a lot like our BMI example. 
 Don't forget that our examples are some of the most helpful resources you have. **Use them!**  
@@ -397,35 +435,131 @@ Don't forget that our examples are some of the most helpful resources you have. 
 ## 2. Parity
 File: `parity.py`
 
-One of the most important points with this question is about function *naming*. In each case, think about what is the most meaningful name you can come up with.  
+The parity of a number is the number % 2 and is either 0 or 1.   
+E.g., the parity of 4 is 0, and the parity of 41 is 1.  
+
+This question requires 3 separate functions and a main to test them all.
+
+One of the most important parts of this question is to use good function *naming* (and that's one reason why the solution is _not_ provided).  
+In each case, think about what is the most meaningful name you can come up with.  
 Remember: "This function will..." 
 
-**Part 1**  
-Write a function to _print_ the parity of a number.  
-Parity is the number % 2  and is either 0 or 1.   
-E.g. the parity of 4 is 0 and the parity of 41 is 1.  
+### Part 1  
+Write a function to _print_ the parity of a number passed into it (parameter).  
+Write a main function that tests this with the numbers 4 and 41 (which you know should be 0 and 1).  
 
-**Part 2**  
-After you have written this and tested it (e.g. with 4 and 41), write a new function that _returns_ the parity instead of printing it.   
+**Important!**  
+Testing is about making sure you know when something is broken!  
 
-**Part 3**  
-After you have written and tested that one, write a third function that returns a Boolean for whether the value passed in is odd.  
-Recall from the lecture, that an excellent and common convention for naming Boolean-returning functions is to start their names with is.  
-Example, the built-in string method `isupper()` determines if a string is uppercase.  
+It's useful when testing to actually print the expected results as well as the actual results. The sample below shows what you might do for this question:
 
-When you have finshed all 3 of these functions, review their names and see how you did.  
-Are the names clear and unambiguous? Would a programmer know how to use these functions based on their names?
+```
+Parity of 4 should be 0:  0
+Parity of 41 should be 1:  1 
+```
+
+If all you do is call the function, you might see: 
+
+```
+1
+0
+```
+
+Did that work? Can you tell?
+
+It would be better to see something like:
+
+```
+Parity of 4 should be 0:  1
+Parity of 41 should be 1:  0
+```
+
+Oops... something needs fixing!
+
+### Part 2  
+Now, in the same program, write a new function that _returns_ the parity of the number you pass into it.  
+Remember to think of a good verb-phrase name for this, but do not use "return" in your name.  
+Since 100% of functions return something, we don't use "return" in names.  
+(Functions with no return statement actually implicitly return `None`.)
+
+Test your function similarly to the first one by adding to `main`.  
+Leave your test code for the first version and just add new tests below.
+
+### Part 3  
+After you have written and tested the first two functions, write a third function that returns a Boolean (True or False) for whether the number passed into it **is odd**.    
+Recall from the lecture, that an [excellent and common convention for naming Boolean-returning functions](https://github.com/CP1404/Starter/wiki/Styles-and-Conventions#best-practice-suggestions) is to start their names with `is`.  
+Example, the built-in string method `isupper()` determines if a string is uppercase. 
+We can then use these functions in meaningful, easy-to-read code like the example below. Notice that it is a nice example of concise handling of a Boolean [as in our guide](https://github.com/CP1404/Starter/wiki/Programming-Patterns#working-with-booleans). 
+
+```python
+def main():
+    my_age = int(input("Age: "))
+    if is_senior(my_age):
+        print("Have a cup of tea")
+    else:
+        print("Please mow the lawn")
+
+
+def is_senior(age):
+    return age >= 65
+```
+
+As with the others, you need to test that it works. Write at least two lines in your `main` program to test. Why test? Because the function has two possible outputs: `True` or `False`.  
+
+When you have finished all 3 of these functions, review their names and see how you did.  
+Are the names clear and unambiguous? Would a programmer know how to use these functions based on their names?  
+
+**Note:** If you (ever) need to change names that you have used more than once, 
+use PyCharm's excellent **refactoring**. Don't just edit in multiple places (and maybe forget one) or use 
+find-and-replace (and maybe change something else it matches). 
+Refactoring changes all the names correctly and is quick and safe.  
+Right-click on the name, then choose: **Refactor > Rename**
+
+### SRP Check!
+When you design and write functions, you should usually think about how they should be used and could be used.  
+So, imagine we want to use the above parity functions for the following tasks (just the parity bit, not the whole programs!).  
+Could yours be used in these ways?
+
+- Read a file of numbers and write a second file containing the parities of those numbers
+- If the user's age is odd, print their name in capitals; if it's even, print their name in lowercase
+
+If you wrote functions that ask the user for the number INSIDE the function, then you can't do these things.  
+If your Boolean-returning function actually returns a string, then you can't use it as a condition.  
+If you need to, go back and fix any problems with your function design.
 
 ## 3. JCU Grades
 File: `jcu_grades.py`
 
-According to [JCU Policy](https://www.jcu.edu.au/policy/learning-and-teaching/learning-teaching-and-assessment-policy), if you score 86% in a JCU subject, you will receive an HD grade; 40% will get you an N, etc.
+[JCU Subject results explained](https://www.jcu.edu.au/students/assessment-and-results/subject-results-explained) 
+shows the percentage score/result you need to get different grades:
 
-Write a function that takes a subject total score (0-100) and returns the corresponding JCU grade.
+- Below 50% = N
+- 50 up to but not including 65 = P
+- 65 up to but not including 75 = C
+- 75 up to but not including 85 = D
+- 85 and over = HD
 
-Test it, then write a program that asks the user for their score and prints their grade until they enter a score of < 0.
+**Note**: think about the *boundary conditions* and don't miss anything. Remember to test your boundaries.  
+Suppose you used 84 as your boundary, e.g., `if score > 84 then HD` Would that work?  
+No, because what if the score were 84.1? That should be a D, but your code would make it an HD!  
+This is where bugs come from :(  
+Our **strong recommendation is that you always use the values in the question**.  
+In this case, use 50, 85, etc. not 49, 49.9, or whatever. This will help prevent mistakes.
+
+Write a function that takes a subject total score and returns the corresponding JCU grade.  
+
+**Check**: Are you getting used to this kind of wording?  
+If the function **"takes"** a score, it means you must pass it into the function as a **parameter**.  
+If the function **"returns"** a grade, it means you don't print it, you... `return` it.
+
+**Test it!** Like we've done before (see the pattern?), write a separate function to test that all the grades can be produced correctly.  
+
+When your tests all pass, write a `main` program that asks the user for their score and prints their grade until they enter a score of < 0.  
+Do not do any error-checking on the score for this program.  
 
 **After** you have finished and tested that program, add to it (same main) so that the program asks the user for a number of scores, then generates that many random scores and shows their grades.  
+(We hope you realise that you do not need a new function for determining the grade - you've already got one!)  
+
 Example output: 
 
 ```
@@ -442,9 +576,9 @@ How many random scores: 5
 13 = N
 ```
 
-You may notice that the display of scores and grades are different in the first part compared to the second (random).  
-Remember **SRP** - that functions should do one thing. So, it's not the function's job to format the score or the =/is,
-but rather it the function has ONLY ONE JOB and that's to... determine the grade.  
+You should notice that the display of scores and grades is different in the first part compared to the second (random).  
+Remember **SRP** - functions should do one thing. So, it's not the function's job to format the score or the =/is,
+but rather, the function has ONLY ONE JOB and that's to... determine the grade.  
 How the grade is used, printed, or whatever, is up to the code that calls this function.
 
 
@@ -504,7 +638,7 @@ Instead of asking the user for their steak style (e.g. medium rare), ask the che
 Think about the functions that make sense, including reusing your function for getting a number. 
 
 ## iii. Tax Calculation
- Rewrite the [calculate tax(income) program from prac 3](https://github.com/CP1401/Practicals/tree/master/prac_03#1-tax) but note:  
+ Rewrite the [calculate tax (income) program from prac 3](https://github.com/CP1401/Practicals/tree/master/prac_03#1-tax) but note:  
 The calculation function should return 2 values (`total_tax` and `take_home_pay`).   
 We did not learn about how to do this in the lecture, but you can return as many values as you want from a function.  
 To store these values, use multiple variables, like:

@@ -32,17 +32,18 @@ You need to continue to systematically build your attension to detail ;)
 
 # Debugging
 Debugging is the process of finding and fixing problems in code (yours or someone else's), and is an important skill to develop.  
-Like our fun logic exercises, it's not just about quickly finding the answer, but about learning to systematically figure it out.  
-It's great if you spot/fix an issue straight away, but what if you know there's a problem but can't see it immediately?  
-You need to develop attention to detail as well as be able to use debugging tools to help you.
+**IMPORTANT:** Debugging is not refactoring, or improving working code.  
+We are not looking for things like formatting issues or unclear variable naming. We don't want nicer code, we want working code. The problems with the provided code are **bugs**.  
+A poor variable name is not good, but it's not a bug.  
+Don't look for ways to improve the code... look for what's actually wrong with it... why it does not work properly.
+
+Like our logic exercises, it's not just about quickly finding the answer, but about learning to systematically figure it out.  
+It's great if you spot/fix an issue straight away, but what if you know there's a problem and you can't see it immediately?  
+You need to develop attention to detail and be able to use debugging tools to help you.
 
 In the "Functions 2" lecture, we introduced the PyCharm debugger.  
 (Again, if you haven't watched that lecture, *please* stop now and go back to the lecture!)
   
-Let's use the debugger now to try and systematically figure out what's wrong with the following programs.  
-In all cases, read the code and try and understand it, then 
-practise using the debugger as instructed to "step through" the program.
-
 Note: PyCharm does wonderful "on the fly" debugging by highlighting problems or potential issues in your code.  
 Get used to spotting the red/green/grey underlines and other warnings and potentially correcting the issues PyCharm tells you about.   
 
@@ -58,22 +59,26 @@ will *not* get proper formatting. OK?
 
 - [debugging.py](./debugging.py)
 
-Follow the arrows in this screenshot to:
-1. Create a breakpoint on the first line that should run (click in the margin to create breakpoints).
-2. Run the debugger (if this is the first time you've run this program, which it will be, right-click your code and choose "Debug debugging").
-3. The program will run until it reaches the breakpoint. Click the "Step into my code" button to run line by line (click it once per line).
-4. The debugger will stop responding when user input is being asked for, so click (4) to switch to the Console and enter your input.
-5. The debugger will continue to the next line, so switch back (5) to the Debugger window to see the state of your variables.
+Let's use the debugger now to systematically figure out what's wrong with the following programs.  
+In all cases, read the code and try and understand it, then 
+use the debugger to "step through" the program.
 
-Keep clicking through "Step into my code" to see exactly how the program runs and what the values of variables are.  
+Follow the arrows in this screenshot to:
+1. Create a **breakpoint** on the first line that should run (click in the margin to create breakpoints).
+2. Right-click your code and choose "Debug debugging".
+3. The program will run until it reaches the breakpoint. Click the "Step Into My Code" button to run line by line (click it once per line).
+4. The debugger will stop responding when user input is being asked for, so click (4) to switch to the Console and enter your input.
+5. The debugger will continue to the next line, so switch back (5) to the Debugger window to see the state of your variables. Notice also how it displays when your code is inside other functions.
+
+Keep clicking through "Step Into My Code" to see exactly how the program runs and what the values of variables are.  
 You will need to switch between the "Console" (to see output and enter input) and "Debugger" (to see program state) windows.
 
 ![PyCharm debugger screenshot](../images/debugger.png)
 
-There are four "main" programs in "debugging.py" for you to debug separately (use a new breakpoint at the start of each).  
+There are four "main" programs in `debugging.py` for you to debug separately (use a new breakpoint at the start of each).  
 Test/debug each, one at a time.  
 When you've finished one, "comment out" its main call and "uncomment" the next one.  
-Example, when testing main_3, the bottom of your code would look like:
+Example, when testing `main_3`, the bottom of your code would look like:
 ```python
 # main()
 # main_2()
@@ -81,47 +86,63 @@ main_3()
 # main_4()
 ``` 
 
-For each program write what you found to be the problem... and solution if you can figure it out.  
+For each program, write what you found to be the **problem** (not the solution) in the provided section of `debugging,py`, then write the fixed, working, code (solution) in the section below that.
+
+```
+# Problem(s) for program 1:
+# ?
+
+# Fixed code for program 1:
+```
+
 Note that *"problem"* and *"solution"* are different things.  
-Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not what problem was causing it to run slowly.
+Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not what problem was
+that caused it to run slowly in the first place.
 
-Write your answers at the bottom of `questions.txt` in a section like below:
-```
-Debugging:
+When you have found the problem, you should be able to fix it, so change the code to make it work.  
+You do not need to explain your solutions, just fix the code and submit the fixed file, `debugging.py`.
 
-1. 
-2. 
-3. 
-4. 
-```
-
+If you haven't already, copy the code from [debugging.py](./debugging.py) and get debugging!
 
 # Python Coding - Functions 2 - Coding Exercises
  
 ## 1. Jerry the Driver
 File: `jerry.py`  
 
-In the Functions 2 lecture, you had a "Do this now" question:
+In the Functions 2 lecture, you had a "Do this now" question like:
 
-> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine if he will get any speeding fine. 
+> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine his speeding fine.  
 
 You (we) wrote the pseudocode for the main function for this:
 
 ```
 function main
-    speed_in_m = get_valid_number("speed in m")
-    speed_in_km = convert_m_to_km(speed_in_m)
-    speed_limit_in_km = get_valid_number("speed limit in km")
-    fine = determine_fine(speed_in_km, speed_limit_in_km)
+    speed_in_mph = get_valid_number("speed in mph")
+    speed_limit_in_kph = get_valid_number("speed limit in kph")
+    speed_in_kph = convert_miles_to_km(speed_in_mph)
+    fine = determine_fine(speed_in_km, speed_limit_in_kph)
     print fine
 ```
+
+**Note**: The value of the fine as a **number** type is much better to return than a string, or a whole message.  
+What if we wanted to determine a new bank balance after paying the fine?
+
+```
+bank_balance -= fine
+```
+
+This is an example of **SRP**. It is the `determine_fine` function's ONLY (single responsibility) job to determine/calculate the actual fine as an actual number.  
+It is counter-productive for this function to print the fine or to format with a '$' or anything else.
+`bank_balance -= fine` doesn't work if `fine` is something like `Your fine is $199`.  
+< insert "you had one job" meme here ;) > 
 
 **Write the complete Python program** for this in `jerry.py`.
 
 Remember that you've done some of this before, so copy your previous work:  
 
-- [Prac 2 where we calculated km -> m](../prac_02/README.md#2-miles-to-kilometres) 
-- [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)
+- [Prac 2 where we calculated km -> m](../prac_02/README.md#2-kilometres-to-miles) 
+- [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)  
+Note that we only want to know the fine as a number, not the demerit points or any other messages.
 
 **Test** this using meaningful test data that you can understand.  
 
@@ -131,7 +152,9 @@ File: `dog_years.py`
 
 In [Prac 3](../prac_03/README.md#4-dog-years) you wrote a program to calculate a dog's age in dog years.  
 Rewrite this program using a function for the conversion.  
-Write a main function that repeatedly asks the user for an age in human years until the user enters a negative number.  
+Write a main function that repeatedly asks the user for an age in human years, then displays it in dog years
+until the user enters a negative number.  
+Don't do any error checking on this age.
 
 Here's the calculation part already:  
 ```python
@@ -144,8 +167,8 @@ else:
 ## 3. Seconds Display
 File: `seconds.py`  
 
-In [Prac 2](../prac_02/README.md#4-i-stop-calculation-percentage) you wrote a program to calculate and display i-stop time/percentage.  
-In that, you displayed seconds as minutes and seconds, example: 
+In [Prac 2](../prac_02/README.md#4-i-stop-calculation-percentage) you wrote a program to calculate and display "i-stop" time/percentage.  
+In that program, you displayed seconds as minutes and seconds, example: 
 ```
 i-stop on in seconds: 62
 Time stopped in seconds: 161
@@ -154,10 +177,17 @@ i-stop ON:      1m 2s
 Time Stopped:   2m 41s
 Percentage:     38.50931677018634%
 ```
+Note: the original program from prac 2 was about i-stop values for a car, but this has nothing to do with that context.  
+The technique for figuring out minutes and seconds from just seconds is the same, so you can copy your work, 
+but do change any references to the old context. 
 
-Rewrite this program using a function that **takes in a number** of seconds and **returns a string** to display that value in minutes and seconds.  
-Write a main program that simply displays a bunch of different seconds values in minutes and seconds using a loop.  
-Example output: 
+Write a simple program using a function that **takes in a number** of seconds and **returns a string** that can be used to display that value in minutes and seconds.  
+Notice that the function DOES NOT PRINT. We want to use the string in different ways, so this function's job is simply to create/return a formatted string.  
+Write a main program that displays a bunch of different seconds values in minutes and seconds using a loop.  
+**Example output:**  
+Note: Think about how this was generated... There's no user input; it starts at 0, goes to ? in steps of ?  
+Try and do the same in your program.  
+
 ```
 0 seconds is 0m 0s
 635 seconds is 10m 35s
@@ -167,9 +197,30 @@ Example output:
 3175 seconds is 52m 55s
 ```
 
-Note: the original program from prac 2 was about i-stop values, but this has nothing to do with that.  
-The technique for figuring out minutes and seconds from just seconds is the same, so you can copy your work, 
-but do change any references to the old context. 
+To help you understand **SRP** even more, let's think about what this function should `return`.  
+Should it return something like?
+
+`635 seconds is 10m 35s`
+
+Well, what if we wanted to use the _same_ function for different kinds of tasks?  
+Let's do that now...
+
+**Add another small part to this same program** - after the loop - that asks the user for their favourite duration in seconds, 
+then prints it in minutes and seconds, like
+
+```
+Favourite duration in seconds: 639
+You love 10m 39s
+```
+
+So... if our function returned something like `635 seconds is 10m 35s`, then we could NOT use it for this task, even though it's really similar.  
+Do we need a second function that returns something like `You love ...`?  
+NO! That would be repeating ourselves, and we know... **DRY**.  
+
+So... we need to remember SRP.  
+This function has **one job**, and it's not printing or returning a whole `n seconds is ...`, it's ONLY the bit that formats the seconds (argument) in minutes and seconds...  
+which we can now reuse in different situations!  
+SRP leads to function reusability and helping us not repeat ourselves :).
 
 ## 4. BMIs
 File: `bmis.py`  
@@ -277,7 +328,7 @@ Do as many as you can, making sure to follow the principles you have learned in 
 # Extension
 
 ## i. Hours
-Extend your function that converts seconds to minutes and seconds so that it can also handle hours.
+Extend the function you wrote earlier that converts seconds to minutes and seconds so that it can also handle hours.
 Example:
 ```
 635 seconds is 0h 10m 35s
@@ -302,11 +353,10 @@ This section summarises the expectations for marking in this practical.
 `questions.txt` with:
 
 - Quick Questions
-- Debugging problems and solutions
 
 Exercises, each in their own file:
 
-- `debugging.py` with code fixed (solutions) if you could figure them out
+- `debugging.py` with both problems and solutions (fixed code)
 - `jerry.py`
 - `dog_years.py`
 - `seconds.py`
