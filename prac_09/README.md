@@ -4,6 +4,10 @@ Solutions for these checkpoint questions are provided as
 worked solution demonstration videos.  
 Please do your own solutions before watching ours!
 
+## Functions
+
+File: `programs.py`
+
 ### Use Docstrings
 Please watch the checkpoint 2 video lecture on docstrings before starting this work.  
 
@@ -19,7 +23,6 @@ def is_valid_password(password):
     return True
 ```
 
-## Functions
 Note that a program that uses a function means we need a `main` function as well.  
 
 A good general principle is that you should never write programs that use only one function.  
@@ -44,9 +47,9 @@ Write testing code in `question_2()` that shows how this function should work, l
 def question_2():
     some_number = int(input("Number: "))
     if is_even(some_number):
-       print(f"{some_number} is even")
+        print(f"{some_number} is even")
     else:
-       print(f"{some_number} is odd")
+        print(f"{some_number} is odd")
 ```
 
 ### 3. Get Non-empty String 
