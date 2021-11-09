@@ -619,7 +619,7 @@ Because we only have six weeks, our practicals are quite large. If you've done a
 Now would be a good time to take a break before completing the rest of our work.
 
 
-# Debugging
+## 5. Debugging
 Debugging is the process of finding and fixing problems in code (yours or someone else's), and is an important skill to develop.  
 **IMPORTANT:** Debugging is not refactoring, or improving working code.  
 We are not looking for things like formatting issues or unclear variable naming. We don't want nicer code, we want working code. The problems with the provided code are **bugs**.  
@@ -693,9 +693,7 @@ You do not need to explain your solutions, just fix the code and submit the fixe
 
 If you haven't already, copy the code from [debugging.py](./debugging.py) and get debugging!
 
-# Python Coding - Functions 2 - Coding Exercises
- 
-## 1. Jerry the Driver
+## 6. Jerry the Driver
 File: `jerry.py`  
 
 In the Functions 2 lecture, you had a "Do this now" question like:
@@ -736,7 +734,7 @@ Note that we only want to know the fine as a number, not the demerit points or a
 **Test** this using meaningful test data that you can understand.  
 
 
-## 2. Dog Years
+## 7. Dog Years
 File: `dog_years.py`  
 
 In [Prac 3](../prac_03/README.md#4-dog-years) you wrote a program to calculate a dog's age in dog years.  
@@ -753,7 +751,7 @@ else:
     dog_years = 21 + 4 * (human_years - 2)
 ```
 
-## 3. Seconds Display
+## 8. Seconds Display
 File: `seconds.py`  
 
 In [Prac 2](../prac_02/README.md#4-i-stop-calculation-percentage) you wrote a program to calculate and display "i-stop" time/percentage.  
@@ -811,7 +809,7 @@ This function has **one job**, and it's not printing or returning a whole `n sec
 which we can now reuse in different situations!  
 SRP leads to function reusability and helping us not repeat ourselves :).
 
-## 4. BMIs
+## 9. BMIs
 File: `bmis.py`  
 
 In [Prac 6](../prac_06/README.md#example) we wrote a program to calculate a person's BMI and weight category using functions.  
@@ -898,7 +896,6 @@ Height 1.9m, Weight  80kg = BMI 22.2, considered normal
 Height 1.9m, Weight  90kg = BMI 24.9, considered normal
 Height 1.9m, Weight 100kg = BMI 27.7, considered overweight
 ```
-
 
 # Practice and Extension
 
