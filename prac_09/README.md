@@ -354,5 +354,6 @@ Do this with a list (much like the earlier question) and use `sum` to calculate 
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-- `checkpoint_02.py` with programs 1-8
-- `checkpoint_02_coffee_orders.py` (All Together Now)
+- `programs.py` with programs 1-5
+- `coffee_orders.py` (All Together Now)
+- `strings.py` with programs  6-8
