@@ -1,10 +1,9 @@
-# Practical 01 - Problem Solving and Algorithms
+# Practical 01 - Problem Solving & Input, Processing and Output
 
 **Welcome to practicals!**
 
 If you haven't read the introduction to pracs and marking, please [read this now](../README.md).  
 **Note: All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
-
 
 ## Community
 It's a good idea to start getting to know your IT@JCU community a bit more...  
@@ -17,13 +16,20 @@ In lecture 1, we established that it was **not OK** to work together with others
 You have to do your own work in order to achieve the learning outcomes.  
 However, it's still really helpful and good practice to work with others to understand problems and to discuss solutions.  
 You **are allowed** to talk with others about these things... you just can't go too far.  
-Communication is a big part of IT and it helps to know a little about who you are communicating with. 
+Communication is a big part of IT, and it helps to know a little about who you are communicating with. 
 
 So, we're going to do this together **on Slack**.  
-*Introduce yourself in Slack* including your name and what you like that starts with the same first letter (e.g. "I'm Yasmin and I like yachting") and also add where you are studying from.
+(If you're in a face-to-face practical class with other students, please work together and do this with one or two people near you!)  
 
+**Introduce yourself in Slack** including your name and what you like that starts with the same first letter (e.g. "I'm Yasmin and I like yachting") and also add where you are studying from and any other interesting details you're happy to share. Thanks!
 
-Record your answers for the below questions in a simple text file, `questions.txt`.
+## Read and Understand
+Make sure you read all practical instructions carefully.  
+Do not make the easy bits hard by not reading the instructions.  
+We want the challenge to be in the new things you're learning and trying, not in the reading and paying attention to what the questions ask.  
+Don't waste time by trying to save time skim-reading. Just read... and understand... then do.  
+
+Record your answers for each of the below questions in a simple text file, `questions.txt`. You can use Notepad or any suitable program for creating your work file.
 
 ## Logic Exercise
 
@@ -43,13 +49,14 @@ If you are ever working in a group on these and you already know the answer (or 
 
 **What is each person's job?**
 
+Note: record your answer for this question in your `questions.txt` file under the heading "Logic Exercise", so it's clear.
+
 ## Algorithms
 
-Record your answers to the following questions in your text file called `questions.txt`.  
-If creating this file takes you more than 30 seconds, then just start the questions, recording them any way you can.
+Record your answers to the following questions in your text file called `questions.txt`. Use a heading for each one.  
 
 The following exercises are focused on the logic of algorithms, rather than the exact formatting of pseudocode or flowcharts to describe them.  
-We're not really interested in writing programs for these, just the basics of writing a set of understandable and clear instructions.  
+We're not going to write computer programs for these, so we are just focused on the basics of writing a set of understandable instructions.  
 
 ### Example
 Here's an example of an algorithm (written in simple pseudocode) to determine if it's safe to go out and play based on the sun (uv index):
@@ -63,7 +70,7 @@ else
 ```
 
 Notice the first line...  
-We can't just say: `if uv index < 5` without knowing what `uv index` is, so we have to get it first. 
+We can't just say: `if uv index < 5` without knowing what `uv index` is, so we have to **get** it first. 
 
 ### Algorithm with I, P, O 
 **Write an algorithm** to calculate the brew ratio of coffee, given the dose (quantity of coffee beans in grams) and the yield (brewed coffee in grams).  
@@ -86,8 +93,11 @@ This algorithm should have included the **repetition** (or iteration or loop) co
 
 ## Problem Decomposition
 
-For the following 3 problem descriptions, identify the **nouns** and **verbs** (separately) in each.   
-You could copy the text and highlight each kind of word in different colours, or write two separate lists.  
+For the following 3 problem descriptions, identify the **nouns** and **verbs** (separately) in each.  
+
+Note: You will end up with 6 separate answers for this section - the nouns & verbs, then the algorithm, for each of the 3 problems.  
+
+Write two separate lists (with subheadings) for each.  If you're writing your answers using Word, you could copy the text and highlight each type of word in different colours or similar.  
 (Don't get hung up on the exact details of the words.)   
 
 Then go through the set of nouns and verbs and work out which
@@ -111,8 +121,8 @@ See if what's remaining is what you need to know to write an algorithm.
     travelled (in km) and the travel time in minutes. The user will then
     be shown the average speed (in km/hour) over the trip.
 
-When you've decomposed these small problems into their parts, **write algorithms** for each of them using either pseudocode or flowcharts.  
-At this stage, we're not too worried about getting the details 'perfect', we just want to get used to problem solving processes.
+When you've decomposed these small problems into their parts (word types), **write algorithms for each of them using either pseudocode or flowcharts**.  
+At this stage, we're not worried about getting the details 'perfect', we just want to get used to problem solving processes.
 
 As you do this, think about what **assumptions** you're making.  
 Good assumptions are an important part of IT and problem solving.
@@ -142,19 +152,26 @@ Note: Your screens may look different than our images or descriptions below depe
 
 2.  Click on **Create New Project**. and choose **Pure Python**. PyCharm
     asks you where to store your new project and to choose an
-    interpreter.  
-    Name your new project (folder)  `cp1401practicals`
+    interpreter. Your screen may look different than our image below,
+    but name your new project (folder) for your **cp1401practicals**.
 
     -   the **location** can be changed to any place you have access to. Use a folder that you will be able to find later
 
-    -   use the **... button** to select the location
+    -   use the **... button** ("meatball menu") to select the location
 
     -   the **interpreter** is the version of Python we need to run our code on the computer.  
-        Use the *existing interpreter* for Python 3.  
-        **DO NOT use a virtual environment (venv).** They're cool but we don't
-        need them in this subject.
+        Use the *previously configured interpreter* for Python 3.  
+        **DO NOT use a virtual environment (Virtualenv).** They're cool, but we don't
+        need them in this subject... they make things harder for you.
 
-![New project window](../images/01image1.png)
+    ![New project window - choose previously configured interpreter](../images/Python-Windows-Install-3-Project-1.png)
+
+    - Click the ... menu button to choose a new interpreter and select the System Interpreter you installed earlier.  
+    (This is why it's useful to install Python in a directory you can find.)
+    Select the System Interpreter you have installed (not a Virtualenv).
+
+    ![Select system interpreter](../images/Python-Windows-Install-4-Project-2.png)
+
 
 3.  Next, let's add our first source code file to the project.  
     **Right-click** on the project name and select  
@@ -197,9 +214,9 @@ prac_01
 ``` 
 
 This conforms with Python module/package naming conventions, using underscore_lowercase (no spaces).   
-Also, by naming it `01` instead of just `1`, when we get to `prac_10`, our alphanumeric sorting will work as we expect (otherwise, prac2 comes _after_ prac10). 
+Also, by naming it `01` instead of just `1`, if we get to `prac_10`, our alphanumeric sorting will work as we expect (otherwise, prac2 comes _after_ prac10). 
 
-Now that you have the folder, drag your **hello.py** file into it.
+Now that you have the folder, drag your `hello.py` file into it.
 
 **Do not** create new projects for each separate practical.
 
@@ -207,20 +224,29 @@ Now that you have the folder, drag your **hello.py** file into it.
 
 ### Example program
 
-For fun, let's now copy all of the code from our [catering calculator example program](https://raw.githubusercontent.com/CP1401/subject/master/cateringcalculator.py) 
+For fun, let's now copy all the code from our [catering calculator example program](https://raw.githubusercontent.com/CP1401/subject/master/cateringcalculator.py) 
 (Use Ctrl+click to open links in new tabs)  
 and paste that into a **new Python file** with the same name, `cateringcalculator.py`.
 
 **Run it**... play with it, change it, break it, see what happens...  
 (Don't worry if you don't understand it yet, we've still got a long way to go.)
 
+
 # *Intermission*
 Because we only have six weeks, our practicals are quite large.  
-If you've done all of the above in one sitting - well done!  
+If you've done all the above in one sitting - well done!  
 Now would be a good time to **take a break** before completing the rest our work.  
 
-Seriously, taking regular breaks helps you to maintain (or restore) a positive and active state of mind so you can work effectively and efficiently.  
+Seriously, taking regular breaks helps you to maintain (or restore) a positive and active state of mind so that you can work effectively and efficiently.  
 Make a habit of it.
+
+Keep writing your answers in your `questions.txt` text file.  
+For the first practical, use whatever text editor you like, but you can use PyCharm to edit text files.
+
+## Logic Exercise 2
+A drawer contains 10 black and 10 white socks that are all mixed up.
+What is the fewest number of socks you can take from the drawer _without looking_ 
+and be sure to get a pair of the same colour?
 
 ## Quick Questions - Variables
 
@@ -320,33 +346,41 @@ print new_price
 ```
 
 **Test** this using meaningful test data that you can understand.  
+
 Once you have done this, adjust your program so that `0.2` is a **named constant** instead of a **magic number**.  
 Test it again.  
 Always test your programs after you modify them. You might have broken something.  
 
+Now that you've started thinking about **constants**, you should consider using them appropriately. We won't always tell you when/if to use a constant, but [you should understand how and when to use constants](https://github.com/CP1404/Starter/wiki/Programming-Patterns#constants).  
+You should use at least one more constant in your solutions for this practical!  
+
 ### Commenting Out Code
-Now that you want to move on to the next exercise, you _could_ start a new file, but just going to keep using the same one.  
+Now that you want to move on to the next exercise, you _could_ start a new file, but instead please just keep using the same one.  
 However, you don't want to _run_ the old programs as well as the new one, so you can "comment out" the previous program code.  
 To do this, select the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
 
-## 2. Kilometres to Miles
+BEFORE you finalise and submit your practical, please "uncomment" your finished code. (More to explain this later.)
 
-Joseph has recently moved to Australia from the United States.  
-He understands that distances are given in kilometres rather than the miles he is used to.  
-Create a program that will request (input) a distance in kilometres and output that distance in miles. 
+## 2. Kilometres to Miles 
+
+Joseph has recently moved to Australia from the United States. He understands that distances are given in kilometres rather than the miles he is used to.  
+Create a program that will request a distance in kilometres and output the same distance in miles. 
 
 - 1 mile = 1.60934 kilometres
 - 1 kilometre = 0.621371 miles
 
+A "conversion rate" is a good situation to use a constant.
 
 ## 3. Holiday Cost
 
 Sonje has been invited on a holiday by her friends, but she is not sure how much it will cost in total.  
-She knows the cost of the hotel will be $75 per day.  
+She knows the cost of the hotel will be $75 per day. (Let's keep it simple and assume days and nights are the same thing.)   
 She would like to be able to enter estimates for daily food cost and daily activity cost and then work out the total based on the number of days for the trip.  
 For simplicity, assume that each day's costs are the same.  
 Help Sonje by writing a program that will figure out the total cost for the holiday.  
-Here is some sample output showing user entry (e.g. the user entered `65.50` for the daily food cost):
+Here is some sample output showing user entry.  
+Please note that this is what the program looks like when it's finished.  
+In this example, the user entered `65.50` for the daily food cost, `49` for the activities and `4` for the number of days (three user inputs).
 
 ```
 Daily food cost: $65.50
@@ -404,7 +438,7 @@ Percentage:     38.50931677018634%
 ```
 
 **Before you finish** with this file, "uncomment" your previous code for all programs.    
-Leave the comments for headings, but return the rest of the code back to normal.    
+Leave the actual comments for headings, but return the rest of the code back to normal.    
 To do this, select the lines of code and press `Ctrl+/` for each program.  
 
 # Practice and Extension
@@ -467,21 +501,21 @@ Just put normal (unformatted) text in here and make sure you have simple heading
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-questions.txt  with:
+`questions.txt` with:
 
-- Logic Exercise
+- Logic Exercises
 - Algorithms
 - Problem Decomposition
-- Quick Questions - Variables
+- Quick Questions
 
-programs.py with:
+`programs.py` with:
 
 - Discount Price
 - Kilometres to Miles
 - Holiday Cost
 - i-stop Calculation (Percentage)
 
-
 ## Submit
 Now **submit your work to LearnJCU**.
-Remember to include both your `questions.txt` and `programs.py` files.
+Remember to include both your `questions.txt` and `programs.py` files. Do not zip these up. Ensure that the file names are accurate.  
+Thank you.
