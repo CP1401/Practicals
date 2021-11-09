@@ -1,16 +1,18 @@
 # Coding Checkpoint 2
 
 **This checkpoint is not an assessed practical, but is a collection of practice exercises for self-evaluation based on things you should know by now (nothing new).**  
-You DO need to submit your (own) work, even though solutions are provided.  
+Solutions for these checkpoint questions are provided as worked solution demonstration videos.  
+Please do your own solutions before watching ours!
 
-Solutions for these checkpoint questions are (will be) provided as 
-worked solution demonstration videos in your LearnJCU site (or live lecture/recording).  
-But please do your own solutions before watching ours!
+## Functions
+
+File: `programs.py`
 
 ### Use Docstrings
 Please watch the checkpoint 2 video lecture on docstrings before starting this work.  
 
-**For each and ALL of your functions from now on, write a brief function docstring**.  
+For each of your functions, write a brief function **docstring**. Docstrings, like all comments, should be written in the imperative mood, e.g., "Print" not "Prints".  
+
 Here's a good example for a function that checks to see if a password is valid:
 
 ```python
@@ -21,98 +23,105 @@ def is_valid_password(password):
     return True
 ```
 
-## Functions
 Note that a program that uses a function means we need a `main` function as well.  
 
 A good general principle is that you should never write programs that use only one function.  
 If you're using a function (like those asked for below), then you also want a main.  
 If you only have main, then you don't really need it (but there's nothing wrong with a program that's entirely in a main).  
 
-1. **Print a line**  
+To make today's practical work easier to identify (and selectively run) but without using lots of separate files, we'll write questions with the "main" code in functions like `question_1()`. 
+
+### 1. Print a line  
 Write a function that prints a line of 40 hyphens.  
 
-2. **Is it even?**  
+Call your function to test it from a function called `question_1()`.
+
+### 2. Is it even? 
 Write a function to determine if an integer passed into it is even.  
-Note: In a previous prac question we did this for if the number was odd, so it's nearly identical.  
-Don't copy that code unless you need help. 
+Note: In prac 6 we did this for if the number was odd, so it's nearly identical.  
+Don't copy that code unless you need help. Remember, we should know this now... so notice if you don't know how to do what you've already done before...
 
-Remember, we should know this now... so notice if you don't know how to do what you've already done before...
+Write testing code in `question_2()` that shows how this function should work, like:
 
-Remember **SRP**? This function has ONE job... NOT printing, NOT asking for user input, NOT returning a string...  
-If you have written this function correctly, then the following test code should work (copy it and see):
+```python
+def question_2():
+    some_number = int(input("Number: "))
+    if is_even(some_number):
+        print(f"{some_number} is even")
+    else:
+        print(f"{some_number} is odd")
 ```
-age = int(input("Age: "))
-if is_even(age):
-    print("Your age is even!")
-else:
-    print("Your age is not even")
+
+### 3. Get Non-empty String 
+Write a function to get a non-empty string. That is, you should be able to enter any string as long as it's not `""`.  
+
+In a `question_3()` function, call your new function to ask the user for their name using your function...  
+Then use the _same_ function for getting their birthplace, and then display a message like:  
+```
+Hi Martin from New Zealand!
 ```
 
-3. **Get Non-empty String**  
-Write a function to get a non-empty string. That is, you should be able to enter any string as long as it's not "".  
-Use this in a program to ask the user for their name using your function...  
-Then use the _same_ function for getting their birthplace, and then display a message like: 
-    ```
-    Hi Martin from New Zealand!
-    ```
-    So, if you need to use the same function for getting two different things and you want the user to know what you're asking, then you might need a function that can be customised... which is one thing we use _parameters_ for.  
+Notice how this works: we can use the same function for getting two different things because we can customise the way the function works using **parameters**.  
 
 ## Lists
 
-4. **Number List**  
-Write a program that asks the user for a minimum and maximum number, then generates a list of integers between those two numbers, then prints it:  
-The maximum number must be greater than the minimum.  
-Note: **Never** use variable names that are the same as Python built-ins, e.g. `max`, `sum`, `print`, etc.  
+### 4. Number List  
+Write a `question_4()` that asks the user for a minimum and maximum number (ensuring the maximum is greater than the minimum).  
+Then generate a list of integers between those two numbers and print it, as shown below.  
 
-    ```
-    Minimum number: 10
-    Maximum number: 9
-    Your maximum must be greater than 10
-    Maximum number: 0
-    Your maximum must be greater than 10
-    Maximum number: 17
-    [10, 11, 12, 13, 14, 15, 16, 17]
-    ``` 
+Note: **Never** use variable names that are the same as Python built-ins, e.g., `max`, `sum`, `print`, etc.  
 
-5. **Subject List**  
-Write a program to ask the user for their subject codes until they enter a blank one.    
+```
+Minimum number: 10
+Maximum number: 9
+Your maximum must be greater than 10
+Maximum number: 10
+Your maximum must be greater than 10
+Maximum number: 17
+[10, 11, 12, 13, 14, 15, 16, 17]
+``` 
+
+### 5. Subject List  
+Write a program in `question_5()` to ask the user for their subject codes until they enter a blank one.    
 (Are you getting good at spotting words like **'until'** and recognising that's the **indefinite iteration pattern**?)  
 All valid subject codes contain 6 characters, so reject any invalid subject code and ask again if needed.  
 
-    When you have a list of subject codes, print them in sorted order and tell them how many subjects they have.  
-    Then, tell them if they are cool or not... In the lecture notes, we determine if a student is cool based on whether they do CP1401 :)  
+When you have a list of subject codes, print them in **sorted** order and tell them how many subjects they have.  
+Then, tell them if they are cool or not... In the lecture notes, we determine if a student is cool based on whether they do CP1401 :)  
 
-    ```
-    Enter subject code: CPaoirsetnrsatien
-    Invalid subject code
-    Enter subject code: C-P
-    Invalid subject code
-    Enter subject code: MA1020
-    Enter subject code: CP1401
-    Enter subject code: CP2403
-    Enter subject code: CP1406
-    Enter subject code: 
-    You do these 4 subjects: 
-    MA1020
-    CP1401
-    CP2403
-    CP1406
-    You are cool
-    ```
+```
+Enter subject code: CPaoirsetnrsatien
+Invalid subject code
+Enter subject code: MA1020
+Enter subject code: CP1401
+Enter subject code: C-P
+Invalid subject code
+Enter subject code: CP2403
+Enter subject code: CP1406
+Enter subject code: 
+You do these 4 subjects: 
+CP1401
+CP1406
+CP2403
+MA1020
+You are cool
+```
 
-    Note: As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative development**.  
-    So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the program works...  
-    _Then_ add error checking using the normal pattern you know and love.
+Note: As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative development**.  
+So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the program works...  
+_Then_ add error checking using the normal pattern you know and love.
 
 
 ## All Together Now
+File: `coffee_orders.py`
+
 IT@JCU are expanding into the coffee business, and of course they need a Python program to help them, and they need you to write it...
 
 This program includes lists, functions, decision structures, repetition structures and the usual input and output.  
-As always, the point is to apply what you have learned in terms of "best practice" (as best you know to date) and use the most appropriate code constructs to solve the problem.
+As always, the point is to apply what you have learned in terms of "best practice" and use the most appropriate code constructs to solve the problem.
 
-We want a coffee-ordering program with a menu, a fixed list of valid coffees to check user orders against, and to print the instructions for making the selected coffee.  
-Of course we want to be able to drink our coffee (virtually), and because some people can't decide, we'd like to be able to choose randomly from the menu.
+We want a coffee ordering program with a menu, a fixed list of valid coffees to check user orders against, and instructions for making the selected coffee.  
+Of course, we want to be able to drink our coffee (virtually), and because some people can't decide, we'd like to be able to choose randomly from the menu.
 
 In the functions lecture, Barista Lindsay showed you how to make coffee using 4 'functions'. This program will use those... so make sure you've watched that video.  
 
@@ -141,19 +150,9 @@ Here's how to make a/n Long Black:
 - Insert full portafilter into group head
 - Press shot button to pour espresso into cup
 - Add hot water to cup
-
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> d
 Mmmm, nice Long Black
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> o
-Please choose from: 
-Flat White - Espresso - Long Black - Babyccino - ? Babyccino
-Here's how to make a/n Babyccino
-- Fill jug with milk
-- Steam milk until nice microfoam formed and milk up to temperature
-- Swirl milk gently in jug
-- Pour milk into cup... carefully, artistically :)
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> R
 Here's how to make a/n Flat White: 
@@ -167,7 +166,6 @@ Here's how to make a/n Flat White:
 - Steam milk until nice microfoam formed and milk up to temperature
 - Swirl milk gently in jug
 - Pour milk into cup... carefully, artistically :)
-
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> o
 Please choose from: 
@@ -179,7 +177,6 @@ Here's how to make a/n Espresso:
 - Tamp grounds
 - Insert full portafilter into group head
 - Press shot button to pour espresso into cup
-
 (O)rder - (D)rink - (R)andom choice - (Q)uit
 >>> d
 Mmmm, nice Espresso
@@ -194,14 +191,14 @@ As you look at the description and the sample output, think about:
 - verbs (processing, functions)
 - sections, including repeated tasks (functions)
 - types (strings, lists, etc.)
+- constants
 
-You should see that each of the functions in the coffee making video will be a function :)  
-You should remember that main should "look like the whole program", that is, main should generally consist of function calls (high level overview tasks), and  
-You should be able to clearly follow how the program runs by reading just the main function.
-You should recognise that when you display the coffees and when you check for a valid coffee order, you're working with a list of valid coffees
-
-Note: The instructions are not meant to be complete or perfect. They're simplistic.  
-You should write simple functions for each step (like in the video). E.g. 
+Consider how to use function:
+- You should see that each of the functions in the coffee making video will be a function :)  
+- You should remember that main should "look like the whole program", that is, main should generally consist of function calls (high level overview tasks)
+- Anyone should be able to clearly understand how the program works by reading just the main function.
+- You should recognise that when you display the coffees and when you check for a valid coffee order, you're working with a list of valid coffees.
+- You should write simple functions for each step (like in the video). E.g., 
 ```python
 def grind_beans():
     print("- Insert portafilter into grinder")
@@ -216,8 +213,8 @@ Revisit these and rewrite them for practice.
 As you do, think about enhancing them with functions (where meaningful) and maybe lists.
 
 Note: We do NOT want you whacking in functions that are poor design -  
-e.g. violating SRP like a function that calculates _and_ prints.  
-Also, remember to include a main function if you use any other function in your program.  
+e.g., violating SRP like a function that calculates _and_ prints.  
+Also, remember to include a `main` function if you use any other function in your program.  
 When you're practising, always follow best practice!   
   
 See the new comments in each one for suggestions.
@@ -230,14 +227,14 @@ Example:
 - Original: 100, Change: 0.05, Result: 105
 - Original: 50.5, Change: -0.1, Result: 45.45
 
-> This program could use a function to "calculate" (think verb phrase) the result.
+This program could use a function to "calculate" (think verb phrase) the result.
 
 ## Decision Structures
 
 2. Ask the user for the time of day (0-23 hours) until they enter a negative.  
 Then print a list of all the hours and how many of them were after noon:  
 
-> (This program is quite different from checkpoint 1)
+(This program is quite different from checkpoint 1)
 
 3. Coffee orders made simple.  
 
@@ -246,15 +243,15 @@ Then print a list of all the hours and how many of them were after noon:
 - Then print the cost: For Black, Small = $3, Medium = $4, Large = $5. White coffee costs $1 more per size.  
 - If a user makes a mistake with their order, just pick the more expensive option :)  
 
-> For this program, you could have a function that gets the coffee order, not allowing mistakes.  
-> You could have a function that calculates the cost based on the two parameters the user chose.
+For this program, you could have a function that gets the coffee order, not allowing mistakes.  
+You could have a function that calculates the cost based on the two parameters the user chose.
 
 
 ## Repetition Structures
 
-5. Write a program to ask the user for a low value and a high value, then print all of the integers between those values inclusive and show the total of those numbers.  
+5. Write a program to ask the user for a low value and a high value, then print all the integers between those values inclusive and show the total of those numbers.  
 Example, if the inputs were `10` and `20`, you would print:  
 
     10 11 12 13 14 15 16 17 18 19 20 totals: 165 
 
-> Do this with a list (much like the earlier question) and use `sum` to calculate the total.
+Do this with a list (much like the earlier question) and use `sum` to calculate the total.
