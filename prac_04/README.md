@@ -2,7 +2,7 @@
 
 ## Important! Learn then Do
 Do not attempt this practical without learning from the lectures.  
-If you're here trying to complete this practical and you have not watched all of the lecture videos + attempted all of the "do this now" exercises from those, then...  
+If you're here trying to complete this practical, and you have not watched all the lecture videos + attempted all the "do this now" exercises from those, then...  
 **Stop and do that now!**  
 Go learn what we are trying to teach you - then, and only then - come back and do the practical exercises, using that knowledge.
 
@@ -10,7 +10,7 @@ Go learn what we are trying to teach you - then, and only then - come back and d
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
 
 In your PyCharm practicals project, you should be using a new folder for each prac.  
-For this practical, create a new folder called `prac_04` to store all of the files.
+For this practical, create a new folder called `prac_04` to store all the files.
 
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
 
@@ -327,11 +327,46 @@ If you don't have it completed from each of the steps above, [here is the comple
 We did quite a number of steps along the way with this example program.  
 Here are a few more things to extend it just a bit more: 
 
-- See if you can change the printing of BMI (NOT the calculation) in main so that it is limited to 1 decimal place (e.g. 44.4 not 44.44444... as above).
-- If you have not done so already, complete your `run_tests` function so that it covers each logical possibility of output. 
+- Change the printing of BMI (NOT the calculation) in main so that it only shows 1 decimal place (e.g. 44.4 not 44.44444... as above).
+- If you have not done so already, complete your `run_tests` function so that you test each possible weight category (see note below). 
 - Add to your main to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use the age in the final output of main.
 - Look at your code. Do you see any grey underlines in PyCharm? If you do, move your mouse over them (don't click, just move) and read the popup message. You might see a PEP8 warning - probably a missing line break or space. Press the shortcut key **Ctrl+Alt+L** (Windows) or **Cmd+Opt+L** (Mac) and watch all of your formatting problems get fixed! Smile :)  
 
+#### Note: Test all the things
+
+If you write a program with code that looks something looks like:
+
+```
+if condition 1
+    do thing A
+else if condition 2
+    do thing B
+else
+    do thing C
+```
+
+Then there are 3 paths (A, B, C) that could possibly occur.  
+To test this properly, you need to write and run *at least* 3 tests, so you see things A, B and C.  
+Get into the habit of testing your code systematically and completely.  
+**Example/Motivation:**  
+Say you had something like:  
+
+```python
+value = int(input("Value: "))
+if value < 0:
+    print("Small value")
+elif value > -5:
+    print("Big value")
+else:
+    print("Other value")
+```
+
+If you never tested that you could see ALL 3 of "Small", "Big" and "Other", then you might think it works... 
+and you wouldn't know that it's broken!
+
+In the BMI question - look at how many possible outputs could occur and make sure your testing covers each one of them.  
+You don't need to test every single possible BMI... that would be infinite. 
+You need to test each weight category in this case.
 
 # Coding Exercises
 
@@ -397,19 +432,22 @@ Notice that we tested at least one of each style and some boundary conditions. (
 **Now write a main program** that asks the user for the dose and yield, works out the brew ratio then uses your function to determine the coffee style.  
 Remember that `main()` should always be your first function in any program file.  
 Note: `yield` is a Python statement (keyword) so you can't use it as a variable.  
-As a general rule, never use Python keywords as variables, even if you're allowed to (e.g. `sum` is a Python function but you're allowed to use it as a variable name... but don't.)
+As a rule, never use Python builtin words as variables, even if you're allowed to 
+(e.g., `sum` and `print` are Python functions that it's possible to use as variable names... but don't!)
 
-Sample output:
+Sample:
 ```
 Dose: 18
 Yield: 36
 1:2.0 is considered normale
 ```
 
-How did you go? Got it? Use the examples above and the teaching in the lectures if you get stuck on anything. Ask for help if you still need more support.  
+How did you go? Got it? Use the examples above and the teaching in the lectures if you get stuck on anything.  
+Ask for help if you still need more support.  
 
 One more thing. In the BMI example program, we had a nice helpful function for getting a valid number.  
-Copy and paste this into your program (near the bottom) and then use it (call it) when you get the dose and yield.
+Copy and paste this into your program (near the bottom) and then use it (call it) when you get the dose and yield. 
+Use estimates of maximum/high values, like 100. Or alternatively, you could rewrite the function to not take/check the maximum. 
 
 Your final program should look quite a lot like our BMI example. 
 Don't forget that our examples are some of the most helpful resources you have. **Use them!**  
@@ -417,35 +455,131 @@ Don't forget that our examples are some of the most helpful resources you have. 
 ## 2. Parity
 File: `parity.py`
 
-One of the most important points with this question is about function *naming*. In each case, think about what is the most meaningful name you can come up with.  
+The parity of a number is the number % 2 and is either 0 or 1.   
+E.g., the parity of 4 is 0, and the parity of 41 is 1.  
+
+This question requires 3 separate functions and a main to test them all.
+
+One of the most important parts of this question is to use good function *naming* (and that's one reason why the solution is _not_ provided).  
+In each case, think about what is the most meaningful name you can come up with.  
 Remember: "This function will..." 
 
-**Part 1**  
-Write a function to _print_ the parity of a number.  
-Parity is the number % 2  and is either 0 or 1.   
-E.g. the parity of 4 is 0 and the parity of 41 is 1.  
+### Part 1  
+Write a function to _print_ the parity of a number passed into it (parameter).  
+Write a main function that tests this with the numbers 4 and 41 (which you know should be 0 and 1).  
 
-**Part 2**  
-After you have written this and tested it (e.g. with 4 and 41), write a new function that _returns_ the parity instead of printing it.   
+**Important!**  
+Testing is about making sure you know when something is broken!  
 
-**Part 3**  
-After you have written and tested that one, write a third function that returns a Boolean for whether the value passed in is odd.  
-Recall from the lecture, that an excellent and common convention for naming Boolean-returning functions is to start their names with is.  
-Example, the built-in string method `isupper()` determines if a string is uppercase.  
+It's useful when testing to actually print the expected results as well as the actual results. The sample below shows what you might do for this question:
 
-When you have finshed all 3 of these functions, review their names and see how you did.  
-Are the names clear and unambiguous? Would a programmer know how to use these functions based on their names?
+```
+Parity of 4 should be 0:  0
+Parity of 41 should be 1:  1 
+```
+
+If all you do is call the function, you might see: 
+
+```
+1
+0
+```
+
+Did that work? Can you tell?
+
+It would be better to see something like:
+
+```
+Parity of 4 should be 0:  1
+Parity of 41 should be 1:  0
+```
+
+Oops... something needs fixing!
+
+### Part 2  
+Now, in the same program, write a new function that _returns_ the parity of the number you pass into it.  
+Remember to think of a good verb-phrase name for this, but do not use "return" in your name.  
+Since 100% of functions return something, we don't use "return" in names.  
+(Functions with no return statement actually implicitly return `None`.)
+
+Test your function similarly to the first one by adding to `main`.  
+Leave your test code for the first version and just add new tests below.
+
+### Part 3  
+After you have written and tested the first two functions, write a third function that returns a Boolean (True or False) for whether the number passed into it **is odd**.    
+Recall from the lecture, that an [excellent and common convention for naming Boolean-returning functions](https://github.com/CP1404/Starter/wiki/Styles-and-Conventions#best-practice-suggestions) is to start their names with `is`.  
+Example, the built-in string method `isupper()` determines if a string is uppercase. 
+We can then use these functions in meaningful, easy-to-read code like the example below. Notice that it is a nice example of concise handling of a Boolean [as in our guide](https://github.com/CP1404/Starter/wiki/Programming-Patterns#working-with-booleans). 
+
+```python
+def main():
+    my_age = int(input("Age: "))
+    if is_senior(my_age):
+        print("Have a cup of tea")
+    else:
+        print("Please mow the lawn")
+
+
+def is_senior(age):
+    return age >= 65
+```
+
+As with the others, you need to test that it works. Write at least two lines in your `main` program to test. Why test? Because the function has two possible outputs: `True` or `False`.  
+
+When you have finished all 3 of these functions, review their names and see how you did.  
+Are the names clear and unambiguous? Would a programmer know how to use these functions based on their names?  
+
+**Note:** If you (ever) need to change names that you have used more than once, 
+use PyCharm's excellent **refactoring**. Don't just edit in multiple places (and maybe forget one) or use 
+find-and-replace (and maybe change something else it matches). 
+Refactoring changes all the names correctly and is quick and safe.  
+Right-click on the name, then choose: **Refactor > Rename**
+
+### SRP Check!
+When you design and write functions, you should usually think about how they should be used and could be used.  
+So, imagine we want to use the above parity functions for the following tasks (just the parity bit, not the whole programs!).  
+Could yours be used in these ways?
+
+- Read a file of numbers and write a second file containing the parities of those numbers
+- If the user's age is odd, print their name in capitals; if it's even, print their name in lowercase
+
+If you wrote functions that ask the user for the number INSIDE the function, then you can't do these things.  
+If your Boolean-returning function actually returns a string, then you can't use it as a condition.  
+If you need to, go back and fix any problems with your function design.
 
 ## 3. JCU Grades
 File: `jcu_grades.py`
 
-According to [JCU Policy](https://www.jcu.edu.au/policy/learning-and-teaching/learning-teaching-and-assessment-policy), if you score 86% in a JCU subject, you will receive an HD grade; 40% will get you an N, etc.
+[JCU Subject results explained](https://www.jcu.edu.au/students/assessment-and-results/subject-results-explained) 
+shows the percentage score/result you need to get different grades:
 
-Write a function that takes a subject total score (0-100) and returns the corresponding JCU grade.
+- Below 50% = N
+- 50 up to but not including 65 = P
+- 65 up to but not including 75 = C
+- 75 up to but not including 85 = D
+- 85 and over = HD
 
-Test it, then write a program that asks the user for their score and prints their grade until they enter a score of < 0.
+**Note**: think about the *boundary conditions* and don't miss anything. Remember to test your boundaries.  
+Suppose you used 84 as your boundary, e.g., `if score > 84 then HD` Would that work?  
+No, because what if the score were 84.1? That should be a D, but your code would make it an HD!  
+This is where bugs come from :(  
+Our **strong recommendation is that you always use the values in the question**.  
+In this case, use 50, 85, etc. not 49, 49.9, or whatever. This will help prevent mistakes.
+
+Write a function that takes a subject total score and returns the corresponding JCU grade.  
+
+**Check**: Are you getting used to this kind of wording?  
+If the function **"takes"** a score, it means you must pass it into the function as a **parameter**.  
+If the function **"returns"** a grade, it means you don't print it, you... `return` it.
+
+**Test it!** Like we've done before (see the pattern?), write a separate function to test that all the grades can be produced correctly.  
+
+When your tests all pass, write a `main` program that asks the user for their score and prints their grade until they enter a score of < 0.  
+Do not do any error-checking on the score for this program.  
 
 **After** you have finished and tested that program, add to it (same main) so that the program asks the user for a number of scores, then generates that many random scores and shows their grades.  
+(We hope you realise that you do not need a new function for determining the grade - you've already got one!)  
+
 Example output: 
 
 ```
@@ -462,9 +596,9 @@ How many random scores: 5
 13 = N
 ```
 
-You may notice that the display of scores and grades are different in the first part compared to the second (random).  
-Remember **SRP** - that functions should do one thing. So, it's not the function's job to format the score or the =/is,
-but rather it the function has ONLY ONE JOB and that's to... determine the grade.  
+You should notice that the display of scores and grades is different in the first part compared to the second (random).  
+Remember **SRP** - functions should do one thing. So, it's not the function's job to format the score or the =/is,
+but rather, the function has ONLY ONE JOB and that's to... determine the grade.  
 How the grade is used, printed, or whatever, is up to the code that calls this function.
 
 
@@ -477,31 +611,32 @@ Do not rewrite those files, but copy the code into this prac and rewrite it here
 In each case, think about what sections can logically become functions and what should stay in main.  
 In some cases, you may be able to reuse functions that you can share between programs in the same file.
 
-- [Calculate salary for worker level](https://github.com/CP1401/Practicals/tree/six-weeks/prac_03#1-error-checking)
-- [Print grid(rows, columns)](https://github.com/CP1401/Practicals/tree/six-weeks/prac_03#6-nested-loop)
-
+- [Calculate salary for worker level](https://github.com/CP1401/Practicals/tree/master/prac_04#1-error-checking)
+- [Print grid(rows, columns)](https://github.com/CP1401/Practicals/tree/master/prac_04#6-nested-loop)
 
 # *Intermission*
-Because we only have six weeks, our practicals are quite large. If you've done all of the above in one sitting - well done! Now would be a good time to take a break because completing the rest our work.
+Because we only have six weeks, our practicals are quite large. If you've done all the above in one sitting - well done!  
+Now would be a good time to take a break before completing the rest of our work.
 
 
 # Debugging
 Debugging is the process of finding and fixing problems in code (yours or someone else's), and is an important skill to develop.  
-Like our fun logic exercises, it's not just about quickly finding the answer, but about learning to systematically figure it out.  
-It's great if you spot/fix an issue straight away, but what if you know there's a problem but can't see it immediately?  
-You need to develop attention to detail as well as be able to use debugging tools to help you.
+**IMPORTANT:** Debugging is not refactoring, or improving working code.  
+We are not looking for things like formatting issues or unclear variable naming. We don't want nicer code, we want working code. The problems with the provided code are **bugs**.  
+A poor variable name is not good, but it's not a bug.  
+Don't look for ways to improve the code... look for what's actually wrong with it... why it does not work properly.
+
+Like our logic exercises, it's not just about quickly finding the answer, but about learning to systematically figure it out.  
+It's great if you spot/fix an issue straight away, but what if you know there's a problem and you can't see it immediately?  
+You need to develop attention to detail and be able to use debugging tools to help you.
 
 In the "Functions 2" lecture, we introduced the PyCharm debugger.  
 (Again, if you haven't watched that lecture, *please* stop now and go back to the lecture!)
   
-Let's use the debugger now to try and systematically figure out what's wrong with the following programs.  
-In all cases, read the code and try and understand it, then 
-practise using the debugger as instructed to "step through" the program.
-
 Note: PyCharm does wonderful "on the fly" debugging by highlighting problems or potential issues in your code.  
 Get used to spotting the red/green/grey underlines and other warnings and potentially correcting the issues PyCharm tells you about.   
 
-Right-click on your `prac_07` folder (that's what you called it, right?) 
+Right-click on your `prac_04` folder (that's what you called it, right?) 
 and create a new Python file here called `debugging.py`
 Copy the **raw** version of the code found at the link below and paste
 into your file...  
@@ -513,22 +648,26 @@ will *not* get proper formatting. OK?
 
 - [debugging.py](./debugging.py)
 
-Follow the arrows in this screenshot to:
-1. Create a breakpoint on the first line that should run (click in the margin to create breakpoints).
-2. Run the debugger (if this is the first time you've run this program, which it will be, right-click your code and choose "Debug debugging").
-3. The program will run until it reaches the breakpoint. Click the "Step into my code" button to run line by line (click it once per line).
-4. The debugger will stop responding when user input is being asked for, so click (4) to switch to the Console and enter your input.
-5. The debugger will continue to the next line, so switch back (5) to the Debugger window to see the state of your variables.
+Let's use the debugger now to systematically figure out what's wrong with the following programs.  
+In all cases, read the code and try and understand it, then 
+use the debugger to "step through" the program.
 
-Keep clicking through "Step into my code" to see exactly how the program runs and what the values of variables are.  
+Follow the arrows in this screenshot to:
+1. Create a **breakpoint** on the first line that should run (click in the margin to create breakpoints).
+2. Right-click your code and choose "Debug debugging".
+3. The program will run until it reaches the breakpoint. Click the "Step Into My Code" button to run line by line (click it once per line).
+4. The debugger will stop responding when user input is being asked for, so click (4) to switch to the Console and enter your input.
+5. The debugger will continue to the next line, so switch back (5) to the Debugger window to see the state of your variables. Notice also how it displays when your code is inside other functions.
+
+Keep clicking through "Step Into My Code" to see exactly how the program runs and what the values of variables are.  
 You will need to switch between the "Console" (to see output and enter input) and "Debugger" (to see program state) windows.
 
 ![PyCharm debugger screenshot](../images/debugger.png)
 
-There are four "main" programs in "debugging.py" for you to debug separately (use a new breakpoint at the start of each).  
+There are four "main" programs in `debugging.py` for you to debug separately (use a new breakpoint at the start of each).  
 Test/debug each, one at a time.  
 When you've finished one, "comment out" its main call and "uncomment" the next one.  
-Example, when testing main_3, the bottom of your code would look like:
+Example, when testing `main_3`, the bottom of your code would look like:
 ```python
 # main()
 # main_2()
@@ -536,58 +675,62 @@ main_3()
 # main_4()
 ``` 
 
-For each program write what you found to be the problem... and solution if you can figure it out.  
+For each program, write what you found to be the **problem** (not the solution) in the provided section of `debugging,py`, then write the fixed, working, code (solution) in the section below that.
+
+```
+# Problem(s) for program 1:
+# ?
+
+# Fixed code for program 1:
+```
+
 Note that *"problem"* and *"solution"* are different things.  
-Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not what problem was causing it to run slowly.
+Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not what problem was
+that caused it to run slowly in the first place.
 
-Write your answers at the bottom of `questions.txt` in a section like below:
-```
-Debugging:
+When you have found the problem, you should be able to fix it, so change the code to make it work.  
+You do not need to explain your solutions, just fix the code and submit the fixed file, `debugging.py`.
 
-1. 
-2. 
-3. 
-4. 
-```
+If you haven't already, copy the code from [debugging.py](./debugging.py) and get debugging!
 
 # Python Coding - Functions 2 - Coding Exercises
  
 ## 1. Jerry the Driver
 File: `jerry.py`  
 
-In the Functions 2 lecture, you had a "Do this now" question:
+In the Functions 2 lecture, you had a "Do this now" question like:
 
-> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine if he will get any speeding fine.
+> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine his speeding fine.  
 
 You (we) wrote the pseudocode for the main function for this:
 
 ```
 function main
-    speed_in_m = get_valid_number("speed in m")
-    speed_in_km = convert_m_to_km(speed_in_m)
-    speed_limit_in_km = get_valid_number("speed limit in km")
-    fine = determine_fine(speed_in_km, speed_limit_in_km)
+    speed_in_mph = get_valid_number("speed in mph")
+    speed_limit_in_kph = get_valid_number("speed limit in kph")
+    speed_in_kph = convert_miles_to_km(speed_in_mph)
+    fine = determine_fine(speed_in_km, speed_limit_in_kph)
     print fine
 ```
 
-**Note**: The value of the fine as a **number** is much better to return than a string, or a whole message.  
+**Note**: The value of the fine as a **number** type is much better to return than a string, or a whole message.  
 What if we wanted to determine a new bank balance after paying the fine?
 
 ```
 bank_balance -= fine
 ```
 
-This is an example of **SRP**. It is the `determine_fine` function's job ONLY (single responsibility) to determine/calculate the actual fine as an actual number.  
-It is counter-productive for this function to print the fine or to format with a '$' or anything else.  
+This is an example of **SRP**. It is the `determine_fine` function's ONLY (single responsibility) job to determine/calculate the actual fine as an actual number.  
+It is counter-productive for this function to print the fine or to format with a '$' or anything else.
+`bank_balance -= fine` doesn't work if `fine` is something like `Your fine is $199`.  
 < insert "you had one job" meme here ;) > 
 
 **Write the complete Python program** for this in `jerry.py`.
 
 Remember that you've done some of this before, so copy your previous work:  
 
-- [Prac 2 where we calculated km -> m](../prac_02/README.md#2-miles-to-kilometres) 
-- [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)
-
+- [Prac 2 where we calculated km -> m](../prac_02/README.md#2-kilometres-to-miles) 
+- [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)  
 Note that we only want to know the fine as a number, not the demerit points or any other messages.
 
 **Test** this using meaningful test data that you can understand.  
@@ -598,7 +741,9 @@ File: `dog_years.py`
 
 In [Prac 3](../prac_03/README.md#4-dog-years) you wrote a program to calculate a dog's age in dog years.  
 Rewrite this program using a function for the conversion.  
-Write a main function that repeatedly asks the user for an age in human years until the user enters a negative number.  
+Write a main function that repeatedly asks the user for an age in human years, then displays it in dog years
+until the user enters a negative number.  
+Don't do any error checking on this age.
 
 Here's the calculation part already:  
 ```python
@@ -611,8 +756,8 @@ else:
 ## 3. Seconds Display
 File: `seconds.py`  
 
-In [Prac 2](../prac_02/README.md#4-i-stop-calculation-percentage) you wrote a program to calculate and display i-stop time/percentage.  
-In that, you displayed seconds as minutes and seconds, example: 
+In [Prac 2](../prac_02/README.md#4-i-stop-calculation-percentage) you wrote a program to calculate and display "i-stop" time/percentage.  
+In that program, you displayed seconds as minutes and seconds, example: 
 ```
 i-stop on in seconds: 62
 Time stopped in seconds: 161
@@ -621,14 +766,17 @@ i-stop ON:      1m 2s
 Time Stopped:   2m 41s
 Percentage:     38.50931677018634%
 ```
-
-Note: the original program from prac 2 was about i-stop values, but this has nothing to do with that.  
+Note: the original program from prac 2 was about i-stop values for a car, but this has nothing to do with that context.  
 The technique for figuring out minutes and seconds from just seconds is the same, so you can copy your work, 
 but do change any references to the old context. 
 
-Rewrite this program using a function that **takes in a number** of seconds and **returns a string** to display that value in minutes and seconds.  
+Write a simple program using a function that **takes in a number** of seconds and **returns a string** that can be used to display that value in minutes and seconds.  
+Notice that the function DOES NOT PRINT. We want to use the string in different ways, so this function's job is simply to create/return a formatted string.  
 Write a main program that displays a bunch of different seconds values in minutes and seconds using a loop.  
-Example output: 
+**Example output:**  
+Note: Think about how this was generated... There's no user input; it starts at 0, goes to ? in steps of ?  
+Try and do the same in your program.  
+
 ```
 0 seconds is 0m 0s
 635 seconds is 10m 35s
@@ -644,9 +792,9 @@ Should it return something like?
 `635 seconds is 10m 35s`
 
 Well, what if we wanted to use the _same_ function for different kinds of tasks?  
-Let's do that now.
+Let's do that now...
 
-Add another small part to this same program - after the loop - that asks the user for their favourite duration in seconds, 
+**Add another small part to this same program** - after the loop - that asks the user for their favourite duration in seconds, 
 then prints it in minutes and seconds, like
 
 ```
@@ -656,10 +804,10 @@ You love 10m 39s
 
 So... if our function returned something like `635 seconds is 10m 35s`, then we could NOT use it for this task, even though it's really similar.  
 Do we need a second function that returns something like `You love ...`?  
-NO! That would be repeating ourselves and we know... **DRY**.  
+NO! That would be repeating ourselves, and we know... **DRY**.  
 
 So... we need to remember SRP.  
-This function has **one job**, and it's not printing or returning a whole "n seconds ...", it's ONLY the bit that formats the seconds (argument) in minutes and seconds...  
+This function has **one job**, and it's not printing or returning a whole `n seconds is ...`, it's ONLY the bit that formats the seconds (argument) in minutes and seconds...  
 which we can now reuse in different situations!  
 SRP leads to function reusability and helping us not repeat ourselves :).
 
@@ -752,7 +900,6 @@ Height 1.9m, Weight 100kg = BMI 27.7, considered overweight
 ```
 
 
-
 # Practice and Extension
 
 These final sections in practicals are not _required_ to be completed for marks, but you will definitely find benefit in completing them for extra practice and to extend yourself.  
@@ -840,7 +987,6 @@ This section summarises the expectations for marking in this practical.
 
 - Quick Questions
 - Good Names
-- Debugging problems and solutions
 
 Exercises, each in their own file:
 
@@ -848,7 +994,7 @@ Exercises, each in their own file:
 - `parity.py`
 - `previous_pracs.py`
 - `jcu_grades.py`
-- `debugging.py` with code fixed (solutions) if you could figure them out
+- `debugging.py` with both problems and solutions (fixed code)
 - `jerry.py`
 - `dog_years.py`
 - `seconds.py`
