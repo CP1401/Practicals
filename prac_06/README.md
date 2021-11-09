@@ -1,4 +1,4 @@
-# Practical 06 - Files and Strings 
+# Practical 06 - Strings and Files
 
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date for your situation.**  
 
@@ -26,11 +26,103 @@ Consider the following list of 3 statements:
 
 How many false statements are there in the list; 0, 1, 2 or 3?
 
+# Python Coding - Strings
+File: `strings.py`
+
+**This is the second substantial part of this practical.  
+Depending on your version of this subject, this practical may be done over multiple weeks.**
+
+Stop here and make sure you have watched the **Strings lecture** before completing this section.  
+In that lecture, you were shown what you need to know for these exercises, including good examples very similar to these tasks.  
+
+### 1. Processing Strings  
+First, let's see another quick example of using slicing and finding.  
+Suppose we have data like:
+    
+```python
+string = "Result = 95%"
+```
+and we want to extract just the percentage as a number.  
+If we know the format will be just like that, we can use:
+```python
+value = int(string[-3:-1])
+```
+But what if it might be different, like:
+```python
+string = "Final Score = 8%"
+# or 
+string = "Relative Value = 178.3%"
+```
+In those cases, our overly-simplistic approach would not work.  
+    
+Ideally, we need a robust way of extracting the data, based on the possibilities the string could be.  
+So, in this case, let's assume we want all the characters between the `= ` and the `%` (which would be true in all 3 of these cases).
+
+One way to do this is to `find` the index of the space after the = and then slice all the characters from there to one before the end.  
+Since we did this in the lecture, the rest is up to you now...
+
+**Write a program in `question_1()`** that processes this list of strings (copy the data here) and prints the values you extract.
+    
+```python
+data_strings = ["Result = 95%", "Final Score = 8%", "Relative Value = 178%",
+                "Something else that's very important = 9.2%", "x = 42%"]
+```  
+    
+**Hint**: Don't try and get your processing/extraction working at the same time as your for loop.  
+Pick one string and work on that. When it works, add in your loop to see how it works with the others.  
+ 
+Sample output (keep it simple... but notice what types these outputs are):
+```
+95.0
+8.0
+178.0
+9.2
+42.0
+```
+
+Last note: There's no obvious 'meaning' in this data, so you can use generic names.  
+You're given _strings_, and you need to extract a _value_ from each.
+
+### 2. Date Strings  
+(From the lecture)  
+Write a program in `question_2()` to get and display only the year from a date of birth stored as a string like `"13/07/1995"`  
+Add a little interest to your program, by asking the user for their DOB, then printing like,  
+```
+DOB: 13/07/1995
+You were born in 1995
+You turn/ed 25 in 2020.
+```
+
+### 3. Subject Code Strings  
+The first 3 characters in JCU subject codes always follow a definite pattern:  
+The first 2 characters are the discipline (MA = Maths, CP = IT, etc.) and the next character is the year level.  
+Who knows what the last 3 characters mean? :)  
+
+Write a program in `question_3()` that asks for subject codes until the user enters a blank one...   
+Hey, sounds familiar... BUT this question does not use lists, so you have to change it!   
+After they type each one, print what year level it is and whether it's an IT subject.  
+
+Sample Output (Consider carefully your decision structures here)
+```
+Enter subject code: CP1401
+That is a first-year IT subject.
+Enter subject code: MA2403
+That is a second-year subject.
+Enter subject code: CP5639
+That is a Masters or other IT subject.
+Enter subject code: PH3456
+That is a third-year subject.
+Enter subject code: 
+```
+
+**Hint**: A nice way to do this is with a single print statement that uses variables.  
+You do not want to repeat yourself (DRY), right? So don't use lots of different print statements... just look at what's different (different = variable).  
+E.g.,
+```python
+print(f"That is a {year_string}{it_string} subject.")
+```
 
 # Python Coding - Files
-
-As you do individual work on your computer, if you need help, start by talking to your peers.  
-You are encouraged to use Slack to ask questions of others in the class (but you don't need to post your answers there).
 
 ## Example
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  
@@ -44,7 +136,7 @@ She wants to process this file and find out what her average score is.
 ### Algorithm
 
 - We need to open the file for _reading_ and close it at the end.  
-- We know that each line is the same kind of data so we can process it with a definite loop, doing the same thing per line.  
+- We know that each line is the same kind of data, so we can process it with a definite loop, doing the same thing per line.  
     We process _each_ line, so that's definite (for loop), not _until_ some condition happens.
 - We should know the "accumulation pattern" by now, so the total and average should be easy. 
 
@@ -127,18 +219,11 @@ If you're not sure how to do the lining up using string formatting, you can chec
 
 # Coding Exercises
  
-(Unless otherwise specified) Write all of your answers to the following questions in a single Python file called `programs.py`  
-At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from here) so you/we know what the program is for later.  
-Example:
+File: `files.py`
 
-```python
-# 2. Miles to Kilometres
-number_of_miles = int(input("Miles: "))
-...
-``` 
 
-## 1. Read a String from a File
-Create a new text file in your prac_10 directory called `name.txt`.  
+## 4. Read a String from a File
+Create a new text file in your current prac directory called `name.txt`.  
 Put your own name in the file.
  
 Write a simple program that _reads_ this `name.txt` file and greets you, example:
@@ -167,7 +252,7 @@ You can solve this problem in two ways.
 text = in_file.read().strip()
 ```
 
-## 2. Write Numbers to a File
+## 5. Write Numbers to a File
 **Write a complete Python program** that _writes_ a range of numbers to a file.  
 Here is the algorithm partly done for you in pseudocode:
 ```
@@ -187,7 +272,7 @@ Try these, and some of your own ideas:
 Run your program each time with different ranges - commenting out the range line when you make a new one (so you keep the old one).  
 
 
-## 3. Greater-Than Counter
+## 6. Greater-Than Counter
 Write a program that _reads_ a user-specified file of floating-point numbers, 
 and counts how many of those numbers are larger than a user-specified threshold.  
 You can see from the example output below that the program determines the number of numbers/lines from reading the file.  
@@ -219,21 +304,22 @@ Processing...
 ```
 
 
-## 4. BMI File
+## 7. BMI Files
 File: `bmi_files.py`
 
 Write a program that writes to and reads from `bmis.txt` (not at the same time).  
-Reuse your functions from earlier where you calculated a person's BMI based on height and weight.  
+Reuse your functions from the previous prac where you calculated a person's BMI based on height and weight.  
 Notice this: since you wrote good, well designed (SRP) functions, you can simply reuse them for this different scenario!
+
 The first part of your program should ask the user for a number of people, 
 then repeatedly ask for the details (height and weight) for that many people.  
 (You did just think of what kind of loop to use, didn't you?)  
 
 For each person, calculate their BMI, but don't print it to the screen... write it (and only it) to the file "bmis.txt".  
-Your file should simply contain one BMI value per line.  
+Your file should simply contain one BMI value per line.    
 Don't forget to close the file when you have finished.  
 
-Test this and confirm it works as you expect by opening and checking the file in PyCharm.  
+Test this and confirm it works as you expect by opening and checking the file in PyCharm.
 
 **Then (only after the first part works)**, write the second part, which should read the file and display the BMI and weight category similar to how we've done it before:  
 
@@ -244,9 +330,10 @@ BMI 24.2, considered normal
 BMI 16.3, considered underweight
 BMI 32.0, considered obese
 ```
+
 Note that we do not want to write the above to the file - that's what we see on the screen. The file only contains the BMI values.
 
-## 5. File Filter
+## 8. File Filter
 File: `file_filter.py` 
 
 Write a program that _reads_ a file and "filters" it, _writing_ only certain lines to another file.  
@@ -274,114 +361,19 @@ You would need to `strip()` the lines to account for indenting in some of these.
     If the user chose this file and searched for '#', then the output file would contain all of the headings.
 - Similarly, HTML headings are `<h1>`, `<h2>` etc. so you could filter/strip those.
 - Python comments use `#` or `"""`, so why not try getting your program to extract just the comments.
+        
 
 ### How are you going with the fundamentals?
 
 In *all* of your programs by now, you should have clear ideas about the fundamental principles we've learned, so how would these principles apply to this exercise/program?  
 
 - You know if you have to refer to the filename (literal) more than once, then it should be a... CONSTANT,
-- You know SRP... your functions should not (usually) print, when they should return... so you can reuse the exact same (bmi) function from prac 6 for this program,
+- You know SRP... your functions should not (usually) print, when they should return... so you can reuse the exact same (bmi) function from your previous prac for this program,
 - The above is also an example of DRY - don't repeat yourself with a function that is really similar to one you already have,
 - You know you use definite iteration (for loop) for things like a fixed number of times,
 - You know every time you open a file, you should close it as soon as you're finished,
 - You know your names must be meaningful,
 - You know programming is fun...
-
-## 6. Strings
-File: `strings.py`
-
-Please make sure you have watched the Strings lecture before completing this section.  
-In that lecture, you were shown what you need to know for these exercises, including good examples very similar to these tasks.
-
-A. **Processing Strings**  
-    First, let's see another quick example of using slicing and finding.  
-    Suppose we have data like:
-    
-    ```python
-    string = "Result = 95%"
-    
-    ```
-    and we want to extract just the percentage as a number.  
-    If we know the format will be just like that, we can use:
-    ```python
-    value = int(string[-3:-1])
-    ```
-    But what if it might be different, like:
-    ```python
-    string = "Final Score = 8%"
-    # or 
-    string = "Relative Value = 178.3%"
-    ```
-    In those cases, our overly-simplistic approach would not work.  
-    
-    Ideally, we need a robust way of extracting the data, based on the possibilities the string could be.  
-    So, in this case, let's assume we want all of the characters between the `= ` and the `%` (which would be true in all 3 of these cases).
-    
-    One way to do this is to `find` the index of the space after the = and then slice all the characters from there to one before the end.  
-    Since we did this in the lecture, the rest is up to you now...
-    
-    Write a program that processes this list of strings (copy the data here) and prints the values you extract.
-    
-    ```python
-    data_strings = ["Result = 95%", "Final Score = 8%", "Relative Value = 178%",
-                    "Something else that's very important = 9.2%", "x = 42%"]
-    ```  
-    
-    **Hint**: Don't try and get your processing/extraction working at the same time as your for loop.  
-    Pick one string and work on that. When it works, add in your loop to see how it works with the others.  
-     
-    Sample output (keep it simple... but notice what types these outputs are):
-    ```
-    95.0
-    8.0
-    178.0
-    9.2
-    42.0
-    ```
-    
-    Last note: There's no obvious 'meaning' in this data, so you can use generic names.  
-    You're given _strings_ and you need to extract a _value_ from each.
-
-B. **Date Strings**  
-    (From the lecture)  
-    Write a program to get and display only the year from a date of birth stored as a string like `"13/07/1995"`  
-    Add a little interest to your program, by asking the user for their DOB, then printing like,  
-    ```
-    DOB: 13/07/1995
-    You were born in 1995
-    You turn/ed 25 in 2020.
-    ```
-
-C. **Subject Code Strings**  
-    The first 3 characters in JCU Subject codes always follow a definite pattern:  
-    The first 2 characters are the discipline (MA = Maths, CP = IT, etc.) and the next character is the year level.  
-    Who knows what the last 3 characters mean? :)  
-
-    Write a program that asks for subject codes until the user enters a blank one...   
-    Hey, sounds familiar... just copy what you've already got, BUT this question does not use lists, so you have to change it!   
-    After they type each one, print what year it is and whether it's an IT subject.  
-    
-    Sample Output (Consider carefully your decision structures here)
-    ```
-    Enter subject code: CP1401
-    That is a first-year IT subject.
-    Enter subject code: MA2403
-    That is a second-year subject.
-    Enter subject code: CP5639
-    That is a Masters or other IT subject.
-    Enter subject code: PH3456
-    That is a third-year subject.
-    Enter subject code: 
-    ```
-
-    **Hint**: A nice way to do this is with a single print statement that uses variables.  
-    You do not want to repeat yourself (DRY), right? So don't use lots of different print statements...  
-    just look at what's different (different = variable).  
-    E.g.
-    ```python
-    print(f"That is a {year_string}{it_string} subject.")
-	```
-
 
 # Practice and Extension
 
@@ -434,15 +426,16 @@ e.	the median (harder - you will need to use a list)
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-questions.txt  with:
+`questions.txt`  with:
 
 - Quick Questions
 - Logic Exercise
 
+`example.py` with updates
+
 Exercises:
 
-- example.py
-- programs.py with exercises 1, 2, 3 
-- bmi_files.py
-- file_filter.py
-- strings.py
+- `strings.py` with programs  1-3
+- `files.py` with programs 4-8 
+- `bmi_files.py`
+- `file_filter.py`
