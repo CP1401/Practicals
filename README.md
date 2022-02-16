@@ -8,11 +8,10 @@ Selected practical solutions are provided here, in the **"solutions"** branch.
 These are to help you learn by evaluating your own work and seeing our suggested ways of solving the practical problems. 
 
 **Important**: Please use the solutions in a mature and honest way, as helpful learning tools... _after_ you complete your own work, _not_ as something to simply copy into your own prac work. OK?  
-Seriously, **never copy the solutions** as this will not help you learn as much as doing your own coding.
+Seriously, **never copy the solutions** as this will not help you learn as much as doing your own work.
 
 ## Practical Content
-Practical numbers do not necessarily correspond to weeks.
-E.g., some subject offerings run in 10 weeks, some in 13 weeks. **If you are enrolled in a six-week offering please [go here for your pracs](https://github.com/CP1401/Practicals/tree/six-weeks).**
+**If you are enrolled in a six-week offering please [go here for your pracs](https://github.com/CP1401/Practicals/tree/six-weeks).**
 
 * [Practical 01 - Problem Solving](./prac_01)
 * [Practical 02 - Input, Processing and Output](./prac_02)
@@ -42,13 +41,11 @@ the practice/extension section. You will be marked as follows:
 - Your work looks too similar to any provided solutions
 - Your work includes concepts and code not taught in the subject
 - You miss or skip part of a question (you must attempt all requirements for all questions)
-- Your work does not follow the core concepts and patterns (e.g. using global variables, while True loops or similar techniques), even if they work!
+- Your work does not follow the core concepts and patterns (e.g., using global variables, while True loops or similar techniques), even if they work!
 
 ## Save your practical work
-You need to save your work from every prac. Keep every file/script you write.  
-We suggest you use a USB disk and cloud storage (like OneDrive) and organise it using folders, like `CP1401/practicals/prac_01`.    
+You need to save your work from every prac. Keep every file/script you write. We suggest you use a USB disk and cloud storage (like OneDrive) and organise it using folders, like `CP1401/practicals/prac_01`.    
 
-Give each file a logical name so that you can find it again. Also, when you need to make changes to an existing script for a separate question, make a copy of the old question first so that you have a record of everything.  
-Don't save your work to the JCU computers' local drives, but into your own storage area. You can use the local hard drive for temporary storage, then move your work onto your disk or cloud storage.  
+When you need to make changes to an existing script for a separate question, make a copy of the old question first so that you have a record of everything.  
 
 For important work like assignments, please make sure you have multiple backups.
