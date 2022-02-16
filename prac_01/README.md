@@ -32,7 +32,7 @@ tutor (your name and what you like that starts with the same first letter, e.g.,
 **Introduce yourself in Slack** - include where you are studying from and any other interesting details you're happy to
 share. Thanks!
 
-Great, now let's get ready to focus on problem solving... 
+Great, now let's get ready to focus on problem solving...
 
 Record your answers for each of the below questions in a simple text file, `questions.txt`. You can use PyCharm (if you
 already know how), Notepad or any suitable program for creating your work file.
@@ -93,7 +93,17 @@ We can't just say: `if uv index < 5` without knowing what `uv index` is, so we h
 yield (brewed coffee in grams).  
 Example: A dose of 18g and yield of 45g is a 1 to 2.5 brew ratio.
 
-This algorithm doesn't have any control structures, but just uses **input, processing and output**.
+This algorithm doesn't have any control structures, but just uses **input, processing and output**.  
+In our lecture, we saw a similar example for calculating the volume of a box:
+
+```
+get length, width, depth
+volume = length * width * depth
+print volume
+```
+
+Notice that we used a "variable" (more on this later) to store the volume so that we could refer to it when printing the
+result.
 
 ### Algorithm with Decision
 
@@ -114,7 +124,7 @@ Note: we are not trying to write code here, so just include simple instructions 
 robotic assistant.  
 This algorithm should have included the **repetition** (or iteration or loop) control structure. We will learn more
 about that later, but for now, you can consider using words like `while` and `repeat`.  
-Here's a simple example for eating food:  
+Here's a simple example for eating food:
 
 ```
 eat mouthful
