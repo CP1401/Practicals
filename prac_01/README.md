@@ -93,7 +93,17 @@ We can't just say: `if uv index < 5` without knowing what `uv index` is, so we h
 yield (brewed coffee in grams).  
 Example: A dose of 18g and yield of 45g is a 1 to 2.5 brew ratio.
 
-This algorithm doesn't have any control structures, but just uses **input, processing and output**.
+This algorithm doesn't have any control structures, but just uses **input, processing and output**.  
+In our lecture, we saw a similar example for calculating the volume of a box:
+
+```
+get length, width, depth
+volume = length * width * depth
+print volume
+```
+
+Notice that we used a "variable" (more on this later) to store the volume so that we could refer to it when printing the
+result.
 
 ### Algorithm with Decision
 
