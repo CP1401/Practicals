@@ -175,30 +175,38 @@ Number of days: 4
 The trip will cost: $758.0
 ```
 
-## 4. i-stop Calculation (Percentage)
+## 4. Deep Sleep Calculation (Percentage)
 
-A certain car brand has a feature called **i-stop**, where the car's engine is turned off to increase fuel economy.  
-The car's display shows the current percentage of stoppage time that i-stop has been engaged. E.g. this is what the car's display might show:  
+Derek wants to track his quality of sleep and understand what percentage of his night's sleep is "deep".  
+Deep sleep is when your body and brain waves slow down and is important for proper restoration. 
+Derek has an app that tracks his sleep but only shows him total time asleep and total time in "deep sleep".  
+He wants to know the percentage of deep sleep.  
+Here's an example of version 1 of what the program will look like:
+
 ```
-i-stop ON:       1m 2s
-Time Stopped:    2m 41s
-Percentage:      38.5%
+Total sleep in seconds: 161
+Deep sleep in seconds : 62
+
+Deep sleep : 1m 2s
+Total sleep: 2m 41s
+Percentage:  38.50931677018634%
 ```
 
-Are you seeing how this works? Looks like our I, P, O pattern...  
-Write a program to produce the percentage based on the time on and the time stopped. This should be easy enough for you by now.  
+Can you see how this will work? Looks like our I, P, O pattern...  
+Write a program to produce the percentage based on the two times (total and deep). This should be easy enough for you by now...  
+
 **But wait...**  
 It's not so easy dealing with minutes and seconds like in the example. How do we handle that?  
-The answer is to develop this program **iteratively** - not trying to solve the whole thing in one go. So...  
+The answer is to develop this program **iteratively**. Do not try to solve the whole thing in one go. So...  
 
 For our first version, let's just use total seconds and ignore the minutes+seconds output.  
 This will help us focus on the core of the program before we figure out customising the outputs.   
  
-- Write a program that asks for the **time on** and the **time stopped** in seconds, then displays the percentage.  
-- Use the same example above to test, so 62 seconds on, 161 seconds stopped should give 0.38509... (don't worry about formatting the output neatly)  
+- Write a program that asks for the **total sleep** and the **deep sleep** in seconds, then displays the percentage.  
+- Use the same example above to test, so 62 seconds deep, 161 seconds total (short sleep!) should give 0.38509... (don't worry about formatting the output neatly yet).  
 
-When you have that working, you can then focus on enhancing the program.  
-Keep the inputs the same, but write the output so it appears as above... How?  
+**ONLY** when you have that working, can you then focus on enhancing the program.  
+Keep the inputs the same, but write the output so that it appears as above... How?  
 
 Remember how the **modulo** operation works, and is useful for repeating cycles like time in minutes and seconds?  
 We know:  
@@ -211,20 +219,12 @@ Also, 0.385 isn't the percentage we want. We want something more like 38.5%. So,
 (Don't worry about the number of decimal places at this stage; we'll learn about handling that later using string formatting.)
 
 Knowing this, complete your program so that it outputs like we want. As always, use good variable names.  
-Here's a full sample output (with the user inputs 62 and 161 we've been testing with):
-
-```
-i-stop on in seconds: 62
-Time stopped in seconds: 161
-
-i-stop ON:      1m 2s
-Time Stopped:   2m 41s
-Percentage:     38.50931677018634%
-```
 
 **Before you finish** with this file, "uncomment" your previous code for all programs.    
 Leave the actual comments for headings, but return the rest of the code back to normal.    
 To do this, select the lines of code and press `Ctrl+/` for each program.  
+
+PLEASE don't ever comment or uncomment large blocks of code manually by typing or deleting `#` one at a time. No :)
 
 # Practice and Extension
 
