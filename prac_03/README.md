@@ -1,13 +1,15 @@
-# Practical 03 - Decision Structures 
+# Practical 03 - Decision Structures
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**  
+**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
 
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
 By now you should be able to use PyCharm easily enough to edit text files. Get started straight away.
 
 ## Quick Questions
+
 Answer these quick questions in your `questions.txt` file.  
-For questions 3-6, calculate the result of the expression using the following as the variable values:  
+For questions 3-6, calculate the result of the expression using the following as the variable values:
+
 ```python
 a = 2
 b = 3
@@ -15,13 +17,14 @@ c = 4
 ```
 
 1. What is the "not equal to" operator in Python?
-2. What is the "less than or equal to" operator in Python?	
-3. b + c * a > a ** b  
-4. True or (c ** b - a % b > c ** c)  
-5. not True and False or True  
-6. (a * b + c) % 2 == 0  
+2. What is the "less than or equal to" operator in Python?
+3. b + c * a > a ** b
+4. True or (c ** b - a % b > c ** c)
+5. not True and False or True
+6. (a * b + c) % 2 == 0
 
 ## Patterns
+
 We have learned 5 common **decision patterns** and when to use them (the "best tool for the job"):
 
 1. if, no else
@@ -29,37 +32,43 @@ We have learned 5 common **decision patterns** and when to use them (the "best t
 3. if-elif-else
 4. if-elif no else
 5. if, if, if...
-  
-**Which pattern** would be the most appropriate choice for each of the following situations: 
+
+**Which pattern** would be the most appropriate choice for each of the following situations:
 
 1. Deciding what coffee to make based on a customer's order (flat white, cappuccino, piccolo, long black, espresso...)
-2. Deciding whether to toast a customer's sandwich  
+2. Deciding whether to toast a customer's sandwich
 3. Recording what foods a customer is allergic to (ask for each allergen)
-4. Calculating tax based on income - could be one of several tax brackets 
+4. Calculating tax based on income - could be one of several tax brackets
 5. Handling the "play again?" question at the end of a computer game level
 6. Determining if a frog is poisonous based on its colour
 7. Determining if a frog is poisonous based on its colour, tongue length and number of eyes
 
-
 ## Logic Exercise
 
-When asked her 3 children's ages, Mrs. Muddled said that Alice is the youngest unless Bill is, and that if Carl isn't the youngest then Alice is the oldest.  
+When asked her 3 children's ages, Mrs. Muddled said that Alice is the youngest unless Bill is, and that if Carl isn't
+the youngest then Alice is the oldest.  
 Who is the oldest and who is the youngest?
 
 ## Note
 
 Before we get on to writing code, we need to highlight a very common error.
 
-When using compound Boolean expressions (sounds fancy doesn't it?) with **and** and/or **or**, you need to make each side of the expression complete.  
+When using compound Boolean expressions (sounds fancy doesn't it?) with **and** and/or **or**, you need to make each
+side of the expression complete.  
 Example:
+
 ```
 if age < 0 or > 100  # not OK
 ```
+
 This is NOT OK, because the right side (after the or) is just `> 100`
 which is incomplete and cannot be determined.  
-In English, we often shortcut this when we speak (e.g. the above could be said "if age is less than zero or greater than one hundred") – makes sense to us, but in pseudocode and code, you can't take that shortcut.  
-You need to restate the variable to make the expression complete so that the code can run (and so pseudocode makes sense).  
+In English, we often shortcut this when we speak (e.g. the above could be said "if age is less than zero or greater than
+one hundred") – makes sense to us, but in pseudocode and code, you can't take that shortcut.  
+You need to restate the variable to make the expression complete so that the code can run (and so pseudocode makes
+sense).  
 Example:
+
 ```
 if age < 0 or age > 100	 # OK
 ```
@@ -70,18 +79,23 @@ As you do individual work on your computer, if you need help, start by talking t
 External students are encouraged to use Slack to ask questions of others in the class.
 
 ## Example
-Let's walk through a complete example, from problem description, through problem solving to code and testing.  
-Just read along and understand. Do not "do" any of this, just read it and make sure you understand. Ask your peers if you need any help.    
-Use this example (and the lecture teaching) as a reference when you do your own work.
- 
-### Problem Description:
-The Automated Steakhouse needs a program to tell customers how long they can expect to wait for their steak.  
-The customer has three options: "rare", "medium" and "well-done" - 
-if they enter anything else, they receive an error message. Rare steaks take 2 minutes to cook, medium steaks take 4 minutes to cook, and well-done steaks require 6 minutes.
 
-When we decompose the problem, looking for nouns, verbs and "decision" words, we can see things like "options" and "if", so we're going to be using decisions.  
+Let's walk through a complete example, from problem description, through problem solving to code and testing.  
+Just read along and understand. Do not "do" any of this, just read it and make sure you understand. Ask your peers if
+you need any help.    
+Use this example (and the lecture teaching) as a reference when you do your own work.
+
+### Problem Description:
+
+The Automated Steakhouse needs a program to tell customers how long they can expect to wait for their steak.  
+The customer has three options: "rare", "medium" and "well-done" - if they enter anything else, they receive an error
+message. Rare steaks take 2 minutes to cook, medium steaks take 4 minutes to cook, and well-done steaks require 6
+minutes.
+
+When we decompose the problem, looking for nouns, verbs and "decision" words, we can see things like "options" and "if",
+so we're going to be using decisions.  
 We can see multiple cases/paths and their conditions.  
-Also, we can tell that there is a default case - the error message. 
+Also, we can tell that there is a default case - the error message.
 
 What pattern will we use?  
 This looks like a menu-style problem and has multiple cases with a default, so...  
@@ -89,7 +103,7 @@ It's clearly the **if-elif-else** pattern.
 
 ### Algorithm
 
-Notice that in pseudocode we use "else if", not "elif", since "elif" is code specific to Python, and it means "else if".  
+Notice that in pseudocode we use "else if", not "elif", since "elif" is code specific to Python, and it means "else if".
 
 ```
 get choice
@@ -102,7 +116,6 @@ else if choice == "well-done"
 else
    display error message
 ```
-
 
 ### Code
 
@@ -119,8 +132,9 @@ else:
 ```
 
 ### Testing
+
 Remember that when testing decision structures, we should use test data to produce each path/output.  
-There are 4 possible paths here, so we need to test each one, like:  
+There are 4 possible paths here, so we need to test each one, like:
 
 | Input | Expected Output | Actual Output |
 |---|---|---|
@@ -129,44 +143,49 @@ There are 4 possible paths here, so we need to test each one, like:
 | well-done | 6 minutes | ? |
 | anything | Ain't no steak like that here | ? |
 
-
 ### Things to do
 
 Create a new Python file, `example.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with the planned test values.  
-As you type into PyCharm, watch how the IDE helps you complete the task. E.g. when you press Enter after a colon, it automatically indents.  
-You should also try typing your `elif` or `else` statements completely before you indent/outdent and watch to see that PyCharm automatically puts them in the right position!
+As you type into PyCharm, watch how the IDE helps you complete the task. E.g. when you press Enter after a colon, it
+automatically indents.  
+You should also try typing your `elif` or `else` statements completely before you indent/outdent and watch to see that
+PyCharm automatically puts them in the right position!
 
 **Now, make these changes** to help you understand the code:
 
 - Add another case: "burnt" should take 8 minutes
-- Try testing with "Rare" instead of "rare". What happens?  Apparently `"Rare" != "rare"`, but you knew that already.
+- Try testing with "Rare" instead of "rare". What happens? Apparently `"Rare" != "rare"`, but you knew that already.
 
 We could handle this using something like:
+
 ```python
 if choice == "rare" or choice == "Rare":
 ```
-**but** what about `"RARE"`, isn't that also the same thing?  
 
-We are going to jump ahead to some string processing and learn to use the `lower()` method...  
+**but** what about `"RARE"`, isn't that also the same thing?
+
+We are going to jump ahead to some string processing and learn to use the `lower()` method...
 
 We can essentially ignore the upper/lower case by converting our choice string to lower case.  
 We can either do this for each and every condition, or (better), just when we get the input.  
-**Try this** in your code now:  
+**Try this** in your code now:
 
 ```python
 choice = input("Steak choice (rare, medium or well-done): ").lower()
 ```
 
-So, we get the input string and immediately convert it to lower case, which means inputs like "Rare" or "RARE" or "RaRe" all become "rare".  
+So, we get the input string and immediately convert it to lower case, which means inputs like "Rare" or "RARE" or "RaRe"
+all become "rare".  
 Nice!
 
 Test this and see if it works.
 
 # Coding Exercises
- 
+
 Write all of your answers to the following questions in a single Python file called `programs.py`  
-At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from here) so you/we know what the program is for later.  
+At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from
+here) so you/we know what the program is for later.  
 Example:
 
 ```python
@@ -175,6 +194,7 @@ Example:
 ``` 
 
 ## 1. Tax
+
 The following problem is partly done for you. Complete your parts.
 
 The Python Party wins government at the next election and introduce a simpler tax system that works like this:
@@ -184,7 +204,7 @@ The Python Party wins government at the next election and introduce a simpler ta
 - If you earn over $1000, you pay 10% tax on the total amount
 
 Write the pseudocode for this (in comments), then copy the code below and complete it.  
-Note the use of meaningful constants provided.   
+Note the use of meaningful constants provided.
 
 First, think of which decision pattern applies.  
 There are three mutually-exclusive categories of taxation.  
@@ -206,7 +226,8 @@ print("Total tax is: $", total_tax, sep="")
 print("Take home pay is: $", take_home_pay, sep="")
 ```
 
-Note: with a situation like this, you should see that in all cases, you want to end up with three properly-set variables: 
+Note: with a situation like this, you should see that in all cases, you want to end up with three properly-set
+variables:
 
 - `total_tax` (if you pay no tax, then $0 is the correct total tax)
 - `income` (don't change this from what the user enters)
@@ -215,7 +236,7 @@ Note: with a situation like this, you should see that in all cases, you want to 
 With that in mind, make sure you **don't repeat yourself (DRY)**.  
 Seriously, don't... repeat... yourself!
 
-Here is some sample output for two runs of the program, so you know what to test it with ("known-good" data).  
+Here is some sample output for two runs of the program, so you know what to test it with ("known-good" data).
 
 ```
 Python Party Tax Program - Where Tax is a Party
@@ -234,8 +255,11 @@ Take home pay is: $565.25
 Again, don't worry about the 2 decimal place currency formatting. We will get to that later.
 
 ### Comment out temporarily
-Remember that you can **comment out** code so that it doesn't run by selecting the lines of code (doesn't need to be exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).  
-Remember also to do this shortcut again when you're finished so that it looks like normal code again - all programs will run - before you submit your work.
+
+Remember that you can **comment out** code so that it doesn't run by selecting the lines of code (doesn't need to be
+exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).  
+Remember also to do this shortcut again when you're finished so that it looks like normal code again - all programs will
+run - before you submit your work.
 
 ## Don't Repeat Yourself (DRY)
 
@@ -251,7 +275,7 @@ elif score >= 0 and score < 20:  # condition 2
     result = score * 2
     print("Score is OK.")
 elif score > 20:  # condition 3
-    result = score * 2  
+    result = score * 2
     print("Your score is good!")
 print("Double your score is", result)
 ```
@@ -259,9 +283,15 @@ print("Double your score is", result)
 This program works, so what's the problem?
 
 - Remember, we don't _just_ want working code, we want _good_ code!
-- condition 2 is only checked if condition 1 is False. if condition 1 is False, this is because score must be not < 0, so `score >= 0 ` is redundant. It will _always_ be true. condition 2 should be replaced by just `score < 20`
-- condition 3 appears to check if condition 2 was False, which we already know, but because this code uses "elif no else" we might just make a mistake like getting the boundary condition wrong. What happens if the user enters `20`? Oops! The right choice of pattern is important! We can fix this by changing condition 3 to `score > 20` but then we ask a question we can guarantee will always be True when we get to it (since the first 2 were False), so that's repeating ourselves. DRY.
-- Lastly, in all three paths, we repeat the line `result = score * 2`. Again, this works, but is not good. Since we always want to do this, it should go _outside_ the decision structure.
+- condition 2 is only checked if condition 1 is False. if condition 1 is False, this is because score must be not < 0,
+  so `score >= 0 ` is redundant. It will _always_ be True. condition 2 should be replaced by just `score < 20`
+- condition 3 appears to check if condition 2 was False, which we already know, but because this code uses "elif no
+  else" we might just make a mistake like getting the boundary condition wrong. What happens if the user enters `20`?
+  **Oops!** The right choice of pattern is important! We can fix this by changing condition 3 to `score >= 20` but then
+  we ask a question we can guarantee will always be True when we get to it (since the first 2 were False), so that's
+  repeating ourselves. DRY.
+- Lastly, in all three paths, we repeat the line `result = score * 2`. Again, this works, but is not good. Since we
+  always want to do this, it should go _outside_ the decision structure.
 
 Here's the code with these problems fixed. Ah, that's better :)
 
@@ -277,25 +307,38 @@ result = score * 2
 print("Double your score is", result)
 ```
 
+### One more thing...
+
+Let's add one more tax threshold and rate.  
+If we've designed our algorithm and code well, this shouldn't take much work.
+
+- If you earn between $100 and $500, you pay 2% tax on the total amount
+
+Add this into your code and notice how much extra work it took. If you had to rewrite or change your decision patterns,
+then notice that you could have been more extensible in the first place.
+
 ## 2. Car Insurance
 
 Car rental company Painz determines whether a renter requires special insurance based on their age.    
 Applicants under 18 are refused hire altogether.  
 Applicants under 25 are required to purchase special insurance.  
-Applicants 25 years and over are not required to purchase insurance.  
+Applicants 25 years and over are not required to purchase insurance.
 
-Painz needs you to write a program that gets the applicant's age, and outputs "Insurance required", "Insurance not required", or "Hire refused" as appropriate.
+Painz needs you to write a program that gets the applicant's age, and outputs "Insurance required", "Insurance not
+required", or "Hire refused" as appropriate.
 
-When you write your decision structure, remember to start at one end of the "number line". The only place you should _not_ start is with the "special insurance" (middle) category. Don't repeat yourself.
+When you write your decision structure, remember to start at one end of the "number line". The only place you should _
+not_ start is with the "special insurance" (middle) category. Don't repeat yourself.
 
 ## 3. Simple Password Checker
 
 Write a program that has a secret password stored as a **constant**, and checks a user's password against it.  
-Use string comparison to print either "Access granted" or "Access denied" depending on if the user's password matches the secret.
-
+Use string comparison to print either "Access granted" or "Access denied" depending on if the user's password matches
+the secret.
 
 ## 4. Dog Years
-Write a Python program to calculate a dog's age in dog years.  
+
+Write a Python program to calculate a dog's age in dog years.
 
 How?  
 Each year of the first two human years is equal to 10.5 dog years.  
@@ -303,12 +346,14 @@ After that, each human year equals 4 dog years.
 (Note: That is two possible scenarios.)
 
 Expected Output:
+
 ```
 Age in human years: 15
 Age in dog years is 73
 ```
 
-or 
+or
+
 ```
 Age in human years: 1
 Age in dog years is 10.5
@@ -317,26 +362,30 @@ Age in dog years is 10.5
 Start by choosing the decision pattern that best applies to this problem...
 
 ### Don't Repeat Yourself
+
 **Note:** "Don't Repeat Yourself" (DRY) is an important programming principle.  
-In this program, and many of your others, you will have a single output that depends on the True/False value of one or more conditions.  
+In this program, and many of your others, you will have a single output that depends on the True/False value of one or
+more conditions.  
 But whatever the result, you print `Age in dog years is ...` so the only difference is the numeric value.  
-Calculate the value in the paths - multiple calculation lines, 
-but do the printing only once - _outside_ the paths - no matter what the result of the condition/s.
+Calculate the value in the paths - multiple calculation lines, but do the printing only once - _outside_ the paths - no
+matter what the result of the condition/s.
 
 ## 5. Rock of Ages
 
-Ask the user for their age, then tell them something related to their age.  
+Ask the user for their age, then tell them something related to their age.
 
 You need to ensure you write your decision structures **efficiently**.  
 DO NOT REPEAT questions you already know the answer to.
 
-- *First*, use a single **compound Boolean expression** to test if the age is invalid (not between 0 and 120 inclusive) and print "Invalid age" if it's invalid.
+- *First*, use a single **compound Boolean expression** to test if the age is invalid (not between 0 and 120 inclusive)
+  and print "Invalid age" if it's invalid.
 - Then, start at one end (highest or lowest) and work towards the other end
 - Print your own custom response for at least four different age categories.
 
 ## 6. Speeding Fines
 
-[Current penalties for individuals caught speeding in Queensland](https://www.tmr.qld.gov.au/Safety/Driver-guide/Speeding/Speeding-fines-and-demerit-points.aspx) are: 
+[Current penalties for individuals caught speeding in Queensland](https://www.tmr.qld.gov.au/Safety/Driver-guide/Speeding/Speeding-fines-and-demerit-points.aspx)
+are:
 
 | Infringement                                                   | Penalty amount | Demerit points |
 |----------------------------------------------------------------|----------------|----------------|
@@ -346,42 +395,48 @@ DO NOT REPEAT questions you already know the answer to.
 | More than 30km/h but not more than 40km/h over the speed limit | $622           | 6              |
 | More than 40km/h over the speed limit                          | $1,245         | 8              |
 
-Note: the way the government website has written this (and we've copied it) is NOT efficient in terms of decision structures. This has been written for each condition to stand alone (if, if, if) but we can tell its mutually exclusive and so know a better tool for the job, don't we?
+Note: the way the government website has written this (and we've copied it) is NOT efficient in terms of decision
+structures. This has been written for each condition to stand alone (if, if, if) but we can tell its mutually exclusive
+and so know a better tool for the job, don't we?
 
-Avoid a 6-month suspension by writing a program to ask for the user's: 
-- **speed** and the 
-- **speed limit** 
+Avoid a 6-month suspension by writing a program to ask for the user's:
+
+- **speed** and the
+- **speed limit**
 
 then tell them their fine in dollars (you can ignore the demerit points).
 
-After getting the inputs, you will want to calculate the speed over the limit. You do not want to calculate this again and again in each condition. DRY. 
+After getting the inputs, you will want to calculate the speed over the limit. You do not want to calculate this again
+and again in each condition. DRY.
 
 # Practice and Extension
 
-These final sections in practicals are _not required_ to be completed for marks, but you will definitely find benefit in completing them for extra practice and to extend yourself.  
-The more practice you do, the more you develop and "lock in" your new skills.  
+These final sections in practicals are _not required_ to be completed for marks, but you will definitely find benefit in
+completing them for extra practice and to extend yourself.  
+The more practice you do, the more you develop and "lock in" your new skills.
 
 Create a new file, `practice.py` to complete these tasks in:
 
 ## Coffee Pour and Grind
 
-As all good baristas know (right, Raven?), the length of time a shot of coffee pours indicates if the grind level is right:  
+As all good baristas know (right, Raven?), the length of time a shot of coffee pours indicates if the grind level is
+right:
 
 - 25-35 seconds = OK, leave it
 - under 25 seconds = grind finer (so it pours slower)
 - over 35 seconds = grind courser (so it pours faster)
 
 Write an algorithm, then a program, to help create a robot that replaces the barista.  
-Give it a cool beard, maybe some tattoos and engaging conversation so the customer still feels the love.   
+Give it a cool beard, maybe some tattoos and engaging conversation so the customer still feels the love.
 
 ## Good morning, good evening and good night.
 
 Write 4 different versions of a time-based greeting program.  
-(You will use different decision patterns for some of these, as appropriate.)  
+(You will use different decision patterns for some of these, as appropriate.)
 
 In each case, ask the user for the hour of day (0-23).
 
-1. If it is morning, print "Good morning" (otherwise do nothing) 
+1. If it is morning, print "Good morning" (otherwise do nothing)
 2. If it is morning, print "Good morning"; if night time, print "Good night"
 3. Print either: Good morning / good afternoon / good night
 4. Print either: Good morning / good afternoon / good evening / good night
@@ -395,10 +450,12 @@ Given pool pH level:
 - Above 7.6 is too alkaline, add acid
 
 ## JCU Grades
-[Grades at JCU work like this](https://www.jcu.edu.au/students/exams-and-results/subject-results-explained) depending on your final percentage for a subject.  
+
+[Grades at JCU work like this](https://www.jcu.edu.au/students/exams-and-results/subject-results-explained) depending on
+your final percentage for a subject.
 
 I think you know what to do...  
-Write a program to tell a student what their grade is based on their input subject percentage. 
+Write a program to tell a student what their grade is based on their input subject percentage.
 
 | Grade | Percentage |
 |-------|------------|
@@ -408,13 +465,13 @@ Write a program to tell a student what their grade is based on their input subje
 | P     | 50%-64%    |
 | N     | < 50%      |
 
-
 ## Speeding Fines 2.0
 
 If you do this, don't change your existing submission in `programs.py`, put it in your `practice.py` file.
 
 Upgrade your speeding fines program to include the demerit points as well.  
-Ask the user at the beginning for their **bank balance** and **number of points**, then tell them the updated balances if they lost money or points.
+Ask the user at the beginning for their **bank balance** and **number of points**, then tell them the updated balances
+if they lost money or points.
 
 ## More...
 
@@ -425,17 +482,23 @@ Practise the patterns you've used the least by implementing some or all of these
 # Extension
 
 ### Divisibility
-Write a program that takes two numbers, and prints "Divisible" if the first is divisible by the second, and "Not divisible" otherwise. 
+
+Write a program that takes two numbers, and prints "Divisible" if the first is divisible by the second, and "Not
+divisible" otherwise.
 
 ## Steak++
+
 Automated Steak House wants version 2 of their program.
 
-- add a default minimum order time as a constant 
-- handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes, a rare steak will take 5.
+- add a default minimum order time as a constant
+- handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes, a rare steak will take
+    5.
 
-You should notice that to handle this properly, you will need to replace your fixed outputs with a calculation (e.g. not "2 minutes", but 3 + 2).  
+You should notice that to handle this properly, you will need to replace your fixed outputs with a calculation (e.g.
+not "2 minutes", but 3 + 2).
 
 # Deliverables
+
 This section summarises the expectations for marking in this practical.
 
 `questions.txt` with:
