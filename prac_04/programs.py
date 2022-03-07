@@ -9,7 +9,7 @@ If you get stuck on something, go back to the teaching and work hard to solve th
 # The user should see a menu like this: (S)miley (F)rowny (Q)uit
 # Make the program print a smiley face (if they press 's'),
 # a frowny face, or an error message ("Invalid choice") depending on their choice.
-# When the user quits, print a farewell message.
+# When the user quits, print "Farewell".
 
 print("(S)miley (F)rowny (Q)uit")
 choice = input("> ").upper()
@@ -46,9 +46,9 @@ else:
 # 0 1 2 3 4 5 6
 # 0 1 2 3 4 5 6
 
-rows = int(input("Rows: "))
-columns = int(input("Columns: "))
-for i in range(rows):
-    for j in range(columns):
+number_of_rows = int(input("Rows: "))
+number_of_columns = int(input("Columns: "))
+for i in range(number_of_rows):
+    for j in range(number_of_columns):
         print(j, end=" ")
     print()

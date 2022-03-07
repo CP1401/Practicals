@@ -14,10 +14,11 @@ Write your answers for the early non-coding questions in a simple text file call
 
 ### range
 
-*a)* Add a new heading "Loop outputs" to your questions.txt file, then:  
+*a)* Add a new heading "**Loop outputs**" to your questions.txt file, then:  
 Write the output of each of the following `for` loops that use `range`.
 
-Then, when you have finished writing your output - **not before!** - copy the code into a Python program and run these loops to check your answers.
+Then, when you have finished writing your output - **not before!** - copy the code into a Python program and run these
+loops to check your answers.
 
 ```python
 # 1.	
@@ -46,7 +47,7 @@ for i in range(10, 0, -2):
 print()
 ```
 
-*b)* Add a new heading "Range values" to your questions.txt file, then:  
+*b)* Add a new heading "**Range values**" to your questions.txt file, then:  
 Write the range statements (just range and parameters, not the whole loop) equivalent to the following lists of numbers:
 
 1. [0, 1, 2, 3, 4, 5]
@@ -59,7 +60,9 @@ Write the range statements (just range and parameters, not the whole loop) equiv
 
 ## Patterns
 
-We have learned that there are 2 main [repetition patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#repetition-structures) and when to use them (the "best tool for the job"):
+We have learned that there are 2
+main [repetition patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#repetition-structures) and when
+to use them (the "best tool for the job"):
 
 - definite (for loops)
 - indefinite (while loops)
@@ -74,19 +77,20 @@ We have learned that there are 2 main [repetition patterns](https://github.com/C
 
 ## Logic Exercise
 
-There are three boxes which each contains two marbles:
+There are three boxes, which each contain two marbles:
 
 - one has two white,
 - one has two black, and
 - one has one white and one black marble.
 
-Each of the boxes also is labeled as to its contents, but the labels have been swapped around and each label is _incorrect_.  
+Each of the boxes also is labeled as to its contents, but the labels have been swapped around and each label is _
+incorrect_.  
 What is the fewest number of marbles you could remove from the boxes and look at in order to definitely determine the
 contents of all three boxes?
 
-*Note*: This is a very interesting exercise, and one you might not get correct without thinking about it carefully (of
+**Note**: This is a very interesting exercise, and one you might not get correct without thinking about it carefully (of
 course).  
-*Hint*: Make sure you are using all the information you have been provided with, and think about which is the best
+**Hint**: Make sure you are using all the information you have been provided with, and think about which is the best
 choice to start with.
 
 # Python Coding - Repetition Structures
@@ -94,17 +98,17 @@ choice to start with.
 ## Example
 
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  
-Read along and understand. Do not "do" any of this, just read it and make sure you understand, until you get to the
+Read along and understand. Do not "do" any of this; just read it and make sure you understand, until you get to the
 section that asks you to do something.
 
 Often, it is impossible for a program to proceed correctly if the user has entered an invalid value.  
 A simple and general pattern for validating user input has been taught in class and is below.  
-NOTE: When you see *"general patterns"* in programming, you need to learn these, as you will be reusing them again and
+**Note**: When you see *"general patterns"* in programming, you need to learn these, as you will be reusing them again and
 again.  
 There may be other ways, but the general patterns are usually the best in most situations.  
-Pay attention to patterns like this!
+*Pay attention to patterns like this!*
 
-Here is our standard error-checking (while loop) pattern: 
+Here is our standard error-checking (while loop) pattern:
 
 ```
 get input
@@ -116,7 +120,7 @@ while <input is not valid>
 
 ### Problem Description:
 
-In this example, we want to ask for the user to enter the month of their birthday as a number (so only a month between 1
+In this example, we want to ask the user to enter the month of their birthday as a number (so only a month between 1
 and 12 is valid), then we will print each of the months of the year up to their birth month.
 
 Sample output:
@@ -143,9 +147,8 @@ We should recognise the type of loops we need:
 - the first will repeat *indefinitely* - until we get a valid month, or "while" the birth month is bad
 - the second will repeat *definitely* - from 1 up to the birth month
 
-Note: Don't forget to make use of our
-useful [Guide to Good Pseudocode](https://github.com/CP1404/Starter/wiki/Pseudocode-Guide). It's useful for how to do
-things like this...
+Don't forget to make use of our
+useful [Guide to Good Pseudocode](https://github.com/CP1404/Starter/wiki/Pseudocode-Guide).
 
 ```
 get birth_month
@@ -188,20 +191,20 @@ To test this kind of input validation program, we need to do the usual:
 - Test the abnormal situations
 - Test the boundary conditions
 
-So, for our month number checking loop, we should check with values:
+For our month number checking loop, we should check with values:
 
-- 5 (first, just try it with something valid in the first instance - we should get no loop)
+- 5 (or anything 1-12) (first, just try it with something valid in the first instance - we should get no loop)
 - 1 and 12 (boundary conditions - which should be valid months)
 - 0, 13 (just outside the boundaries)
-- and we should test with looping no times (as we did first) and many times, not just once.
+- and we should test with looping no times (as we did first) and multiple times, not just once.
 
 ### Things to do
 
 Create a new Python file, `example.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with some other values.  
-The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g. use
-autocomplete!), type code accurately, and develop an eye for detail.
+The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE, type code accurately, and develop an eye for detail. Use autocomplete!
 
+**Changes**  
 Now update your program as follows:
 
 - Print whether the birth month is in the first or second half of the year
@@ -210,7 +213,7 @@ Now update your program as follows:
 - When you've got the above working, use these constants in the prompt, so it would print like:
   `Enter the month number (1-12): `  
   Note: This is a good case for some more string formatting. Here are a few options to achieve a string like that.  
-  Which do you like best?
+  Which do you like best? (Hint: you like the f-string version best.)
 
 ```python
 # Using the format method:
@@ -219,26 +222,31 @@ month = int(input("Enter the month number ({}-{}): ".format(MINIMUM_MONTH, MAXIM
 # Using string concatenation and explicit type conversion 
 month = int(input("Enter the month number (" + str(MINIMUM_MONTH) + "-" + str(MAXIMUM_MONTH) + "): "))
 
-# Using f-strings - only introduced in Python 3.6
+# Using f-strings
 month = int(input(f"Enter the month number ({MINIMUM_MONTH}-{MAXIMUM_MONTH}): "))
 ```
 
 There's also old-fashioned %-formatting, but it is limited as to the types it supports and is not recommended.  
-You might find examples that use %-formatting online, but should avoid this generally.
+You might find examples that use %-formatting online, but don't use this.
 
-Note that you cannot simply use commas here like you do in `print`, because `input` does not accept multiple arguments
-unlike `print`.
+Note that you cannot simply use commas here like you do in `print`, because `input` does not accept multiple arguments.
+
+**Test it!**  
+One way to test you've used the constants properly is to change one or both.  
+What happens when you change 12 to 8?  
+Does it still work?  
+Did ALL the 12's change to 8's?
 
 # Coding Exercises
 
-Write all of your answers to the following questions in a single Python file called `programs.py`  
+Write all your answers to the following questions in a single Python file called `programs.py`  
 At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from
 here) so you/we know what the program is for later.  
 Example:
 
 ```python
 # 1. Error Checking
-number_of_miles = int(input("Miles: "))
+worker_level = int(input("Worker level: "))
 ...
 ``` 
 
@@ -250,13 +258,13 @@ When you have a valid entry, print their salary, which is their worker level mul
 
 The algorithm will be very similar to the error-checking example above.
 
-Use string formatting to make your last output look like currency, e.g.
+Use f-string formatting to make your last output look like currency (2 decimal places), e.g.,
 
 ```python
-print("With worker level {}, your salary is ${:,.2f}".format(worker_level, salary))
+print(f"With worker level {worker_level}, your salary is ${salary:,.2f}")
 ```
 
-*Sample Output:*
+### Sample Output:
 
 ```
 Worker level: 0
@@ -267,21 +275,19 @@ Worker level: 7
 With worker level 7, your salary is $35,000.00
 ```
 
-**Test** this using meaningful test data that you can understand.
+**Test** this using meaningful test data that you understand.
 
 You will use this error-checking pattern a lot, so get used to it.
 
-Remember that you can **comment out** code so it doesn't run by selecting the lines of code (doesn't need to be exact
-characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
+Remember that you can **comment out** code so that it doesn't run by selecting the lines of code (doesn't need to be exact
+characters, just any part of the right lines) and pressing `Ctrl+/` (Windows) or `Cmd+/` (Mac).
 
 ## 2. Number Sequences
 
-Most of the programs in this part are fairly small, so we've combined them into one question with parts:
-
-a. Write a loop that displays all of the odd numbers between 1 and 100 with a line break between each one.  
-b. Write a loop that displays all of the Summer Olympic years (i.e. every 4 years) between 1896 and today, with a space
-between each one.  
-c. Write one more loop that represents a meaningful sequence. Explain your chosen sequence in a comment.
+a. Write a loop that displays all the odd numbers between 1 and 100 with a line break between each one. Think about the `step` value for this.  
+b. Write a loop that displays all the Summer Olympic years (every 4 years) between 1896 and today, with a space
+between each one (all on one line).  
+c. Write one more loop that represents any meaningful sequence. Explain your chosen sequence in a comment.
 
 ## 3. Menus
 
@@ -291,15 +297,16 @@ Remember we have
 a [helpful guide to Programming Patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus). It's very
 helpful.
 
-Write a program that prints smiley and frowny faces until the user quits. The user should see a menu like this:
-(S)miley
-(F)rowny
-(Q)uit Make the program print a smiley face (if they press 's'), a frowny face, or an error message ("Invalid choice")
-depending on their choice.   
-When the user quits, print a farewell message.
+Write a menu program that prints smiley and frowny faces until the user quits. The user should see a menu like this:
 
-Remember that one of the first things to do when analysing a problem like this is to decide on *definite* vs. *
-indefinite* repetition.  
+    (S)miley
+    (F)rowny
+    (Q)uit  
+
+Make the program print a smiley face if they press 's', a frowny face if they press 'f', or an error message ("Invalid choice") depending on their choice.   
+When the user quits ('q'), print "Farewell".
+
+Remember that one of the first things to do when analysing a problem like this is to decide on *definite* vs. *indefinite* repetition.  
 Get into the habit of asking yourself that question every time.
 
 ## 4. Accumulation
@@ -329,9 +336,9 @@ You would want to use a *sentinel* when:
 
 - you don't know how many values there will be beforehand;
 - there is some obvious invalid value you can use to be the sentinel and mark the end.  
-  Note that you can use a range of invalid values, e.g. all negative numbers.
+  Note that you can use a range of invalid values, e.g., all negative numbers.
 
-E.g. calculating the average age of a line of people, where you don't know how many there are beforehand (you can use -1
+E.g., calculating the average age of a line of people, where you don't know how many there are beforehand (you can use -1
 for the sentinel).
 
 #### B. Ask-the-user-to-quit
@@ -340,11 +347,11 @@ Note that this pattern uses a Boolean variable to control the loop.
 
 ```
 total = 0
-is_finished = false
+is_finished = False
 while not is_finished
     get choice
     if choice is quit
-         is_finished = true
+         is_finished = True
     else
          get value
          total = total + value	
@@ -372,7 +379,7 @@ display total
 
 You would use the *definite count* pattern whenever the number of values can be entered beforehand.
 
-E.g. calculating the average test score of the class - we know how many students there are beforehand.
+E.g., calculating the average test score of the class - we know how many students there are beforehand.
 
 *Now it's your turn...*
 
@@ -385,12 +392,13 @@ Hint: you will need to keep track of the total age, and the number of people, se
 ### Smileys Count
 
 Add to your smiley/frowny program so that when the user quits, the program tells them how many smileys and how many
-frownies they printed. (Don't keep track of invalid choices.)
+frownies they printed.  
+Hint: you will need to keep track of the two counts separately. (Don't keep track of invalid choices.)
 
 ### Total Numbers
 
 Write some code that asks the user for a number of repetitions, then asks for that many numbers and adds them up.  
-(Is this definite iteration - we know how many times it will run, or indefinite - we don't know?)
+Is this definite iteration (we know how many times it will run), or indefinite (we don't know)?
 
 Sample output would look like:
 
@@ -445,9 +453,10 @@ for round_number in range(1, 4):
     print("---------------------")
 ```
 
-(Note that the above example uses a list, which we haven't learned about yet - but hopefully you can see how it works. You should not use lists for this program.)
+(Note that the above example uses a list, which we haven't learned about yet - but hopefully you can see how it works.
+*You should not use lists for your program.*)
 
-Write a program that asks the user for a number of rows and columns, then prints the numbers to mach, like:
+Write a program that asks the user for a number of rows and columns, then prints the numbers to match, like:
 
 ```
 Rows: 3
@@ -468,14 +477,15 @@ Create a new file, `practice.py` to complete these tasks in:
 ## Loopiness
 
 Write a loop that continually asks you for any string and then prints it, until you just press Enter (the empty string
-is ""). E.g. you type bob, it prints bob, you type hello, it prints hello, you press Enter, it stops.  
+is ""). E.g., you type bob, it prints bob, you type hello, it prints hello, you press Enter, it stops.  
 (This is indefinite iteration - we don't know how many times it will run.)
 
 ## Turn-on
 
 Write a program that asks the user to enter either "on" or "off", and error-check this input until they choose one of
 these.  
-Then print either "the light is on" or "the light is off". Note: Think about your condition carefully before you run
+Then print either "the light is on" or "the light is off".  
+Think about your condition carefully before you run
 your program to test it.
 
 # Extension
@@ -505,8 +515,8 @@ To get the spacing nice, note that `"{:4}".format(number)` will make `number` ta
 
 #### 2. Random Secrets
 
-See if you can figure out how to make your guessing game random, 
-so it's not always whatever the SECRET constant is set to.  
+See if you can figure out how to make your guessing game random, so it's not always whatever the SECRET constant is set
+to.  
 Do this by:
 
 - Open the Python Console (down the bottom in PyCharm)
@@ -535,7 +545,7 @@ Columns: 7
 #### 4. Seriously Loopy
 
 Write a program that works like the output below.  
-Hint: use mod (%)
+Hint: use mod (`%`)
 
 ```
 Rows: 7
@@ -556,7 +566,7 @@ This section summarises the expectations for marking in this practical.
 `questions.txt` with:
 
 - Quick Questions
-- range a) output & b) parameters
+- a) Loop outputs & b) Range values
 - Patterns
 - Logic Exercise
 

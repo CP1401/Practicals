@@ -20,13 +20,13 @@ CP1401 Practical 04 - Repetition Structures - Suggested Solutions
 
 
 range
-a)
+a) Loop Outputs
 33 34 35 36 37 38
 17 16 15 14 13 12
 1 0 1 0 1 0 1 0 1 0
 100>64>36>16>4>
 
-b)
+b) Range Values
 [0, 1, 2, 3, 4, 5]
     range(6)
 [1, 5, 9, 13]
@@ -44,7 +44,7 @@ Which pattern would be the most appropriate choice for each of the following sit
     indefinite
 2. A menu with several options including 'quit'
     indefinite
-3. Displaying all of the months in a year
+3. Displaying all the months in a year
     definite
 4. Printing 5 random numbers
     definite
