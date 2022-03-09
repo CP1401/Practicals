@@ -10,8 +10,7 @@ File: `programs.py`
 ### Use Docstrings
 
 For each of your functions, write a brief function **docstring**.  
-Docstrings, like all comments, should be written in
-the imperative mood, e.g., "Print" not "Prints".
+Docstrings, like all comments, should be written in the imperative mood, e.g., "Print" not "Prints".
 
 Here's a good example for a function that checks to see if a password is valid:
 
@@ -284,6 +283,10 @@ Do this with a list (much like the earlier question) and use `sum` to calculate 
 # Deliverables
 
 This section summarises the expectations for marking in this practical.
+
+Do not zip up your files.  
+Please submit each file separately.  
+Ensure each file has the correct/exact name.
 
 - `programs.py` with programs 1-5
 - `coffee_orders.py` (All Together Now)

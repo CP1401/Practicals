@@ -501,6 +501,10 @@ not "2 minutes", but 3 + 2).
 
 This section summarises the expectations for marking in this practical.
 
+Do not zip up your files.  
+Please submit each file separately.  
+Ensure each file has the correct/exact name.
+
 `questions.txt` with:
 
 - Quick Questions

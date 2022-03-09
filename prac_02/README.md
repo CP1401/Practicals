@@ -1,6 +1,7 @@
 # Practical 02 - Input, Processing and Output
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
+**All students (internal and external), please submit your prac work (as individual files) via LearnJCU each week by the
+due date.**
 
 ## Read and Understand
 
@@ -316,6 +317,10 @@ neatly lined up output with a fixed number of decimal positions for the above pr
 # Deliverables
 
 This section summarises the expectations for marking in this practical.
+
+Do not zip up your files.  
+Please submit each file separately.  
+Ensure each file has the correct/exact name.
 
 `questions.txt` with:
 

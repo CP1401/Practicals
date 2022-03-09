@@ -103,8 +103,8 @@ section that asks you to do something.
 
 Often, it is impossible for a program to proceed correctly if the user has entered an invalid value.  
 A simple and general pattern for validating user input has been taught in class and is below.  
-**Note**: When you see *"general patterns"* in programming, you need to learn these, as you will be reusing them again and
-again.  
+**Note**: When you see *"general patterns"* in programming, you need to learn these, as you will be reusing them again
+and again.  
 There may be other ways, but the general patterns are usually the best in most situations.  
 *Pay attention to patterns like this!*
 
@@ -120,8 +120,8 @@ while <input is not valid>
 
 ### Problem Description:
 
-In this example, we want to ask the user to enter the month of their birthday as a number (so only a month between 1
-and 12 is valid), then we will print each of the months of the year up to their birth month.
+In this example, we want to ask the user to enter the month of their birthday as a number (so only a month between 1 and
+12 is valid), then we will print each of the months of the year up to their birth month.
 
 Sample output:
 
@@ -202,7 +202,8 @@ For our month number checking loop, we should check with values:
 
 Create a new Python file, `example.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with some other values.  
-The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE, type code accurately, and develop an eye for detail. Use autocomplete!
+The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE, type code
+accurately, and develop an eye for detail. Use autocomplete!
 
 **Changes**  
 Now update your program as follows:
@@ -279,14 +280,15 @@ With worker level 7, your salary is $35,000.00
 
 You will use this error-checking pattern a lot, so get used to it.
 
-Remember that you can **comment out** code so that it doesn't run by selecting the lines of code (doesn't need to be exact
-characters, just any part of the right lines) and pressing `Ctrl+/` (Windows) or `Cmd+/` (Mac).
+Remember that you can **comment out** code so that it doesn't run by selecting the lines of code (doesn't need to be
+exact characters, just any part of the right lines) and pressing `Ctrl+/` (Windows) or `Cmd+/` (Mac).
 
 ## 2. Number Sequences
 
-a. Write a loop that displays all the odd numbers between 1 and 100 with a line break between each one. Think about the `step` value for this.  
-b. Write a loop that displays all the Summer Olympic years (every 4 years) between 1896 and today, with a space
-between each one (all on one line).  
+a. Write a loop that displays all the odd numbers between 1 and 100 with a line break between each one. Think about
+the `step` value for this.  
+b. Write a loop that displays all the Summer Olympic years (every 4 years) between 1896 and today, with a space between
+each one (all on one line).  
 c. Write one more loop that represents any meaningful sequence. Explain your chosen sequence in a comment.
 
 ## 3. Menus
@@ -303,10 +305,12 @@ Write a menu program that prints smiley and frowny faces until the user quits. T
     (F)rowny
     (Q)uit  
 
-Make the program print a smiley face if they press 's', a frowny face if they press 'f', or an error message ("Invalid choice") depending on their choice.   
+Make the program print a smiley face if they press 's', a frowny face if they press 'f', or an error message ("Invalid
+choice") depending on their choice.   
 When the user quits ('q'), print "Farewell".
 
-Remember that one of the first things to do when analysing a problem like this is to decide on *definite* vs. *indefinite* repetition.  
+Remember that one of the first things to do when analysing a problem like this is to decide on *definite* vs. *
+indefinite* repetition.  
 Get into the habit of asking yourself that question every time.
 
 ## 4. Accumulation
@@ -338,8 +342,8 @@ You would want to use a *sentinel* when:
 - there is some obvious invalid value you can use to be the sentinel and mark the end.  
   Note that you can use a range of invalid values, e.g., all negative numbers.
 
-E.g., calculating the average age of a line of people, where you don't know how many there are beforehand (you can use -1
-for the sentinel).
+E.g., calculating the average age of a line of people, where you don't know how many there are beforehand (you can use
+-1 for the sentinel).
 
 #### B. Ask-the-user-to-quit
 
@@ -485,8 +489,7 @@ is ""). E.g., you type bob, it prints bob, you type hello, it prints hello, you 
 Write a program that asks the user to enter either "on" or "off", and error-check this input until they choose one of
 these.  
 Then print either "the light is on" or "the light is off".  
-Think about your condition carefully before you run
-your program to test it.
+Think about your condition carefully before you run your program to test it.
 
 # Extension
 
@@ -562,6 +565,10 @@ Columns: 10
 # Deliverables
 
 This section summarises the expectations for marking in this practical.
+
+Do not zip up your files.  
+Please submit each file separately.  
+Ensure each file has the correct/exact name.
 
 `questions.txt` with:
 

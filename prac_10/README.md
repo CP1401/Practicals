@@ -30,7 +30,8 @@ How many false statements are there in the list; 0, 1, 2 or 3?
 File: `strings.py`
 
 Stop here and make sure you have watched the **Strings lecture** before completing this section.  
-In that lecture, you were shown what you need to know for these exercises, including good examples very similar to these tasks.
+In that lecture, you were shown what you need to know for these exercises, including good examples very similar to these
+tasks.
 
 ### 6. Processing Strings
 
@@ -148,13 +149,15 @@ Just read along and understand. Do not "do" any of this until asked, just read i
 
 ### Problem Description:
 
-Geraldine Gamer likes to record her gaming scores, so each day she types her best score as a floating-point number into the file "scores.txt".  
+Geraldine Gamer likes to record her gaming scores, so each day she types her best score as a floating-point number into
+the file "scores.txt".  
 She wants to process this file and find out what her average score is.
 
 ### Algorithm
 
 - We need to open the file for _reading_ and close it at the end.
-- We know that each line is the same kind of data, so we can process it with a definite loop, doing the same thing per line.  
+- We know that each line is the same kind of data, so we can process it with a definite loop, doing the same thing per
+  line.  
   We process _each_ line, so that's definite (for loop), not _until_ some condition happens.
 - We should know the "accumulation pattern" by now, so the total and average should be easy.
 
@@ -173,7 +176,8 @@ print average
 
 ### Code
 
-Note: we don't usually use the variable name `file` because we'd like to know whether it's for reading input from (`in_file`) or writing output to (`out_file`).  
+Note: we don't usually use the variable name `file` because we'd like to know whether it's for reading input
+from (`in_file`) or writing output to (`out_file`).  
 These are not world-standard kind of names, but they are more meaningful than `file` or `f`, etc. and should help us
 avoid trying to write output to an input file or vice versa.
 
@@ -195,7 +199,8 @@ Notice also that we `close` the file as soon as we've finished with it (not afte
 ### Testing
 
 Test data for this kind of program is stored in a file.  
-Copy this text into a new file (not Python file) called `scores.txt`, saved in the same folder as this prac's program files.   
+Copy this text into a new file (not Python file) called `scores.txt`, saved in the same folder as this prac's program
+files.   
 You can also [download it here](./scores.txt).
 
 ```
@@ -484,6 +489,10 @@ c. the minimum d. the maximum e. the median (harder - you will need to use a lis
 # Deliverables
 
 This section summarises the expectations for marking in this practical.
+
+Do not zip up your files.  
+Please submit each file separately.  
+Ensure each file has the correct/exact name.
 
 `questions.txt`  with:
 
