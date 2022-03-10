@@ -1,7 +1,5 @@
 """
-CP1401 - Coding Checkpoint 1
-https://github.com/CP1401/Practicals/blob/master/checkpoints/checkpoint_01.md
-Suggested Solutions
+CP1401 - Coding Checkpoint 1 - Suggested Solutions
 Please do not use/view these solutions until you have attempted the checkpoint challenges yourself!
 """
 
