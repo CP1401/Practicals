@@ -286,7 +286,8 @@ This section summarises the expectations for marking in this practical.
 
 Do not zip up your files.  
 Please submit each file separately.  
-Ensure each file has the correct/exact name.
+Ensure each file has the correct/exact name.  
+Ensure your code is not commented-out (only comments should be commented).  
 
 - `programs.py` with programs 1-5
 - `coffee_orders.py` (All Together Now)

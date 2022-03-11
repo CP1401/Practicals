@@ -178,7 +178,7 @@ This section summarises the expectations for marking in this practical.
 Do not zip up your files.  
 Please submit each file separately.  
 Ensure each file has the correct/exact name.  
-Ensure your code is not commented-out.  
+Ensure your code is not commented-out (only comments should be commented).    
 
 - `programs.py` with all of the numbered checkpoint questions:
 
