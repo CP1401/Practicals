@@ -285,7 +285,7 @@ exact characters, just any part of the right lines) and pressing `Ctrl+/` (Windo
 
 ## 2. Number Sequences
 
-a. Write a loop that displays all the odd numbers between 1 and 100 with a line break between each one. Think about
+a. Write a loop that displays all the odd numbers between 1 and 100 with each number on its own line (normal print, no sep/end). Think about
 the `step` value for this.  
 b. Write a loop that displays all the Summer Olympic years (every 4 years) between 1896 and today, with a space between
 each one (all on one line).  
