@@ -446,7 +446,7 @@ BMI value.
 Next, like we did with the example, let's write another function to test it:
 
 ```python
-def test_coffee():
+def check_coffee():
     style = determine_coffee_style(1)
     print(style)  # This should be ristretto
     style = determine_coffee_style(2)
@@ -731,7 +731,7 @@ This section summarises the expectations for marking in this practical.
 Do not zip up your files.  
 Please submit each file separately.  
 Ensure each file has the correct/exact name.  
-Ensure your code is not commented-out (only comments should be commented).  
+Ensure your code is not commented-out (only comments should be commented).
 
 `questions.txt` with:
 
