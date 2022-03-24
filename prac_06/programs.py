@@ -35,7 +35,7 @@ def get_valid_number(prompt, low, high):
     return number
 
 
-def test_coffee():
+def check_coffee():
     """Run quick tests to ensure determine_coffee_style works as expected."""
     style = determine_coffee_style(1)
     print(style)  # This should be ristretto
@@ -45,7 +45,7 @@ def test_coffee():
     print(style)  # This should be lungo
 
 
-def test_coffee_loop():
+def check_coffee_loop():
     """Run through a number of brew ratios, printing the style for each."""
     for i in range(0, 5):
         ratio = i + 0.5
@@ -53,6 +53,6 @@ def test_coffee_loop():
         print(f"1:{ratio} is considered {style}")
 
 
-# test_coffee()
-# test_coffee_loop()
+# check_coffee()
+# check_coffee_loop()
 main()
