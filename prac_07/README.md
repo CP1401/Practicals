@@ -181,31 +181,32 @@ else:
 
 File: `seconds.py`
 
-In [Prac 2](../prac_02/README.md#4-i-stop-calculation-percentage) you wrote a program to calculate and display "i-stop"
-time/percentage.  
+In [Prac 2](../prac_02/README.md#4-deep-sleep-calculation-percentage) you wrote a program to calculate and display deep
+sleep time/percentage.  
 In that program, you displayed seconds as minutes and seconds, example:
 
 ```
-i-stop on in seconds: 62
-Time stopped in seconds: 161
+Total sleep in seconds: 161
+Deep sleep in seconds : 62
 
-i-stop ON:      1m 2s
-Time Stopped:   2m 41s
-Percentage:     38.50931677018634%
+Deep sleep : 1m 2s
+Total sleep: 2m 41s
+Percentage : 38.50931677018634%
 ```
 
-Note: the original program from prac 2 was about i-stop values for a car, but this has nothing to do with that
-context.  
-The technique for figuring out minutes and seconds from just seconds is the same, so you can copy your work, but do
+Note: the original program from prac 2 was about sleep, but this question is not related to that context.  
+The technique for figuring out minutes and seconds from just seconds is the same, so you can copy your work, but please
 change any references to the old context.
 
 Write a simple program using a function that **takes in a number** of seconds and **returns a string** that can be used
 to display that value in minutes and seconds.  
-Notice that the function DOES NOT PRINT. We want to use the string in different ways, so this function's job is simply
-to create/return a formatted string.  
+Notice that this function DOES NOT PRINT.  
+We want to use the string in different ways, so this function's job is simply to create/return a formatted string.  
 Write a main program that displays a bunch of different seconds values in minutes and seconds using a loop.  
+
 **Example output:**  
-Note: Think about how this was generated... There's no user input; it starts at 0, goes to ? in steps of ?  
+Note: Think about how this was generated...  
+There's no user input; it starts at 0, goes to ? in steps of ?  
 Try and do the same in your program.
 
 ```
@@ -238,8 +239,8 @@ though it's really similar.
 Do we need a second function that returns something like `You love ...`?  
 NO! That would be repeating ourselves, and we know... **DRY**.
 
-So... we need to remember SRP.  
-This function has **one job**, and it's not printing or returning a whole `n seconds is ...`, it's ONLY the bit that
+So... we need to remember **SRP**.  
+This function has **one job**, and it's not printing or returning `n seconds is ...`, it's ONLY the bit that
 formats the seconds (argument) in minutes and seconds...  
 which we can now reuse in different situations!  
 SRP leads to function reusability and helping us not repeat ourselves :).
@@ -393,7 +394,7 @@ This section summarises the expectations for marking in this practical.
 Do not zip up your files.  
 Please submit each file separately.  
 Ensure each file has the correct/exact name.  
-Ensure your code is not commented-out (only comments should be commented).  
+Ensure your code is not commented-out (only comments should be commented).
 
 `questions.txt` with:
 
