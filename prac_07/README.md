@@ -30,6 +30,19 @@ If you didn't... notice that you had trouble with attention to detail.
 This is a fairly normal issue, but one that programmers need to deal with more so than 'regular' people.  
 You need to continue to systematically build your attension to detail ;)
 
+## Reflection
+
+This exercise is intended to help you prepare for your second assignment where you will keep a **developer's journal**.  
+In your journal, you will keep track of your work over time, noting any problems and how you overcame them.  
+You will also complete a summary that identifies any lessons you have learned through the process.  
+
+Now, take a couple of minutes and think about your work, how you overcame problems and particularly your **process** 
+for practicals in this subject so far...  
+
+**Write at least 3 lessons** you have learned about yourself and the problem-solving process (not about Python code) through
+completing the practicals up to now.
+
+
 # Debugging
 
 Debugging is the process of finding and fixing problems in code (yours or someone else's), and is an important skill to
@@ -399,6 +412,8 @@ Ensure your code is not commented-out (only comments should be commented).
 `questions.txt` with:
 
 - Quick Questions
+- Logic Exercise (just write whether you read the statement correctly the first time)
+- Reflection
 
 Exercises, each in their own file:
 
