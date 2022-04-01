@@ -598,7 +598,7 @@ File: `jcu_grades.py`
 [JCU Subject results explained](https://www.jcu.edu.au/students/assessment-and-results/subject-results-explained)
 shows the percentage score/result you need to get different grades:
 
-- Below 50% = N
+- Below 50% = F
 - 50 up to but not including 65 = P
 - 65 up to but not including 75 = C
 - 75 up to but not including 85 = D
@@ -637,11 +637,11 @@ Score: 89.5
 The score 89.5 is HD
 Score: -1
 How many random scores: 5
-16 = N
-15 = N
+16 = F
+15 = F
 75 = D
 53 = P
-13 = N
+13 = F
 ```
 
 You should notice that the display of scores and grades is different in the first part compared to the second (random)
