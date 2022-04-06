@@ -7,21 +7,6 @@ Please do your own solutions before looking at ours!
 
 File: `programs.py`
 
-### Use Docstrings
-
-For each of your functions, write a brief function **docstring**.  
-Docstrings, like all comments, should be written in the imperative mood, e.g., "Print" not "Prints".
-
-Here's a good example for a function that checks to see if a password is valid:
-
-```python
-def is_valid_password(password):
-    """Determine if password is considered valid or not."""
-    if len(password) < 6 or " " in password:
-        return False
-    return True
-```
-
 Note that a program that uses a function means we need a `main` function as well.
 
 A good general principle is that you should never write programs that use only one function.  

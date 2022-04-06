@@ -129,6 +129,21 @@ If you haven't already, copy the code from [debugging.py](./debugging.py) and ge
 
 # Python Coding - Functions 2 - Coding Exercises
 
+## Use Docstrings
+
+For each of your functions, write a brief function **docstring**.  
+Docstrings, like all comments, should be written in the imperative mood, e.g., "Print" not "Prints".
+
+Here's a good example for a function that checks to see if a password is valid:
+
+```python
+def is_valid_password(password):
+    """Determine if password is considered valid or not."""
+    if len(password) < 6 or " " in password:
+        return False
+    return True
+```
+
 ## 1. Jerry the Driver
 
 File: `jerry.py`
