@@ -1,269 +1,475 @@
-# Practical 09 - Coding Checkpoint 2
+# Practical 9 - Strings & Files
 
-Solutions for these checkpoint questions are provided as worked solution demonstration videos and code.  
-Please do your own solutions before looking at ours!
+**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
 
-## Functions
+Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
 
-File: `programs.py`
+## Quick Questions
 
-Note that a program that uses a function means we need a `main` function as well.
+1. Explain the difference between the `'r'` and `'w'` modes when opening a file.
+2. What is a **file object** and how is it different from a file name or the file's contents?
+3. Why is it necessary to close a file after it has been opened and used?
+4. What is a good principle for deciding whether a literal value should be stored in a CONSTANT?
+5. Write a **single Python expression** that would evaluate to the file extension of a variable like  
+   `filename = "this_is_a_name.txt"` or `filename = "document.docx"`  
+   In those two examples, the result of the expression would be `txt` and `docx` respectively.
+6. What is a good number of quick questions to have at the start of a practical?
 
-A good general principle is that you should never write programs that use only one function.  
-If you're using a function (like those asked for below), then you also want a main.  
-If you only have main, then you don't really need it (but there's nothing wrong with a program that's entirely in a
-main).
+## Logic Exercise
 
-To make today's practical work easier to identify (and selectively run) but without using lots of separate files, we'll
-write questions with the "main" code in functions like `question_1()`.
+Consider the following list of 3 statements:
 
-### 1. Print a line
+- There is exactly 1 false statement in this list.
+- There are exactly 2 false statements in this list.
+- There are exactly 3 false statements in this list.
 
-Write a function that prints a line of 40 hyphens.
+How many false statements are there in the list; 0, 1, 2 or 3?
 
-Call your function to test it from a function called `question_1()`.
+## Strings
 
-### 2. Is it even?
+File: `strings.py`
 
-Write a function to determine if an integer passed into it is even.  
-Note: In prac 6 we did this for if the number was odd, so it's nearly identical.  
-Don't copy that code unless you need help. Remember, we should know this now... so notice if you don't know how to do
-what you've already done before...
+### 1. Processing Strings
 
-Write testing code in `question_2()` that shows how this function should work, like:
+First, let's see another quick example of using slicing and finding.  
+Suppose we have data like:
 
 ```python
-def question_2():
-    some_number = int(input("Number: "))
-    if is_even(some_number):
-        print(f"{some_number} is even")
-    else:
-        print(f"{some_number} is odd")
+string = "Result = 95%"
 ```
 
-### 3. Get Non-empty String
+and we want to extract just the percentage as a number.  
+If we know that the format will be just like that, we can use:
 
-Write a function to get a non-empty string. That is, you should be able to enter any string as long as it's not `""`.
-
-In a `question_3()` function, call your new function to ask the user for their name using your function...  
-Then use the _same_ function for getting their birthplace, and then display a message like:
-
-```
-Hi Martin from New Zealand!
+```python
+value = int(string[-3:-1])
 ```
 
-Notice how this works: we can use the same function for getting two different things because we can customise the way
-the function works using **parameters**.
+But what if it might be different, like:
 
-## Lists
+```python
+string = "Final Score = 8%"
+# or 
+string = "Relative Value = 178.3%"
+```
 
-### 4. Number List
+In those cases, our overly-simplistic approach would not work.
 
-Write a `question_4()` that asks the user for a minimum and maximum number (ensuring the maximum is greater than the
-minimum).  
-Then generate a list of integers between those two numbers and print it, as shown below.
+Ideally, we need a robust way of extracting the data, based on the possible values that the string could have.  
+So, in this case, let's assume we want all the characters between the `= ` and the `%` (which would be valid in all 3 of
+these cases).
 
-Note: **Never** use variable names that are the same as Python built-ins, e.g., `max`, `sum`, `print`, etc.
+One way to do this is to `find` the index of the space after the = and then slice all the characters from there to one
+before the end.  
+Since we did this in the lecture, the rest is up to you now...
+
+**Write a program in `question_1()`** that processes this list of strings (copy the data provided) and prints the values
+you extract.
+
+```python
+data_strings = ["Result = 95%", "Final Score = 8%", "Relative Value = 178%",
+                "Something else that's very important = 9.2%", "x = 42%"]
+```  
+
+**Hint**: Don't try and get your processing/extraction working at the same time as your for loop.  
+Pick one string and work on that. When it works, add in your loop to see how it works with the others.
+
+Sample output (notice what types these outputs are):
 
 ```
-Minimum number: 10
-Maximum number: 9
-Your maximum must be greater than 10
-Maximum number: 10
-Your maximum must be greater than 10
-Maximum number: 17
-[10, 11, 12, 13, 14, 15, 16, 17]
-``` 
+95.0
+8.0
+178.0
+9.2
+42.0
+```
 
-### 5. Subject List
+Last note: There's no obvious 'meaning' in this data, so you can use generic names.  
+You're given _strings_, and you need to extract a _value_ from each.
 
-Write a program in `question_5()` to ask the user for their subject codes until they enter a blank one.    
-(Are you getting good at spotting words like **'until'** and recognising that's the **indefinite iteration pattern**?)  
-All valid subject codes contain 6 characters, so reject any invalid subject code and ask again if needed.
+### 2. Date Strings
 
-When you have a list of subject codes, print them in **sorted** order and tell them how many subjects they have.  
-Then, tell them if they are cool or not... In the lecture notes, we determine if a student is cool based on whether they
-do CP1401 :)
+(From the lecture)  
+Write a program in `question_2()` to get and display only the year from a date of birth stored as a string
+like `"13/07/1995"`  
+Add a little interest to your program, by asking the user for their DOB, then printing like,
 
 ```
-Enter subject code: CPaoirsetnrsatien
-Invalid subject code
-Enter subject code: MA1020
+DOB: 13/07/1995
+You were born in 1995
+You turn/ed 25 in 2020.
+```
+
+### 3. Subject Code Strings
+
+The first 3 characters in JCU subject codes always follow a definite pattern:  
+The first 2 characters are the discipline (MA = Maths, CP = IT, etc.) and the next character is the year level.  
+Who knows what the last 3 characters mean? :)
+
+Write a program in `question_3()` that asks for subject codes until the user enters a blank one...   
+Hey, sounds familiar... BUT this question does not use lists, so you have to change it!   
+After the user enters each one, print what year level it is and whether it's an IT subject.
+
+Sample Output (Consider carefully your decision structures here):
+
+```
 Enter subject code: CP1401
-Enter subject code: C-P
-Invalid subject code
-Enter subject code: CP2403
-Enter subject code: CP1406
+That is a first-year IT subject.
+Enter subject code: MA2403
+That is a second-year subject.
+Enter subject code: CP5639
+That is a Masters or other IT subject.
+Enter subject code: PH3456
+That is a third-year subject.
 Enter subject code: 
-You do these 4 subjects: 
-CP1401
-CP1406
-CP2403
-MA1020
-You are cool
 ```
 
-Note: As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative
-development**.  
-So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the
-program works...  
-_Then_ add error checking using the normal pattern you know and love.
-
-## All Together Now
-
-File: `coffee_orders.py`
-
-IT@JCU are expanding into the coffee business, and of course they need a Python program to help them, and they need you
-to write it...
-
-This program includes lists, functions, decision structures, repetition structures and the usual input and output.  
-As always, the point is to apply what you have learned in terms of "best practice" and use the most appropriate code
-constructs to solve the problem.
-
-We want a coffee ordering program with a menu, a fixed list of valid coffees to check user orders against, and
-instructions for making the selected coffee.  
-Of course, we want to be able to drink our coffee (virtually), and because some people can't decide, we'd like to be
-able to choose randomly from the menu.
-
-In the functions lecture, Barista Lindsay showed you how to make coffee using 4 'functions'. This program will use
-those... so make sure you've watched that video.
-
-### Sample Output
-
-```
-Welcome to the IT@JCU Coffee Shop
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> C
-Invalid option
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> d
-Oh... where's my coffee?
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> o
-Please choose from: 
-Flat White - Espresso - Long Black - Babyccino - ? capuccino
-Invalid order
-? I'd like to confuse you with a double shot half-strength machiato with extra milk
-Invalid order
-? Long BLACK
-Here's how to make a/n Long Black: 
-- Insert portafilter into grinder
-- Press grind button to grind beans into portafilter
-- Distribute grounds
-- Tamp grounds
-- Insert full portafilter into group head
-- Press shot button to pour espresso into cup
-- Add hot water to cup
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> d
-Mmmm, nice Long Black
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> R
-Here's how to make a/n Flat White: 
-- Insert portafilter into grinder
-- Press grind button to grind beans into portafilter
-- Distribute grounds
-- Tamp grounds
-- Insert full portafilter into group head
-- Press shot button to pour espresso into cup
-- Fill jug with milk
-- Steam milk until nice microfoam formed and milk up to temperature
-- Swirl milk gently in jug
-- Pour milk into cup... carefully, artistically :)
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> o
-Please choose from: 
-Flat White - Espresso - Long Black - Babyccino - ? espresso
-Here's how to make a/n Espresso: 
-- Insert portafilter into grinder
-- Press grind button to grind beans into portafilter
-- Distribute grounds
-- Tamp grounds
-- Insert full portafilter into group head
-- Press shot button to pour espresso into cup
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> d
-Mmmm, nice Espresso
-(O)rder - (D)rink - (R)andom choice - (Q)uit
->>> q
-Thanks for drinking coffee
-```
-
-As always, start with **planning**.  
-As you look at the description and the sample output, think about:
-
-- nouns (variables)
-- verbs (processing, functions)
-- sections, including repeated tasks (functions)
-- types (strings, lists, etc.)
-- constants
-
-Consider how to use function:
-
-- You should see that each of the functions in the coffee making video will be a function :)
-- You should remember that main should "look like the whole program", that is, main should generally consist of function
-  calls (high level overview tasks)
-- Anyone should be able to clearly understand how the program works by reading just the main function.
-- You should recognise that when you display the coffees and when you check for a valid coffee order, you're working
-  with a list of valid coffees.
-- You should write simple functions for each step (like in the video). E.g.,
+**Hint**: A nice way to do this is with a single print statement that uses variables.  
+You do not want to repeat yourself (DRY), right?  
+So don't use lots of different print statements... just look at what's different (different = variable).  
+E.g.,
 
 ```python
-def grind_beans():
-    print("- Insert portafilter into grinder")
-    print("- Press grind button to grind beans into portafilter")
-``` 
+print(f"That is a {year_string}{it_string} subject.")
+```
 
-# Re-Revision Practice
+# Python Coding - Files Example
 
-In checkpoint 1 you wrote the programs below (modified based on our current progress).  
-Revisit these and rewrite them for practice.  
-As you do, think about enhancing them with functions (where meaningful) and maybe lists.
+Let's walk through a complete example, from problem description, through problem solving to code and testing.  
+Just read along and understand. Do not "do" any of this until asked, just read it and make sure you understand.
 
-Note: We do NOT want you whacking in functions that are poor design -  
-e.g., violating SRP like a function that calculates _and_ prints.  
-Also, remember to include a `main` function if you use any other function in your program.  
-When you're practising, always follow best practice!
+### Problem Description:
 
-See the new comments in each one for suggestions.
+Geraldine Gamer likes to record her gaming scores, so each day she types her best score as a floating-point number into
+the file "scores.txt".  
+She wants to process this file and find out what her average score is.
 
-## Input, Processing, Output
+### Algorithm
 
-1. Write a program that calculates a new value based on an original value and a (percentage-like) increase or
-   decrease.  
-   Example:
+- We need to open the file for _reading_ and close it at the end.
+- We know that each line is the same kind of data, so we can process it with a definite loop, doing the same thing per
+  line.  
+  We process _each_ line, so that's definite (for loop), not _until_ some condition happens.
+- We should know the "accumulation pattern" by now, so the total and average should be easy.
 
-- Original: 100, Change: 0.05, Result: 105
-- Original: 50.5, Change: -0.1, Result: 45.45
+```
+total = 0.0
+count = 0
+open "scores.txt" for reading as in_file
+for line in in_file
+    score = line as float
+    total = total + score
+    count = count + 1
+close in_file
+average = total / count
+print average
+```
 
-This program could use a function to "calculate" (think verb phrase) the result.
+### Code
 
-## Decision Structures
+Note: we don't usually use the variable name `file` because we'd like to know whether it's for reading input
+from (`in_file`) or writing output to (`out_file`).  
+These are not world-standard kind of names, but they are more meaningful than `file` or `f`, etc. and should help us
+avoid trying to write output to an input file or vice versa.
 
-2. Ask the user for the time of day (0-23 hours) until they enter a negative.  
-   Then print a list of all the hours and how many of them were after noon:
+```python
+total = 0.0
+count = 0
+in_file = open("scores.txt", 'r')
+for line in in_file:
+    score = float(line)
+    total += score
+    count += 1
+in_file.close()
+average = total / count
+print(f"Average = {average:.1f}")
+```
 
-(This program is quite different from checkpoint 1)
+Notice also that we `close` the file as soon as we've finished with it (not at the end of the program).
 
-3. Coffee orders made simple.
+### Testing
 
-- Ask the user for white or black coffee
-- Ask for their chosen size: small, medium or large
-- Then print the cost: For Black, Small = $3, Medium = $4, Large = $5. White coffee costs $1 more per size.
-- If a user makes a mistake with their order, just pick the more expensive option :)
+Test data for this kind of program is stored in a file.  
+Copy the numbers below into a new file (not Python file) called `scores.txt`, saved in the same folder as this prac's
+program files.   
+Or you can [download scores.txt from here](./scores.txt).
 
-For this program, you could have a function that gets the coffee order, not allowing mistakes.  
-You could have a function that calculates the cost based on the two parameters the user chose.
+```
+56.8
+34.0
+45.5
+49.3
+```
 
-## Repetition Structures
+Output
 
-5. Write a program to ask the user for a low value and a high value, then print all the integers between those values
-   inclusive and show the total of those numbers.  
-   Example, if the inputs were `10` and `20`, you would print:
+```
+Average = 46.4
+```
 
-   10 11 12 13 14 15 16 17 18 19 20 totals: 165
+### Things to do
 
-Do this with a list (much like the earlier question) and use `sum` to calculate the total.
+Create a new Python file, `example.py` (File > New > Python File)    
+**Now, you type this code in (don't copy it)**, and **test it** to see you got the expected output.  
+The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g., use
+autocomplete!), type code accurately, and develop an eye for detail.
+
+- The filename in the program is a literal, but we can easily make it a variable and ask the user for the file name.  
+  Do this now. Note that if the file doesn't exist, the program will crash and that's fine for now...  
+  We'll learn how to handle exceptions in Programming 2.  
+  Test it with a different file, like [recentrain.txt](./recentrain.txt).
+
+- Currently, the program just prints the final average.  
+  **Make it print a running total**, so output would look like:
+
+```
+Score = 56.8   Total so far =   56.8
+Score = 34.0   Total so far =   90.8
+Score = 45.5   Total so far =  136.3
+Score = 49.3   Total so far =  185.6
+Average = 46.4
+```
+
+If you're not sure how to do the lining up using string formatting, you can check
+the [example.py file here](./example.py).
+
+# Coding Exercises - Files
+
+(Unless otherwise specified) Write all your answers to the following questions in a single Python file
+called `files.py`  
+At the top of each program, put a comment with the exercise number/name (copy-and-paste it from here) so you/we know
+what the program is for later.
+
+## 4. Read a String from a File
+
+Create a new text file in your prac_09 directory called `name.txt`.  
+Put your own name in the file.
+
+**Write a program in `question_4()`** that _reads_ this `name.txt` file and greets you, example:
+
+```
+Greetings Lindsay!
+```
+
+Note that since we want the entire contents of the file in one string, we don't need any kind of loop, we can
+just `read` the file, like:
+
+```python
+in_file = open("name.txt", "r")
+text = in_file.read()
+```
+
+Did it work?  
+If you got something like
+
+```
+Greetings Lindsay
+!
+```
+
+Then what's happened is the `text` variable includes the new line in your file.  
+You can solve this problem in two ways.
+
+- Edit the file so there's no line break
+- Strip the new line character (any whitespace from the ends of the line) from text with:
+
+```python
+text = in_file.read().strip()
+```
+
+## 5. Greater-Than Counter
+
+**Write a program in `question_5()`** that _reads_ a user-specified file of floating-point numbers, and counts how many of those numbers are
+larger than a user-specified threshold.  
+You can see from the example output below that the program determines the number of numbers/lines from reading the
+file.  
+Your program should work for any file of numbers (one per line) of any size.
+
+### Example file:
+
+Copy the numbers below into a new file called `recentrain.txt`,  
+or [download recentrain.txt here](./recentrain.txt).
+
+```
+12.4
+10.0
+10.1
+0
+8.4
+13.9
+19.1
+141.0
+33.5
+1.2
+```
+
+### Example output:
+
+```
+Filename: recentrain.txt
+Threshold: 13.9
+Processing...
+3 out of 10 (30.0%) values in recentrain.txt are greater than 13.9.
+```
+
+## 6. BMI Files
+
+File: `bmi_files.py`
+
+Write a program that writes to and reads from `bmis.txt` (not at the same time).  
+Reuse your functions from [Prac 6](../prac_06/README.md#example) (and 7) where you calculated a person's BMI based on
+height and weight.  
+Notice this: since you wrote good, well designed functions (following SRP), you can simply reuse them for this different
+scenario!
+
+The first part of your program should ask the user for a number of people, then repeatedly ask for the details (height
+and weight) for that many people.  
+_(You did just think of what kind of loop to use, didn't you?)_
+
+For each person, calculate their BMI, but don't print it to the screen...   
+write it (and only it) to the file `bmis.txt`.  
+Your file should simply contain one BMI value per line.    
+Don't forget to close the file when you have finished.
+
+Test this and confirm it works as you expect by opening and checking the file in PyCharm.
+
+**Then (only after the first part works)**, write the second part, which should read the file and display the BMI and
+weight category similar to how we've done it before:
+
+```
+BMI 23.5, considered normal
+BMI 25.5, considered overweight
+BMI 24.2, considered normal
+BMI 16.3, considered underweight
+BMI 32.0, considered obese
+```
+
+Note that we do not want to write the above to the file - that's what we see on the screen.  
+The file only contains the BMI values.
+
+## 7. File Filter
+
+File: `file_filter.py`
+
+Write a program that _reads_ a file and "filters" it, _writing_ only certain lines to another file.  
+In the lecture, we wrote a program that read [letter.txt](./letter.txt) and printed every line that started with a
+capital.
+
+For this exercise, write a program that asks the user for three things:
+
+- input file name
+- output file name
+- a search string to look for lines that contain it
+
+Read the input file, and then for each line that contains the search string, write that line to the output file.
+
+### Optional:
+
+- Get your program to search for lines that start with the search string.  
+  Python has a very helpful string method for this: `startswith`.  
+  `"hello".startswith("he")  # this is True`    
+  E.g., Lindsay starts a lot of sentences with "So". So, if you had a [transcript file](./transcript.txt) of one of his
+  lectures and searched for "So", you could make a new file that contained those sentences.
+- Filter in other ways (not based on a user string), like lines that start with numbers or vowels or white space, etc.
+
+### Interesting Examples:
+
+You would need to `strip()` the lines to account for indenting in some of these.
+
+- The practical instructions file you are reading now is a "Markdown" text file. The headings all start with '#'.  
+  If the user chose this file and searched for '#', then the output file would contain all of the headings.
+- Similarly, HTML headings are `<h1>`, `<h2>` etc. so you could filter/strip those.
+- Python comments use `#` or `"""`, so why not try getting your program to extract just the comments.
+
+### How are you going with the fundamentals?
+
+In *all* of your programs by now, you should have clear ideas about the fundamental principles we've learned, so how
+would these principles apply to this exercise/program?
+
+- You know if you have to refer to the filename (literal) more than once, then it should be a... CONSTANT,
+- You know SRP... your functions should not (usually) print, when they should return... so you can reuse the exact
+  same (bmi) function from prac 6 for this program,
+- The above is also an example of DRY - don't repeat yourself with a function that is really similar to one you already
+  have,
+- You know you use definite iteration (for loop) for things like a fixed number of times,
+- You know every time you open a file, you should close it as soon as you're finished,
+- You know your names must be meaningful,
+- You know programming is fun...
+
+# Practice and Extension
+
+These final sections in practicals are not _required_ to be completed for marks, but you will definitely find benefit in
+completing them for extra practice and to extend yourself.  
+The more practice you do, the more you develop and "lock in" your new skills.
+
+Create a new file, `practice.py` to complete these tasks in:
+
+- Write a program that asks the user for a filename, opens that file and then simply prints how many lines are in the
+  file.
+- Write a program that asks the user for a filename, opens that file and then simply prints the number of characters in
+  the file.
+- Write a program that asks the user for a phrase and a filename, opens that file and then searches the file for the
+  phrase, printing either "Found" or "Not found".
+- Write the programs from the "Do this now" in the lecture, including the one that prints only the lines
+  of [letter.txt](./letter.txt) that start with a capital.
+
+## Write Numbers to a File
+
+**Write a complete Python program** that _writes_ a range of numbers to a file.  
+Here is the algorithm partly done for you in pseudocode:
+
+```
+open file "range.txt" for writing as out_file
+for number in range ? to ? in steps of ?
+    write number to out_file
+close out_file
+```
+
+It is up to you what range to generate.  
+Try these, and some of your own ideas:
+
+- all the odd numbers from 0 to 99
+- 0 to 100 in 10's
+- 20, 19, 18... 0
+
+Run your program each time with different ranges - commenting out the range line when you make a new one (so you keep
+the old one).
+
+# Extension
+
+## i. Generating A File Of Random Floating-Point Numbers
+
+Write a program that writes a customised collection of random integers to a file.  
+Ask the user for the inputs as below, then generate the file.  
+So,
+
+```
+Enter the filename: RandomNumbers.txt
+Enter the minimum integer: 12
+Enter the maximum integer: 50
+Enter the number of random integers to generate: 9
+```
+
+would produce, `RandomNumbers.txt` containing something (random) like:
+
+```
+22
+45
+41
+19
+31
+23
+40
+28
+20
+```
+
+## ii. Simple File Statistics
+
+Given a file with a floating-point number on each line, write a program that will calculate:
+
+a. the total b. the average (arithmetic mean)
+c. the minimum d. the maximum e. the median (harder - you will need to use a list)
 
 # Deliverables
 
@@ -272,7 +478,20 @@ This section summarises the expectations for marking in this practical.
 Do not zip up your files.  
 Please submit each file separately.  
 Ensure each file has the correct/exact name.  
-Ensure your code is not commented-out (only comments should be commented).  
+Ensure your code is not commented-out (only comments should be commented).
 
-- `programs.py` with programs 1-5
-- `coffee_orders.py` (All Together Now)
+`questions.txt`  with:
+
+- Quick Questions
+- Logic Exercise
+
+`example.py` with updates
+
+Exercises:
+
+- `strings.py` with programs 1-3
+- `files.py` with exercises 4-5
+- `bmi_files.py`
+- `file_filter.py`
+
+Please do not submit your data text files (like `bmis.txt` and others).

@@ -1,5 +1,5 @@
 """
-CP1401 - Practical 10 - Files
+CP1401 - Practical 09 - Files
 Example Program - Scores
 
 Pseudocode:
