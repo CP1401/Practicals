@@ -1,7 +1,8 @@
 # Practical 10 - Coding Checkpoint 2
 
-Solutions for these checkpoint questions are provided as worked solution demonstration videos and code.  
-Please do your own solutions before looking at ours!
+Solutions for most of these checkpoint questions are provided as worked solution demonstration videos and code.  
+Please do your own solutions before looking at ours.  
+It's all about learning!
 
 ## Functions
 
@@ -27,7 +28,8 @@ Call your function to test it from a function called `question_1()`.
 
 Write a function to determine if an integer passed into it is even.  
 Note: In prac 6 we did this for if the number was odd, so it's nearly identical.  
-Don't copy that code unless you need help. Remember, we should know this now... so notice if you don't know how to do
+Don't copy that code unless you need help.  
+Remember, we should know this now... so notice if you don't know how to do
 what you've already done before...
 
 Write testing code in `question_2()` that shows how this function should work, like:
@@ -45,7 +47,7 @@ def question_2():
 
 Write a function to get a non-empty string. That is, you should be able to enter any string as long as it's not `""`.
 
-In a `question_3()` function, call your new function to ask the user for their name using your function...  
+In `question_3()`, call your new function to ask the user for their name using your function...  
 Then use the _same_ function for getting their birthplace, and then display a message like:
 
 ```
@@ -77,12 +79,15 @@ Maximum number: 17
 
 ### 5. Subject List
 
-Write a program in `question_5()` to ask the user for their subject codes until they enter a blank one.    
-(Are you getting good at spotting words like **'until'** and recognising that's the **indefinite iteration pattern**?)  
+Write a program in `question_5()` to ask the user for their subject codes until they enter a blank one.  
+(Are you getting good at spotting words like **'until'** and recognising that's
+the [indefinite iteration pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#while-loops-indefinite-iteration)
+?)  
 All valid subject codes contain 6 characters, so reject any invalid subject code and ask again if needed.
 
 When you have a list of subject codes, print them in **sorted** order and tell them how many subjects they have.  
-Then, tell them if they are cool or not... In the lecture notes, we determine if a student is cool based on whether they
+Then, tell them if they are cool or not...  
+In the lecture notes, we determine if a student is cool based on whether they
 do CP1401 :)
 
 ```
@@ -107,7 +112,19 @@ Note: As we've tried to both teach and demonstrate, it is highly valuable to get
 development**.  
 So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the
 program works...  
-_Then_ add error checking using the normal pattern you know and love.
+_Then_ add error checking using the
+normal [pattern you know and love](https://github.com/CP1404/Starter/wiki/Programming-Patterns#error-checking).
+
+## Debugging
+
+File: `debugging.py`
+
+Here we have a program that works sometimes, but not always. It also is not written following best-practices.
+
+- Copy or download the code from [debugging.py](./debugging.py)
+- Run the code and see what is happening.
+- Complete the template in the file, explaining: the **problems** (just bugs) you find AND your process for debugging.
+- Then, fix the code in-place. In addition to correcting the problems, improve this code (names, formatting, principles, etc.)
 
 ## All Together Now
 
@@ -120,12 +137,14 @@ This program includes lists, functions, decision structures, repetition structur
 As always, the point is to apply what you have learned in terms of "best practice" and use the most appropriate code
 constructs to solve the problem.
 
-We want a coffee ordering program with a menu, a fixed list of valid coffees to check user orders against, and
+We want a coffee ordering program with a [menu](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus), a
+fixed list of valid coffees to check user orders against, and
 instructions for making the selected coffee.  
 Of course, we want to be able to drink our coffee (virtually), and because some people can't decide, we'd like to be
 able to choose randomly from the menu.
 
-In the functions lecture, Barista Lindsay showed you how to make coffee using 4 'functions'. This program will use
+In the functions lecture, Barista Lindsay showed you how to make coffee using different 'functions'. This program will
+use
 those... so make sure you've watched that video.
 
 ### Sample Output
@@ -198,12 +217,12 @@ As you look at the description and the sample output, think about:
 - types (strings, lists, etc.)
 - constants
 
-Consider how to use function:
+Consider how to use functions:
 
 - You should see that each of the functions in the coffee making video will be a function :)
 - You should remember that main should "look like the whole program", that is, main should generally consist of function
   calls (high level overview tasks)
-- Anyone should be able to clearly understand how the program works by reading just the main function.
+- Anyone should be able to clearly understand the program by just reading the main function.
 - You should recognise that when you display the coffees and when you check for a valid coffee order, you're working
   with a list of valid coffees.
 - You should write simple functions for each step (like in the video). E.g.,
@@ -216,8 +235,8 @@ def grind_beans():
 
 # Re-Revision Practice
 
-In checkpoint 1 you wrote the programs below (modified based on our current progress).  
-Revisit these and rewrite them for practice.  
+In checkpoint 1 you wrote a number of programs.  
+Revisit these and rewrite them for practice using what we know now.  
 As you do, think about enhancing them with functions (where meaningful) and maybe lists.
 
 Note: We do NOT want you whacking in functions that are poor design -  
@@ -241,7 +260,7 @@ This program could use a function to "calculate" (think verb phrase) the result.
 ## Decision Structures
 
 2. Ask the user for the time of day (0-23 hours) until they enter a negative.  
-   Then print a list of all the hours and how many of them were after noon:
+   Then print a list of all the hours entered and how many of them were after noon:
 
 (This program is quite different from checkpoint 1)
 
@@ -272,7 +291,8 @@ This section summarises the expectations for marking in this practical.
 Do not zip up your files.  
 Please submit each file separately.  
 Ensure each file has the correct/exact name.  
-Ensure your code is not commented-out (only comments should be commented).  
+Ensure your code is not commented-out (only comments should be commented).
 
 - `programs.py` with programs 1-5
+- `debugging.py` with explanations and fixed code
 - `coffee_orders.py` (All Together Now)

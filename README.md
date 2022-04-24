@@ -21,8 +21,8 @@ Seriously, **never copy the solutions** as this will not help you learn as much 
 * [Practical 06 - Functions 1](./prac_06)
 * [Practical 07 - Functions 2](./prac_07)
 * [Practical 08 - Lists](./prac_08)
-* [Practical 09 - Coding Checkpoint 2 & Strings](./prac_09)  
-* [Practical 10 - Files](./prac_10)
+* [Practical 09 - Strings and Files](./prac_09)  
+* [Practical 10 - Coding Checkpoint 2](./prac_10)
 
 ## Practicals are assessed
 
