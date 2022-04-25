@@ -36,6 +36,11 @@ def print_line(length):
 
 
 # 2. Is it even?
+def is_even(number):
+    """Determine if an integer passed into it is even."""
+    return number % 2 == 0
+
+
 def question_2():
     """Test question 2."""
     some_number = int(input("Number: "))
@@ -47,19 +52,7 @@ def question_2():
     # print(is_even(61))
 
 
-def is_even(number):
-    """Determine if an integer passed into it is even."""
-    return number % 2 == 0
-
-
 # 3. Get Non-empty String
-def question_3():
-    """Get and display a user's details."""
-    name = get_nonempty_string("Name: ")
-    birthplace = get_nonempty_string("Birthplace: ")
-    print(f"your name is {name} and you were born in {birthplace}.")
-
-
 def get_nonempty_string(prompt):
     """Get non-empty string."""
     string = input(prompt)
@@ -67,6 +60,13 @@ def get_nonempty_string(prompt):
         print("String is too short")
         string = input(prompt)
     return string
+
+
+def question_3():
+    """Get and display a user's details."""
+    name = get_nonempty_string("Name: ")
+    birthplace = get_nonempty_string("Birthplace: ")
+    print(f"your name is {name} and you were born in {birthplace}.")
 
 
 # 4. Number List
@@ -85,18 +85,29 @@ def question_4():
 
 
 # 5. Subject List
-# See the other subject list file for a more advanced version of this program
+def is_valid_subject(subject):
+    """Determine if a subject code passed in is valid."""
+    if len(subject) != 6:
+        return False
+    if not subject[:2].isalpha():
+        return False
+    if not subject[2:].isdigit():
+        return False
+    return True
+
+
 def question_5():
     """Program to get and process list of subject codes."""
     subjects = []
     subject = input("Enter subject code: ")
     while subject != "":
-        if len(subject) != 6:
+        if not is_valid_subject(subject):
             print("Invalid subject code")
         else:
-            subjects.append(subject)
+            subjects.append(subject.upper())
         subject = input("Enter subject code: ")
     print(f"You do these {len(subjects)} subjects: ")
+    subjects.sort()
     for subject in subjects:
         print(subject)
     if "CP1401" in subjects:
