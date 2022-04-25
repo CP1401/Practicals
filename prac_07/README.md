@@ -28,7 +28,9 @@ Read the following out loud:
 Good job. Or was it? Double-check that you said it correctly.  
 If you didn't... notice that you had trouble with attention to detail.  
 This is a fairly normal issue, but one that programmers need to deal with more so than 'regular' people.  
-You need to continue to systematically build your attension to detail ;)
+You need to continue to systematically build your attension to detail ;)  
+
+For this question, just write whether you read the statement correctly the first time or not.
 
 ## Reflection
 

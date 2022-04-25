@@ -661,7 +661,7 @@ In each case, think about what sections can logically become functions and what 
 In some cases, you may be able to reuse functions that you can share between programs in the same file.
 
 - [Calculate salary for worker level](https://github.com/CP1401/Practicals/tree/master/prac_04#1-error-checking)
-- [Print grid(rows, columns)](https://github.com/CP1401/Practicals/tree/master/prac_04#6-nested-loop)
+- [Print grid(rows, columns)](https://github.com/CP1401/Practicals/tree/master/prac_04#6-nested-loops)
 
 # Practice and Extension
 
