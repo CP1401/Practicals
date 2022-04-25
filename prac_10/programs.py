@@ -85,21 +85,35 @@ def question_4():
 
 
 # 5. Subject List
-# See the other subject list file for a more advanced version of this program
+def is_valid_subject(subject):
+    """Determine if a subject code passed in is valid."""
+    if len(subject) != 6:
+        return False
+    if not subject[:2].isalpha():
+        return False
+    if not subject[2:].isdigit():
+        return False
+    return True
+
+
 def question_5():
     """Program to get and process list of subject codes."""
     subjects = []
     subject = input("Enter subject code: ")
     while subject != "":
-        if len(subject) != 6:
+        if not is_valid_subject(subject):
             print("Invalid subject code")
         else:
-            subjects.append(subject)
+            subjects.append(subject.upper())
         subject = input("Enter subject code: ")
     print(f"You do these {len(subjects)} subjects: ")
+    subjects.sort()
     for subject in subjects:
         print(subject)
     if "CP1401" in subjects:
         print("You are cool")
     else:
         print("You could be cooler")
+
+
+question_5()

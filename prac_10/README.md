@@ -80,10 +80,12 @@ Maximum number: 17
 ### 5. Subject List
 
 Write a program in `question_5()` to ask the user for their subject codes until they enter a blank one.  
-(Are you getting good at spotting words like **'until'** and recognising that's
-the [indefinite iteration pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#while-loops-indefinite-iteration)
-?)  
-All valid subject codes contain 6 characters, so reject any invalid subject code and ask again if needed.
+Don't accept invalid subjects. For a subject code to be valid: 
+
+- The string should consist of exactly 6 characters
+- The first two characters must be letters
+- The next four characters must be digits
+- (You can capitalise any lowercase inputs) 
 
 When you have a list of subject codes, print them in **sorted** order and tell them how many subjects they have.  
 Then, tell them if they are cool or not...  
@@ -91,13 +93,13 @@ In the lecture notes, we determine if a student is cool based on whether they
 do CP1401 :)
 
 ```
-Enter subject code: CPaoirsetnrsatien
+Enter subject code: CP1404 is going to be good
 Invalid subject code
 Enter subject code: MA1020
 Enter subject code: CP1401
-Enter subject code: C-P
+Enter subject code: 1402CP
 Invalid subject code
-Enter subject code: CP2403
+Enter subject code: cp2403
 Enter subject code: CP1406
 Enter subject code: 
 You do these 4 subjects: 
@@ -108,7 +110,10 @@ MA1020
 You are cool
 ```
 
-Note: As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative
+Are you getting good at spotting words like **'until'** and recognising that's
+the [indefinite iteration pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#while-loops-indefinite-iteration)
+?  
+As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative
 development**.  
 So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the
 program works...  
