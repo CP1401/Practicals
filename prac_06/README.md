@@ -742,7 +742,7 @@ Ensure your code is not commented-out (only comments should be commented).
 
 Exercises, each in their own file:
 
-- `cofee_ratio.py`
+- `coffee_ratio.py`
 - `parity.py`
 - `previous_pracs.py`
 - `jcu_grades.py`
