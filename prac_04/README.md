@@ -233,10 +233,19 @@ You might find examples that use %-formatting online, but don't use this.
 Note that you cannot simply use commas here like you do in `print`, because `input` does not accept multiple arguments.
 
 **Test it!**  
-One way to test you've used the constants properly is to change one or both.  
-What happens when you change 12 to 8?  
-Does it still work?  
-Did ALL the 12's change to 8's?
+One way to test you've used the constants properly is to change them.
+
+An early Roman calendar had 10 months. Change your MAX constant from 12 to 10?  
+Does all the code still work?  
+Did ALL the 12's change to 10's?  
+Did the first/second half of the month still work... with this one change?
+
+If you had to change BOTH the MAX and the half (from 6 to 5), then you have an inappropriate dependency.  
+You should notice when values are _derived_ from other values.  
+[Here's a note about not storing derivable data in our programming patterns page](https://github.com/CP1404/Starter/wiki/Programming-Patterns#data-storage)
+.
+
+Fix this now, if you didn't do it right the first time. 
 
 # Coding Exercises
 
@@ -285,7 +294,8 @@ exact characters, just any part of the right lines) and pressing `Ctrl+/` (Windo
 
 ## 2. Number Sequences
 
-a. Write a loop that displays all the odd numbers between 1 and 100 with each number on its own line (normal print, no sep/end). Think about
+a. Write a loop that displays all the odd numbers between 1 and 100 with each number on its own line (normal print, no
+sep/end). Think about
 the `step` value for this.  
 b. Write a loop that displays all the Summer Olympic years (every 4 years) between 1896 and today, with a space between
 each one (all on one line).  
@@ -569,7 +579,7 @@ This section summarises the expectations for marking in this practical.
 Do not zip up your files.  
 Please submit each file separately.  
 Ensure each file has the correct/exact name.  
-Ensure your code is not commented-out (only comments should be commented).  
+Ensure your code is not commented-out (only comments should be commented).
 
 `questions.txt` with:
 
