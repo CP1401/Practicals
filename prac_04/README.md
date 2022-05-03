@@ -205,13 +205,14 @@ Create a new Python file, `example.py` (File > New > Python File)
 The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE, type code
 accurately, and develop an eye for detail. Use autocomplete!
 
-**Changes**  
+#### Changes
+
 Now update your program as follows:
 
 - Print whether the birth month is in the first or second half of the year
-- I spy some "magic numbers"... While it's unlikely that we'll need to change 1 or 12, we are repeating them. Replace
-  these literals with named CONSTANTS.
-- When you've got the above working, use these constants in the prompt, so it would print like:
+- I spy some "magic numbers"... While it's unlikely that we'll need to change 1 or 12, we are repeating them. **Replace
+  these literals with named CONSTANTS**.
+- When you've got the above working, **use these constants in the prompt**, so it would print like:
   `Enter the month number (1-12): `  
   Note: This is a good case for some more string formatting. Here are a few options to achieve a string like that.  
   Which do you like best? (Hint: you like the f-string version best.)
@@ -232,20 +233,22 @@ You might find examples that use %-formatting online, but don't use this.
 
 Note that you cannot simply use commas here like you do in `print`, because `input` does not accept multiple arguments.
 
-**Test it!**  
+#### Test it!
+
 One way to test you've used the constants properly is to change them.
 
-An early Roman calendar had 10 months. Change your MAX constant from 12 to 10?  
+An early Roman calendar had 10 months.
+**Change your MAX constant from 12 to 10.**   
 Does all the code still work?  
 Did ALL the 12's change to 10's?  
 Did the first/second half of the month still work... with this one change?
 
-If you had to change BOTH the MAX and the half (from 6 to 5), then you have an inappropriate dependency.  
+If you had to change BOTH the MAX and the half (from 6 to 5), then you have inappropriate stored derivable data.  
 You should notice when values are _derived_ from other values.  
 [Here's a note about not storing derivable data in our programming patterns page](https://github.com/CP1404/Starter/wiki/Programming-Patterns#data-storage)
 .
 
-Fix this now, if you didn't do it right the first time. 
+Fix this now, if you didn't do it right the first time.
 
 # Coding Exercises
 
