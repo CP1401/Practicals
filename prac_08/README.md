@@ -119,8 +119,9 @@ Test this with an empty place to start with (just press enter).
 
 Remember to do these one at a time and test each one.
 
-- Let's assume that all place names need to be in title case (e.g. "New Zealand" not "new zeaLAND").  
+- Let's assume that all place names need to be stored in title case (e.g. "New Zealand" not "new zeaLAND").  
   Use Python's `.title()` string method to do this.  
+  Consider the **DRY** principle. We only need to title the names we keep when we append.  
   (In Prac 3 we learned to use `.upper()` and `.lower()`, now we're using another useful string method.  
   Watch what happens after you type the `.` and you'll see all the other methods available!)
 
