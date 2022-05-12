@@ -89,15 +89,20 @@ You're given _strings_, and you need to extract a _value_ from each.
 
 ### 2. Date Strings
 
-(From the lecture)  
-Write a program in `question_2()` to get and display only the year from a date of birth stored as a string
-like `"13/07/1995"`  
-Add a little interest to your program, by asking the user for their DOB, then printing like,
+(Similar to a question from the lecture)  
+Write a program in `question_2()` to extract and display only the year from a date of birth stored as a string
+like `"13/07/1995"`
+
+- Ask the user for their DOB and store it as a string
+- Then tell them how old they will be next year
+- Remember to think about CONSTANTS for any 'magic numbers' you reuse
+
+Sample output (as at 2022):
 
 ```
 DOB: 13/07/1995
-You were born in 1995
-You turn/ed 25 in 2020.
+You were born in 1995.
+You will turn 28 in 2023.
 ```
 
 ### 3. Subject Code Strings
@@ -279,11 +284,15 @@ text = in_file.read().strip()
 
 ## 5. Greater-Than Counter
 
-**Write a program in `question_5()`** that _reads_ a user-specified file of floating-point numbers, and counts how many of those numbers are
+**Write a program in `question_5()`** that _reads_ a user-specified file of floating-point numbers, and counts how many
+of those numbers are
 larger than a user-specified threshold.  
 You can see from the example output below that the program determines the number of numbers/lines from reading the
 file.  
-Your program should work for any file of numbers (one per line) of any size.
+Your program should work for any file of numbers (one per line) of any size.  
+The example below has 10 lines, but yours might have 365 or 2 or...  
+We ALWAYS write algorithms and code to solve general problems (within reason), so you rarely hard-code something like
+the length/size of a file.
 
 ### Example file:
 
@@ -363,21 +372,24 @@ For this exercise, write a program that asks the user for three things:
 
 Read the input file, and then for each line that contains the search string, write that line to the output file.
 
-### Optional:
+### Optional - Version 2:
 
-- Get your program to search for lines that start with the search string.  
+Copy your program and make a "version 2" that searches differently:
+
+- Search only for lines that _start with_ the search string.  
   Python has a very helpful string method for this: `startswith`.  
   `"hello".startswith("he")  # this is True`    
   E.g., Lindsay starts a lot of sentences with "So". So, if you had a [transcript file](./transcript.txt) of one of his
   lectures and searched for "So", you could make a new file that contained those sentences.
-- Filter in other ways (not based on a user string), like lines that start with numbers or vowels or white space, etc.
+- Filter in other ways (not based on a user string), like lines that start with numbers or vowels or white space, etc.  
+  Explain your choice of filter/search in comments.
 
-### Interesting Examples:
+#### Interesting Examples:
 
 You would need to `strip()` the lines to account for indenting in some of these.
 
 - The practical instructions file you are reading now is a "Markdown" text file. The headings all start with '#'.  
-  If the user chose this file and searched for '#', then the output file would contain all of the headings.
+  If the user chose this file and searched for '#', then the output file would contain all the headings.
 - Similarly, HTML headings are `<h1>`, `<h2>` etc. so you could filter/strip those.
 - Python comments use `#` or `"""`, so why not try getting your program to extract just the comments.
 
@@ -489,8 +501,8 @@ Ensure your code is not commented-out (only comments should be commented).
 
 Exercises:
 
-- `strings.py` with programs 1-3
-- `files.py` with exercises 4-5
+- `strings.py` with questions 1-3
+- `files.py` with questions 4-5
 - `bmi_files.py`
 - `file_filter.py`
 
