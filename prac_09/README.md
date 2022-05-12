@@ -321,7 +321,42 @@ Processing...
 3 out of 10 (30.0%) values in recentrain.txt are greater than 13.9.
 ```
 
-## 6. BMI Files
+## 6. File Filter
+
+Write a program in `question_6()` that _reads_ a file and "filters" it, _writing_ only certain lines to another file.  
+In the lecture, we wrote a program that read [letter.txt](./letter.txt) and printed every line that started with a
+capital.
+
+For this exercise, write a program that asks the user for three things:
+
+- input file name
+- output file name
+- a search string to look for lines that contain it
+
+Read the input file, and then for each line that contains the search string, write that line to the output file.
+
+### Optional - Version 2:
+
+Copy your program and make a "version 2" that searches differently:
+
+- Search only for lines that _start with_ the search string.  
+  Python has a very helpful string method for this: `startswith`.  
+  `"hello".startswith("he")  # this is True`    
+  E.g., Lindsay starts a lot of sentences with "So". So, if you had a [transcript file](./transcript.txt) of one of his
+  lectures and searched for "So", you could make a new file that contained those sentences.
+- Filter in other ways (not based on a user string), like lines that start with numbers or vowels or white space, etc.  
+  Explain your choice of filter/search in comments.
+
+#### Interesting Examples:
+
+You would need to `strip()` the lines to account for indenting in some of these.
+
+- The practical instructions file you are reading now is a "Markdown" text file. The headings all start with '#'.  
+  If the user chose this file and searched for '#', then the output file would contain all the headings.
+- Similarly, HTML headings are `<h1>`, `<h2>` etc. so you could filter/strip those.
+- Python comments use `#` or `"""`, so why not try getting your program to extract just the comments.
+
+## 7. BMI Files
 
 File: `bmi_files.py`
 
@@ -356,44 +391,7 @@ BMI 32.0, considered obese
 Note that we do not want to write the above to the file - that's what we see on the screen.  
 The file only contains the BMI values.
 
-## 7. File Filter
-
-File: `file_filter.py`
-
-Write a program that _reads_ a file and "filters" it, _writing_ only certain lines to another file.  
-In the lecture, we wrote a program that read [letter.txt](./letter.txt) and printed every line that started with a
-capital.
-
-For this exercise, write a program that asks the user for three things:
-
-- input file name
-- output file name
-- a search string to look for lines that contain it
-
-Read the input file, and then for each line that contains the search string, write that line to the output file.
-
-### Optional - Version 2:
-
-Copy your program and make a "version 2" that searches differently:
-
-- Search only for lines that _start with_ the search string.  
-  Python has a very helpful string method for this: `startswith`.  
-  `"hello".startswith("he")  # this is True`    
-  E.g., Lindsay starts a lot of sentences with "So". So, if you had a [transcript file](./transcript.txt) of one of his
-  lectures and searched for "So", you could make a new file that contained those sentences.
-- Filter in other ways (not based on a user string), like lines that start with numbers or vowels or white space, etc.  
-  Explain your choice of filter/search in comments.
-
-#### Interesting Examples:
-
-You would need to `strip()` the lines to account for indenting in some of these.
-
-- The practical instructions file you are reading now is a "Markdown" text file. The headings all start with '#'.  
-  If the user chose this file and searched for '#', then the output file would contain all the headings.
-- Similarly, HTML headings are `<h1>`, `<h2>` etc. so you could filter/strip those.
-- Python comments use `#` or `"""`, so why not try getting your program to extract just the comments.
-
-### How are you going with the fundamentals?
+# How are you going with the fundamentals?
 
 In *all* of your programs by now, you should have clear ideas about the fundamental principles we've learned, so how
 would these principles apply to this exercise/program?
@@ -502,8 +500,7 @@ Ensure your code is not commented-out (only comments should be commented).
 Exercises:
 
 - `strings.py` with questions 1-3
-- `files.py` with questions 4-5
+- `files.py` with questions 4-6
 - `bmi_files.py`
-- `file_filter.py`
 
 Please do not submit your data text files (like `bmis.txt` and others).
