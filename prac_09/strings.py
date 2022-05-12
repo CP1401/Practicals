@@ -6,32 +6,32 @@ the checkpoint challenges yourself!
 Use these solutions as a guide to review and improve your completed work.
 """
 
-REFERENCE_YEAR = 2021
+THIS_YEAR = 2022
 
 
-# 6. Data Strings
-def question_6():
+# 1. Processing Strings
+def question_1():
     """Program to extract values from strings."""
     data_strings = ["Result = 95%", "Final Score = 8%", "Relative Value = 178%",
                     "Something else that's very important = 9.2%", "x = 42%"]
     for string in data_strings:
-        start_index = string.find("= ")
-        value = float(string[start_index + 2:-1])
+        start_index = string.find("= ") + 2
+        value = float(string[start_index:-1])
         print(value)
 
 
-# 7. Date Strings
-def question_7():
+# 2. Date Strings
+def question_2():
     """Program that gets year from date of birth string."""
     dob_string = input("DOB: ")
     birth_year = int(dob_string[-4:])  # Extract the last 4 characters
-    age = REFERENCE_YEAR - birth_year
-    print(f"You were born in {birth_year}")
-    print(f"You turn/ed {age} in {REFERENCE_YEAR}")
+    age = THIS_YEAR - birth_year
+    print(f"You were born in {birth_year}.")
+    print(f"You will be {age + 1} in {THIS_YEAR + 1}.")
 
 
-# 8. Subject Code Strings
-def question_8():
+# 3. Subject Code Strings
+def question_3():
     """Program to get and display subject code details."""
     subject = input("Enter subject code: ")
     while subject != "":
