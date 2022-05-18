@@ -8,6 +8,8 @@ It's all about learning!
 
 File: `programs.py`
 
+For all functions in this practical, include a valid and meaningful **docstring**.
+
 Note that a program that uses a function means we need a `main` function as well.
 
 A good general principle is that you should never write programs that use only one function.  
