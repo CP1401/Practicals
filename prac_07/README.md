@@ -28,22 +28,23 @@ Read the following out loud:
 Good job. Or was it? Double-check that you said it correctly.  
 If you didn't... notice that you had trouble with attention to detail.  
 This is a fairly normal issue, but one that programmers need to deal with more so than 'regular' people.  
-You need to continue to systematically build your attension to detail ;)  
+You need to continue to systematically build your attension to detail ;)
 
 For this question, just write whether you read the statement correctly the first time or not.
 
 ## Reflection
 
-This exercise is intended to help you prepare for your second assignment where you will keep a **developer's journal**.  
+This exercise is intended to help you prepare for your second assignment where you will keep a **developer's journal**
+.  
 In your journal, you will keep track of your work over time, noting any problems and how you overcame them.  
-You will also complete a summary that identifies any lessons you have learned through the process.  
+You will also complete a summary that identifies any lessons you have learned through the process.
 
-Now, take a couple of minutes and think about your work, how you overcame problems and particularly your **process** 
-for practicals in this subject so far...  
+Now, take a couple of minutes and think about your work, how you overcame problems and particularly your **process**
+for practicals in this subject so far...
 
-**Write at least 3 lessons** you have learned about yourself and the problem-solving process (not about Python code) through
+**Write at least 3 lessons** you have learned about yourself and the problem-solving process (not about Python code)
+through
 completing the practicals up to now.
-
 
 # Debugging
 
@@ -129,7 +130,7 @@ You do not need to explain your solutions, just fix the code and submit the fixe
 
 If you haven't already, copy the code from [debugging.py](./debugging.py) and get debugging!
 
-# Python Coding - Functions 2 - Coding Exercises
+# Python Coding - Functions 2
 
 ## Use Docstrings
 
@@ -146,13 +147,34 @@ def is_valid_password(password):
     return True
 ```
 
+## Example
+
+[Download and study the sample code and provided comments here](./menu_with_functions.py).
+
+This example shows a familiar program (our number guessing game) using a menu and functions.  
+Use this example as a reference for writing your assignment and other code.  
+It demonstrates good function design, parameter passing, pseudocode for functions, docstrings...
+
+### Things to do
+
+Add one more menu and function, so the user can choose `(D)isplay`, to display all of the numbers between `low`
+and `high`.  
+Use a function to do this. You know the function needs parameters passed in.  
+If the low and high are 1 and 10, the function should print:  
+```
+1 2 3 4 5 6 7 8 9 10
+```
+
+# Coding Exercises
+
 ## 1. Jerry the Driver
 
 File: `jerry.py`
 
 In the Functions 2 lecture, you had a "Do this now" question like:
 
-> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in mph, the speed limit in kph and determine his speeding fine.
+> Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in
+> mph, the speed limit in kph and determine his speeding fine.
 
 You (we) wrote the pseudocode for the main function for this:
 
@@ -232,7 +254,7 @@ Write a simple program using a function that **takes in a number** of seconds an
 to display that value in minutes and seconds.  
 Notice that this function DOES NOT PRINT.  
 We want to use the string in different ways, so this function's job is simply to create/return a formatted string.  
-Write a main program that displays a bunch of different seconds values in minutes and seconds using a loop.  
+Write a main program that displays a bunch of different seconds values in minutes and seconds using a loop.
 
 **Example output:**  
 Note: Think about how this was generated...  
@@ -384,10 +406,20 @@ Create a new file, `practice.py` to complete these tasks in:
 What other previous practical questions can you rewrite (in new files, not in their existing files!) using functions?  
 Do as many as you can, making sure to follow the principles you have learned in the lectures, including:
 
-- Good verb-phrase variable naming, *"This function will..."
+- Good verb-phrase variable naming, *"This function will..."*
 - Single responsibility principle (SRP)
-- Testing, including using the function in different ways (e.g. with user input or literals, with output to the screen
+- Testing, including using the function in different ways (e.g., with user input or literals, with output to the screen
   or as part of an expression)
+
+## Guessing Game Enhancements
+
+Update the guessing game in a new file (don't change the existing file) with new features like:
+
+- a high (low!) score
+- a way to set the low limit
+- a user name
+- a maximum value for the high limit (user can't choose above maximum)
+- ...
 
 # Extension
 
@@ -434,6 +466,7 @@ Ensure your code is not commented-out (only comments should be commented).
 
 Exercises, each in their own file:
 
+- `menu_with_functions.py` with added display function
 - `debugging.py` with both problems and solutions (fixed code)
 - `jerry.py`
 - `dog_years.py`
