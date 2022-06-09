@@ -27,7 +27,9 @@ c = 4
 
 ## Patterns
 
-We have learned 5 common **decision patterns** and when to use them (the "best tool for the job"):
+[We have learned 5 common **decision
+patterns**](https://github.com/CP1404/Starter/wiki/Programming-Patterns#decision-structures) and when to use them 
+(the "best tool for the job"):
 
 1. if, no else
 2. if, else
@@ -506,7 +508,7 @@ This section summarises the expectations for marking in this practical.
 Do not zip up your files.  
 Please submit each file separately.  
 Ensure each file has the correct/exact name.  
-Ensure your code is not commented-out (only comments should be commented).  
+Ensure your code is not commented-out (only comments should be commented).
 
 `questions.txt` with:
 
