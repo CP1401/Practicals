@@ -28,9 +28,9 @@ c = 4
 We have learned 5 common **decision patterns** and when to use them (the "best tool for the job"):
 
 1. if, no else
-2. if-else
-3. if-elif-else
-4. if-elif no else
+2. if, else
+3. if, elif, else
+4. if, elif no else
 5. if, if, if...
 
 **Which pattern** would be the most appropriate choice for each of the following situations:
@@ -99,7 +99,7 @@ Also, we can tell that there is a default case - the error message.
 
 What pattern will we use?  
 This looks like a menu-style problem and has multiple cases with a default, so...  
-It's clearly the **if-elif-else** pattern.
+It's clearly the **if, elif, else** pattern.
 
 ### Algorithm
 
