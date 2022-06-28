@@ -408,7 +408,9 @@ Hint: you will need to keep track of the total age, and the number of people, se
 
 ### Smileys Count
 
-Add to your smiley/frowny program so that when the user quits, the program tells them how many smileys and how many
+Create a new program (with the heading "Smileys Count") and copy your previous 
+smiley/frowny program from above.  
+Modify this version so that when the user quits, the program tells them how many smileys and how many
 frownies they printed.  
 Hint: you will need to keep track of the two counts separately. (Don't keep track of invalid choices.)
 
