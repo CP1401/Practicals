@@ -1,7 +1,10 @@
 """
-CP1401 - Coding Checkpoint 1
-https://github.com/CP1401/Practicals/blob/master/checkpoints/checkpoint_01.md
+CP1401 - Practical 5 - Coding Checkpoint 1
 Happy Products Suggested Solution
+
+Note: some aspects of this solution have been left imperfect on purpose.
+Ensure you are using the principles you've learned and applying them carefully.
+Do not copy these solutions, but learn from them and consider the principles and patterns.
 
 Enter the number of products you want to buy and your chosen price.
 If you buy 0-5 items, they're full price, over 5 items and each one is 10% off!
@@ -31,13 +34,15 @@ while choice != quit
     get choice
 print farewell message
 """
+DISCOUNT_THRESHOLD = 5
 MENU = "Menu:\n(I)nstructions\n(C)alculate\n(Q)uit"
 
 print(MENU)
 choice = input("Choice: ").lower()
 while choice != "q":
     if choice == 'i':
-        print("Enter the number of products you want to buy and your chosen price.\nIf you buy 0-5 items, they're full price, over 5 items and each one is 10% off!")
+        print("Enter the number of products you want to buy and your chosen price.")
+        print(f"If you buy 0-{DISCOUNT_THRESHOLD} items, they're full price, over {DISCOUNT_THRESHOLD} items and each one is 10% off!")
     elif choice == 'c':
         number_of_products = int(input("Number of products: "))
         while number_of_products < 0:
@@ -48,9 +53,9 @@ while choice != "q":
             print("Invalid input")
             price = float(input("Price: "))
         total = number_of_products * price
-        if number_of_products > 5:
+        if number_of_products > DISCOUNT_THRESHOLD:
             total = total * 0.9
-        print("{} x ${:.2f} products = ${:.2f}".format(number_of_products, price, total))
+        print(f"{number_of_products} x ${price:.2f} products = ${total:.2f}")
     else:
         print("Invalid choice")
     print(MENU)

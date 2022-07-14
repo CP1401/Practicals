@@ -1,6 +1,5 @@
 """
-CP1401 - Coding Checkpoint 1
-https://github.com/CP1401/Practicals/blob/master/checkpoints/checkpoint_01.md
+CP1401 - Practical 5 - Coding Checkpoint 1
 Suggested Solutions
 Please do not use/view these solutions until you have attempted the checkpoint challenges yourself!
 """
@@ -19,10 +18,10 @@ print("You want {}. It costs ${:.2f}".format(product, price))
 print(f"You want {product}. It costs ${price}")
 print(f"You want {product}. It costs ${price:.2f}")
 
-
 # Input, Processing, Output
 
-# 1. Write a program that calculates a new value based on an
+# 1. Percentage change
+# Write a program that calculates a new value based on an
 # original value and a (percentage-like) increase or decrease.
 # Example:
 # Original: 100, Change: 0.05, Result: 105
@@ -31,17 +30,17 @@ print(f"You want {product}. It costs ${price:.2f}")
 # Pseudocode:
 # get original_value, change
 # new_value = original_value * (1 + change)
-# print new_value
+# print original_value, change, new_value
 
 original_value = float(input("Original: "))
 change = float(input("Change: "))
 new_value = original_value * (1 + change)
-print(new_value)
-
+print(f"Original: {original_value}, Change: {change}, Result: {new_value}")
 
 # Decision Structures
 
-# 2. Ask the user for the time of day (0-23 hours)
+# 2. Time of day
+# Ask the user for the time of day (0-23 hours)
 # and if they are coming or going.
 # Then print a statement about their situation like:
 # It is before noon and you are coming. Hi!
@@ -65,11 +64,9 @@ if state == "coming":
     direction_message = "coming. Hi!"
 else:
     direction_message = "going. Bye!"
-print("It is {} noon and you are {}".format(noon_message, direction_message))
+print(f"It is {noon_message} noon and you are {direction_message}")
 
-
-# 3. Coffee orders made simple.
-
+# 3. Coffee orders
 # Pseudocode:
 # get colour, size
 # if size is small
@@ -93,7 +90,6 @@ else:
 if colour != "black":
     cost += 1
 print("${}".format(cost))
-
 
 # Repetition Structures
 
@@ -134,13 +130,14 @@ if colour != "black":
     cost += 1
 print("${}".format(cost))
 
-# 5. Write a program to ask the user for a low value and a
-# high value, then print all of the integers between those
+# 5. Accumulation
+# Write a program to ask the user for a low value and a
+# high value, then print all integers between those
 # values inclusive and show the total of those numbers.
 # Example, if the inputs were 10 and 20, you would print:
 # 10 11 12 13 14 15 16 17 18 19 20 totals: 165
 
-# Pseucode:
+# Pseudocode:
 # get low, high
 # total = 0
 # for i from low to high
