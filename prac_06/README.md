@@ -160,7 +160,7 @@ function determine_weight_category(bmi)
 Notice that the list of categories at the start was taken from the cancer.org website but we understand boundary
 conditions and have rewritten the conditions in a better way :).
 
-We could test each of these pseudocode functions by trying them out ("desk checking" them). E.g. if we put a BMI value
+We could test each of these pseudocode functions by trying them out ("desk checking" them). E.g., if we put a BMI value
 of 27 into the `determine_weight_category` function, we should get "overweight".
 
 ### Code
@@ -180,14 +180,15 @@ def calculate_bmi(height, weight):
 
 **Do this now**  
 Create a new Python file, `example.py` (File > New > Python File)    
-**Now, you type this code in**, and **test it**.  
+**Now, you type the above code (just the `calculate_bmi` function) in**, and **test it**...  
 But how do we test a function?  
-There are a number of ways, but what we'll do here is write a simple function with some tests in it to see what we get
+There are a number of ways, but what we will write a simple function with some tests in it to see what we get
 when we call our new calculation function.
 
-We'll do this for each of the functions, so follow along carefully, won't you?
+We'll do this for each of the functions, so follow along carefully, won't you?  
+**Note:** We are demonstrating a **best-practice**. You should be testing every function you write.  
 
-Add a simple main program at the top of your example.py program, so it looks like:
+Add a simple testing function called `run_tests` at the top, so it looks like:
 
 ```python
 def run_tests():
@@ -204,13 +205,13 @@ def calculate_bmi(height, weight):
 run_tests()
 ```
 
-Did that work? If it did, we've successfully written and tested our first function!  
+Did that work? If it did, you have successfully written and tested your first function!  
 If that did not work, go back and see what you've missed.
 
 Note that we did not write a complete program, getting valid user inputs and producing lovely outputs. We don't care
 about that yet; we're focused on writing one good function.
 
-OK, now let's do the next one. **Type this function in** (under the calculate_bmi function), paying attention to how it
+OK, now let's do the next one. **Type the following function in** (under the `calculate_bmi` function), paying attention to how it
 works and is designed. Notice also how similar it is to the algorithm.  
 Try and write simple and understandable algorithms that match the basic logic without too many extra words or weird
 things... and you'll find it easier to write simple effective code to match :).
@@ -235,16 +236,16 @@ print(determine_weight_category(16.5))  # This should be underweight
 print(determine_weight_category(25))  # This should be overweight
 ```
 
-Notice that in these tests we didn't bother saving the category as a variable. We can just print what the function
-returns directly.  
-Notice also that we tested a boundary condition (25) because that's what good programmers do, right?  
-Of course, we should test ALL of the conditions, so **write at least as many tests as there are different outputs now.**
+Notice that in these tests we didn't bother saving the category as a variable.  
+We can just print what the function returns directly.  
+Notice also that we tested a **boundary condition** (25) because that's what good programmers do, right?  
+Of course, we should test ALL the conditions, so now **write at least as many tests as there are different outputs.**
 
 How are you going? If any of this is not making sense, it might be a good idea to go back to the lectures and see what
 you might have missed in the teaching there.
 
-Before we write our nicely reusable function for getting valid inputs, how about we try a complete main program without
-it. We'll then add that function as an enhancement.
+Before we write our nicely reusable function for getting valid inputs, let's try a simple main program.  
+We'll then add that function as an enhancement.
 
 **Type this main function at the top of your program**:
 
@@ -258,7 +259,12 @@ def main():
 ```
 
 To run this, you will need to *comment out* the call to `run_tests()` at the bottom (don't delete it because we might
-want it again later). Then write a call to `main()` below it.
+want it again later). Then write a call to `main()` below it:
+
+```python
+# run_tests()
+main()
+```
 
 Run the program and test it with known values, like:
 
@@ -274,13 +280,16 @@ back and re-read the instructions, check your code, and fix it.
 So, we've got a complete program, don't we? Nice... but what happens if we use invalid values like height=10 and
 weight=-50? Is a BMI of -0.5 really OK?
 
-Looks like we want to error-check those inputs. Both of them. Wait... both of them...? The same way? Like, repeating
-code? \<insert scream>
+We want to error-check those inputs.  
+Both of them.  
+Wait... both of them...?  
+The same way?  
+Like, repeating code? \<insert scream>
 
 Remember, that any time we're repeating ourselves in code, we should stop and ask if there's a better way.  
 Reusable functions to the rescue!
 
-**Now, add the following function, as designed in the algorithm above**
+**Now, add the following function, as designed in the algorithm above.**
 
 ```python
 def get_valid_number(prompt, low, high):
@@ -295,11 +304,11 @@ Notice that this function doesn't mention "height" or "weight". It has instead b
 It's reusable for height or weight or age or ... any float! That's why our variable is just `number`. It's a generic and
 not misleading name.
 
-Now, before we use this in our main program, we should... *test* it.  
+Now, before we use this in our main program, we should... **test it!**  
 Change the last 2 lines of your program so `main()` is commented out and `run_tests()` is back in.
 
-Then add some tests. You should be able to do this yourself now. Write two calls to the function that get different
-values and save them into variables, then print those variables.
+Then add some tests. You should be able to do this yourself now. 
+Write two calls to the function that get different values and save them into variables, then print those variables.
 
 ```python
 height = get_valid_number("Height (m): ", 0, 3)
@@ -309,8 +318,8 @@ print(weight)
 ```
 
 If that worked, go on. Otherwise, fix your function.  
-This is important, so we'll say it again. You can't use a broken function! You should not use an untested function. Test
-it, fix it if needed, then use it.
+This is important, so we'll say it again... **You can't use a broken function!** 
+You should not use an untested function. Test it, fix it if needed, then use it.
 
 We're in the final stretch now (\<insert exciting music>).  
 You may have noticed that we chose tests that exactly match what we want to use for our main program.  
@@ -339,12 +348,12 @@ your reference.
 We did quite a number of steps along the way with this example program.  
 Here are a few more things to extend it just a bit more:
 
-- Change the printing of BMI (NOT the calculation) in main so that it only shows 1 decimal place (e.g. 44.4 not
-  44.44444... as above).
+- Change the printing of BMI (NOT the calculation) in `main` so that it only shows 1 decimal place (e.g., `44.4` not
+  `44.44444`... as above).
 - If you have not done so already, complete your `run_tests` function so that you test each possible weight category (
   see note below).
-- Add to your main to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use the
-  age in the final output of main.
+- Add to your `main` to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use the
+  age in the final output of your program.
 - Look at your code. Do you see any grey underlines in PyCharm? If you do, move your mouse over them (don't click, just
   move) and read the popup message. You might see a PEP8 warning - probably a missing line break or space. Press the
   shortcut key **Ctrl+Alt+L** (Windows) or **Cmd+Opt+L** (Mac) and watch all of your formatting problems get fixed!
@@ -379,8 +388,8 @@ else:
     print("Other value")
 ```
 
-If you never tested that you could see ALL 3 of "Small", "Big" and "Other", then you might think it works... and you
-wouldn't know that it's broken!
+If you never tested that you could see ALL 3 of "Small", "Big" and "Other", then you might think it works...  
+But it doesn't - and you wouldn't know that it's broken!
 
 In the BMI question - look at how many possible outputs could occur and make sure your testing covers each one of
 them.  
@@ -405,8 +414,8 @@ def main():
 ``` 
 
 **Note:** In any questions that ask you to write a function, you are expected to write test code to show that it works
-as expected. In some cases, you will be told how to test, and in others it is assumed. Get used to writing simple tests,
-as in our example.
+as expected. In some cases, you will be told how to test, and in others it is assumed.  \
+Get used to writing simple tests, as in our example.
 
 ## 1. Coffee Brew Ratio
 
@@ -421,15 +430,15 @@ print ratio
 ``` 
 
 Here, "ratio" is the number of grams of yield (brewed coffee) per 1 gram of dose (ground coffee), expressed as a float,
-e.g. 2.5.
+e.g., 2.5.
 
 [According to La Marzocco](https://au.lamarzoccohome.com/brew-ratios-around-world/):
 > Using traditional Italian espresso nomenclature, we’ll refer to a brew ratio of 1:1 (18 grams in / 18 grams out, for example) to 1:2 (18 grams in / 36 grams out) as a “ristretto” espresso; a 1:2 to a 1:3 ratio as a “normale” espresso; and a 1:3 to 1:4 ratio as a “lungo” espresso.
 
 **Write an algorithm** to determine the coffee "style" based on the brew ratio.  
-E.g. a ratio of 2.5 (1:2.5) would be a "normale".  
+E.g., a ratio of 2.5 (1:2.5) would be a "normale".  
 Note: We will consider anything outside the ranges defined above to match the nearest style,   
-E.g. 1:0.1 wouldn't be good coffee, but we'd call it a "ristretto" and 1:100 would be dishwater, but let's call it a "
+E.g., 1:0.1 wouldn't be good coffee, but we'd call it a "ristretto" and 1:100 would be dishwater, but let's call it a "
 lungo".
 
 Now, that looks like the sort of thing we could use a function for in our code, doesn't it?  
@@ -686,7 +695,7 @@ between some realistic values that you set.
 ## C. Reverse Words
 
 Write a function called `print_reversed_words` that takes two string parameters and prints them in the reverse order.   
-E.g. calling `print_reversed_words("hi", "ho")` would print `ho hi`
+E.g., calling `print_reversed_words("hi", "ho")` would print `ho hi`
 
 # Extension
 
@@ -708,8 +717,8 @@ Try and produce output like the following:
 
 Write a new version of
 the [Automated Steakhouse from prac 3](https://github.com/CP1401/Practicals/tree/master/prac_03#example) but:  
-Instead of asking the user for their steak style (e.g. medium rare), ask the chef for a number of minutes and print what
-the style will be (e.g. 1 minute is rare, 20 minutes is burned).  
+Instead of asking the user for their steak style (e.g., medium rare), ask the chef for a number of minutes and print what
+the style will be (e.g., 1 minute is rare, 20 minutes is burned).  
 Think about the functions that make sense, including reusing your function for getting a number.
 
 ## iii. Tax Calculation
