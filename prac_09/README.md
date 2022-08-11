@@ -248,7 +248,7 @@ what the program is for later.
 ## 4. Read a String from a File
 
 Create a new text file in your prac_09 directory called `name.txt`.  
-Put your own name in the file.
+Type _only_ your own name in the file.
 
 **Write a program in `question_4()`** that _reads_ this `name.txt` file and greets you, example:
 
@@ -272,10 +272,10 @@ Greetings Lindsay
 !
 ```
 
-Then what's happened is the `text` variable includes the new line in your file.  
+Then what happened is the `text` variable includes the new line character (`\n`) in your file.  
 You can solve this problem in two ways.
 
-- Edit the file so there's no line break
+- Edit the file so there's no new line 
 - Strip the new line character (any whitespace from the ends of the line) from text with:
 
 ```python
