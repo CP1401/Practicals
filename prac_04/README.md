@@ -408,7 +408,7 @@ Hint: you will need to keep track of the total age, and the number of people, se
 
 ### Smileys Count
 
-Create a new program (with the heading "Smileys Count") and copy your previous 
+Create a new program (with the heading "Smileys Count") and copy your previous
 smiley/frowny program from above.  
 Modify this version so that when the user quits, the program tells them how many smileys and how many
 frownies they printed.  
@@ -581,10 +581,12 @@ Columns: 10
 
 This section summarises the expectations for marking in this practical.
 
-Do not zip up your files.  
-Please submit each file separately.  
-Ensure each file has the correct/exact name.  
-Ensure your code is not commented-out (only comments should be commented).
+- Do not zip up your files.
+- Please submit each file separately.
+- Ensure each file has the correct/exact name, including the extension.
+- Ensure your code is not commented-out (only comments should be commented).
+
+## Files required:
 
 `questions.txt` with:
 
