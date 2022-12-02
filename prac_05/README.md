@@ -1,5 +1,9 @@
 # Practical 05 - Lists 
 
+This week, you should also practise your problem-solving and programming skills with the 
+[checkpoint 2](./checkpoint_02.md) practice problem.
+
+
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date for your situation.**  
 
 This practical builds on the **Lists lecture** as well as previous practicals.  
