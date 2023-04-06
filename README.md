@@ -3,6 +3,8 @@
 This repository contains instructions and resources for practicals for the subjects CP1401 and CP5639 at James Cook University.  
 Complete instructions are found in each prac folder.
 
+[Programming Guides (Patterns, Style Guide, Pseudocode...) can be found here](https://github.com/CP1404/Starter/wiki)
+
 ## Solutions
 Selected practical solutions are provided here, in the **"solutions"** branch.  
 These are to help you learn by evaluating your own work and seeing our suggested ways of solving the practical problems. 
