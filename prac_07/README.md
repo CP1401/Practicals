@@ -149,7 +149,7 @@ def is_valid_password(password):
 
 ## Example
 
-[Download and study the sample code and provided comments here](./menu_with_functions.py).
+[Download and study the sample code and provided comments here: menu_with_functions.py](./menu_with_functions.py).
 
 This example shows a familiar program (our number guessing game) using a menu and functions.  
 Use this example as a reference for writing your assignment and other code.  
@@ -468,7 +468,7 @@ This section summarises the expectations for marking in this practical.
 
 Exercises, each in their own file:
 
-- `menu_with_functions.py` with added display function
+- `menu_with_functions.py` (the example) with added display function
 - `debugging.py` with both problems and solutions (fixed code)
 - `jerry.py`
 - `dog_years.py`
