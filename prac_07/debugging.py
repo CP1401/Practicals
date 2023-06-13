@@ -46,7 +46,7 @@ def calculate_parity(number):
 
 def main_2():
     """Print numbers from 0 up to the user's input multiplied by 2."""
-    # E.g., if input is 12, should print 0 2 4 6 8 10 12 14 16 18 20 22 24
+    # E.g., if input is 13, should print 0 2 4 6 8 10 12 14 16 18 20 22 24 26
     numnums = input("How many: ")
     for i in numnums:
         print(i * 2)
