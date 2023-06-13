@@ -47,7 +47,9 @@ def question_2():
 
 ### 3. Get Non-empty String
 
-Write a function to get a non-empty string. That is, you should be able to enter any string as long as it's not `""`.
+Write a function to get a non-empty string.  
+That is, you should be able to enter any string as long as it's not `""`.  
+If the user input is `""`, print an error like `"Input cannot be blank"` and get the input again.
 
 In `question_3()`, call your new function to ask the user for their name using your function...  
 Then use the _same_ function for getting their birthplace, and then display a message like:
