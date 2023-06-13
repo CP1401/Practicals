@@ -2,6 +2,28 @@
 
 **All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
 
+Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
+
+## Reflection
+
+Your learning in this subject is not just about code, but about yourself and your process: how _you_ learn and what
+_you_ need to do to succeed.  
+Now, take some time to reflect and think about your work, how you overcame problems and particularly your **process**
+for learning in this subject so far...
+
+When you reflect, consider what you have learned through experience, not just things that are clear in the teaching.  
+Reflections must be personal. Be honest.
+
+**Answer the following questions to describe some lessons** you have learned about yourself and your learning in this
+subject up to now.
+
+1. What do you do that leads to your best learning in this subject?
+2. How are you going with getting the most out of the teaching in this subject in order to have the best learning
+   experience?
+3. What is one thing that you need to change to more consistently do your best learning?
+
+# Python Coding - Checkpoint
+
 _How do you get better at programming?_  
 Write more (good) programs!  
 And watch/read/study more examples of good programs and programming.  
@@ -15,7 +37,7 @@ Do the numbered questions in a file called `programs.py`
 
 ## Input, Processing, Output
 
-**1. Percentage change**
+### 1. Percentage change
 
 Write a program that calculates a new value based on an original value and a (percentage-like) increase or decrease.  
 Ask the user for the original and the change, then print all 3 values (including the new result) in one statement.
@@ -26,7 +48,7 @@ Examples (only output is shown):
 
 ## Decision Structures
 
-**2. Time of day**
+### 2. Time of day
 
 Make sure you read the note below before completing this question.  
 Ask the user for two inputs: the *time of day* (0-23 hours) and if they are *coming* or *going*.  
@@ -37,7 +59,7 @@ It is before noon and you are coming. Hi!
 It is after noon and you are going. Bye!
 ```
 
-### Note - Don't Repeat Yourself!
+#### Don't Repeat Yourself!
 
 Remember the **DRY (Don't Repeat Yourself)** principle?  
 The intention with this exercise is for you to see that what the user inputs for these 2 questions are unrelated.  
@@ -49,7 +71,7 @@ print based on the 2 user inputs.
 Also, there's no such thing as "noon" :) As soon as you hit 12, it's "after noon".  
 Do not use any error-checking; just assume the user will enter correct inputs.
 
-**3. Coffee orders**
+### 3. Coffee orders
 
 - Ask the user for white or black coffee
 - Ask for their chosen size: small, medium or large
@@ -72,7 +94,7 @@ if string == "string":
 
 ## Repetition Structures
 
-**4. Coffee orders with error-checking**
+### 4. Coffee orders with error-checking
 
 For this question, duplicate your coffee orders program, and rewrite it as a new version with error-checking.  
 You must submit both questions, so don't change the other code.  
@@ -80,7 +102,7 @@ Your error-checking should repeat until the user enters valid inputs. Note that 
 the expensive option, because it won't be possible to choose the colour "purple" or a wrong size. Rewrite your code
 constructs to take this into consideration effectively if needed.
 
-**5. Accumulation**
+### 5. Accumulation
 
 Write a program to ask the user for a _low_ value and a _high_ value.  
 Then print all the integers between those values inclusive and show the total of those numbers.
@@ -89,7 +111,7 @@ Example, if the inputs were `10` and `20`, you would print:
 
 10 11 12 13 14 15 16 17 18 19 20 totals: 165
 
-**Optional:** Add error-checking to ensure that the high value is actually higher than the low value.
+Now (only after this works) add error-checking to ensure that the high value is actually higher than the low value.
 
 ## All Together Now
 
@@ -181,6 +203,8 @@ This section summarises the expectations for marking in this practical.
 - Ensure your code is not commented-out (only comments should be commented).
 
 ## Files required:
+
+- `questions.py` with personal reflection
 
 - `programs.py` with all of the numbered checkpoint questions:
 
