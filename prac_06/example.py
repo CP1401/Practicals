@@ -27,14 +27,15 @@ def calculate_bmi(height, weight):
 
 
 def determine_weight_category(bmi):
+    # Note that we don't use the if, elif, else pattern here
+    # because we return, making "elif" and "else" redundant
     if bmi < 18.5:
         return "underweight"
-    elif bmi < 25:
+    if bmi < 25:
         return "normal"
-    elif bmi < 30:
+    if bmi < 30:
         return "overweight"
-    else:
-        return "obese"
+    return "obese"
 
 
 def run_tests():

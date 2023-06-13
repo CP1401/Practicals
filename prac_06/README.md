@@ -66,12 +66,14 @@ understand.
 ### Problem Description:
 
 > Firstly, we understand that for some people, things like body image, weight and health can be sensitive issues.  
-> There is no intention for the following scenario to be taken personally or thought of in any way that might cause concern.  
+> There is no intention for the following scenario to be taken personally or thought of in any way that might cause
+> concern.  
 > It is a useful scenario for the purpose of breaking a problem into functions, which is why it is used.
 
 According
 to [cancer.org](https://www.cancer.org/cancer/cancer-causes/diet-physical-activity/body-weight-and-cancer-risk/adult-bmi.html):
-> BMI is used to broadly define different weight groups in adults 20 years old or older. The same groups apply to both men and women.
+> BMI is used to broadly define different weight groups in adults 20 years old or older. The same groups apply to both
+> men and women.
 
 BMI (Body Mass Index) can be calculated by the formula:
 
@@ -87,6 +89,9 @@ The rough weight group categories defined by BMI are:
 - Normal weight: BMI is 18.5 to 24.9
 - Overweight: BMI is 25 to 29.9
 - Obese: BMI is 30 or more
+
+This list of categories was taken from the cancer.org website, but we understand boundary
+conditions and should write our conditions in a better way. E.g., what category should a BMI of 29.95 be?
 
 The client wants a program that will ask for a person's height and weight, then tell them their BMI and weight category.
 
@@ -134,16 +139,20 @@ function get_valid_number(prompt, low, high)
 ```
 
 For the `calculate_bmi` function, we should see that this is a simple calculation/processing step.  
-When a result has been calculated, we "return" it.
+When a result has been calculated, we `return` it.
 
 ```
 function calculate_bmi(height, weight)
     return weight / (height ** 2)
 ```
 
-For the `determine_weight_category` function, we should see that this uses the normal if-elif-else decision structure
-pattern.  
-Again, the job of this function is not to print, but to return the category that has been determined by the decision.
+The job of the `determine_weight_category` function is not to print, but to `return` the category that has been
+determined by the function.
+
+#### Upgraded pattern with functions
+
+For a situation like this, we want a single, mutually exclusive result, so it seems fine to use the usual if-elif-else
+decision structure:
 
 ```
 function determine_weight_category(bmi)
@@ -157,11 +166,28 @@ function determine_weight_category(bmi)
         return obese
 ```
 
-Notice that the list of categories at the start was taken from the cancer.org website but we understand boundary
-conditions and have rewritten the conditions in a better way :).
+However, since we are now using a function, the "else" is redundant. If any one of these conditions is True, the
+function returns, so we know it will only get to the next condition if the previous one was False.  
+If we run `pylint` to check the code for the above algorithm, we would get the message:
 
-We could test each of these pseudocode functions by trying them out ("desk checking" them). E.g., if we put a BMI value
-of 27 into the `determine_weight_category` function, we should get "overweight".
+    Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+
+So, let's "upgrade" this pattern, noting that this ONLY makes sense for use within a function because of how `return`
+works:
+
+```
+function determine_weight_category(bmi)
+    if bmi < 18.5
+        return underweight
+    if bmi < 25
+        return normal
+    if bmi < 30
+        return overweight
+    return obese
+```
+
+We could "desk check" each of these pseudocode functions.  
+E.g., if we put a BMI value of 27 into the `determine_weight_category` function, we should get "overweight".
 
 ### Code
 
@@ -186,7 +212,7 @@ There are a number of ways, but what we will write a simple function with some t
 when we call our new calculation function.
 
 We'll do this for each of the functions, so follow along carefully, won't you?  
-**Note:** We are demonstrating a **best-practice**. You should be testing every function you write.  
+**Note:** We are demonstrating a **best-practice**. You should be testing every function you write.
 
 Add a simple testing function called `run_tests` at the top, so it looks like:
 
@@ -211,7 +237,8 @@ If that did not work, go back and see what you've missed.
 Note that we did not write a complete program, getting valid user inputs and producing lovely outputs. We don't care
 about that yet; we're focused on writing one good function.
 
-OK, now let's do the next one. **Type the following function in** (under the `calculate_bmi` function), paying attention to how it
+OK, now let's do the next one. **Type the following function in** (under the `calculate_bmi` function), paying attention
+to how it
 works and is designed. Notice also how similar it is to the algorithm.  
 Try and write simple and understandable algorithms that match the basic logic without too many extra words or weird
 things... and you'll find it easier to write simple effective code to match :).
@@ -220,15 +247,14 @@ things... and you'll find it easier to write simple effective code to match :).
 def determine_weight_category(bmi):
     if bmi < 18.5:
         return "underweight"
-    elif bmi < 25:
+    if bmi < 25:
         return "normal"
-    elif bmi < 30:
+    if bmi < 30:
         return "overweight"
-    else:
-        return "obese"
+    return "obese"
 ```
 
-**Now, see if you can write some simple tests - in the same testing function**.  
+**Now, write some simple tests - in the same testing function**.  
 Think about this yourself before you try what we have below...
 
 ```python
@@ -239,10 +265,11 @@ print(determine_weight_category(25))  # This should be overweight
 Notice that in these tests we didn't bother saving the category as a variable.  
 We can just print what the function returns directly.  
 Notice also that we tested a **boundary condition** (25) because that's what good programmers do, right?  
-Of course, we should test ALL the conditions, so now **write at least as many tests as there are different outputs.**
+Of course, we should test ALL the conditions, so now...  
+**Write at least as many tests as there are different outputs.**
 
-How are you going? If any of this is not making sense, it might be a good idea to go back to the lectures and see what
-you might have missed in the teaching there.
+How are you going? If any of this is not making sense, go back to the lectures and see what
+you might have missed in the teaching.
 
 Before we write our nicely reusable function for getting valid inputs, let's try a simple main program.  
 We'll then add that function as an enhancement.
@@ -287,7 +314,7 @@ The same way?
 Like, repeating code? \<insert scream>
 
 Remember, that any time we're repeating ourselves in code, we should stop and ask if there's a better way.  
-Reusable functions to the rescue!
+_Reusable functions to the rescue!_
 
 **Now, add the following function, as designed in the algorithm above.**
 
@@ -300,15 +327,17 @@ def get_valid_number(prompt, low, high):
     return number
 ```  
 
-Notice that this function doesn't mention "height" or "weight". It has instead been designed to be generic and reusable.
+Notice that this function doesn't mention `height` or `weight`. It has instead been designed to be generic and
+reusable.  
 It's reusable for height or weight or age or ... any float! That's why our variable is just `number`. It's a generic and
 not misleading name.
 
 Now, before we use this in our main program, we should... **test it!**  
 Change the last 2 lines of your program so `main()` is commented out and `run_tests()` is back in.
 
-Then add some tests. You should be able to do this yourself now. 
+Then add some tests. You should be able to do this yourself now.
 Write two calls to the function that get different values and save them into variables, then print those variables.
+E.g.,
 
 ```python
 height = get_valid_number("Height (m): ", 0, 3)
@@ -318,13 +347,14 @@ print(weight)
 ```
 
 If that worked, go on. Otherwise, fix your function.  
-This is important, so we'll say it again... **You can't use a broken function!** 
-You should not use an untested function. Test it, fix it if needed, then use it.
+This is important, so we'll say it again...  
+**You can't use a broken function!**  
+You should not use an untested function. Test it, fix it if needed, _then_ use it.
 
 We're in the final stretch now (\<insert exciting music>).  
 You may have noticed that we chose tests that exactly match what we want to use for our main program.  
 Comment out the two lines in main that get height and width now, and add the two lines from our tests.    
-Change the last two lines of the program so that you're running/calling `main` and let's see it in action:
+Change the last two lines of the program so that you're calling `main` and let's see it in action:
 
 ```
 Height (m): 10
@@ -350,9 +380,9 @@ Here are a few more things to extend it just a bit more:
 
 - Change the printing of BMI (NOT the calculation) in `main` so that it only shows 1 decimal place (e.g., `44.4` not
   `44.44444`... as above).
-- If you have not done so already, complete your `run_tests` function so that you test each possible weight category (
-  see note below).
-- Add to your `main` to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use the
+- If you have not done so already, complete your `run_tests` function so that you test each possible weight category (see note below).
+- Add to your `main` to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use
+  the
   age in the final output of your program.
 - Look at your code. Do you see any grey underlines in PyCharm? If you do, move your mouse over them (don't click, just
   move) and read the popup message. You might see a PEP8 warning - probably a missing line break or space. Press the
@@ -433,7 +463,9 @@ Here, "ratio" is the number of grams of yield (brewed coffee) per 1 gram of dose
 e.g., 2.5.
 
 [According to La Marzocco](https://au.lamarzoccohome.com/brew-ratios-around-world/):
-> Using traditional Italian espresso nomenclature, we’ll refer to a brew ratio of 1:1 (18 grams in / 18 grams out, for example) to 1:2 (18 grams in / 36 grams out) as a “ristretto” espresso; a 1:2 to a 1:3 ratio as a “normale” espresso; and a 1:3 to 1:4 ratio as a “lungo” espresso.
+> Using traditional Italian espresso nomenclature, we’ll refer to a brew ratio of 1:1 (18 grams in / 18 grams out, for
+> example) to 1:2 (18 grams in / 36 grams out) as a “ristretto” espresso; a 1:2 to a 1:3 ratio as a “normale” espresso;
+> and a 1:3 to 1:4 ratio as a “lungo” espresso.
 
 **Write an algorithm** to determine the coffee "style" based on the brew ratio.  
 E.g., a ratio of 2.5 (1:2.5) would be a "normale".  
@@ -717,7 +749,8 @@ Try and produce output like the following:
 
 Write a new version of
 the [Automated Steakhouse from prac 3](https://github.com/CP1401/Practicals/tree/master/prac_03#example) but:  
-Instead of asking the user for their steak style (e.g., medium rare), ask the chef for a number of minutes and print what
+Instead of asking the user for their steak style (e.g., medium rare), ask the chef for a number of minutes and print
+what
 the style will be (e.g., 1 minute is rare, 20 minutes is burned).  
 Think about the functions that make sense, including reusing your function for getting a number.
 
