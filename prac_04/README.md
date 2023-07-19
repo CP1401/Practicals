@@ -297,22 +297,28 @@ exact characters, just any part of the right lines) and pressing `Ctrl+/` (Windo
 
 ## 2. Number Sequences
 
-a. Write a loop that displays all the odd numbers between 1 and 100 with each number on its own line (normal print, no
-sep/end). Think about
-the `step` value for this.  
-b. Write a loop that displays all the Summer Olympic years (every 4 years) between 1896 and today, with a space between
-each one (all on one line).  
-c. Write one more loop that represents any meaningful sequence. Explain your chosen sequence in a comment.
+* a. Write a loop that displays all the odd numbers between 1 and 100 with each number on its own line (normal print, no
+  sep/end). Think about the `step` value for this.
+* b. Write a loop that displays all the Summer Olympic years (every 4 years) between 1896 and today, with a space
+  between each one (all on one line).
+* c. Write one more loop that represents any meaningful sequence. Explain your chosen sequence in a comment.
+
+Remember that one of the first things to do when analysing problems like these is to decide on *definite* vs.
+*indefinite* repetition.  
+Get into the habit of asking yourself that question every time.
 
 ## 3. Menus
 
-Not sure how to write menus?  
-Think about what you've learned and what pattern best applies.  
+How do we write menus? Well, ask yourself, "Where have we done this before?"  
 Remember we have
-a [helpful guide to Programming Patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus). It's very
+a [helpful guide to Programming Patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus).  It's very
 helpful.
 
-Write a menu program that prints smiley and frowny faces until the user quits. The user should see a menu like this:
+For this question, first, **copy and paste the menu pattern pseudocode** from the above guide.  
+Then, **modify the pseudocode** to match the program described below.
+
+Write a menu program that prints smiley and frowny faces until the user quits.  
+The user should see a menu like this:
 
     (S)miley
     (F)rowny
@@ -321,10 +327,6 @@ Write a menu program that prints smiley and frowny faces until the user quits. T
 Make the program print a smiley face if they press 's', a frowny face if they press 'f', or an error message ("Invalid
 choice") depending on their choice.   
 When the user quits ('q'), print "Farewell".
-
-Remember that one of the first things to do when analysing a problem like this is to decide on *definite* vs. *
-indefinite* repetition.  
-Get into the habit of asking yourself that question every time.
 
 ## 4. Accumulation
 

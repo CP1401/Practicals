@@ -8,8 +8,8 @@ Write your answers for the early non-coding questions in a simple text file call
 
 Your learning in this subject is not just about code, but about yourself and your process: how _you_ learn and what
 _you_ need to do to succeed.  
-Now, take some time to reflect and think about your work, how you overcame problems and particularly your **process**
-for learning in this subject so far...
+Take some time right now to reflect and think about your work, how you overcame problems and particularly your
+**process** for learning in this subject so far...
 
 When you reflect, consider what you have learned through experience, not just things that are clear in the teaching.  
 Reflections must be personal. Be honest.
@@ -18,8 +18,8 @@ Reflections must be personal. Be honest.
 subject up to now.
 
 1. What do you do that leads to your best learning in this subject?
-2. How are you going with getting the most out of the teaching in this subject in order to have the best learning
-   experience?
+2. How are you going with getting the most out of the teaching in this subject (lecture videos, seminars, etc.) in order
+   to have the best learning experience?
 3. What is one thing that you need to change to more consistently do your best learning?
 
 # Python Coding - Checkpoint
@@ -204,7 +204,7 @@ This section summarises the expectations for marking in this practical.
 
 ## Files required:
 
-- `questions.py` with personal reflection
+- `questions.txt` with personal reflection
 
 - `programs.py` with all of the numbered checkpoint questions:
 
