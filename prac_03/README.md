@@ -28,7 +28,7 @@ c = 4
 ## Patterns
 
 [We have learned 5 common **decision
-patterns**](https://github.com/CP1404/Starter/wiki/Programming-Patterns#decision-structures) and when to use them 
+patterns**](https://github.com/CP1404/Starter/wiki/Programming-Patterns#decision-structures) and when to use them
 (the "best tool for the job"):
 
 1. if, no else
@@ -140,12 +140,12 @@ else:
 Remember that when testing decision structures, we should use test data to produce each path/output.  
 There are 4 possible paths here, so we need to test each one, like:
 
-| Input | Expected Output | Actual Output |
-|---|---|---|
-| rare | 2 minutes | ? |
-| medium | 4 minutes | ? |
-| well-done | 6 minutes | ? |
-| anything | Ain't no steak like that here | ? |
+| Input     | Expected Output               | Actual Output |
+|-----------|-------------------------------|---------------|
+| rare      | 2 minutes                     | ?             |
+| medium    | 4 minutes                     | ?             |
+| well-done | 6 minutes                     | ?             |
+| anything  | Ain't no steak like that here | ?             |
 
 ### Things to do
 
@@ -391,17 +391,17 @@ DO NOT REPEAT questions you already know the answer to.
 [Current penalties for individuals caught speeding in Queensland](https://www.tmr.qld.gov.au/Safety/Driver-guide/Speeding/Speeding-fines-and-demerit-points.aspx)
 are:
 
-| Infringement                                                   | Penalty amount | Demerit points |
-|----------------------------------------------------------------|----------------|----------------|
-| Less than 13km/h over the speed limit                          | $177           | 1              |
-| At least 13km/h but not more than 20km/h over the speed limit  | $266           | 3              |
-| More than 20km/h but not more than 30km/h over the speed limit | $444           | 4              |
-| More than 30km/h but not more than 40km/h over the speed limit | $622           | 6              |
-| More than 40km/h over the speed limit                          | $1,245         | 8              |
+| Infringement                                                     | Penalty amount | Demerit points |
+|------------------------------------------------------------------|----------------|----------------|
+| Less than 11 km/h over the speed limit                           | $309           | 1              |
+| At least 11 km/h but not more than 20 km/h over the speed limit  | $464           | 3              |
+| More than 20 km/h but not more than 30 km/h over the speed limit | $696           | 4              |
+| More than 30 km/h but not more than 40 km/h over the speed limit | $1,161         | 6              |
+| More than 40 km/h over the speed limit                           | $1,780         | 8              |
 
 Note: the way the government website has written this (and we've copied it) is NOT efficient in terms of decision
-structures. This has been written for each condition to stand alone (if, if, if) but we can tell its mutually exclusive
-and so know a better tool for the job, don't we?
+structures. This has been written for each condition to stand alone (if, if, if) but we can tell this is mutually
+exclusive, so we know a better tool for the job, don't we?
 
 Avoid a 6-month suspension by writing a program to ask for the user's:
 
@@ -412,6 +412,8 @@ then tell them their fine in dollars (you can ignore the demerit points).
 
 After getting the inputs, you will want to calculate the speed over the limit. You do not want to calculate this again
 and again in each condition. DRY.
+
+Before you finish this question, check again for any "DRY" issues. Can you improve your code?
 
 # Practice and Extension
 
