@@ -39,6 +39,7 @@ For this reason (to help you learn properly!), you will not achieve full marks f
 that are not done in the way that we prescribe.  
 Here are some reasons that you might lose marks for your practicals and assignments:
 
+- You do not submit your work correctly, according to the submission instructions
 - Your work looks too similar to any provided solutions, code found online or made by services like ChatGPT
 - You miss or skip part of a question (you must attempt all requirements)
 - Your work includes concepts and code not taught in the subject
