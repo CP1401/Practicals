@@ -83,8 +83,8 @@ There are three boxes, which each contain two marbles:
 - one has two black, and
 - one has one white and one black marble.
 
-Each of the boxes also is labeled as to its contents, but the labels have been swapped around and each label is _
-incorrect_.  
+Each of the boxes also is labeled as to its contents, 
+but the labels have been swapped around and each label is _incorrect_.  
 What is the fewest number of marbles you could remove from the boxes and look at in order to definitely determine the
 contents of all three boxes?
 

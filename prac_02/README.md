@@ -27,7 +27,7 @@ Use whatever text editor you like, but you can use PyCharm to edit text files.
 
 A drawer contains 10 black and 10 white socks that are all mixed up. What is the fewest number of socks you can take
 from the drawer _without looking_
-and be sure to get a pair of the same colour?
+and be **sure** to get a pair of the same colour?
 
 When you've decided on an answer for this, discuss it with a group near you.  
 If you have a different answer, try and figure out why/how you arrived at different answers.  

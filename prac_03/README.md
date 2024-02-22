@@ -331,8 +331,9 @@ Applicants 25 years and over are not required to purchase insurance.
 Painz needs you to write a program that gets the applicant's age, and outputs "Insurance required", "Insurance not
 required", or "Hire refused" as appropriate.
 
-When you write your decision structure, remember to start at one end of the "number line". The only place you should _
-not_ start is with the "special insurance" (middle) category. Don't repeat yourself.
+When you write your decision structure, remember to start at one end of the "number line".  
+The only place you should _not_ start is with the "special insurance" (middle) category.  
+Don't repeat yourself.
 
 ## 3. Simple Password Checker
 

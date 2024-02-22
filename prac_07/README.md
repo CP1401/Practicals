@@ -26,7 +26,7 @@ Read the following out loud:
     THE SPRING
 
 Good job.  
-Or was it?  Did you say it correctly?  
+Or was it? Did you say it correctly?  
 If you didn't... notice that your attention to detail could be improved.  
 This is a fairly common issue, but one that programmers need to deal with more so than 'regular' people.  
 You need to continue to systematically build your attension to detail ;)
@@ -35,17 +35,18 @@ To answer this question, just write whether you read the statement correctly the
 
 ## Reflection
 
-This exercise is intended to help you prepare for your second assignment where you will keep a **developer's journal**
-.  
+This exercise is intended to help you prepare for your second assignment where you will keep a
+**developer's journal**.  
 In your journal, you will keep track of your work over time, noting any problems and how you overcame them.  
 You will also complete a summary that identifies any lessons you have learned through the process.
 
-Now, take a couple of minutes and think about your work, how you overcame problems and particularly your **process**
+Now, take a couple of minutes and think about your work, how you overcame problems, and particularly your **process**
 for practicals in this subject so far...
 
-**Write at least 3 lessons** you have learned about yourself and the problem-solving process (not about Python code)
-through
-completing the practicals up to now.
+**Write 3 lessons** you have learned about yourself and the problem-solving process (not about Python code)
+through completing the practicals up to now.  
+Remember that personal lessons from reflection like this must be *personal*. Don't state "truisms" like, 
+_"It's good to read the instructions carefully"_.
 
 # Debugging
 
@@ -161,7 +162,8 @@ It demonstrates good function design, parameter passing, pseudocode for function
 Add one more menu and function, so the user can choose `(D)isplay`, to display all of the numbers between `low`
 and `high`.  
 Use a function to do this. You know the function needs parameters passed in.  
-If the low and high are 1 and 10, the function should print:  
+If the low and high are 1 and 10, the function should print:
+
 ```
 1 2 3 4 5 6 7 8 9 10
 ```
