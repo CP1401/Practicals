@@ -768,14 +768,10 @@ x, y = function_that_returns_2_values()
 
 # Deliverables
 
-This section summarises the expectations for marking in this practical.
+This section summarises the expectations for marking in this practical.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-- Do not zip up your files.
-- Please submit each file separately.
-- Ensure each file has the correct/exact name, including the extension.
-- Ensure your code is not commented-out (only comments should be commented).
-
-## Files required:
+**Files required:**
 
 `questions.txt` with:
 

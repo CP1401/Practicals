@@ -497,22 +497,17 @@ divisible" otherwise.
 Automated Steak House wants version 2 of their program.
 
 - add a default minimum order time as a constant
-- handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes, a rare steak will take
-    5.
+- handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes, a rare steak will take 5.
 
-You should notice that to handle this properly, you will need to replace your fixed outputs with a calculation (e.g.
+You should notice that to handle this properly, you will need to replace your fixed outputs with a calculation (e.g.,
 not "2 minutes", but 3 + 2).
 
 # Deliverables
 
-This section summarises the expectations for marking in this practical.
+This section summarises the expectations for marking in this practical.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-- Do not zip up your files.
-- Please submit each file separately.
-- Ensure each file has the correct/exact name, including the extension.
-- Ensure your code is not commented-out (only comments should be commented).
-
-## Files required:
+**Files required:**
 
 `questions.txt` with:
 
