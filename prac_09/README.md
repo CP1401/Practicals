@@ -275,7 +275,7 @@ Greetings Lindsay
 Then what happened is the `text` variable includes the new line character (`\n`) in your file.  
 You can solve this problem in two ways.
 
-- Edit the file so there's no new line 
+- Edit the file so there's no new line
 - Strip the new line character (any whitespace from the ends of the line) from text with:
 
 ```python
@@ -483,14 +483,10 @@ c. the minimum d. the maximum e. the median (harder - you will need to use a lis
 
 # Deliverables
 
-This section summarises the expectations for marking in this practical.
+This section summarises the expectations for marking in this practical.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-- Do not zip up your files.
-- Please submit each file separately.
-- Ensure each file has the correct/exact name, including the extension.
-- Ensure your code is not commented-out (only comments should be commented).
-
-## Files required:
+**Files required:**
 
 `questions.txt`  with:
 
