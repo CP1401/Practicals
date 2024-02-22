@@ -414,7 +414,16 @@ then tell them their fine in dollars (you can ignore the demerit points).
 After getting the inputs, you will want to calculate the speed over the limit. You do not want to calculate this again
 and again in each condition. DRY.
 
-Before you finish this question, check again for any "DRY" issues. Can you improve your code?
+Before you finish this question, check again for any "DRY" issues.  
+Can you improve your code?
+
+## Reflection
+
+In `questions.txt`, answer the following questions based on your experiences in the subject so far:
+
+1. What is something you have done well in this subject that you should **keep doing**?
+2. What is something you have **not** done well in this subject that you should **stop doing**?
+3. What is something new that think you could try, or **start doing**?
 
 # Practice and Extension
 
@@ -498,7 +507,8 @@ divisible" otherwise.
 Automated Steak House wants version 2 of their program.
 
 - add a default minimum order time as a constant
-- handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes, a rare steak will take 5.
+- handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes, a rare steak will take
+  5.
 
 You should notice that to handle this properly, you will need to replace your fixed outputs with a calculation (e.g.,
 not "2 minutes", but 3 + 2).
@@ -515,6 +525,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 - Quick Questions
 - Patterns
 - Logic Exercise
+- Reflection
 
 `example.py` with updates
 

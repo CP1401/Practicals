@@ -446,7 +446,7 @@ Jimmy was born in 1928 and was a great piano player.
 
 Notice that "Piano" is now more appropriately "piano" since it's used in a sentence here.
 
-Then (extension alert!, create a list of lists where each inner list is a record like this.  
+Then (extension alert!), create a list of lists where each inner list is a record like this.  
 We'll do this more in Programming 2 so don't worry if this is a stretch too far.
 
 Your program should display a line like the above for each of the great jazz musicians in your list.

@@ -4,6 +4,24 @@ Solutions for most of these checkpoint questions are provided as worked solution
 Please do your own solutions before looking at ours.  
 It's all about learning!
 
+## Reflection
+
+In `questions.txt`, answer the following questions based on your experiences in the subject so far:
+
+1. What is something you have done well in this subject that you should **keep doing** in future subjects?
+2. What is something you have **not** done well in this subject that you should **stop doing** in future subjects?
+3. What is something new that think you could try, or **start doing** in future subjects?
+4. What do you think is the best, most important, most fun... thing in this subject that we should **definitely keep**?
+5. What do you think is the worst, biggest waste of time, least fun... thing in this subject that we should **definitely
+   change**?
+
+**Please do the feedback survey for this subject.**  
+JCU asks all students to give feedback on every subject they do. This feedback is very valuable for us to improve and do
+the best job we can for our students.  
+Please take the time to do the feedback survey this week.  
+You have already written some comments in the earlier questions that you can reuse on the survey.  
+**Thank you!**
+
 ## Functions
 
 File: `programs.py`
@@ -84,12 +102,12 @@ Maximum number: 17
 ### 5. Subject List
 
 Write a program in `question_5()` to ask the user for their subject codes until they enter a blank one.  
-Don't accept invalid subjects. For a subject code to be valid: 
+Don't accept invalid subjects. For a subject code to be valid:
 
 - The string should consist of exactly 6 characters
 - The first two characters must be letters
 - The next four characters must be digits
-- (You can capitalise any lowercase inputs) 
+- (You can capitalise any lowercase inputs)
 
 When you have a list of subject codes, print them in **sorted** order and tell them how many subjects they have.  
 Then, tell them if they are cool or not...  
@@ -133,7 +151,8 @@ Here we have a program that works sometimes, but not always. It also is not writ
 - Copy or download the code from [debugging.py](./debugging.py)
 - Run the code and see what is happening.
 - Complete the template in the file, explaining: the **problems** (just bugs) you find AND your process for debugging.
-- Then, fix the code in-place. In addition to correcting the problems, improve this code (names, formatting, principles, etc.)
+- Then, fix the code in-place. In addition to correcting the problems, improve this code (names, formatting, principles,
+  etc.)
 
 ## All Together Now
 
@@ -253,8 +272,6 @@ e.g., violating SRP like a function that calculates _and_ prints.
 Also, remember to include a `main` function if you use any other function in your program.  
 When you're practising, always follow best practice!
 
-See the new comments in each one for suggestions.
-
 ## Input, Processing, Output
 
 1. Write a program that calculates a new value based on an original value and a (percentage-like) increase or
@@ -269,9 +286,8 @@ This program could use a function to "calculate" (think verb phrase) the result.
 ## Decision Structures
 
 2. Ask the user for the time of day (0-23 hours) until they enter a negative.  
-   Then print a list of all the hours entered and how many of them were after noon:
-
-(This program is quite different from checkpoint 1)
+   Then print a list of all the hours entered and how many of them were after noon:  
+   (This program is quite different from checkpoint 1)
 
 3. Coffee orders made simple.
 
@@ -300,6 +316,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 **Files required:**
 
+- `questions.txt`
 - `programs.py` with programs 1-5
 - `debugging.py` with explanations and fixed code
 - `coffee_orders.py` (All Together Now)

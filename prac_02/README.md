@@ -257,6 +257,14 @@ To do this, select the lines of code and press `Ctrl+/` for each program.
 
 PLEASE don't ever comment or uncomment large blocks of code manually by typing or deleting `#` one at a time. No :)
 
+## Reflection
+
+In `questions.txt`, type the heading "Reflection" and answer the following questions:
+
+1. What is your current **goal** for your career? What do you see yourself doing 5 years from now?
+2. How are your current efforts in this subject helping you achieve that goal?
+3. What can you differently to improve the value of your time at university as you work towards your goals?
+
 # Practice and Extension
 
 These final sections in practicals are not _required_ to be completed for marks, but you will definitely find benefit in
@@ -325,6 +333,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 - Quick Questions
 - Logic Exercise
+- Reflection
 
 `programs.py` with:
 
