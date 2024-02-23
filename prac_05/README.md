@@ -18,9 +18,9 @@ Reflections must be personal. Be honest.
 subject up to now.
 
 1. What do you do that leads to your best learning in this subject?
-2. What percentage of the lecture videos have you watched?
-3. How are you going with getting the most out of the teaching in this subject (lecture videos, seminars, etc.) in order
+2. How are you going with getting the most out of the teaching in this subject (lecture videos, seminars, etc.) in order
    to have the best learning experience?
+3. What percentage of the lecture videos have you watched?
 4. What is one thing that you will change to more consistently do your best learning?
 
 # Python Coding - Checkpoint
@@ -65,7 +65,7 @@ It is after noon and you are going. Bye!
 Remember the **DRY (Don't Repeat Yourself)** principle?  
 The intention with this exercise is for you to see that what the user inputs for these 2 questions are unrelated.  
 You can store the results to be printed in string variables and then print a _SINGLE_ output using those variables.  
-You do _NOT_ want to handle this with multiple separate print statements; one for each possible outcome.  
+You do _NOT_ want to handle this with multiple separate `print` statements; one for each possible outcome.  
 Why not?  
 Because in _ALL_ cases, you print one thing. So, you should have one single `print` statement... but customise what you
 print based on the 2 user inputs.  
@@ -113,6 +113,32 @@ Example, if the inputs were `10` and `20`, you would print:
 10 11 12 13 14 15 16 17 18 19 20 totals: 165
 
 Now (only after this works) add error-checking to ensure that the high value is actually higher than the low value.
+
+### 6. Debugging
+
+The following code is intended to help a bouncer manage PyNightclub.  
+Under 18's are not allowed entry. 
+18-29 year olds may only enter the 'limited' section, 
+but patrons aged 30+ get full access.
+
+Copy the code into your programs file and **test it**.  
+In comments below this code, list all the values that you should and did test with.  
+Remember that we have taught systematic ways to test code, so there should be no guesswork here.  
+
+Once you have run your tests, see if you can fix any errors in the best way possible.  
+Change the provided code and submit your improved code.  
+Test again with the good test values that you determined above.
+
+```python
+age = int(input("Age: "))
+if age < 18:
+    print("Entry refused")
+elif age < 25:
+    print("Limited entry allowed")
+elif age > 30:
+    print("Full entry allowed")
+```
+
 
 ## All Together Now
 
@@ -196,14 +222,10 @@ Farewell
 
 # Deliverables
 
-This section summarises the expectations for marking in this practical.
+This section summarises the expectations for marking in this practical.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-- Do not zip up your files.
-- Please submit each file separately.
-- Ensure each file has the correct/exact name, including the extension.
-- Ensure your code is not commented-out (only comments should be commented).
-
-## Files required:
+**Files required:**
 
 - `questions.txt` with personal reflection
 
@@ -214,5 +236,6 @@ This section summarises the expectations for marking in this practical.
 3. Coffee orders (Decision)
 4. Coffee orders with error-checking (Repetition)
 5. Accumulation (Repetition)
+6. Debugging (code and test values)
 
 - `happy_products.py` (All Together Now)

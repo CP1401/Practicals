@@ -7,8 +7,6 @@ University. Complete instructions are found in each prac folder.
 
 ## Practical Content
 
-[Practicals for the six-week offering are here](https://github.com/CP1401/Practicals/tree/six-weeks).
-
 * [Practical 01 - Problem Solving](./prac_01)
 * [Practical 02 - Input, Processing and Output](./prac_02)
 * [Practical 03 - Decision Structures](./prac_03)
@@ -56,14 +54,16 @@ Please submit your practicals correctly, so they can be marked.
 - Ensure each file has the correct name, including the extension. If you don't use the right extensions, we cannot read
   your work in LearnJCU.
 - Ensure your code is not commented-out. Only comments should be commented.
-- Include a `# comment` for any parts of questions. E.g., if a question has parts `a.` and `b.` then add comments
-  like `# a.` and `# b.` to make it clear where your answers are, and to show you what you need to complete.
-- Rewrite any `# TODO` comments as appropriate.
+- Include a `# comment` as a heading for questions, or sub-parts of questions. 
+  E.g., if a question has parts `a.` and `b.` then add comments
+  like `# a.` and `# b.` to make it clear where your answers are, and to help yourself know what you need to complete.
+- Rewrite any provided `# TODO` comments as appropriate.
 
 ## Solutions
 
 Selected practical solutions are provided here, in the **"solutions"** branch.  
-These are to help you learn from evaluating your own work and seeing our suggested ways of solving the practical problems.
+These are to help you learn from evaluating your own work and seeing our suggested ways of solving the practical
+problems. Not all solutions are provided. This is on purpose.
 
 **Important**: Please use the solutions in a mature and honest way, as helpful learning tools... _after_ you complete
 your own work, _not_ as something to simply copy into your own prac work. OK?  
@@ -72,6 +72,7 @@ Seriously, **never copy the solutions** as this will not help you learn as much 
 ## Save your practical work
 
 You need to save your work for every prac. Keep every file you write.  
-We suggest you use OneDrive and organise it using folders, like `CP1401/practicals/prac_01`.  
-As explained in the practical instructions, use a single PyCharm project for practicals, with each prac in its own folder.  
+We suggest you use OneDrive and organise it using folders, like `CP1401/cp1401practicals/prac_01`.  
+As explained in the practical instructions, use a single PyCharm project for practicals, with each prac in its own
+folder.  
 Please make sure you have suitable backups.

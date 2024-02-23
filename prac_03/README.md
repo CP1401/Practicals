@@ -335,9 +335,14 @@ When you write your decision structure, remember to start at one end of the "num
 The only place you should _not_ start is with the "special insurance" (middle) category.  
 Don't repeat yourself.
 
+### Testing
+
+In comments below your code, list all the values that you should (and did) test with.  
+Remember that we have taught systematic ways to test code, so there should be no guesswork here.  
+
 ## 3. Simple Password Checker
 
-Write a program that has a secret password stored as a **constant**, and checks a user's password against it.  
+Write a program that has a secret password stored as a **named constant**, and checks a user's password against it.  
 Use string comparison to print either "Access granted" or "Access denied" depending on if the user's password matches
 the secret.
 
@@ -507,8 +512,8 @@ divisible" otherwise.
 Automated Steak House wants version 2 of their program.
 
 - add a default minimum order time as a constant
-- handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes, a rare steak will take
-  5.
+- handle the outputs as the extra cooking time plus this minimum, so if the minimum is 3 minutes,
+  then a rare steak will take 5 minutes.
 
 You should notice that to handle this properly, you will need to replace your fixed outputs with a calculation (e.g.,
 not "2 minutes", but 3 + 2).
