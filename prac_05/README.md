@@ -121,8 +121,8 @@ Under 18's are not allowed entry.
 18-29 year olds may only enter the 'limited' section, 
 but patrons aged 30+ get full access.
 
-Copy the code into your programs file and **test it**.  
-In comments below this code, list all the values that you should and did test with.  
+Copy the code into your `programs.py` file and **test it**.  
+In the comments below the code, list all the values that you should and did test with.  
 Remember that we have taught systematic ways to test code, so there should be no guesswork here.  
 
 Once you have run your tests, see if you can fix any errors in the best way possible.  
@@ -130,13 +130,19 @@ Change the provided code and submit your improved code.
 Test again with the good test values that you determined above.
 
 ```python
+# 6. Debugging
+
 age = int(input("Age: "))
 if age < 18:
     print("Entry refused")
-elif age < 25:
+elif age < 30:
     print("Limited entry allowed")
 elif age > 30:
     print("Full entry allowed")
+
+# Test values: 
+# (Input and expected outcomes)
+# ...
 ```
 
 
