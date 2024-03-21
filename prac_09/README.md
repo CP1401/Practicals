@@ -111,7 +111,8 @@ The first 3 characters in JCU subject codes always follow a definite pattern:
 The first 2 characters are the discipline (MA = Maths, CP = IT, etc.) and the next character is the year level.  
 Who knows what the last 3 characters mean? :)
 
-Write a program in `question_3()` that asks for subject codes until the user enters a blank one...   
+**Write pseudocode for this question.**  
+Then, write a program in `question_3()` that asks for subject codes until the user enters a blank one...   
 Hey, sounds familiar... BUT this question does not use lists, so you have to change it!   
 After the user enters each one, print what year level it is and whether it's an IT subject.
 
@@ -214,7 +215,7 @@ Average = 46.4
 
 ### Things to do
 
-Create a new Python file, `example.py` (File > New > Python File)    
+Create a new Python file, `example.py`.      
 **Now, you type this code in (don't copy it)**, and **test it** to see you got the expected output.  
 The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g., use
 autocomplete!), type code accurately, and develop an eye for detail.
@@ -249,8 +250,8 @@ what the program is for later.
 
 Create a new text file in your prac_09 directory called `name.txt`.  
 Type _only_ your own name in the file.
-
-**Write a program in `question_4()`** that _reads_ this `name.txt` file and greets you, example:
+ 
+Write a program in `question_4()` that _reads_ this `name.txt` file and greets you, example:
 
 ```
 Greetings Lindsay!
@@ -284,6 +285,7 @@ text = in_file.read().strip()
 
 ## 5. Greater-Than Counter
 
+**Write pseudocode for this question.**  
 **Write a program in `question_5()`** that _reads_ a user-specified file of floating-point numbers, and counts how many
 of those numbers are
 larger than a user-specified threshold.  

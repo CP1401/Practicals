@@ -106,10 +106,8 @@ This doesn't implement the "longest" part of the problem... that's coming later.
 
 ### Testing
 
-Create a new Python file, `example.py` (File > New > Python File)    
-**Now, you type this code in (don't copy it)**, and **test it** with a few places. Is it OK?    
-Remember: The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g.
-use autocomplete!), type code accurately, and develop an eye for detail.
+Create a new Python file, `example.py`.  
+**Now, you type or copy this example code and test it** with a few places. Is it OK?  
 
 When testing while loops, a good idea is to test what happens if they are False the first time (so the body never
 executes).  
