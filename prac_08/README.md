@@ -243,7 +243,7 @@ Score: 3
 Score: 50.5
 Score: 66
 Score: 100
-Score 3.0, which is N
+Score 3.0, which is F
 Score 50.5, which is P
 Score 66.0, which is C
 Score 100.0, which is HD
@@ -312,7 +312,7 @@ Consider and copy the following code:
 record = ["Jimmy", "Smith", (8, 12, 1928), "piano"]
 ```
 
-Write code to extract and print specific data, like (sample output):
+Write code to extract and print specific data, like in this sample output:
 
 ```
 Last name: Smith
