@@ -20,10 +20,9 @@ def determine_coffee_style(ratio):
     """Determine the style of coffee based on the brew ratio."""
     if ratio < 2:
         return "ristretto"
-    elif ratio < 3:
+    if ratio < 3:
         return "normale"
-    else:
-        return "lungo"
+    return "lungo"
 
 
 def get_valid_number(prompt, low, high):

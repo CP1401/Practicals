@@ -35,12 +35,12 @@ def main():
 def determine_grade(score):
     """Determine a JCU grade based on a score (percentage 0-100)."""
     if score < 50:
-        return "N"
-    elif score < 65:
+        return "F"
+    if score < 65:
         return "P"
-    elif score < 75:
+    if score < 75:
         return "C"
-    elif score < 85:
+    if score < 85:
         return "D"
     return "HD"
 

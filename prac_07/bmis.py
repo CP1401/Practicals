@@ -26,12 +26,11 @@ def determine_weight_category(bmi):
     """Determine the weight group (category) in adults 20 years old or older based on BMI."""
     if bmi < 18.5:
         return "underweight"
-    elif bmi < 25:
+    if bmi < 25:
         return "normal"
-    elif bmi < 30:
+    if bmi < 30:
         return "overweight"
-    else:
-        return "obese"
+    return "obese"
 
 
 main()
