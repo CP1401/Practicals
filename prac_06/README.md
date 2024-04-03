@@ -570,15 +570,18 @@ Can you tell? (No. Well, maybe... but no.)
 It would be better to see something like:
 
 ```
-Parity of 4 should be 0:  1
-Parity of 41 should be 1:  0
+Parity of 4 should be 0, got:  1
+Parity of 41 should be 1, got:  0
 ```
 
 Now we can see that something needs fixing!  
 So, it's useful to print the **expected results** as well as the **actual results**.  
 
-Please note that we do NOT put the testing _inside_ the function. The testing goes outside.  
-So, in the example output above, the last value is printed by the function, 
+**Ensure that all your tests from now on print both the expected and actual results.** 
+
+Please note that we do NOT put the testing _inside_ the function.  
+The testing goes outside.  
+So, in the example output above, the actual value is printed by the function, 
 the rest of the line is printing by the tests in `main`.
 
 ### Part 2
@@ -617,11 +620,12 @@ def is_senior(age):
 
 As with the others, you need to test that this function works.  
 Write at least two tests in your `main` program.  
-Why two test?  
+Why two tests?  
 Because the function has two possible outputs: `True` or `False`, so we need to test both.
 
 When you have finished all 3 of these functions, review their names and see how you did.  
-Are the names clear and unambiguous? Would a programmer know how to use these functions based on their names?
+Are the names clear and unambiguous?  
+Would a programmer know how to use these functions based on their names?
 
 > [!NOTE]  
 > If you ever need to change names that you have used more than once, use PyCharm's excellent **refactoring**.

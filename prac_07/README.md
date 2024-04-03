@@ -136,10 +136,10 @@ If you haven't already, copy the code from [debugging.py](./debugging.py) and ge
 
 ## Use Docstrings
 
-For each of your functions, write a brief function **docstring**.  
+For each of your functions from now on, write a brief function **docstring**.  
 Docstrings, like all comments, should be written in the imperative mood, e.g., "Print" not "Prints".
 
-Here's a good example for a function that checks to see if a password is valid:
+Here's a good example docstring for a function that checks to see if a password is valid:
 
 ```python
 def is_valid_password(password):
