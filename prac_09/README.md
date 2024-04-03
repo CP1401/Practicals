@@ -25,6 +25,11 @@ Consider the following list of 3 statements:
 
 How many false statements are there in the list; 0, 1, 2 or 3?
 
+> [!NOTE]  
+> We will write answers to the questions below in functions like `question_1()`.
+> These are not meant to be nice SRP-following functions, but rather just ways to organise our answers.
+> It's helpful to comment in/out the _calls_ to these functions so that you only run the one you're working on.
+
 ## Strings
 
 File: `strings.py`
@@ -250,7 +255,7 @@ what the program is for later.
 
 Create a new text file in your prac_09 directory called `name.txt`.  
 Type _only_ your own name in the file.
- 
+
 Write a program in `question_4()` that _reads_ this `name.txt` file and greets you, example:
 
 ```

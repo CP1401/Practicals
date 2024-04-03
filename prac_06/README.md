@@ -662,12 +662,12 @@ Suppose you used 84 as your boundary, e.g., `if score > 84 then HD` Would that w
 No, because what if the score were 84.1? That should be a D, but your code would make it an HD!  
 This is where bugs come from :(  
 Our [strong recommendation](https://github.com/CP1404/Starter/wiki/Programming-Patterns#boundary-conditions) 
-is that you always use the values in the question**.  
+is that you always use the values in the question.  
 In this case, use 50, 85, etc. not 49, 49.9, or whatever. This will help prevent mistakes.
 
-Write a function that takes a subject total score and returns the corresponding JCU grade.
+**Write a function that takes a subject total score and returns the corresponding JCU grade.**
 
-**Check**: Are you getting used to this kind of wording?  
+**Self-check**: Are you getting used to this kind of wording?  
 If the function **"takes"** a score, it means you must pass it into the function as a **parameter**.  
 If the function **"returns"** a grade, it means you don't print it, you... `return` it.
 
