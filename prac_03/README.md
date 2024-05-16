@@ -268,7 +268,7 @@ run - before you submit your work.
 ## Don't Repeat Yourself (DRY)
 
 Hopefully you're starting to "get it" with not repeating yourself.  
-Here's a counter-example to show you what NOT to do.
+*Here's a counter-example to show you what **NOT** to do.*
 
 ```python3
 score = int(input("Score: "))
@@ -311,15 +311,16 @@ result = score * 2
 print("Double your score is", result)
 ```
 
-### One more thing...
+### One more thing to do...
 
-Let's add one more tax threshold and rate.  
+**Add one more tax threshold and rate.**  
 If we've designed our algorithm and code well, this shouldn't take much work.
 
 - If you earn between $100 and $500, you pay 2% tax on the total amount
 
-Add this into your code and notice how much extra work it took. If you had to rewrite or change your decision patterns,
-then notice that you could have been more extensible in the first place.
+Add this into your code now and notice how much extra work it took.  
+If you had to rewrite or change your decision patterns,
+then notice that you could have made it more extensible in the first place.
 
 ## 2. Car Insurance
 
@@ -338,7 +339,7 @@ Don't repeat yourself.
 ### Testing
 
 In comments below your code, list all the values that you should (and did) test with.  
-Remember that we have taught systematic ways to test code, so there should be no guesswork here.  
+Remember that we have taught systematic ways to test code, so there should be no guesswork here.
 
 ## 3. Simple Password Checker
 
@@ -346,39 +347,47 @@ Write a program that has a secret password stored as a **named constant**, and c
 Use string comparison to print either "Access granted" or "Access denied" depending on if the user's password matches
 the secret.
 
-## 4. Dog Years
+## 4. Basketball
 
-Write a Python program to calculate a dog's age in dog years.
+[The `if, no else` pattern from our teaching](https://github.com/CP1404/Starter/wiki/Programming-Patterns#if-no-else),
+is useful for when you want to do something when the condition is true, but do nothing when it's false.  
+You do not need an `else`, you just do nothing when the condition is false.
 
-How?  
-Each year of the first two human years is equal to 10.5 dog years.  
-After that, each human year equals 4 dog years.  
-(Note: That is two possible scenarios.)
+Write a Python program to determine someone's basketball shooting percentage.
+
+Ask the user for the number of shots attempted and the number of shots made.  
+Notice that we have
+a [style guide naming pattern for "number of ..." variables](https://github.com/CP1404/Starter/wiki/Style-Guide#our-word-choices).
+Use it.
+
+If a user has a shooting percentage of 50% or higher, then print an encouraging message, as in the sample output below.
 
 Expected Output:
 
 ```
-Age in human years: 15
-Age in dog years is 73
+Number of shots attempted: 15
+Number of shots made: 3
+Your shooting percentage is 20.0% 
 ```
 
 or
 
 ```
-Age in human years: 1
-Age in dog years is 10.5
+Number of shots attempted: 15
+Number of shots made: 13
+Your shooting percentage is 86.6%
+That's great!
 ```
 
-Start by choosing the decision pattern that best applies to this problem...
+Notice that the encouraging message is either displayed or it isn't.  
+There's no `else` path.
 
-### Don't Repeat Yourself
+The sample output shows the percentage displayed with 1 decimal place.  
+You can do this using f-string formatting, like in the example below:
 
-**Note:** "Don't Repeat Yourself" (DRY) is an important programming principle.  
-In this program, and many of your others, you will have a single output that depends on the True/False value of one or
-more conditions.  
-But whatever the result, you print `Age in dog years is ...` so the only difference is the numeric value.  
-Calculate the value in the paths - multiple calculation lines, but do the printing only once - _outside_ the paths - no
-matter what the result of the condition/s.
+```python
+print(f"Value is ${value:.1f}")
+```
 
 ## 5. Rock of Ages
 
@@ -539,6 +548,6 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 - Tax
 - Car Insurance
 - Simple Password Checker
-- Dog Years
+- Basketball
 - Rock of Ages
 - Speeding Fines
