@@ -3,6 +3,7 @@ CP1401 Practical 03 - Decision Structures - Suggested Solution
 """
 
 # 1. Tax
+# This solution does not include the extra tax bracket
 
 TAX_RATE_LOW = 0.05  # 5%
 TAX_RATE_HIGH = 0.1  # 10%
@@ -22,26 +23,19 @@ take_home_pay = income - total_tax
 print("Total tax is: $", total_tax, sep="")
 print("Take home pay is: $", take_home_pay, sep="")
 
-# 4. Dog years
-# Write a Python program to calculate a dog's age in dog's years.
-#
-# To do this – Each year of the first two years is equal to 10.5 human years.
-# After that, each dog year equals 4 human years.
-#
-# Expected Output:
-# Input a dog's age in human years: 15
-# The dog's age in dog's years is 73
-#
-# Note: This solution contains "magic numbers".
-# It would be good to use CONSTANTS for these, but seems acceptable as it is
-# (partly due to how silly this whole dog years thing appears :)
+# 3. Basketball
+# Number of shots attempted: 15
+# Number of shots made: 13
+# Your shooting percentage is 86.7%
+# That's great!
 
-age_in_human_years = int(input("Age in human years: "))
-if age_in_human_years <= 2:
-    age_in_dog_years = age_in_human_years * 10.5
-else:
-    age_in_dog_years = 21 + (age_in_human_years - 2) * 4
-print("Age in dog years is", age_in_dog_years)
+number_of_shots_attempted = int(input("Number of shots attempted: "))
+number_of_shots_made = int(input("Number of shots made: "))
+percentage = number_of_shots_made / number_of_shots_attempted * 100
+print(f"Your shooting percentage is {percentage:.1f}%")
+if percentage >= 50:
+    print("That's great!")
+
 
 # 5. Rock of Ages
 # Ask the user for their age, then tell them something related to their age.
