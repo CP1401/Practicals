@@ -375,7 +375,7 @@ or
 ```
 Number of shots attempted: 15
 Number of shots made: 13
-Your shooting percentage is 86.6%
+Your shooting percentage is 86.7%
 That's great!
 ```
 

@@ -217,13 +217,15 @@ Remember that you've done some of this before, so copy your previous work:
 
 File: `dog_years.py`
 
-In [Prac 3](../prac_03/README.md#4-dog-years) you wrote a program to calculate a dog's age in dog years.  
-Rewrite this program using a function for the conversion.  
-Write a main function that repeatedly asks the user for an age in human years, then displays it in dog years until the
+Below is part of a program to calculate a dog's age in dog years.  
+Rewrite this program using a function for the calculation.  
+Remember **SRP**, the calculation function will receive a value via a **parameter** and `return` the result. 
+It will not do user input or output. 
+Write a `main` function that repeatedly asks the user for an age in human years, then displays it in dog years until the
 user enters a negative number.  
 Don't do any error checking on this age.
 
-Here's the calculation part already:
+Here's the calculation part for you:
 
 ```python
 if human_years <= 2:
