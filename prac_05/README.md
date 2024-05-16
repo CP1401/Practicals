@@ -1,7 +1,5 @@
 # Practical 05 - Coding Checkpoint 1
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
-
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
 
 ## Reflection
@@ -21,7 +19,8 @@ subject up to now.
 2. How are you going with getting the most out of the teaching in this subject (lecture videos, seminars, etc.) in order
    to have the best learning experience?
 3. What percentage of the lecture videos have you watched?
-4. What is one thing that you will change to more consistently do your best learning?
+4. How much "time on task" (focused learning time) are you devoting to this subject outside the contact hours each week?
+5. What is one thing that you will change to more consistently do your best learning?
 
 # Python Coding - Checkpoint
 
@@ -117,13 +116,13 @@ Now (only after this works) add error-checking to ensure that the high value is 
 ### 6. Debugging
 
 The following code is intended to help a bouncer manage PyNightclub.  
-Under 18's are not allowed entry. 
-18-29 year olds may only enter the 'limited' section, 
+Under 18's are not allowed entry.
+18-29 year olds may only enter the 'limited' section,
 but patrons aged 30+ get full access.
 
 Copy the code into your `programs.py` file and **test it**.  
 In the comments below the code, list all the values that you should and did test with.  
-Remember that we have taught systematic ways to test code, so there should be no guesswork here.  
+Remember that we have taught systematic ways to test code, so there should be no guesswork here.
 
 Once you have run your tests, see if you can fix any errors in the best way possible.  
 Change the provided code and submit your improved code.  
@@ -144,7 +143,6 @@ elif age > 30:
 # (Input and expected outcomes)
 # ...
 ```
-
 
 ## All Together Now
 

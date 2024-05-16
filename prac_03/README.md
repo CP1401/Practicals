@@ -1,9 +1,8 @@
 # Practical 03 - Decision Structures
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
-
 As with each new practical, create a new directory (folder) in your existing practicals project.  
-Call it `prac_03` and put all of your practical 3 files in this folder.  
+**Do not make a new project!**  
+Call your new folder `prac_03` and put all of your practical 3 files in this folder.  
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
 By now you should be able to use PyCharm easily enough to edit text files.
 

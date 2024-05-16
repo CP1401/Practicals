@@ -1,16 +1,17 @@
-# Practical 01 - Problem solving and algorithms
+# Practical 01 - Problem Solving and Algorithms
 
 **Welcome to practicals!**
 
 If you haven't read the introduction to pracs and marking, please [read this now](../README.md).  
-**Note: All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
+**Please submit your prac work via LearnJCU each week by the due date according to
+the [submission requirements](../README.md#submission).**
 
 ## Community
 
 It's a good idea to start getting to know your IT@JCU community a bit more...
 
 In lecture 1, we established that it was **not OK** to work together with others on your assignments for this subject,
-including the simple rules:
+including these simple rules:
 
 - Never give someone a copy of your work
 - Never get a copy of someone else’s work
@@ -32,7 +33,7 @@ tutor (your name and what you like that starts with the same first letter, e.g.,
 **Introduce yourself in Slack** - include where you are studying from and any other interesting details you're happy to
 share. Thanks!
 
-Great, now let's get ready to focus on problem solving... 
+Great, now let's get ready to focus on problem solving...
 
 Record your answers for each of the below questions in a simple text file, `questions.txt`. You can use PyCharm (if you
 already know how), Notepad or any suitable program for creating your work file.
@@ -124,7 +125,7 @@ Note: we are not trying to write code here, so just include simple instructions 
 robotic assistant.  
 This algorithm should have included the **repetition** (or iteration or loop) control structure. We will learn more
 about that later, but for now, you can consider using words like `while` and `repeat`.  
-Here's a simple example for eating food:  
+Here's a simple example for eating food:
 
 ```
 eat mouthful

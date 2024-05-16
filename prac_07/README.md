@@ -1,7 +1,5 @@
 # Practical 07 - Functions 2
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
-
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
 
 This practical builds on the Functions 1 and 2 lectures as well as practical 6.  
@@ -45,8 +43,12 @@ for practicals in this subject so far...
 
 **Write 3 lessons** you have learned about yourself and the problem-solving process (not about Python code)
 through completing the practicals up to now.  
-Remember that personal lessons from reflection like this must be *personal*. Don't state "truisms" like, 
-_"It's good to read the instructions carefully"_.
+Personal lessons from reflection like this **must be personal**.  
+Don't state "truisms" like,
+_"It's good to read the instructions carefully"_ or _"I've learned to break a larger problem into smaller parts"_.  
+Those sorts of lessons could be written at the start of the subject, so are **not** personal reflections.  
+When we mark your reflections in the developer journal, we need to see specific, lessons based on your
+personal experience.
 
 # Debugging
 
@@ -219,8 +221,8 @@ File: `dog_years.py`
 
 Below is part of a program to calculate a dog's age in dog years.  
 Rewrite this program using a function for the calculation.  
-Remember **SRP**, the calculation function will receive a value via a **parameter** and `return` the result. 
-It will not do user input or output. 
+Remember **SRP**, the calculation function will receive a value via a **parameter** and `return` the result.
+It will not do user input or output.
 Write a `main` function that repeatedly asks the user for an age in human years, then displays it in dog years until the
 user enters a negative number.  
 Don't do any error checking on this age.

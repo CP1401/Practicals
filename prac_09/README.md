@@ -1,7 +1,5 @@
 # Practical 9 - Strings & Files
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
-
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
 
 ## Quick Questions

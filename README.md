@@ -7,7 +7,7 @@ University. Complete instructions are found in each prac folder.
 
 ## Practical Content
 
-* [Practical 01 - Problem Solving](./prac_01)
+* [Practical 01 - Problem Solving and Algorithms](./prac_01)
 * [Practical 02 - Input, Processing and Output](./prac_02)
 * [Practical 03 - Decision Structures](./prac_03)
 * [Practical 04 - Repetition Structures](./prac_04)
@@ -44,7 +44,7 @@ Here are some reasons that you might lose marks for your practicals and assignme
 - Your work does not follow the core concepts and patterns (e.g., using global variables, `while True` loops or similar
   techniques) - even if they work!
 
-# Submission
+## Submission
 
 Please submit your practicals correctly, so they can be marked.
 

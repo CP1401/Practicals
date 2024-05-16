@@ -3,15 +3,12 @@
 ## Important! Learn then Do
 
 Do not attempt this practical without learning from the lectures.  
-If you're here trying to complete this practical and you have not watched all the lecture videos + attempted all the "do
-this now" exercises from those, then...  
-**Stop and do that now!**  
-Go learn what we are trying to teach you - then, and only then - come back and do the practical exercises, using that
-knowledge.
+If you're here trying to complete this practical, but you have not watched all the lecture videos + attempted all the
+"do this now" exercises from those, then don't guess your way through...  
+**Stop and learn what we are trying to teach you!**  
+Then, and only then - come back and do the practical exercises, using that knowledge.
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
-
-In your PyCharm practicals project, you should be using a new folder for each prac.  
+In your PyCharm practicals project, you should be using a new folder for each prac (NOT a new project).  
 For this practical, create a new folder called `prac_06` to store all the files.
 
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
@@ -211,8 +208,8 @@ But how do we test a function?
 There are a number of ways, but what we will write a simple function with some tests in it to see what we get
 when we call our new calculation function.
 
-We'll do this for each of the functions, so follow along carefully, won't you?  
- 
+We'll do this for each of the functions, so follow along carefully, won't you?
+
 > [!NOTE]
 > We are demonstrating a **best-practice**. You should be testing every function you write.
 
@@ -448,8 +445,8 @@ def main():
 
 > [!NOTE]  
 > In any questions that ask you to write a function, you are expected to write test code to show that it works
-as expected. In some cases, you will be told how to test, and in others it is assumed.  
-Get used to writing simple tests, as in our example.
+> as expected. In some cases, you will be told how to test, and in others it is assumed.  
+> Get used to writing simple tests, as in our example.
 
 ## 1. Coffee Brew Ratio
 
@@ -471,7 +468,7 @@ e.g., 2.5.
 > example) to 1:2 (18 grams in / 36 grams out) as a “ristretto” espresso; a 1:2 to a 1:3 ratio as a “normale” espresso;
 > and a 1:3 to 1:4 ratio as a “lungo” espresso.
 
-(You may need to make some **assumptions** about interpreting the boundary conditions here.)  
+(You may need to make some **assumptions** about interpreting the boundary conditions here.)
 
 **Write an algorithm** to determine the coffee "style" based on the brew ratio.  
 E.g., a ratio of 2.5 (1:2.5) would be a "normale".  
@@ -507,11 +504,11 @@ you want.)
 
 **Now write a main program** that asks the user for the dose and yield, works out the brew ratio then uses your function
 to determine the coffee style.  
-Remember that `main()` should always be your first function in any program file.  
+Remember that `main()` should always be your first function in any program file.
 
-> [!NOTE] 
+> [!NOTE]
 > `yield` is a Python statement keyword, so you can't use it as a variable.  
-As a rule, never use Python builtin words as variables, even if you're allowed to
+> As a rule, never use Python builtin words as variables, even if you're allowed to
 (e.g., `sum` and `print` are Python functions that it's possible to use as variable names... but don't!)
 
 Sample:
@@ -575,13 +572,13 @@ Parity of 41 should be 1, got:  0
 ```
 
 Now we can see that something needs fixing!  
-So, it's useful to print the **expected results** as well as the **actual results**.  
+So, it's useful to print the **expected results** as well as the **actual results**.
 
-**Ensure that all your tests from now on print both the expected and actual results.** 
+**Ensure that all your tests from now on print both the expected and actual results.**
 
 Please note that we do NOT put the testing _inside_ the function.  
 The testing goes outside.  
-So, in the example output above, the actual value is printed by the function, 
+So, in the example output above, the actual value is printed by the function,
 the rest of the line is printing by the tests in `main`.
 
 ### Part 2
@@ -603,7 +600,8 @@ an [excellent and common convention for naming Boolean-returning functions](http
 is to start their names with `is`.  
 Example, the built-in string method `isupper()` determines if a string is uppercase.  
 We can then use these functions in meaningful, easy-to-read code like the example below.  
-Notice that it is a nice example of concise handling of a Boolean [as in our guide](https://github.com/CP1404/Starter/wiki/Programming-Patterns#working-with-booleans).
+Notice that it is a nice example of concise handling of a
+Boolean [as in our guide](https://github.com/CP1404/Starter/wiki/Programming-Patterns#working-with-booleans).
 
 ```python
 def main():
@@ -629,9 +627,9 @@ Would a programmer know how to use these functions based on their names?
 
 > [!NOTE]  
 > If you ever need to change names that you have used more than once, use PyCharm's excellent **refactoring**.
-Don't just edit in multiple places (and maybe forget one) or use find-and-replace (and maybe change something else it
-matches). Refactoring changes all the names correctly and is quick and safe.  
-Right-click on the name, then choose: **Refactor > Rename**
+> Don't just edit in multiple places (and maybe forget one) or use find-and-replace (and maybe change something else it
+> matches). Refactoring changes all the names correctly and is quick and safe.  
+> Right-click on the name, then choose: **Refactor > Rename**
 
 ### SRP Check!
 
@@ -662,12 +660,12 @@ shows the percentage score/result you need to get different grades:
 
 > [!NOTE]  
 > Think about the *boundary conditions* and don't miss anything. Remember to test your boundaries.  
-Suppose you used 84 as your boundary, e.g., `if score > 84 then HD` Would that work?  
-No, because what if the score were 84.1? That should be a D, but your code would make it an HD!  
-This is where bugs come from :(  
-Our [strong recommendation](https://github.com/CP1404/Starter/wiki/Programming-Patterns#boundary-conditions) 
-is that you always use the values in the question.  
-In this case, use 50, 85, etc. not 49, 49.9, or whatever. This will help prevent mistakes.
+> Suppose you used 84 as your boundary, e.g., `if score > 84 then HD` Would that work?  
+> No, because what if the score were 84.1? That should be a D, but your code would make it an HD!  
+> This is where bugs come from :(  
+> Our [strong recommendation](https://github.com/CP1404/Starter/wiki/Programming-Patterns#boundary-conditions)
+> is that you always use the values in the question.  
+> In this case, use 50, 85, etc. not 49, 49.9, or whatever. This will help prevent mistakes.
 
 **Write a function that takes a subject total score and returns the corresponding JCU grade.**
 

@@ -1,7 +1,5 @@
 # Practical 08 - Lists
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
-
 This practical builds on the **Lists lecture** as well as previous practicals.  
 If you haven't learned from those, then go back and do so before continuing with this practical work.
 
@@ -63,7 +61,8 @@ Just read along and understand. Do not "do" any of this until asked - just read 
 
 This is a problem from the lists lecture:
 > Julie is planning a holiday and wants to record all the places she goes in the order she visits them.   
-> Once she returns, she wants to be able to display the list of places and also which place had the longest name (because she likes that sort of thing).
+> Once she returns, she wants to be able to display the list of places and also which place had the longest name (
+> because she likes that sort of thing).
 
 Using our technique of reading the description looking for nouns, verbs, things that might be function, data types, etc.
 we should see the plural "places" (as well as "list of places") and recognise the need for a list.
@@ -107,7 +106,7 @@ This doesn't implement the "longest" part of the problem... that's coming later.
 ### Testing
 
 Create a new Python file, `example.py`.  
-**Now, you type or copy this example code and test it** with a few places. Is it OK?  
+**Now, you type or copy this example code and test it** with a few places. Is it OK?
 
 When testing while loops, a good idea is to test what happens if they are False the first time (so the body never
 executes).  
@@ -459,7 +458,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 `questions.txt`  with:
 
 - Quick Questions
-- List expressions
+- Lists Warmup - parts 1 and 2
 
 `example.py` with updates
 

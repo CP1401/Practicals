@@ -1,8 +1,5 @@
 # Practical 02 - Input, Processing and Output
 
-**All students (internal and external), please submit your prac work (as individual files) via LearnJCU each week by the
-due date.**
-
 ## Read and Understand
 
 Make sure you read the instructions carefully.  
@@ -261,7 +258,7 @@ PLEASE don't ever comment or uncomment large blocks of code manually by typing o
 
 In `questions.txt`, type the heading "Reflection" and answer the following questions:
 
-1. What is your current **goal** for your career? What do you see yourself doing 5 years from now?
+1. What is your current **career goal**? What do you see yourself doing 5 years from now?
 2. How are your current efforts in this subject helping you achieve that goal?
 3. What can you differently to improve the value of your time at university as you work towards your goals?
 

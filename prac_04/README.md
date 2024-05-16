@@ -1,7 +1,5 @@
 # Practical 04 - Repetition Structures
 
-**All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
-
 Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
 
 ## Quick Questions
@@ -14,7 +12,7 @@ Write your answers for the early non-coding questions in a simple text file call
 
 ### range
 
-*a)* Add a new heading "**Loop outputs**" to your questions.txt file, then:  
+*a)* Add a new heading "**Loop Outputs**" to your questions.txt file, then:  
 Write the output of each of the following `for` loops that use `range`.
 
 Then, when you have finished writing your output - **not before!** - copy the code into a Python program and run these
@@ -47,7 +45,7 @@ for i in range(10, 0, -2):
 print()
 ```
 
-*b)* Add a new heading "**Range values**" to your questions.txt file, then:  
+*b)* Add a new heading "**Range Values**" to your questions.txt file, then:  
 Write the range statements (just range and parameters, not the whole loop) equivalent to the following lists of numbers:
 
 1. [0, 1, 2, 3, 4, 5]
@@ -83,15 +81,15 @@ There are three boxes, which each contain two marbles:
 - one has two black, and
 - one has one white and one black marble.
 
-Each of the boxes also is labeled as to its contents, 
+Each of the boxes also is labeled as to its contents,
 but the labels have been swapped around and each label is _incorrect_.  
 What is the fewest number of marbles you could remove from the boxes and look at in order to definitely determine the
 contents of all three boxes?
 
-**Note**: This is a very interesting exercise, and one you might not get correct without thinking about it carefully (of
-course).  
-**Hint**: Make sure you are using all the information you have been provided with, and think about which is the best
-choice to start with.
+> [!NOTE]  
+> This is a very interesting exercise, and one you might not get correct without thinking about it carefully.  
+> **Hint**: Make sure you are using all the information you have been provided with, and think about which is the best
+> choice to start with.
 
 # Python Coding - Repetition Structures
 
@@ -102,13 +100,14 @@ Read along and understand. Do not "do" any of this; just read it and make sure y
 section that asks you to do something.
 
 Often, it is impossible for a program to proceed correctly if the user has entered an invalid value.  
-A simple and general pattern for validating user input has been taught in class and is below.  
-**Note**: When you see *"general patterns"* in programming, you need to learn these, as you will be reusing them again
-and again.  
-There may be other ways, but the general patterns are usually the best in most situations.  
-*Pay attention to patterns like this!*
+A simple and general pattern for validating user input has been taught in class and is below.
+> [!NOTE]  
+> When you see *"general patterns"* in programming, you need to learn these, because you will be reusing them again
+> and again.  
+> There may be other ways, but the general patterns are usually the best in most situations.  
+> **Pay attention to patterns like this!**
 
-Here is our standard error-checking (while loop) pattern:
+[Here is our standard error-checking (while loop) pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#error-checking):
 
 ```
 get input
@@ -311,7 +310,7 @@ Get into the habit of asking yourself that question every time.
 
 How do we write menus? Well, ask yourself, "Where have we done this before?"  
 Remember we have
-a [helpful guide to Programming Patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus).  It's very
+a [helpful guide to Programming Patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus). It's very
 helpful.
 
 For this question, first, **copy and paste the menu pattern pseudocode** from the above guide.  
@@ -354,15 +353,18 @@ display total
 You would want to use a *sentinel* when:
 
 - you don't know how many values there will be beforehand;
-- there is some obvious invalid value you can use to be the sentinel and mark the end.  
-  Note that you can use a range of invalid values, e.g., all negative numbers.
+- there is some obvious invalid value you can use to be the sentinel and mark the end.
 
 E.g., calculating the average age of a line of people, where you don't know how many there are beforehand (you can use
 -1 for the sentinel).
 
+> [!NOTE]  
+> You don't always need a specific value, and you don't need to use a constant.    
+> E.g., any negative number could be your sentinel
+
 #### B. Ask-the-user-to-quit
 
-Note that this pattern uses a Boolean variable to control the loop.
+This pattern uses a Boolean variable to control the loop.
 
 ```
 total = 0
@@ -589,7 +591,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 `questions.txt` with:
 
 - Quick Questions
-- a) Loop outputs & b) Range values
+- a) Loop Outputs & b) Range Values
 - Patterns
 - Logic Exercise
 
@@ -600,6 +602,9 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 - Error Checking
 - Number Sequences: a, b, c
 - Menu for Smiley/Frowny
-- Accumulation: Average Age, Smileys Count, Total Numbers
+- Accumulation:
+    - Average Age
+    - Smileys Count
+    - Total Numbers
 - Guessing Game
 - Nested Loops
