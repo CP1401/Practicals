@@ -69,9 +69,9 @@ You need to develop attention to detail and be able to use debugging tools to he
 In the "Functions 2" lecture, we introduced the PyCharm debugger.  
 (Again, if you haven't watched that lecture, *please* stop now and go back to the lecture!)
 
-Note: PyCharm does wonderful "on the fly" debugging by highlighting problems or potential issues in your code.  
-Get used to spotting the red/green/grey underlines and other warnings and potentially correcting the issues PyCharm
-tells you about.
+> [!NOTE]
+> PyCharm does wonderful "on the fly" debugging by highlighting potential problems in your code.  
+> Get used to noticing the underlines and other warnings and correcting these issues.
 
 Right-click on your `prac_07` folder (that's what you called it, right?)
 and create a new Python file here called `debugging.py`
@@ -125,9 +125,10 @@ of `debugging,py`, then write the fixed, working, code (solution) in the section
 # Fixed code for program 1:
 ```
 
-Note that *"problem"* and *"solution"* are different things.  
-Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not what problem was that caused
-it to run slowly in the first place.
+> [!NOTE]
+> *"Problem"* and *"solution"* are different things.  
+> Example, if restarting your PC makes it run faster, that's just a (temporary) solution, not the problem that caused
+> it to run slowly in the first place.
 
 When you have found the problem, you should be able to fix it, so change the code to make it work.  
 You do not need to explain your solutions, just fix the code and submit the fixed file, `debugging.py`.
@@ -181,39 +182,55 @@ In the Functions 2 lecture, you had a "Do this now" question like:
 > Jerry's car's speedo shows miles (mph) instead of kilometres per hour (kph). He wants to be able to enter his speed in
 > mph, the speed limit in kph and determine his speeding fine.
 
-You (we) wrote the pseudocode for the main function for this:
+Copy and use the following pseudocode for your main function:
 
 ```
-function main
-    speed_in_mph = get_valid_number("speed in mph")
-    speed_limit_in_kph = get_valid_number("speed limit in kph")
-    speed_in_kph = convert_miles_to_km(speed_in_mph)
-    fine = determine_fine(speed_in_km, speed_limit_in_kph)
+function main()
+    speed_in_miles = get_valid_number("Speed in miles")
+    speed_limit_in_kilometres = get_valid_number("speed limit in kilometres")
+    speed_in_kilometres = convert_miles_to_kilometres(speed_in_miles)
+    amount_over_limit = speed_in_kilometres - speed_limit_in_kilometres
+    fine = determine_fine(amount_over_limit)
     print fine
 ```
 
-**Note**: The value of the fine as a **number** type is much better to return than a string, or a whole message.  
-What if we wanted to determine a new bank balance after paying the fine?
+Implement that pseudocode in Python, including the function definitions with proper docstrings.  
+Remember that you've done some of this before, so you can copy your previous work:
 
-```
-bank_balance -= fine
-```
+- [Prac 2 where we calculated km -> m](../prac_02/README.md#2-kilometres-to-miles)
+- [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)  
 
-This is an example of **SRP**. It is the `determine_fine` function's ONLY (single responsibility) job to
-determine/calculate the actual fine as an actual number.  
+**Test** this using meaningful test data that you can understand.
+
+**Important**: The value of the fine as a **number** type is much better to return than a string, or a whole message.  
+What if we wanted to determine a new bank balance after paying the fine?  
+
+This is an example of **SRP**.  
+It is the `determine_fine` function's ONLY (single responsibility) job to
+determine the actual fine as an actual number.  
 It is counter-productive for this function to print the fine or to format with a '$' or anything else.
 `bank_balance -= fine` doesn't work if `fine` is something like `Your fine is $199`.  
 < insert "you had one job" meme here ;) >
 
-**Write the complete Python program** for this in `jerry.py`.
+When you have this working, complete a more fulsome program that matches the following example output:
 
-Remember that you've done some of this before, so copy your previous work:
+### Sample Output
 
-- [Prac 2 where we calculated km -> m](../prac_02/README.md#2-kilometres-to-miles)
-- [Prac 3 where we determined speeding fines](../prac_03/README.md#6-speeding-fines)  
-  Note that we only want to know the fine as a number, not the demerit points or any other messages.
+    Your speed in miles per hour: 55.1
+    Speed limit in km/h: 80
+    Your speed of 88.7 km/h was over the limit by 8.7 km/h.
+    Your fine will be $309.00
+    Enter your current bank balance: $22.35
+    Your bank balance after your fine will be $-286.65
+    Don't speed again, OK?
+    Farewell
 
-**Test** this using meaningful test data that you can understand.
+and
+
+    Your speed in miles per hour: 34
+    Speed limit in km/h: 60
+    Your speed of 54.7 km/h has not exceeded the speed limit - no fine :)
+    Farewell
 
 ## 2. Dog Years
 
