@@ -24,7 +24,8 @@ while choice != "Q":
     choice = input("> ").upper()
 print("Farewell")
 
-# 4. Average Age
+# 4. Accumulation
+# Average Age
 total_age = 0
 number_of_people = 0
 age = int(input("Age: "))

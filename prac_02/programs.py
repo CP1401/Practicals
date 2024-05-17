@@ -1,5 +1,5 @@
 """
-CP1401 Practical 02 - I, P, O - Suggested Solutions
+CP1401 Practical 02 - IPO - Suggested Solutions
 
 # Walkthrough Example
 get original_price and surcharge_percentage
@@ -10,25 +10,23 @@ display total_price
 """
 
 # Example
-# original_price = float(input("Original price: $"))
-# surcharge_percentage = float(input("Surcharge % (e.g. 0.15 is 15%): "))
-# extra_charge = original_price * surcharge_percentage
-# total_price = original_price + extra_charge
-# print("The total meal price is $", total_price, sep="")
-#
+original_price = float(input("Original price: $"))
+surcharge_percentage = float(input("Surcharge % (e.g. 0.15 is 15%): "))
+extra_charge = original_price * surcharge_percentage
+total_price = original_price + extra_charge
+print("The total meal price is $", total_price, sep="")
+
 # # 3. Holiday Cost
-# HOTEL_COST = 75.0
-# food_cost = float(input("Daily food cost: $"))
-# activities_cost = float(input("Daily activities cost: $"))
-# number_of_days = int(input("Number of days: "))
-# total = number_of_days * (HOTEL_COST + food_cost + activities_cost)
-# print("The trip will cost: $", total, sep="")
+HOTEL_COST = 75.0
+food_cost = float(input("Daily food cost: $"))
+activities_cost = float(input("Daily activities cost: $"))
+number_of_days = int(input("Number of days: "))
+total = number_of_days * (HOTEL_COST + food_cost + activities_cost)
+print("The trip will cost: $", total, sep="")
 
 # 4. - Deep Sleep Calculation
-
 # Total sleep in seconds: 161
 # Deep sleep in seconds : 62
-#
 # Deep sleep : 1m 2s
 # Total sleep: 2m 41s
 # Percentage : 38.50931677018634%

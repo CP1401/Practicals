@@ -85,17 +85,6 @@ def question_4():
 
 
 # 5. Subject List
-def is_valid_subject(subject):
-    """Determine if a subject code passed in is valid."""
-    if len(subject) != 6:
-        return False
-    if not subject[:2].isalpha():
-        return False
-    if not subject[2:].isdigit():
-        return False
-    return True
-
-
 def question_5():
     """Program to get and process list of subject codes."""
     subjects = []
@@ -114,3 +103,14 @@ def question_5():
         print("You are cool")
     else:
         print("You could be cooler")
+
+
+def is_valid_subject(subject):
+    """Determine if a subject code passed in is valid."""
+    if len(subject) != 6:
+        return False
+    if not subject[:2].isalpha():
+        return False
+    if not subject[2:].isdigit():
+        return False
+    return True

@@ -23,7 +23,7 @@ take_home_pay = income - total_tax
 print("Total tax is: $", total_tax, sep="")
 print("Take home pay is: $", take_home_pay, sep="")
 
-# 3. Basketball
+# 4. Basketball
 # Number of shots attempted: 15
 # Number of shots made: 13
 # Your shooting percentage is 86.7%
