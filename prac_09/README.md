@@ -365,43 +365,69 @@ You would need to `strip()` the lines to account for indenting in some of these.
 
 File: `bmi_files.py`
 
-Write a program that writes to and reads from `bmis.txt` (not at the same time).  
+Write a program that writes to and then reads from `bmis.txt` (not at the same time).  
 Reuse your functions from [Prac 6](../prac_06/README.md#example) (and 7) where you calculated a person's BMI based on
 height and weight.  
-Notice this: since you wrote good, well designed functions (following SRP), you can simply reuse them for this different
+Notice that if you wrote good, well-designed functions (following SRP), you can simply reuse them for this different
 scenario!
 
-The first part of your program should ask the user for a number of people, then repeatedly ask for the details (height
+Copy and use the following main:
+
+```python
+def main():
+    """BMI program using files."""
+    filename = input("Filename: ")
+    save_bmis(filename)
+    print()
+    display_bmi_categories(filename)
+```
+
+The first function, `save_bmis` should ask the user for a number of people, then repeatedly ask for the details (height
 and weight) for that many people.  
 _(You did just think of what kind of loop to use, didn't you?)_
 
 For each person, calculate their BMI, but don't print it to the screen...   
-write it (and only it) to the file `bmis.txt`.  
-Your file should simply contain one BMI value per line.    
+write the BMI to the file `bmis.txt`.  
+**Your file should simply contain one BMI value per line.**  
 Don't forget to close the file when you have finished.
 
 Test this and confirm it works as you expect by opening and checking the file in PyCharm.
 
-**Then (only after the first part works)**, write the second part, which should read the file and display the BMI and
-weight category similar to how we've done it before:
+**When your first part works**, write the second function, `display_bmi_categories`, which should read the file and
+display the BMI and
+weight category similar to how we've done it before.
 
-```
-BMI 23.5, considered normal
-BMI 25.5, considered overweight
-BMI 24.2, considered normal
-BMI 16.3, considered underweight
-BMI 32.0, considered obese
-```
+> [!NOTE]  
+> These two functions might look like they breach SRP and do more than one thing.  
+> But we're OK with it. The main program is nice and simple and the two functions are the two main sections.  
+> We're not going to reuse these functions for different things like we do with `calculate_bmi` and others.
 
-Note that we do not want to write the above to the file - that's what we see on the screen.  
-The file only contains the BMI values.
+### Sample Output
+
+    Filename: bmis.txt
+    Enter the number of people: 2
+    Person 1
+    Enter height (m) : 1.75
+    Enter weight (kg): 67
+    Person 2
+    Enter height (m) : 2
+    Enter weight (kg): 55.4
+    
+    BMI Categories
+    BMI 21.9, considered normal
+    BMI 13.8, considered underweight
+
+Before you finish, here's one way to check that you've done this properly.  
+Temporarily, comment-out the `save_bmis` call and see that your program should still run, printing the categories from
+the last run by opening the file with the last set of BMI values.  
+Uncomment that line when you know it works OK.  
 
 # How are you going with the fundamentals?
 
 In *all* of your programs by now, you should have clear ideas about the fundamental principles we've learned, so how
 would these principles apply to this exercise/program?
 
-- You know if you have to refer to the filename (literal) more than once, then it should be a... CONSTANT,
+- You know if you have to refer to the filename (literal) more than once, then it should be a variable or CONSTANT,
 - You know SRP... your functions should not (usually) print, when they should return... so you can reuse the exact
   same (bmi) function from prac 6 for this program,
 - The above is also an example of DRY - don't repeat yourself with a function that is really similar to one you already
