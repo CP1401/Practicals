@@ -15,18 +15,28 @@ display ratio
 
 Algorithm with Selection (Decision)
 
-get money, price
-if money >= price
+Note: Remember to use names from the "problem domain".
+In this case we have the problem:
+"Write an algorithm to determine if you can afford to buy an item based on its price and the money you have in your pocket."
+So, we could consider the terms provided:
+"item price" (reworked based on the sentence structure)
+"money you have in your pocket"
+We could abbreviate these to "price" and "money", but they sound too similar.
+We need to differentiate names clearly.
+Let's go with:
+
+get pocket_money, item_price
+if pocket_money >= item_price
     display can afford
 else
     display can not afford
 
 Note: we could write lots of different things to figure out how much money we have in our collection of coins, e.g.
-money = add up value of coins
+pocket_money = add up value of coins
 or
-money = 0
+pocket_money = 0
 for each coin in collection
-    money = money + value of coin
+    pocket_money = pocket_money + value of coin
 etc.
 But let's just keep it simple...
 
@@ -35,7 +45,9 @@ Algorithm with Repetition
 get thing from floor
 while there are things on the floor
     get thing from floor
+
 or
+
 repeat until floor is clean
     get thing from floor
 
@@ -53,7 +65,7 @@ Algorithm
 
 get distance, time in minutes
 speed in kilometres per minute = distance / time in minutes
-speed in kilometres per hour = in kilometres per minutes * 60
+speed in kilometres per hour = in kilometres per minute * 60
 display in kilometres per hour
 
 Note: To help evaluate your own work, you should always TEST using values you understand.
