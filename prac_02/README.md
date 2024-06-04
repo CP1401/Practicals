@@ -125,7 +125,7 @@ Example:
 
 ```python
 # 2. Kilometres to Miles
-number_of_kilometres = int(input("Kilometres: "))
+distance_in_kilometres = int(input("Distance in kilometres: "))
 ...
 ``` 
 
@@ -147,6 +147,10 @@ print new_price
 Once you have done this, adjust your program so that `0.2` is a **named constant** instead of a **magic number**.  
 Test it again.  
 Always test your programs after you modify them. You might have broken something.
+
+We just added another name (the named constant), so check your existing names and see if you need to improve anything.  
+Remember to follow our teaching
+and [reference guide on good naming](https://github.com/CP1404/Starter/wiki/Style-Guide#identifier-naming).
 
 Now that you've started thinking about **constants**, you should consider using them appropriately. We won't always tell
 you when/if to use a constant,
@@ -174,7 +178,8 @@ Create a program that will request a distance in kilometres and output the same 
 - 1 mile = 1.60934 kilometres
 - 1 kilometre = 0.621371 miles
 
-A "conversion rate" is a good situation to use a constant.
+A "conversion rate" is a good situation to use a constant.  
+Choose a name that clearly indicates what's being converted to what.
 
 ## 3. Holiday Cost
 
@@ -185,10 +190,14 @@ She would like to be able to enter estimates for daily food cost and daily activ
 based on the number of days for the trip.  
 For simplicity, assume that each day's costs are the same.  
 Help Sonje by writing a program that will figure out the total cost for the holiday.  
-Here is some sample output showing user entry.  
+
+Below is some sample output showing user entry.  
 Please note that this is what the program looks like when it's finished.  
 In this example, the user entered `65.50` for the daily food cost, `49` for the activities and `4` for the number of
 days (three user inputs).
+
+> [!NOTE]
+> Whenever we provide sample output, it is a requirement that your solution matches it.
 
 ```
 Daily food cost: $65.50
