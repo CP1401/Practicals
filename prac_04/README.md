@@ -242,7 +242,7 @@ Does all the code still work?
 Did ALL the 12's change to 10's?  
 Did the first/second half of the month still work... with this one change?
 
-If you had to change BOTH the MAX and the half (from 6 to 5), then you have inappropriate stored derivable data.  
+If you had to change BOTH the MAX and the half (from 6 to 5), then you have inappropriately stored derivable data.  
 You should notice when values are _derived_ from other values.  
 [Here's a note about not storing derivable data in our programming patterns page](https://github.com/CP1404/Starter/wiki/Programming-Patterns#data-storage)
 .
@@ -261,6 +261,13 @@ Example:
 worker_level = int(input("Worker level: "))
 ...
 ``` 
+
+> [!IMPORTANT]
+> _By far_, the most common problem that students in this subject make is using poor variable names.  
+> Please learn what we teach about naming and follow
+> our [Style Guide](https://github.com/CP1404/Starter/wiki/Style-Guide).  
+> Good identifier naming is a key learning outcome and a requirement for all practical marking.  
+> Do this well! 
 
 ## 1. Error Checking
 
