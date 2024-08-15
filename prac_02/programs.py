@@ -16,7 +16,14 @@ extra_charge = original_price * surcharge_percentage
 total_price = original_price + extra_charge
 print("The total meal price is $", total_price, sep="")
 
-# # 3. Holiday Cost
+"""
+3. Holiday Cost
+
+HOTEL_COST = 75.0
+get food_cost, activities_cost, number_of_days
+total = number_of_days * (HOTEL_COST + food_cost + activities_cost)
+print total
+"""
 HOTEL_COST = 75.0
 food_cost = float(input("Daily food cost: $"))
 activities_cost = float(input("Daily activities cost: $"))
@@ -24,7 +31,7 @@ number_of_days = int(input("Number of days: "))
 total = number_of_days * (HOTEL_COST + food_cost + activities_cost)
 print("The trip will cost: $", total, sep="")
 
-# 4. - Deep Sleep Calculation
+# 4. Deep Sleep Calculation
 # Total sleep in seconds: 161
 # Deep sleep in seconds : 62
 # Deep sleep : 1m 2s
