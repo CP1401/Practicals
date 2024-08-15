@@ -67,8 +67,7 @@ clear.
 
 Record your answers to the following questions in your text file called `questions.txt`. Use a heading for each one.
 
-The following exercises are focused on the logic of algorithms, rather than the exact formatting of pseudocode or
-flowcharts to describe them.  
+The following exercises are focused on the logic of algorithms, rather than the exact pseudocode.  
 We're not going to write computer programs for these, so we are just focused on the basics of writing a set of
 understandable instructions.
 
@@ -111,8 +110,7 @@ result.
 **Write an algorithm** to determine if you can afford to buy an item based on its price and the money you have in your
 pocket.
 
-Notice how similar this question is to the UV index example above. Your pseudocode should be structurally very
-similar.  
+Notice how similar this question is to the UV index example above. Your pseudocode should be structurally like the example.  
 This algorithm should have included the **decision** (or selection) control structure. We will learn more about that
 soon.
 
@@ -139,33 +137,30 @@ Notice how the last line is not indented. We know we only do the dishes when we'
 
 ## Problem Decomposition
 
-For the following 3 problem descriptions, identify the **nouns** and **verbs** (separately) in each.
+For the following problem descriptions, identify the **nouns** and **verbs** (separately) in each.
 
-Note: You will end up with 6 separate answers for this section - the nouns & verbs, then the algorithm, for each of the
-3 problems.
+Note: You will end up with 4 separate answers for this section - the nouns & verbs, then the algorithm, for each of the problems.
 
-Write two separate lists (with subheadings) for each. If you're writing your answers using Word, you could copy the text
-and highlight each type of word in different colours or similar.  
+Write two separate lists (with subheadings) for each.  
 (Don't get hung up on the exact details of the words.)
 
 Then go through the set of nouns and verbs and work out which ones are irrelevant or duplicated and remove them from the
 lists.
 
-See if what's remaining is what you need to know to write an algorithm.
+See if what's remaining is what you need to know to write an algorithm.  
 
-1. A doctor needs to be able to calculate the total amount of a drug that has been administered to a patient. The system
-   will get the hourly dosage from the user, as well as the number of hours they have been receiving the medicine. The
-   system will then display the total for the doctor.
+Nouns = variables to store  
+Verbs = actions to do  
 
-2. Happy Photos needs a way to calculate the total charge for a customer's booking. The system will use the customer's
+1. Happy Photos needs a way to calculate the total charge for a customer's booking. The system will use the customer's
    name and the date of the booking to make a unique booking id. The hourly charge, and number of hours will be entered,
    and the total charge and id code will be displayed.
 
-3. A road trip planning system will ask the user for the distance travelled (in km) and the travel time in minutes. The
+2. A road trip planning system will ask the user for the distance travelled (in km) and the travel time in minutes. The
    user will then be shown the average speed (in km/hour) over the trip.
 
-When you've decomposed these small problems into their parts (word types), **write algorithms for each of them using
-either pseudocode or flowcharts**.  
+
+**Write algorithms for each of these problems using pseudocode**.  
 At this stage, we're not worried about getting the details 'perfect', we just want to get used to problem solving
 processes.
 
