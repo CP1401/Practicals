@@ -100,8 +100,8 @@ print("The total meal price is $", total_price, sep="")
 ### Testing
 
 Just because the code is written, doesn't mean it works, so we need to test it. How?  
-Put in some meaningful/easy inputs so you can evaluate if the output matches what you expect.  
-E.g. We can easily calculate that 15% of 100 is 15, so a $100 meal with a 0.15 (15%) surcharge should cost $115.
+Put in some meaningful/easy inputs so that you can evaluate if the output matches what you expect.  
+E.g., We can easily calculate that 15% of 100 is 15, so a $100 meal with a 0.15 (15%) surcharge should cost $115.
 
 ```
 Original price: $100
@@ -118,14 +118,27 @@ autocomplete!), type code accurately, and develop an eye for detail.
 
 # Coding Exercises
 
-Write all of your answers to the following questions in a single Python file called `programs.py`  
-At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from
-here) so you/we know what the program is for later.  
-Example:
+Write all of your answers to the following questions in a single Python file called `programs.py`.  
+
+At the top of each program, put a **comment** with the exercise number/name (copy-and-paste it from
+here) so we all know what the program is.  
+If a question does not require pseudocode, you can use a simple block comment like:  
 
 ```python
-# 2. Kilometres to Miles
-distance_in_kilometres = int(input("Distance in kilometres: "))
+# 4. Deep Sleep Calculation
+...
+``` 
+
+The easiest way to write pseudocode for a question is in a multi-line comment like:
+
+```python
+"""
+2. Kilometres to Miles
+
+get distance_in_kilometres
+...
+"""
+distance_in_kilometres = float(input("Distance in kilometres: "))
 ...
 ``` 
 
@@ -150,13 +163,13 @@ Always test your programs after you modify them. You might have broken something
 
 We just added another name (the named constant), so check your existing names and see if you need to improve anything.  
 Remember to follow our teaching
-and [reference guide on good naming](https://github.com/CP1404/Starter/wiki/Style-Guide#identifier-naming).
+and [style guide for good naming](https://github.com/CP1404/Starter/wiki/Style-Guide#identifier-naming).
 
 Now that you've started thinking about **constants**, you should consider using them appropriately. We won't always tell
 you when/if to use a constant,
 but [you should understand how and when to use constants](https://github.com/CP1404/Starter/wiki/Programming-Patterns#constants)
 .  
-You should use at least one more constant in your solutions for this practical!
+Use at least one more appropriate constant in your solutions for this practical!
 
 ### Commenting Out Code
 
@@ -167,18 +180,20 @@ code.
 To do this, select the lines of code (doesn't need to be exact characters, just any part of the right lines) and
 press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
 
-BEFORE you finalise and submit your practical, please "uncomment" your finished code. (More to explain this later.)
+> [!NOTE]
+> BEFORE you finalise and submit your practical, you must "uncomment" your finished code.
 
 ## 2. Kilometres to Miles
 
 Joseph has recently moved to Australia from the United States. He understands that distances are given in kilometres
 rather than the miles he is used to.  
-Create a program that will request a distance in kilometres and output the same distance in miles.
+**Write pseudocode** for a program that will request a distance in kilometres and output the same distance in miles.  
+**Then, implement this algorithm in Python code.**
 
 - 1 mile = 1.60934 kilometres
 - 1 kilometre = 0.621371 miles
 
-A "conversion rate" is a good situation to use a constant.  
+A conversion rate is a good situation to use a constant.  
 Choose a name that clearly indicates what's being converted to what.
 
 ## 3. Holiday Cost
@@ -189,7 +204,8 @@ thing.)
 She would like to be able to enter estimates for daily food cost and daily activity cost and then work out the total
 based on the number of days for the trip.  
 For simplicity, assume that each day's costs are the same.  
-Help Sonje by writing a program that will figure out the total cost for the holiday.  
+Help Sonje by **writing a program** that will figure out the total cost for the holiday.  
+**Write pseudocode** for this first.
 
 Below is some sample output showing user entry.  
 Please note that this is what the program looks like when it's finished.  
