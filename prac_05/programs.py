@@ -2,6 +2,8 @@
 CP1401 - Practical 5 - Coding Checkpoint 1
 Suggested Solutions
 Please do not use/view these solutions until you have attempted the checkpoint challenges yourself!
+Please also note that the lecture videos explain and demonstrate how and why we have developed this way.
+Not every solution in this subject is expected to be complete. You need to consider the requirements yourself.
 """
 
 # String formatting demos
@@ -49,10 +51,14 @@ print(f"Original: {original_value}, Change: {change}, Result: {new_value}")
 # Pseudcode:
 # get time, state
 # if time < 12
-#     print before
+#     noon_message = before
 # else
-#     print after
-# print state
+#     noon_message = after
+# if state == coming
+#     direction_message = Hi
+# else
+#     direction_message = Bye
+# print noon_message, direction_message
 
 time = int(input("Time: "))
 state = input("Coming or going? ").lower()
@@ -75,7 +81,7 @@ print(f"It is {noon_message} noon and you are {direction_message}")
 #     cost = 4
 # else
 #     cost = 5
-# if colour is white
+# if colour is not black
 #     cost = cost + 1
 # print cost
 
@@ -89,7 +95,7 @@ else:
     cost = 5
 if colour != "black":
     cost += 1
-print("${}".format(cost))
+print(f"${cost}")
 
 # Repetition Structures
 
@@ -99,6 +105,7 @@ print("${}".format(cost))
 # while colour is not "black" and colour is not "white" 
 #     print error
 #     get colour
+# get size
 # while size is not "small" and size is not "medium" and size is not "large"
 #     print error
 #     get size
@@ -108,7 +115,7 @@ print("${}".format(cost))
 #     cost = 4
 # else
 #     cost = 5
-# if colour is white
+# if colour is not black
 #     cost = cost + 1
 # print cost
 
@@ -128,7 +135,7 @@ else:
     cost = 5
 if colour != "black":
     cost += 1
-print("${}".format(cost))
+print(f"${cost}")
 
 # 5. Accumulation
 # Write a program to ask the user for a low value and a
@@ -139,6 +146,9 @@ print("${}".format(cost))
 
 # Pseudocode:
 # get low, high
+# while high <= low
+#     print error
+#     get high
 # total = 0
 # for i from low to high
 #     print i
@@ -147,8 +157,8 @@ print("${}".format(cost))
 
 low = int(input("Low: "))
 high = int(input("High: "))
-while high < low:
-    print("High must be >=", low)
+while high <= low:
+    print("High must be greater than", low)
     high = int(input("High: "))
 total = 0
 for i in range(low, high + 1):
