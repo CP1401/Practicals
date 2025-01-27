@@ -293,17 +293,12 @@ _Keep every file you ever write in this subject._
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-For the first week, we're flexible with how you record your work.  
-Ideally, upload your answers in a text file called `questions.txt`.  
-But for this week only, we'll accept anything that works for you: photos of hand-written work on paper, Word documents,
-text files... whatever you did.
-
 **Files required:**
 
 `questions.txt` (or similar) with:
 
 - Logic Exercise
 - Algorithms (IPO, Decision, Repetition)
-- Problem Decomposition (3 problems, each with word types and algorithms)
+- Problem Decomposition (2 problems, each with word types and algorithms)
 
 Now **submit your work to LearnJCU** (click on the practical link inside the relevant weekly folder).
