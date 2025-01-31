@@ -22,6 +22,9 @@ Please take the time to do the feedback survey this week.
 You have already written some comments in the earlier questions that you can reuse on the survey.  
 **Thank you!**
 
+> [!NOTE]
+> Pseudocode is expected for all programs in this practical.
+
 ## Functions
 
 File: `programs.py`
@@ -320,3 +323,5 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 - `programs.py` with programs 1-5
 - `debugging.py` with explanations and fixed code
 - `coffee_orders.py` (All Together Now)
+
+Remember to include your pseudocode for all questions.
