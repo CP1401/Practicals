@@ -285,7 +285,7 @@ In `questions.txt`, type the heading "Reflection" and answer the following quest
 
 1. What is your current **career goal**? What do you see yourself doing 5 years from now?
 2. How are your current efforts in this subject helping you achieve that goal?
-3. What can you differently to improve the value of your time at university as you work towards your goals?
+3. What can you do differently to improve the value of your time at university as you work towards your goals?
 
 # Practice and Extension
 
