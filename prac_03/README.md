@@ -436,7 +436,7 @@ In `questions.txt`, answer the following questions based on your experiences in 
 
 1. What is something you have done well in this subject that you should **keep doing**?
 2. What is something you have **not** done well in this subject that you should **stop doing**?
-3. What is something new that think you could try, or **start doing**?
+3. What is something new that you would like to try, or **start doing** to help your learning progress?
 
 # Practice and Extension
 
