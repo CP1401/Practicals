@@ -114,8 +114,10 @@ Don't accept invalid subjects. For a subject code to be valid:
 
 When you have a list of subject codes, print them in **sorted** order and tell them how many subjects they have.  
 Then, tell them if they are cool or not...  
-In the lecture notes, we determine if a student is cool based on whether they
-do CP1401 :)
+In the lecture notes, we determine if a student is cool based on whether they do CP1401 :)
+
+Use a separate function to determine if a subject code is valid.  
+Think about good function design. This will be a Boolean-returning function.
 
 ```
 Enter subject code: CP1404 is going to be good
@@ -149,13 +151,14 @@ normal [pattern you know and love](https://github.com/CP1404/Starter/wiki/Progra
 
 File: `debugging.py`
 
-Here we have a program that works sometimes, but not always. It also is not written following best-practices.
+Here we have a program that works sometimes, but not always. It also is not written following our best-practices.
 
 - Copy or download the code from [debugging.py](./debugging.py)
 - Run the code and see what is happening.
 - Complete the template in the file, explaining: the **problems** (just bugs) you find AND your process for debugging.
-- Then, fix the code in-place. In addition to correcting the problems, improve this code (names, formatting, principles,
-  etc.)
+- Then, fix the code in-place. In addition to correcting the problems, improve this code - names, formatting, patterns,
+  principles, etc.
+- You do not need to write pseudocode for this question.
 
 ## All Together Now
 
