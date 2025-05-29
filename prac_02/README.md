@@ -118,11 +118,11 @@ autocomplete!), type code accurately, and develop an eye for detail.
 
 # Coding Exercises
 
-Write all of your answers to the following questions in a single Python file called `programs.py`.  
+Write all of your answers to the following questions in a single Python file called `programs.py`.
 
 At the top of each program, put a **comment** with the exercise number/name (copy-and-paste it from
 here) so we all know what the program is.  
-If a question does not require pseudocode, you can use a simple block comment like:  
+If a question does not require pseudocode, you can use a simple block comment like:
 
 ```python
 # 4. Deep Sleep Calculation
@@ -207,13 +207,14 @@ For simplicity, assume that each day's costs are the same.
 Help Sonje by **writing a program** that will figure out the total cost for the holiday.  
 **Write pseudocode** for this first.
 
-Below is some sample output showing user entry.  
-Please note that this is what the program looks like when it's finished.  
-In this example, the user entered `65.50` for the daily food cost, `49` for the activities and `4` for the number of
-days (three user inputs).
-
 > [!NOTE]
-> Whenever we provide sample output, it is a requirement that your solution matches it.
+> Below is some sample output showing user entry.  
+> Whenever we provide sample output, it is a requirement that your solution matches it.  
+> Please note that this is what the entire program looks like when it's finished.  
+> We copied the contents of the Run window, including prompts, user input, other outputs.  
+> In this example, the user entered `65.50` for the daily food cost, `49` for the activities and `4` for the number of
+> days. These numbers in the output are not printed by your code, but are the user's inputs.  
+> We will never ask you to closely match the output and then not show you what the program looks like!
 
 ```
 Daily food cost: $65.50
@@ -222,6 +223,8 @@ Number of days: 4
 
 The trip will cost $758.0
 ```
+
+![Screenshot of holiday cost program output in the Run window](../images/PyCharm-Console-Output-Holiday.png)
 
 ## 4. Deep Sleep Calculation (Percentage)
 
