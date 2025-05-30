@@ -8,14 +8,28 @@ We want the challenge to be in the new things you're learning and trying, not in
 what the questions ask.  
 Don't waste time by trying to save time skim-reading. Just read... and understand... then do.
 
-As you do the early non-coding questions, you can write your answers in a simple text file called `questions.txt`.  
-Use whatever text editor you like, but you can use PyCharm to edit text files.
+As you do individual work on your computer, if you need help, start by talking to your peers.  
+External JCUA students are encouraged to use Slack to ask questions of others in the class.
+
+Let's use PyCharm as our text editor:
+
+- Run PyCharm
+- Open your existing Practicals project (made last prac), or if you don't have it with you for some reason, create a new
+  one following the instructions in the last prac.
+- Create a new folder (directory) with the exact name `prac_02`. Do not make a new project for each prac,
+  only new folders.
+- Now create a new text file: Choose **File > New... > File**  (not Python file)
+- Name your file `questions.txt` (the `.txt` extension means PyCharm won't try and correct your Python code... it's just
+  text). Also, the `.txt` extension means that LearnJCU will show it to your markers.
+- Make sure your new file is inside the prac_02 folder. If it isn't, just drag it inside.
 
 ## Quick Questions
 
-1. Write two variable names that would be valid and well-named.
-2. Write two variable names that would be valid but not well-named.
-3. Write two variable names that would not be valid.
+Add the heading "Quick Questions" to `questions.txt`. Leave a blank line, then answer these questions with numbering.
+
+1. Write two variable names that would be **valid** and well-named.
+2. Write two variable names that would be **valid** but not well-named.
+3. Write two variable names that would **not be valid**.
 4. What is the naming convention for variables in Python?
 5. What is a constant? Give an example of when you would use one.
 6. What is the naming convention for constants?
@@ -30,20 +44,8 @@ When you've decided on an answer for this, discuss it with a group near you.
 If you have a different answer, try and figure out why/how you arrived at different answers.  
 Is there a meaningful way that you can explain your answer, perhaps a diagram that would help?
 
-As you do individual work on your computer, if you need help, start by talking to your peers.  
-External students are encouraged to use Slack to ask questions of others in the class.
-
-To use PyCharm as your text editor:
-
-- Run PyCharm
-- Open your existing Practicals project (made last prac), or if you don't have it with you for some reason, create a new
-  one following the instructions in the last prac.
-- Create a new folder (directory) for `prac_02` (remember not to use spaces, and do not make a new project per prac,
-  only new folders).
-- Now create a new text file: Choose **File > New... > File**  (not Python file)
-- Name your file `questions.txt` (the `.txt` extension means PyCharm won't try and correct your Python code... it's just
-  text)
-- Make sure your new file is inside the prac_02 folder. If it isn't, just drag it in.
+Add the heading "Logic Exercise" to `questions.txt`. Leave a blank line, then write your answer for the question.  
+See how this works? :)
 
 # Python Coding - Input, Processing and Output
 
@@ -214,7 +216,7 @@ Help Sonje by **writing a program** that will figure out the total cost for the 
 > We copied the contents of the Run window, including prompts, user input, other outputs.  
 > In this example, the user entered `65.50` for the daily food cost, `49` for the activities and `4` for the number of
 > days. These numbers in the output are not printed by your code, but are the user's inputs.  
-> We will never ask you to closely match the output and then not show you what the program looks like!
+> We will never ask you to closely match the output and then not show you what the program results look like!
 
 ```
 Daily food cost: $65.50
@@ -259,7 +261,7 @@ This will help us focus on the core of the program before we figure out customis
 - Use the same example above to test, so 62 seconds deep, 161 seconds total (short sleep!) should give 0.38509... (don't
   worry about formatting the output neatly yet).
 
-**ONLY** when you have that working, can you then focus on enhancing the program.  
+**ONLY** when you have that working, should you then focus on enhancing the program.  
 Keep the inputs the same, but write the output so that it appears as above... How?
 
 Remember how the **modulo** operation works, and is useful for repeating cycles like time in minutes and seconds?  
@@ -276,11 +278,12 @@ formatting.)
 
 Knowing this, complete your program so that it outputs like we want. As always, use good variable names.
 
-**Before you finish** with this file, "uncomment" your previous code for all programs.    
-Leave the actual comments for headings, but return the rest of the code back to normal.    
-To do this, select the lines of code and press `Ctrl+/` for each program.
-
-PLEASE don't ever comment or uncomment large blocks of code manually by typing or deleting `#` one at a time. No :)
+> [!IMPORTANT]
+> **Before you finish** with this file, "uncomment" your previous code for all programs.    
+> Leave the actual comments for headings, but return the rest of the code back to normal.    
+> To do this, select the lines of code and press `Ctrl+/` for each program.
+> Don't waste your time commenting or uncommenting large blocks of code manually by typing or deleting `#` one at a
+> time. No :)
 
 ## Reflection
 
@@ -296,7 +299,7 @@ These final sections in practicals are not _required_ to be completed for marks,
 completing them for extra practice and to extend yourself.  
 The more practice you do, the more you develop and "lock in" your new skills.
 
-Create a new file, `practice.py` to complete these tasks in:
+Create a new file, `practice.py` to complete these tasks in. You do not need to submit this.
 
 ## BMI
 
