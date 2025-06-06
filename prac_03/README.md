@@ -200,13 +200,13 @@ Example:
 
 The following problem is partly done for you. Complete your parts.
 
-The Python Party wins government at the next election and introduce a simpler tax system that works like this:
+The Python Party wins government at the next election and introduce a simple tax system that works like this:
 
 - If you earn under $100, you pay no tax
 - If you earn between $100 and $1000, you pay 5% tax on the total amount
 - If you earn over $1000, you pay 10% tax on the total amount
 
-Write the pseudocode for this (in comments), then copy the code below and complete it.  
+**Write the pseudocode** for this in comments, then copy the code below and complete it.  
 Note the use of meaningful constants provided.
 
 First, think of which decision pattern applies.  
@@ -257,13 +257,6 @@ Take home pay is: $565.25
 
 Again, don't worry about the 2 decimal place currency formatting. We will get to that later.
 
-### Comment out temporarily
-
-Remember that you can **comment out** code so that it doesn't run by selecting the lines of code (doesn't need to be
-exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).  
-Remember also to do this shortcut again when you're finished so that it looks like normal code again - all programs will
-run - before you submit your work.
-
 ## Don't Repeat Yourself (DRY)
 
 Hopefully you're starting to "get it" with not repeating yourself.  
@@ -312,14 +305,26 @@ print("Double your score is", result)
 
 ### One more thing to do...
 
-**Add one more tax threshold and rate.**  
-If we've designed our algorithm and code well, this shouldn't take much work.
+**Add this one more tax threshold and rate.**  
+If we've designed our algorithm well, using the most suitable decision structure, then this should not take much work.
 
 - If you earn between $100 and $500, you pay 2% tax on the total amount
 
 Add this into your code now and notice how much extra work it took.  
 If you had to rewrite or change your decision patterns,
-then notice that you could have made it more extensible in the first place.
+then notice that you could have made it more extensible in the first place... so please revisit the teaching on using
+decision structures to locate a value in a range.
+
+> [!NOTE]
+> The provided code and CONSTANTS are good, so don't change the main structure of the program.  
+> However, you might need to change some of your CONSTANT names to suit this new change above.
+
+### Comment out temporarily
+
+Remember that you can **comment out** code so that it doesn't run by selecting the lines of code (doesn't need to be
+exact characters, just any part of the right lines) and press `Ctrl+/` (Windows) or `Cmd+/` (Mac).  
+Remember also to do this shortcut again when you're finished so that it looks like normal code again - all programs will
+run - before you submit your work.
 
 ## 2. Car Insurance
 
