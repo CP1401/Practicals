@@ -235,35 +235,40 @@ Deep sleep is when your body and brain waves slow down and is important for prop
 tracks his sleep but only shows him total time asleep and total time in "deep sleep". He wants to know the percentage of
 deep sleep.
 
-Here's an example of version 1 of what the program will look like:
+### Version 1 - simple percentage
+
+Here's an example of what the simple program will look like:
 
 ```
 Total sleep in seconds: 161
 Deep sleep in seconds : 62
 
-Deep sleep : 1m 2s
-Total sleep: 2m 41s
-Percentage : 38.50931677018634%
+Percentage = 0.3850931677018634
 ```
 
-Can you see how this will work? Looks like our I, P, O pattern...  
-Write a program to produce the percentage based on the two input times (total and deep). This should be easy enough for
-you by now...
-
-**But wait...**  
-It's not so easy dealing with minutes and seconds like in the example. How do we handle that?  
-The answer is to develop this program **iteratively**. Do not try to solve the whole thing in one go. So...
-
-For our first version, let's just use total seconds and ignore the minutes+seconds output.  
-This will help us focus on the core of the program before we figure out customising the outputs.
+Can you see how this will work? Looks like our I, P, O pattern...
 
 - Write a program that asks for the **total sleep** and the **deep sleep** in seconds, then displays the percentage.
-- Use the same example above to test, so 62 seconds deep, 161 seconds total (short sleep!) should give 0.38509... (don't
+- Use the same example above to test, so 62 seconds deep, 161 seconds total (short sleep!) should give 0.38509...  (
+  don't
   worry about formatting the output neatly yet).
 
-**ONLY** when you have that working, should you then focus on enhancing the program.  
-Keep the inputs the same, but write the output so that it appears as above... How?
+### Version 2 - minutes and seconds
 
+**ONLY** when you have version 1 working, should you then focus on enhancing the program.  
+_You do not need to submit two versions, just update your version 1 code._  
+Keep the inputs the same, but write the output so that it appears as:
+
+```
+Total sleep in seconds: 161
+Deep sleep in seconds : 62
+
+Deep sleep  = 1m 2s
+Total sleep = 2m 41s
+Percentage  = 38.50931677018634%
+```
+
+How do we handle minutes and seconds like in this example?  
 Remember how the **modulo** operation works, and is useful for repeating cycles like time in minutes and seconds?  
 We know:  
 `161 seconds is 2 minutes and 41 seconds`  
@@ -272,7 +277,7 @@ Because:
 `161 % 60 = 41`
 
 Also, 0.385 isn't the percentage we want. We want something more like 38.5%. So, what do we need to do to get from 0.385
-to 38.5?    
+to 38.5?  
 (Don't worry about the number of decimal places at this stage; we'll learn about handling that later using string
 formatting.)
 
@@ -280,16 +285,16 @@ Knowing this, complete your program so that it outputs like we want. As always, 
 
 > [!IMPORTANT]
 > **Before you finish** with this file, "uncomment" your previous code for all programs.    
-> Leave the actual comments for headings, but return the rest of the code back to normal.    
+> Leave the actual comments for headings and pseudocode, but return the rest of the code back to normal.    
 > To do this, select the lines of code and press `Ctrl+/` for each program.
 > Don't waste your time commenting or uncommenting large blocks of code manually by typing or deleting `#` one at a
-> time. No :)
+> time. Ain't nobody got time for that :)
 
 ## Reflection
 
 In `questions.txt`, type the heading "Reflection" and answer the following questions:
 
-1. What is your current **career goal**? What do you see yourself doing 5 years from now?
+1. What is your current **career goal**? What work do you see yourself doing 5 years from now?
 2. How are your current efforts in this subject helping you achieve that goal?
 3. What can you do differently to improve the value of your time at university as you work towards your goals?
 
