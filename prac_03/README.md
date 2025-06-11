@@ -150,7 +150,7 @@ There are 4 possible paths here, so we need to test each one, like:
 
 Create a new Python file, `example.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with the planned test values.  
-As you type into PyCharm, watch how the IDE helps you complete the task. E.g. when you press Enter after a colon, it
+As you type into PyCharm, watch how the IDE helps you complete the task. E.g., when you press Enter after a colon, it
 automatically indents.  
 You should also try typing your `elif` or `else` statements completely before you indent/outdent and watch to see that
 PyCharm automatically puts them in the right position!
@@ -211,7 +211,9 @@ Note the use of meaningful constants provided.
 
 First, think of which decision pattern applies.  
 There are three mutually-exclusive categories of taxation.  
-As you write conditions to determine the category, DO NOT REPEAT questions you already know the answer to.
+As you write conditions to determine the category, DO NOT REPEAT questions you already know the answer to and DO NOT use
+compound Boolean expressions (like `and`/`or`) if you can just use the simple conditions we've taught you to use in
+situations like these.
 
 Make sure to only put your calculation for `take_home_pay` in one spot - it does not need to be repeated in each path.
 
@@ -234,7 +236,7 @@ variables:
 
 - `total_tax` (if you pay no tax, then $0 is the correct total tax)
 - `income` (don't change this from what the user enters)
-- `take_home_pay` (this will ALWAYS be income - total_tax)
+- `take_home_pay` (this will ALWAYS be `income - total_tax`)
 
 With that in mind, make sure you **don't repeat yourself (DRY)**.  
 Seriously, don't... repeat... yourself!
@@ -343,7 +345,10 @@ Don't repeat yourself.
 ### Testing
 
 In comments below your code, list all the values that you should (and did) test with.  
-Remember that we have taught systematic ways to test code, so there should be no guesswork here.
+It's not enough to say the values to test with; you need to know what the output should be.  
+List the input values and the expected output, e.g.,   
+`# 1  Hire refused`  
+Remember that we have taught systematic ways to test decision structures, so there should be no guesswork here.
 
 ## 3. Simple Password Checker
 
@@ -412,11 +417,11 @@ are:
 
 | Infringement                                                     | Penalty amount | Demerit points |
 |------------------------------------------------------------------|----------------|----------------|
-| Less than 11 km/h over the speed limit                           | $309           | 1              |
-| At least 11 km/h but not more than 20 km/h over the speed limit  | $464           | 3              |
-| More than 20 km/h but not more than 30 km/h over the speed limit | $696           | 4              |
-| More than 30 km/h but not more than 40 km/h over the speed limit | $1,161         | 6              |
-| More than 40 km/h over the speed limit                           | $1,780         | 8              |
+| Less than 11 km/h over the speed limit                           | $322           | 1              |
+| At least 11 km/h but not more than 20 km/h over the speed limit  | $483           | 3              |
+| More than 20 km/h but not more than 30 km/h over the speed limit | $725           | 4              |
+| More than 30 km/h but not more than 40 km/h over the speed limit | $1,209         | 6              |
+| More than 40 km/h over the speed limit                           | $1,854         | 8              |
 
 Note: the way the government website has written this (and we've copied it) is NOT efficient in terms of decision
 structures. This has been written for each condition to stand alone (if, if, if) but we can tell this is mutually
@@ -427,7 +432,9 @@ Avoid a 6-month suspension by writing a program to ask for the user's:
 - **speed** and the
 - **speed limit**
 
-then tell them their fine in dollars (you can ignore the demerit points).
+then tell them their fine in dollars (you can ignore the demerit points).  
+Remember that if you have similar concepts represented by variables, then you need to differentiate these.  
+**Don't** name one generally (e.g., `speed`) and the other specifically (e.g., `speed_limit`).
 
 After getting the inputs, you will want to calculate the speed over the limit. You do not want to calculate this again
 and again in each condition. DRY.
