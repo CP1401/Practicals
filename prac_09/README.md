@@ -377,7 +377,8 @@ Copy and use the following main:
 def main():
     """BMI program using files."""
     filename = input("Filename: ")
-    save_bmis(filename)
+    number_of_people = int(input("Enter the number of people: "))
+    save_bmis(number_of_people, filename)
     print()
     display_bmi_categories(filename)
 ```
