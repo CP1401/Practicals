@@ -43,14 +43,14 @@ write questions with the "main" code in functions like `question_1()`.
 
 ### 1. Print a line
 
-Write a function that prints a line of 40 hyphens.
+Write a function that prints a line of hyphens the length of an integer parameter.
 
-Call your function to test it from a function called `question_1()`.
+Write a second function called `question_1()` that calls your function to test it with a few different line lengths.
 
 ### 2. Is it even?
 
 Write a function to determine if an integer passed into it is even.  
-Note: In prac 6 we did this for if the number was odd, so it's nearly identical.  
+Note: In prac 6 we wrote a function to determine if a number was odd, so it's nearly identical.  
 Don't copy that code unless you need help.  
 Remember, we should know this now... so notice if you don't know how to do
 what you've already done before...
@@ -73,7 +73,8 @@ That is, you should be able to enter any string as long as it's not `""`.
 If the user input is `""`, print an error like `"Input cannot be blank"` and get the input again.
 
 In `question_3()`, call your new function to ask the user for their name using your function...  
-Then use the _same_ function for getting their birthplace, and then display a message like:
+Then use the _same_ function for getting their birthplace.  
+Then display a message like:
 
 ```
 Hi Martin from New Zealand!
@@ -101,51 +102,6 @@ Your maximum must be greater than 10
 Maximum number: 17
 [10, 11, 12, 13, 14, 15, 16, 17]
 ``` 
-
-### 5. Subject List
-
-Write a program in `question_5()` to ask the user for their subject codes until they enter a blank one.  
-Don't accept invalid subjects. For a subject code to be valid:
-
-- The string should consist of exactly 6 characters
-- The first two characters must be letters
-- The next four characters must be digits
-- (You can capitalise any lowercase inputs)
-
-When you have a list of subject codes, print them in **sorted** order and tell them how many subjects they have.  
-Then, tell them if they are cool or not...  
-In the lecture notes, we determine if a student is cool based on whether they do CP1401 :)
-
-Use a separate function to determine if a subject code is valid.  
-Think about good function design. This will be a Boolean-returning function.
-
-```
-Enter subject code: CP1404 is going to be good
-Invalid subject code
-Enter subject code: MA1020
-Enter subject code: CP1401
-Enter subject code: 1402CP
-Invalid subject code
-Enter subject code: cp2403
-Enter subject code: CP1406
-Enter subject code: 
-You do these 4 subjects: 
-CP1401
-CP1406
-CP2403
-MA1020
-You are cool
-```
-
-Are you getting good at spotting words like **'until'** and recognising that's
-the [indefinite iteration pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#while-loops-indefinite-iteration)
-?  
-As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative
-development**.  
-So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the
-program works...  
-_Then_ add error checking using the
-normal [pattern you know and love](https://github.com/CP1404/Starter/wiki/Programming-Patterns#error-checking).
 
 ## Debugging
 
@@ -315,6 +271,50 @@ You could have a function that calculates the cost based on the two parameters t
 
 Do this with a list (much like the earlier question) and use `sum` to calculate the total.
 
+## Functions - Subject List
+
+Write a program in to ask the user for their subject codes until they enter a blank one.  
+Don't accept invalid subjects. For a subject code to be valid:
+
+- The string should consist of exactly 6 characters
+- The first two characters must be letters
+- The next four characters must be digits
+- (You can capitalise any lowercase inputs)
+
+When you have a list of subject codes, print them in **sorted** order and tell them how many subjects they have.  
+Then, tell them if they are cool or not...  
+In the lecture notes, we determine if a student is cool based on whether they do CP1401 :)
+
+Use a separate function to determine if a subject code is valid.  
+Think about good function design. This will be a Boolean-returning function.
+
+```
+Enter subject code: CP1404 is going to be good
+Invalid subject code
+Enter subject code: MA1020
+Enter subject code: CP1401
+Enter subject code: 1402CP
+Invalid subject code
+Enter subject code: cp2403
+Enter subject code: CP1406
+Enter subject code: 
+You do these 4 subjects: 
+CP1401
+CP1406
+CP2403
+MA1020
+You are cool
+```
+
+Are you getting good at spotting words like **'until'** and recognising that's
+the [indefinite iteration pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#while-loops-indefinite-iteration)?  
+As we've tried to both teach and demonstrate, it is highly valuable to get into the habit of **iterative
+development**.  
+So here, rather than getting the whole thing working in one go, leave out the error-checking until the main part of the
+program works...  
+_Then_ add error checking using the
+normal [pattern you know and love](https://github.com/CP1404/Starter/wiki/Programming-Patterns#error-checking).
+
 # Deliverables
 
 This section summarises the expectations for marking in this practical.  
@@ -323,7 +323,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 **Files required:**
 
 - `questions.txt`
-- `programs.py` with programs 1-5
+- `programs.py` with programs 1-4
 - `debugging.py` with explanations and fixed code
 - `coffee_orders.py` (All Together Now)
 
