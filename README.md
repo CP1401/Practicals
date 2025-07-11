@@ -67,7 +67,7 @@ problems.
 
 Not all solutions are provided.  
 Not all provided solutions are complete.
-E.g., a question may require pseudocode and code, but its solution may only have code.
+E.g., a question may require pseudocode and code, but its solution may only have code.  
 This is on purpose.
 
 > [!IMPORTANT]
