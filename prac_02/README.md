@@ -371,6 +371,6 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 `programs.py` with:
 
 - Discount Price
-- Kilometres to Miles
-- Holiday Cost
-- Deep Sleep Calculation (Percentage)
+- Kilometres to Miles (with pseudocode)
+- Holiday Cost (with pseudocode)
+- Deep Sleep Calculation

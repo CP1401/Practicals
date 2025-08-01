@@ -465,6 +465,6 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 Exercises, each in their own file:
 
 - `random_numbers.py`
-- `test_scores.py`
+- `test_scores.py` (with pseudocode)
 - `debugging.py`
 - `extract_data.py`

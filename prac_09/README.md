@@ -529,8 +529,8 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 Exercises:
 
-- `strings.py` with questions 1-3
-- `files.py` with questions 4-6
+- `strings.py` with questions 1-3 (with pseudocode)
+- `files.py` with questions 4-6 (with pseudocode)
 - `bmi_files.py`
 
 Please do not submit your data text files (like `bmis.txt` and others).

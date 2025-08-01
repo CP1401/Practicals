@@ -33,6 +33,9 @@ Please note that you already have plenty of practice questions in the first 4 pr
 Solutions for these checkpoint questions are provided as worked solution demonstration videos as well as the final code
 here.
 
+> [!NOTE]
+> Pseudocode is expected for all programs in this practical.
+
 Do the numbered questions in a file called `programs.py`
 
 ## Input, Processing, Output
@@ -233,7 +236,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 - `questions.txt` with personal reflection
 
-- `programs.py` with all of the numbered checkpoint questions:
+- `programs.py` with all the numbered checkpoint questions:
 
 1. Percentage program (I, P, O)
 2. Time of day (Decision)
@@ -243,3 +246,5 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 6. Debugging (code and test values)
 
 - `happy_products.py` (All Together Now)
+
+Remember to include your pseudocode for all questions.

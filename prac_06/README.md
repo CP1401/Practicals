@@ -470,7 +470,7 @@ e.g., 2.5.
 
 (You may need to make some **assumptions** about interpreting the boundary conditions here.)
 
-**Write an algorithm** to determine the coffee "style" based on the brew ratio.  
+**Write pseudocode for an algorithm** to determine the coffee "style" based on the brew ratio.  
 E.g., a ratio of 2.5 (1:2.5) would be a "normale".  
 Note: We will consider anything outside the ranges defined above to match the nearest style,   
 E.g., 1:0.1 wouldn't be good coffee, but we'd call it a "ristretto" and 1:100 would be dishwater, but let's call it a "
@@ -480,7 +480,7 @@ Now, that looks like the sort of thing we could use a function for in our code, 
 We _pass in_ a number like 2.5 and the function _returns_ a string like "normale".  
 This is a very common style of function, converting one value to another.
 
-**Write a second algorithm** (it will be very similar, so copy-and-paste then modify) for a **function** that takes in
+**Write a second algorithm in pseudocode** (it will be very similar, so copy-and-paste then modify) for a **function** that takes in
 ratio and returns the style.  
 Use the above examples as a reference. This is very much like the function for determining a weight category based on a
 BMI value.
@@ -797,7 +797,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 Exercises, each in their own file:
 
-- `coffee_ratio.py`
+- `coffee_ratio.py` (with pseudocode)
 - `parity.py`
 - `previous_pracs.py`
 - `jcu_grades.py`

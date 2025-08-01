@@ -64,9 +64,9 @@ Example:
 if age < 0 or > 100  # not OK
 ```
 
-This is NOT OK, because the right side (after the or) is just `> 100`
+This is NOT OK, because the right side (after the `or`) is just `> 100`
 which is incomplete and cannot be determined.  
-In English, we often shortcut this when we speak (e.g. the above could be said "if age is less than zero or greater than
+In English, we often shortcut this when we speak (e.g., the above could be said "if age is less than zero or greater than
 one hundred") – makes sense to us, but in pseudocode and code, you can't take that shortcut.  
 You need to restate the variable to make the expression complete so that the code can run (and so pseudocode makes
 sense).  
@@ -556,7 +556,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 `programs.py` with:
 
-- Tax
+- Tax (with pseudocode)
 - Car Insurance
 - Simple Password Checker
 - Basketball

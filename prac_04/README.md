@@ -608,7 +608,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 - Error Checking
 - Number Sequences: a, b, c
-- Menu for Smiley/Frowny
+- Menus (with pseudocode)
 - Accumulation:
     - Average Age
     - Smileys Count
