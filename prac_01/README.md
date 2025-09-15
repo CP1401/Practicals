@@ -176,66 +176,65 @@ As problems get bigger, we need to be more systematic about our methods.
 
 We are not going to write any substantial programs in this prac, but we are going to run PyCharm and see how it works.
 
-If you have your own computer, you
-can [follow these instructions to install Python 3 and PyCharm Professional](https://github.com/CP1404/Starter/wiki/Software-Setup)
-remembering you only need Python and PyCharm.
+Let's start by getting you used to working with the PyCharm IDE
+(Integrated Development Environment).
 
-Let's start by getting used to working with the PyCharm IDE (Integrated Development Environment).  
-Note: Your screens may look different than our images or descriptions below depending on versions used.
+If you are using your own computer, complete the instructions for setting
+up all the required software at:
+<https://github.com/CP1404/Starter/wiki/Software-Setup>  
+You don't need Git or Kivy, just Python 3 and PyCharm.
+
+> [!NOTE]  
+> Your version of PyCharm may look different from our images and instructions below,
+> but hopefully they are close enough for you to follow.
+
+A PyCharm **project** is a folder on the computer that contains
+Python source code files and related resource files to make your
+program run... but it's more than that.  
+**Always do your coding in files that are part of a project - NOT just
+individual files you open.**
 
 1. Run PyCharm.  
-   When PyCharm first starts you should have a window with a link to create a new project.
+   You should see a window with a link to create a new project.
 
-    - A PyCharm **project** is a folder on the computer that contains Python source code files and related resource
-      files to make your program run... but it's more than that. Always do your coding in files that are part of a
-      meaningful project.
+2. Click on **Create New Project** (not notebook) and choose **Pure Python**.  
+   PyCharm lets you choose where to store your new project and what
+   interpreter to use.
 
-    - the **Quick Start** window lists several useful tasks like creating a new project or adjusting the configuration
-      of PyCharm
+    - the **location** can be changed to any place you have access to.  
+      Use a folder that you will be able to find later, probably inside your main folder for this subject.  
+      Name your project, and therefore your folder: `cp1401practicals`
+   
+    - the **interpreter** is the version of Python used to run our code.  
+      Select *"Custom environment"* and *"Select existing"* for Python 3.  
 
-2. Click on **Create New Project**. and choose **Pure Python**. PyCharm asks you where to store your new project and to
-   choose an interpreter. Your screen may look different than our image below, but name your new project (folder) for
-   your **cp1401practicals**.
-
-    - the **location** can be changed to any place you have access to. Use a folder that you will be able to find later
-
-    - use the **... button** ("meatball menu") to select the location
-
-    - the **interpreter** is the version of Python we need to run our code on the computer.  
-      Use the *previously configured interpreter* for Python 3.  
-      **DO NOT use a virtual environment (Virtualenv).** They're cool, but we don't need them in this subject... they
-      make things harder for you.
-
-   ![New project window - choose previously configured interpreter](../images/Python-Windows-Install-3-Project-1.png)
-
-    - Click the ... menu button to choose a new interpreter and select the System Interpreter you installed earlier.  
-      (This is why it's useful to install Python in a directory you can find.)
-      Select the System Interpreter you have installed (not a Virtualenv).
-
-   ![Select system interpreter](../images/Python-Windows-Install-4-Project-2.png)
-
+   ![New project window - select existing interpreter](../images/PyCharm-Project-Custom-Environment.png)
 
 3. Next, let's add our first source code file to the project.  
    **Right-click** on the project name and select  
    **New > Python File**  
-   ![New file](../images/01image2.png)
+   ![New file](../images/PyCharm-New-Python-File.png)
 
-4. This opens a window where you can define the name of the file - call it **hello.py** and hit the **OK** button.
-   Always give your files descriptive names so they're easy to find again.
+4. Enter the name `hello.py`. Always give your files descriptive names that are easy to understand.
 
-5. PyCharm created a new source code file in the project folder and opened the editor window:
-   ![Editor window](../images/01image3.png)
+5. PyCharm created a new source code file in the project folder and opened the editor window.
+   Look at the interface and see what information you can identify: row/column, syntax errors, Python version...
 
-6. Let's learn our first shortcut! Press **Shift+Enter** to add a blank line below the one you're on (no matter where
-   the cursor is). Nice!
-   Now type the famous line:
+6. Let's learn our first shortcut! Press **Shift+Enter** to add a blank
+   line below the one you're on (no matter where the cursor is). Nice!  
+   Do it again, then add the famous line:
 
    ```python
-   print('Hello world')
+   print("Hello world")
    ```
 
-7. To **run** this first program, **right-click** in the code editor window and select **run**.  
-   (If it didn't work, please check for what the problem might be, and ask the nearest person for help if you need.)
+7. To **run** this standard first program, **right-click** in the code
+   editor window and select the **run** option.  
+   If it didn't work, please check for what the problem might be, then
+   if you need to, ask the nearest person for help.
+
+   ![Run Program](../images/PyCharm-Run-Right-Click.png)
+
 
 ### Project Structure: Use one project for all practicals
 

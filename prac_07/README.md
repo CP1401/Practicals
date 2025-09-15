@@ -77,7 +77,7 @@ Right-click on your `prac_07` folder (that's what you called it, right?)
 and create a new Python file here called `debugging.py`
 Copy the **raw** version of the code found at the link below and paste into your file...  
 Click on the link below, then click the Raw button to get a version suitable for copying.  
-![Raw in GitHub](../images/github_raw.png)  
+![Raw in GitHub](../images/GitHub-Raw.png)  
 Don't just copy from the normal view, without clicking Raw, or you will *not* get proper formatting. OK?
 
 - [debugging.py](./debugging.py)

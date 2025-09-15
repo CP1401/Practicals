@@ -49,6 +49,37 @@ See how this works? :)
 
 # Python Coding - Input, Processing and Output
 
+> [!WARNING]
+> We love being productive, and we don't want you to waste time, BUT...  
+> We're not just trying to get through this work as quickly as possible. What we really want is to learn.  
+> With this in mind, we are purposely choosing NOT to use AI in this subject at all.  
+> So, turn off PyCharm's very handy AI full line completion now.
+
+Open the settings:  
+File (or PyCharm on Mac) > Settings > Editor > General > Inline Completion  
+**Untick** "Enable local Full Line completion suggestions"
+
+![PyCharm full line completion settings](../images/PyCharm-Full-Line-Completion.png)
+
+**Here's a quick story to help illustrate the point.**
+Lindsay was working with a student in a prac recently whose code had some problems.  
+He asked the student why they had chosen to implement the code that way, and the student replied:  
+*"Not gonna lie, I just pressed Tab multiple times."*  
+If you want to finish the job quickly, get AI to do it... but learn very little.  
+If you want to learn and build your own skills, don't use AI and choose to learn all you can.
+
+While we're thinking about being more productive...  
+A good way to organise your workspace is to put these instructions on
+one side of your screen, and your code (PyCharm) on the other side.
+Windows users can use the Windows key + arrow shortcuts for this.  
+Now you don't have to waste time switching back and forth between these two screens!  
+Drag the bar between your project files and your code so that you
+can see lots of code (or hide the project window altogether with Alt+1).
+
+![Screen layout](../images/PyCharm-Screen-Layout.png)
+
+Got your windows organised? Let's keep going...
+
 ## Example
 
 Let's walk through a complete example, from problem description, through problem solving to code and testing.  
@@ -115,7 +146,7 @@ Looks good.
 
 Create a new Python file, `example.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with some other values.  
-The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g. use
+The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g., use
 autocomplete!), type code accurately, and develop an eye for detail.
 
 # Coding Exercises
