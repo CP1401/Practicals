@@ -49,6 +49,19 @@ See how this works? :)
 
 # Python Coding - Input, Processing and Output
 
+Before we do much programming, we need to configure PyCharm.
+
+- If you see an underline, move your mouse over it (**but don't click!**) to see what the
+  issue is, and look at the action PyCharm suggests to fix it for you. Example:  
+  ![Highlight suggestion in PyCharm](../images/PyCharm-Formatting-Warning.png)
+
+If you don't see underlines for formatting warnings, change the following setting:  
+**File (or PyCharm on Mac) > Settings > Editor > Inspections**  
+Search for "PEP" and select "PEP 8 Coding Style Violation" then change the severity to "Weak Warning" as in this
+screenshot:
+![Inspections settings in PyCharm](../images/PyCharm-Inspections.png)
+
+
 > [!WARNING]
 > We love being productive, and we don't want you to waste time, BUT...  
 > We're not just trying to get through this work as quickly as possible. What we really want is to learn.  
@@ -62,23 +75,25 @@ File (or PyCharm on Mac) > Settings > Editor > General > Inline Completion
 ![PyCharm full line completion settings](../images/PyCharm-Full-Line-Completion.png)
 
 **Here's a quick story to help illustrate the point.**
+
 Lindsay was working with a student in a prac recently whose code had some problems.  
 He asked the student why they had chosen to implement the code that way, and the student replied:  
-*"Not gonna lie, I just pressed Tab multiple times."*  
-If you want to finish the job quickly, get AI to do it... but learn very little.  
-If you want to learn and build your own skills, don't use AI and choose to learn all you can.
+*"Not gonna lie, I just pressed Tab multiple times."*
+
+* If you want to finish the job quickly, get AI to do it... but you will not learn much.  
+* If you want to learn and build your own skills, don't use AI... but choose to learn all you can.
 
 While we're thinking about being more productive...  
 A good way to organise your workspace is to put these instructions on
 one side of your screen, and your code (PyCharm) on the other side.
 Windows users can use the Windows key + arrow shortcuts for this.  
-Now you don't have to waste time switching back and forth between these two screens!  
+Now you don't have to waste time switching back and forth between these two windows!  
 Drag the bar between your project files and your code so that you
 can see lots of code (or hide the project window altogether with Alt+1).
 
 ![Screen layout](../images/PyCharm-Screen-Layout.png)
 
-Got your windows organised? Let's keep going...
+Got PyCharm configured and your windows organised? Let's keep going...
 
 ## Example
 
