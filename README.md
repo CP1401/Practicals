@@ -28,7 +28,8 @@ the practice/extension section. You will be marked as follows:
 - 2 = Reasonable response to some requirements, but some significant omissions or problems
 - 1 = Reasonable response to at least one requirement
 - 0 = Minimal or no attempt
-- LATE practicals will receive 1 mark for decent work, or 0 marks for poor work. **Do not be late**.
+- LATE practicals will receive no more than 2/4 for decent work, or down to 0 marks for poor work.  
+  **Do not be late**.
 
 **Note**: This subject is all about learning best-practices and clean coding using the patterns taught. It is important
 that you learn these important foundations according to the teaching philosophy of the
