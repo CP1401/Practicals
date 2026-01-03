@@ -20,8 +20,8 @@ Let's use PyCharm as our text editor:
   only new folders.
 - Now create a new text file: Choose **File > New... > File**  (not Python file)
 - Name your file `questions.txt` (the `.txt` extension means PyCharm won't try and correct your Python code... it's just
-  text). Also, the `.txt` extension means that LearnJCU will show it to your markers.
-- Make sure your new file is inside the prac_02 folder. If it isn't, just drag it inside.
+  text). Also, the `.txt` extension means that LearnJCU will show it to your markers correctly.
+- Make sure your new file is inside the `prac_02` folder. If it isn't, just drag it inside.
 
 ## Quick Questions
 
@@ -402,9 +402,6 @@ up [how to do string formatting](https://docs.python.org/3/library/stdtypes.html
 neatly lined up output with a fixed number of decimal positions for the above programs, especially the deep sleep one.
 
 # Deliverables
-
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
 **Files required:**
 

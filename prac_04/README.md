@@ -590,9 +590,6 @@ Columns: 10
 
 # Deliverables
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
-
 **Files required:**
 
 `questions.txt` with:

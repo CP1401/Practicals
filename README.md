@@ -21,44 +21,27 @@ University. Complete instructions are found in each prac folder.
 ## Marking
 
 Assessment will be based on completing the tasks up to but not including
-the practice/extension section. You will be marked as follows:
+the practice/extension section.
 
-- 4 = Excellent response to all requirements (Always aim for this!)
-- 3 = Good response to most or all requirements, but some omissions or problems
-- 2 = Reasonable response to some requirements, but some significant omissions or problems
-- 1 = Reasonable response to at least one requirement
-- 0 = Minimal or no attempt
-- LATE practicals will receive no more than 2/4 for decent work, or down to 0 marks for poor work.  
-  **Do not be late**.
+> [!NOTE]
+> This subject is all about learning best-practices and clean coding using
+> the [patterns taught](https://github.com/CP1404/Starter/wiki/Programming-Patterns).
+> It is important that you learn these important foundations according to the teaching of the subject.  
+> So, to help your learning, prac work must be done in the way that we prescribe to achieve full marks.
 
-**Note**: This subject is all about learning best-practices and clean coding using the patterns taught. It is important
-that you learn these important foundations according to the teaching philosophy of the
-subject.  
-For this reason (to help you learn properly!), you will not achieve full marks for working/complete practicals
-that are not done in the way that we prescribe.  
-Here are some reasons that you might lose marks for your practicals and assignments:
-
-- You do not submit your work correctly, according to the submission instructions
-- Your work looks too similar to any provided solutions, code found online or made by services like ChatGPT
-- You miss or skip part of a question (you must attempt all requirements)
-- Your work includes concepts and code not taught in the subject
-- Your work does not follow the core concepts and patterns (e.g., using global variables, `while True` loops or similar
-  techniques) - even if they work!
+> [!CAUTION]
+> Here are some reasons that you might lose marks for your practicals and assignments:
+> - Your work looks too similar to any provided solutions, code found online or answers made by services like ChatGPT
+> - You miss or skip part of a question (you must attempt all requirements)
+> - Your work includes concepts and code not taught in the subject
+> - Your work does not follow the core concepts and patterns taught (e.g., using global variables, while True loops or
+    similar techniques), even if they work!
 
 ## Submission
 
-Please submit your practicals correctly, so they can be marked.
+As of 2026, your weekly practical work will be submitted as a single 'portfolio' assessment item, as outlined in the subject documentation.  
 
-- Do not zip up your files.
-- Submit your practical with each file attached to one submission.
-- If you need to resubmit additional attempts, you must include all files in the new submission.
-- Ensure each file has the correct name, including the extension. If you don't use the right extensions, we cannot read
-  your work in LearnJCU.
-- Ensure your code is not commented-out. Only comments should be commented.
-- Include a `# comment` as a heading for questions, or sub-parts of questions.
-  E.g., if a question has parts `a.` and `b.` then add comments
-  like `# a.` and `# b.` to make it clear where your answers are, and to help yourself know what you need to complete.
-- Rewrite any provided `# TODO` comments as appropriate.
+Please submit your practical portfolio correctly, so that you can receive marks for your work.
 
 ## Solutions
 

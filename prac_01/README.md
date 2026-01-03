@@ -2,9 +2,7 @@
 
 **Welcome to practicals!**
 
-If you haven't read the introduction to pracs and marking, please [read this now](../README.md).  
-**Please submit your prac work via LearnJCU each week by the due date according to
-the [submission requirements](../README.md#submission).**
+If you haven't read the introduction to pracs, please [read this now](../README.md).  
 
 ## Community
 
@@ -110,7 +108,8 @@ result.
 **Write an algorithm** to determine if you can afford to buy an item based on its price and the money you have in your
 pocket.
 
-Notice how similar this question is to the UV index example above. Your pseudocode should be structurally like the example.  
+Notice how similar this question is to the UV index example above. Your pseudocode should be structurally like the
+example.  
 This algorithm should have included the **decision** (or selection) control structure. We will learn more about that
 soon.
 
@@ -139,7 +138,8 @@ Notice how the last line is not indented. We know we only do the dishes when we'
 
 For the following problem descriptions, identify the **nouns** and **verbs** (separately) in each.
 
-Note: You will end up with 4 separate answers for this section - the nouns & verbs, then the algorithm, for each of the problems.
+Note: You will end up with 4 separate answers for this section - the nouns & verbs, then the algorithm, for each of the
+problems.
 
 Write two separate lists (with subheadings) for each.  
 (Don't get hung up on the exact details of the words.)
@@ -147,10 +147,10 @@ Write two separate lists (with subheadings) for each.
 Then go through the set of nouns and verbs and work out which ones are irrelevant or duplicated and remove them from the
 lists.
 
-See if what's remaining is what you need to know to write an algorithm.  
+See if what's remaining is what you need to know to write an algorithm.
 
 Nouns = variables to store  
-Verbs = actions to do  
+Verbs = actions to do
 
 1. Happy Photos needs a way to calculate the total charge for a customer's booking. The system will use the customer's
    name and the date of the booking to make a unique booking id. The hourly charge, and number of hours will be entered,
@@ -158,7 +158,6 @@ Verbs = actions to do
 
 2. A road trip planning system will ask the user for the distance travelled (in km) and the travel time in minutes. The
    user will then be shown the average speed (in km/hour) over the trip.
-
 
 **Write algorithms for each of these problems using pseudocode**.  
 At this stage, we're not worried about getting the details 'perfect', we just want to get used to problem solving
@@ -204,9 +203,9 @@ individual files you open.**
     - the **location** can be changed to any place you have access to.  
       Use a folder that you will be able to find later, probably inside your main folder for this subject.  
       Name your project, and therefore your folder: `cp1401practicals`
-   
+
     - the **interpreter** is the version of Python used to run our code.  
-      Select *"Custom environment"* and *"Select existing"* for Python 3.  
+      Select *"Custom environment"* and *"Select existing"* for Python 3.
 
    ![New project window - select existing interpreter](../images/PyCharm-Project-Custom-Environment.png)
 
@@ -234,7 +233,6 @@ individual files you open.**
    if you need to, ask the nearest person for help.
 
    ![Run Program](../images/PyCharm-Run-Right-Click.png)
-
 
 ### Project Structure: Use one project for all practicals
 
@@ -289,8 +287,7 @@ _Keep every file you ever write in this subject._
 
 # Deliverables
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
+This section summarises the expectations for this practical.  
 
 **Files required:**
 
@@ -299,5 +296,3 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 - Logic Exercise
 - Algorithms (IPO, Decision, Repetition)
 - Problem Decomposition (2 problems, each with word types and algorithms)
-
-Now **submit your work to LearnJCU** (click on the practical link inside the relevant weekly folder).
