@@ -11,7 +11,7 @@ Then, and only then - come back and do the practical exercises, using that knowl
 In your PyCharm practicals project, you should be using a new folder for each prac (NOT a new project).  
 For this practical, create a new folder called `prac_06` to store all the files.
 
-Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
+Write your answers for the early non-coding questions in a simple text file called `p6questions.txt`.
 
 ## Quick Questions
 
@@ -202,7 +202,7 @@ def calculate_bmi(height, weight):
 ```
 
 **Do this now**  
-Create a new Python file, `example.py` (File > New > Python File)    
+Create a new Python file, `p6example.py` (File > New > Python File)    
 **Now, you type the above code (just the `calculate_bmi` function) in**, and **test it**...  
 But how do we test a function?  
 There are a number of ways, but what we will write a simple function with some tests in it to see what we get
@@ -369,7 +369,7 @@ Weight (kg): 100
 This BMI is 44.44444444444444, which is considered obese
 ```
 
-If you don't have it completed from each of the steps above, [here is the complete example.py program](./example.py) for
+If you don't have it completed from each of the steps above, [here is the complete p6example.py program](./p6example.py) for
 your reference.
 
 ### Things to do
@@ -785,12 +785,12 @@ x, y = function_that_returns_2_values()
 
 **Files required:**
 
-`questions.txt` with:
+`p6questions.txt` with:
 
 - Quick Questions
 - Good Names
 
-`example.py` with updates
+`p6example.py` with updates
 
 Exercises, each in their own file:
 

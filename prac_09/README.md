@@ -1,6 +1,6 @@
 # Practical 9 - Strings & Files
 
-Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
+Write your answers for the early non-coding questions in a simple text file called `p9questions.txt`.
 
 ## Quick Questions
 
@@ -218,7 +218,7 @@ Average = 46.4
 
 ### Things to do
 
-Create a new Python file, `example.py`.      
+Create a new Python file, `p9example.py`.      
 **Now, you type this code in (don't copy it)**, and **test it** to see you got the expected output.  
 The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g., use
 autocomplete!), type code accurately, and develop an eye for detail.
@@ -240,7 +240,7 @@ Average = 46.4
 ```
 
 If you're not sure how to do the lining up using string formatting, you can check
-the [example.py file here](./example.py).
+the [p9example.py file here](./p9example.py).
 
 # Coding Exercises - Files
 
@@ -517,12 +517,12 @@ c. the minimum d. the maximum e. the median (harder - you will need to use a lis
 
 **Files required:**
 
-`questions.txt`  with:
+`p9questions.txt`  with:
 
 - Quick Questions
 - Logic Exercise
 
-`example.py` with updates
+`p9example.py` with updates
 
 Exercises:
 

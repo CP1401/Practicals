@@ -1,6 +1,6 @@
 # Practical 05 - Coding Checkpoint 1
 
-Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
+Write your answers for the early non-coding questions in a simple text file called `p5questions.txt`.
 
 ## Reflection
 
@@ -36,7 +36,7 @@ here.
 > [!NOTE]
 > Pseudocode is expected for all programs in this practical.
 
-Do the numbered questions in a file called `programs.py`
+Do the numbered questions in a file called `p5programs.py`
 
 ## Input, Processing, Output
 
@@ -123,7 +123,7 @@ Under 18's are not allowed entry.
 18-29 year olds may only enter the 'limited' section,
 but patrons aged 30+ get full access.
 
-Copy the code into your `programs.py` file and **test it**.  
+Copy the code into your `p5programs.py` file and **test it**.  
 In the comments below the code, list all the values that you should and did test with.  
 Remember that we have taught systematic ways to test code, so there should be no guesswork here.
 
@@ -231,9 +231,9 @@ Farewell
 
 **Files required:**
 
-- `questions.txt` with personal reflection
+- `p5questions.txt` with personal reflection
 
-- `programs.py` with all the numbered checkpoint questions:
+- `p5programs.py` with all the numbered checkpoint questions:
 
 1. Percentage program (I, P, O)
 2. Time of day (Decision)

@@ -3,12 +3,12 @@
 As with each new practical, create a new directory (folder) in your existing practicals project.  
 **Do not make a new project!**  
 Call your new folder `prac_03` and put all of your practical 3 files in this folder.  
-Write your answers for the early non-coding questions in a simple text file called `questions.txt`.  
+Write your answers for the early non-coding questions in a simple text file called `p3questions.txt`.  
 By now you should be able to use PyCharm easily enough to edit text files.
 
 ## Quick Questions
 
-Answer these quick questions in your `questions.txt` file.  
+Answer these quick questions in your `p3questions.txt` file.  
 For questions 3-6, calculate the result of the expression using the following as the variable values:
 
 ```python
@@ -186,7 +186,7 @@ Test this and see if it works.
 
 # Coding Exercises
 
-Write all of your answers to the following questions in a single Python file called `programs.py`  
+Write all of your answers to the following questions in a single Python file called `p3programs.py`  
 At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from
 here) so you/we know what the program is for later.  
 Example:
@@ -444,7 +444,7 @@ Can you improve your code?
 
 ## Reflection
 
-In `questions.txt`, answer the following questions based on your experiences in the subject so far:
+In `p3questions.txt`, answer the following questions based on your experiences in the subject so far:
 
 1. What is something you have done well in this subject that you should **keep doing**?
 2. What is something you have **not** done well in this subject that you should **stop doing**?
@@ -508,7 +508,7 @@ Write a program to tell a student what their grade is based on their input subje
 
 ## Speeding Fines 2.0
 
-If you do this, don't change your existing submission in `programs.py`, put it in your `practice.py` file.
+If you do this, don't change your existing submission in `p3programs.py`, put it in your `practice.py` file.
 
 Upgrade your speeding fines program to include the demerit points as well.  
 Ask the user at the beginning for their **bank balance** and **number of points**, then tell them the updated balances
@@ -542,7 +542,7 @@ not "2 minutes", but 3 + 2).
 
 **Files required:**
 
-`questions.txt` with:
+`p3questions.txt` with:
 
 - Quick Questions
 - Patterns
@@ -551,7 +551,7 @@ not "2 minutes", but 3 + 2).
 
 `example.py` with updates
 
-`programs.py` with:
+`p3programs.py` with:
 
 - Tax (with pseudocode)
 - Car Insurance

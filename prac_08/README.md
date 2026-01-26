@@ -3,7 +3,7 @@
 This practical builds on the **Lists lecture** as well as previous practicals.  
 If you haven't learned from those, then go back and do so before continuing with this practical work.
 
-Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
+Write your answers for the early non-coding questions in a simple text file called `p8questions.txt`.
 
 ## Quick Questions
 
@@ -18,7 +18,7 @@ Write your answers for the early non-coding questions in a simple text file call
 
 ### Warmup Part 1
 
-Without running any code, write down your answers to these questions in your `questions.txt` file (under a "Lists
+Without running any code, write down your answers to these questions in your `p8questions.txt` file (under a "Lists
 Warmup" heading).  
 Then use the **Python Console** to see if you were correct.  
 **Seriously**, do it in your head first; don't just run code to find the answers. You don't learn as much when you do
@@ -40,7 +40,7 @@ Consider the following Python list definition:
 
 ### Warmup Part 2
 
-Again, write your answers in `questions.txt`.  
+Again, write your answers in `p8questions.txt`.  
 When you've had a go, check your answers in the Python console.
 
 **Write Python statements or expressions to achieve the following:**
@@ -105,7 +105,7 @@ This doesn't implement the "longest" part of the problem... that's coming later.
 
 ### Testing
 
-Create a new Python file, `example.py`.  
+Create a new Python file, `p8example.py`.  
 **Now, you type or copy this example code and test it** with a few places. Is it OK?
 
 When testing while loops, a good idea is to test what happens if they are False the first time (so the body never
@@ -452,12 +452,12 @@ Your program should display a line like the above for each of the great jazz mus
 
 **Files required:**
 
-`questions.txt`  with:
+`p8questions.txt`  with:
 
 - Quick Questions
 - Lists Warmup - parts 1 and 2
 
-`example.py` with updates
+`p8example.py` with updates
 
 Exercises, each in their own file:
 

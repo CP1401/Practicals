@@ -33,7 +33,7 @@ share. Thanks!
 
 Great, now let's get ready to focus on problem solving...
 
-Record your answers for each of the below questions in a simple text file, `questions.txt`. You can use PyCharm (if you
+Record your answers for each of the below questions in a simple text file, `p1questions.txt`. You can use PyCharm (if you
 already know how), Notepad or any suitable program for creating your work file.
 
 ## Logic Exercise
@@ -58,12 +58,12 @@ it out themselves and learn through the process.
 
 **What is each person's job?**
 
-Note: record your answer for this question in your `questions.txt` file under the heading "Logic Exercise", so it's
+Note: record your answer for this question in your `p1questions.txt` file under the heading "Logic Exercise", so it's
 clear.
 
 ## Algorithms
 
-Record your answers to the following questions in your text file called `questions.txt`. Use a heading for each one.
+Record your answers to the following questions in your text file called `p1questions.txt`. Use a heading for each one.
 
 The following exercises are focused on the logic of algorithms, rather than the exact pseudocode.  
 We're not going to write computer programs for these, so we are just focused on the basics of writing a set of
@@ -275,7 +275,7 @@ and paste that into a **new Python file** with the same name, `cateringcalculato
 If you did your algorithms from earlier in this prac using the computer, you can copy and paste the text into your new
 PyCharm project.  
 PyCharm lets you create text files, so right-click the project folder and choose **New > File** and name this
-one `questions.txt`
+one `p1questions.txt`
 
 Note that this is a **text file**, not a Python file (or a Word document or whatever).  
 Just put normal (unformatted) text in here and make sure you have simple headings for each question to help you (and us)
@@ -291,7 +291,7 @@ This section summarises the expectations for this practical.
 
 **Files required:**
 
-`questions.txt` (or similar) with:
+`p1questions.txt` with:
 
 - Logic Exercise
 - Algorithms (IPO, Decision, Repetition)

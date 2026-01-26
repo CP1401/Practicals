@@ -1,6 +1,6 @@
 # Practical 07 - Functions 2
 
-Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
+Write your answers for the early non-coding questions in a simple text file called `p7questions.txt`.
 
 This practical builds on the Functions 1 and 2 lectures as well as practical 6.  
 If you haven't learned from those, then go back and do so before continuing with this practical work.
@@ -74,13 +74,13 @@ In the "Functions 2" lecture, we introduced the PyCharm debugger.
 > Get used to noticing the underlines and other warnings and correcting these issues.
 
 Right-click on your `prac_07` folder (that's what you called it, right?)
-and create a new Python file here called `debugging.py`
+and create a new Python file here called `p7debugging.py`
 Copy the **raw** version of the code found at the link below and paste into your file...  
 Click on the link below, then click the Raw button to get a version suitable for copying.  
 ![Raw in GitHub](../images/GitHub-Raw.png)  
 Don't just copy from the normal view, without clicking Raw, or you will *not* get proper formatting. OK?
 
-- [debugging.py](./debugging.py)
+- [p7debugging.py](./p7debugging.py)
 
 Let's use the debugger now to systematically figure out what's wrong with the following programs.  
 In all cases, read the code and try and understand it, then use the debugger to "step through" the program.
@@ -102,7 +102,7 @@ windows.
 
 ![PyCharm debugger screenshot](../images/debugger.png)
 
-There are four "main" programs in `debugging.py` for you to debug separately (use a new breakpoint at the start of each)
+There are four "main" programs in `p7debugging.py` for you to debug separately (use a new breakpoint at the start of each)
 .  
 Test/debug each, one at a time.  
 When you've finished one, "comment out" its main call and "uncomment" the next one.  
@@ -131,9 +131,9 @@ of `debugging,py`, then write the fixed, working, code (solution) in the section
 > it to run slowly in the first place.
 
 When you have found the problem, you should be able to fix it, so change the code to make it work.  
-You do not need to explain your solutions, just fix the code and submit the fixed file, `debugging.py`.
+You do not need to explain your solutions, just fix the code and submit the fixed file, `p7debugging.py`.
 
-If you haven't already, copy the code from [debugging.py](./debugging.py) and get debugging!
+If you haven't already, copy the code from [p7debugging.py](./p7debugging.py) and get debugging!
 
 # Python Coding - Functions 2
 
@@ -477,7 +477,7 @@ sense).
 
 **Files required:**
 
-`questions.txt` with:
+`p7questions.txt` with:
 
 - Quick Questions
 - Logic Exercise (just write whether you read the statement correctly the first time)
@@ -486,7 +486,7 @@ sense).
 Exercises, each in their own file:
 
 - `menu_with_functions.py` (the example) with added display function
-- `debugging.py` with both problems and solutions (fixed code)
+- `p7debugging.py` with both problems and solutions (fixed code)
 - `jerry.py`
 - `dog_years.py`
 - `seconds.py`

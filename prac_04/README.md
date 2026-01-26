@@ -1,6 +1,6 @@
 # Practical 04 - Repetition Structures
 
-Write your answers for the early non-coding questions in a simple text file called `questions.txt`.
+Write your answers for the early non-coding questions in a simple text file called `p4questions.txt`.
 
 ## Quick Questions
 
@@ -12,7 +12,7 @@ Write your answers for the early non-coding questions in a simple text file call
 
 ### range
 
-*a)* Add a new heading "**Loop Outputs**" to your questions.txt file, then:  
+*a)* Add a new heading "**Loop Outputs**" to your p4questions.txt file, then:  
 Write the output of each of the following `for` loops that use `range`.
 
 Then, when you have finished writing your output - **not before!** - copy the code into a Python program and run these
@@ -45,7 +45,7 @@ for i in range(10, 0, -2):
 print()
 ```
 
-*b)* Add a new heading "**Range Values**" to your questions.txt file, then:  
+*b)* Add a new heading "**Range Values**" to your p4questions.txt file, then:  
 Write the range statements (just range and parameters, not the whole loop) equivalent to the following lists of numbers:
 
 1. [0, 1, 2, 3, 4, 5]
@@ -251,7 +251,7 @@ Fix this now, if you didn't do it right the first time.
 
 # Coding Exercises
 
-Write all your answers to the following questions in a single Python file called `programs.py`  
+Write all your answers to the following questions in a single Python file called `p4programs.py`  
 At the top of each program, put a **comment** (starts with a `#`) with the exercise number/name (copy-and-paste it from
 here) so you/we know what the program is for later.  
 Example:
@@ -592,7 +592,7 @@ Columns: 10
 
 **Files required:**
 
-`questions.txt` with:
+`p4questions.txt` with:
 
 - Quick Questions
 - a) Loop Outputs & b) Range Values
@@ -601,7 +601,7 @@ Columns: 10
 
 `example.py` with updates
 
-`programs.py` with:
+`p4programs.py` with:
 
 - Error Checking
 - Number Sequences: a, b, c

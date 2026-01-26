@@ -44,7 +44,7 @@ When you've decided on an answer for this, discuss it with a group near you.
 If you have a different answer, try and figure out why/how you arrived at different answers.  
 Is there a meaningful way that you can explain your answer, perhaps a diagram that would help?
 
-Add the heading "Logic Exercise" to `questions.txt`. Leave a blank line, then write your answer for the question.  
+Add the heading "Logic Exercise" to `p2questions.txt`. Leave a blank line, then write your answer for the question.  
 See how this works? :)
 
 # Python Coding - Input, Processing and Output
@@ -166,7 +166,7 @@ autocomplete!), type code accurately, and develop an eye for detail.
 
 # Coding Exercises
 
-Write all of your answers to the following questions in a single Python file called `programs.py`.
+Write all of your answers to the following questions in a single Python file called `p2programs.py`.
 
 At the top of each program, put a **comment** with the exercise number/name (copy-and-paste it from
 here) so we all know what the program is.  
@@ -338,7 +338,7 @@ Knowing this, complete your program so that it outputs like we want. As always, 
 
 ## Reflection
 
-In `questions.txt`, type the heading "Reflection" and answer the following questions:
+In `p2questions.txt`, type the heading "Reflection" and answer the following questions:
 
 1. What is your current **career goal**? What work do you see yourself doing 5 years from now?
 2. How are your current efforts in this subject helping you achieve that goal?
@@ -405,13 +405,13 @@ neatly lined up output with a fixed number of decimal positions for the above pr
 
 **Files required:**
 
-`questions.txt` with:
+`p2questions.txt` with:
 
 - Quick Questions
 - Logic Exercise
 - Reflection
 
-`programs.py` with:
+`p2programs.py` with:
 
 - Discount Price
 - Kilometres to Miles (with pseudocode)

@@ -6,7 +6,7 @@ It's all about learning!
 
 ## Reflection
 
-In `questions.txt`, answer the following questions based on your experiences in the subject so far:
+In `p10questions.txt`, answer the following questions based on your experiences in the subject so far:
 
 1. What is something you have done well in this subject that you should **keep doing** in future subjects?
 2. What is something you have **not** done well in this subject that you should **stop doing** in future subjects?
@@ -27,7 +27,7 @@ You have already written some comments in the earlier questions that you can reu
 
 ## Functions
 
-File: `programs.py`
+File: `p10programs.py`
 
 For all functions in this practical, include a valid and meaningful **docstring**.
 
@@ -105,11 +105,11 @@ Maximum number: 17
 
 ## Debugging
 
-File: `debugging.py`
+File: `p10debugging.py`
 
 Here we have a program that works sometimes, but not always. It also is not written following our best-practices.
 
-- Copy or download the code from [debugging.py](./debugging.py)
+- Copy or download the code from [p10debugging.py](./p10debugging.py)
 - Run the code and see what is happening.
 - Complete the template in the file, explaining: the **problems** (just bugs) you find AND your process for debugging.
 - Then, fix the code in-place. In addition to correcting the problems, improve this code - names, formatting, patterns,
@@ -319,9 +319,9 @@ normal [pattern you know and love](https://github.com/CP1404/Starter/wiki/Progra
 
 **Files required:**
 
-- `questions.txt`
-- `programs.py` with programs 1-4
-- `debugging.py` with explanations and fixed code
+- `p10questions.txt`
+- `p10programs.py` with programs 1-4
+- `p10debugging.py` with explanations and fixed code
 - `coffee_orders.py` (All Together Now)
 
 Remember to include your pseudocode for all questions.
