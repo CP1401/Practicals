@@ -148,7 +148,7 @@ There are 4 possible paths here, so we need to test each one, like:
 
 ### Things to do
 
-Create a new Python file, `example.py` (File > New > Python File)    
+Create a new Python file, `p3example.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with the planned test values.  
 As you type into PyCharm, watch how the IDE helps you complete the task. E.g., when you press Enter after a colon, it
 automatically indents.  
@@ -549,7 +549,7 @@ not "2 minutes", but 3 + 2).
 - Logic Exercise
 - Reflection
 
-`example.py` with updates
+`p3example.py` with updates
 
 `p3programs.py` with:
 

@@ -159,7 +159,7 @@ The total meal price is $115.0
 
 Looks good.
 
-Create a new Python file, `example.py` (File > New > Python File)    
+Create a new Python file, `p2example.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with some other values.  
 The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE (e.g., use
 autocomplete!), type code accurately, and develop an eye for detail.

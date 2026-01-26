@@ -199,7 +199,7 @@ For our month number checking loop, we should check with values:
 
 ### Things to do
 
-Create a new Python file, `example.py` (File > New > Python File)    
+Create a new Python file, `p4example.py` (File > New > Python File)    
 **Now, you type this code in (don't copy it)**, and **test it** with some other values.  
 The reason you want to _type_ instead of _copy_ this code is because it helps you learn to use the IDE, type code
 accurately, and develop an eye for detail. Use autocomplete!
@@ -599,7 +599,7 @@ Columns: 10
 - Patterns
 - Logic Exercise
 
-`example.py` with updates
+`p4example.py` with updates
 
 `p4programs.py` with:
 
