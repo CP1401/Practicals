@@ -19,13 +19,13 @@ Let's use PyCharm as our text editor:
 - Create a new folder (directory) with the exact name `prac_02`. Do not make a new project for each prac,
   only new folders.
 - Now create a new text file: Choose **File > New... > File**  (not Python file)
-- Name your file `questions.txt` (the `.txt` extension means PyCharm won't try and correct your Python code... it's just
+- Name your file `p2questions.txt` (the `.txt` extension means PyCharm won't try and correct your Python code... it's just
   text). Also, the `.txt` extension means that LearnJCU will show it to your markers correctly.
 - Make sure your new file is inside the `prac_02` folder. If it isn't, just drag it inside.
 
 ## Quick Questions
 
-Add the heading "Quick Questions" to `questions.txt`. Leave a blank line, then answer these questions with numbering.
+Add the heading "Quick Questions" to `p2questions.txt`. Leave a blank line, then answer these questions with numbering.
 
 1. Write two variable names that would be **valid** and well-named.
 2. Write two variable names that would be **valid** but not well-named.
