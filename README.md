@@ -39,9 +39,20 @@ the practice/extension section.
 
 ## Submission
 
-As of 2026, your weekly practical work will be submitted as a single 'portfolio' assessment item, as outlined in the subject documentation.  
-
+As of 2026, your weekly practical work will be submitted as a single 'portfolio' assessment item, as outlined in the
+subject documentation.
 Please submit your practical portfolio correctly, so that you can receive marks for your work.
+
+- Do not zip up your files.
+- Submit your practical with each file attached to one submission.
+- If you need to resubmit additional attempts, you must include all files in the new submission.
+- Ensure each file has the correct name, including the extension. If you don't use the right extensions, we cannot read
+  your work in LearnJCU.
+- Ensure your code is not commented-out. Only comments should be commented.
+- Include a `# comment` as a heading for questions, or sub-parts of questions.
+  E.g., if a question has parts `a.` and `b.` then add comments
+  like `# a.` and `# b.` to make it clear where your answers are, and to help yourself know what you need to complete.
+- Rewrite any provided `# TODO` comments as appropriate.
 
 ## Solutions
 
