@@ -118,14 +118,26 @@ Now (only after this works) add error-checking to ensure that the high value is 
 
 ### 6. Debugging
 
+You do not need to write pseudocode for this question.
+
 The following code is intended to help a bouncer manage PyNightclub.  
 Under 18's are not allowed entry.
 18-29 year olds may only enter the 'limited' section,
 but patrons aged 30+ get full access.
 
 Copy the code into your `p5programs.py` file and **test it**.  
-In the comments below the code, list all the values that you should and did test with.  
-Remember that we have taught systematic ways to test code, so there should be no guesswork here.
+Remember that we have taught systematic ways to test code, so there should be no guesswork here.  
+
+For these tests, record three things for each test:
+
+- value (input for age)
+- expected outcome for that value
+- actual outcome for that value
+
+In the comments below the code, list all the values that you should and did test with along with the expected and actual
+outputs. E.g.,  
+
+    # 1, Entry refused, Entry refused
 
 Once you have run your tests, see if you can fix any errors in the best way possible.  
 Change the provided code and submit your improved code.  
@@ -142,8 +154,8 @@ elif age < 30:
 elif age > 30:
     print("Full entry allowed")
 
-# Test values: 
-# (Input and expected outcomes)
+# Tests: 
+# (Input, Expected, Actual outcomes)
 # ...
 ```
 
