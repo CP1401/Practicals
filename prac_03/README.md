@@ -540,6 +540,9 @@ not "2 minutes", but 3 + 2).
 
 # Deliverables
 
+This section summarises the expectations for this practical.
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
+
 **Files required:**
 
 `p3questions.txt` with:

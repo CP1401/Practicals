@@ -590,6 +590,9 @@ Columns: 10
 
 # Deliverables
 
+This section summarises the expectations for this practical.
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
+
 **Files required:**
 
 `p4questions.txt` with:

@@ -515,6 +515,9 @@ c. the minimum d. the maximum e. the median (harder - you will need to use a lis
 
 # Deliverables
 
+This section summarises the expectations for this practical.
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
+
 **Files required:**
 
 `p9questions.txt`  with:

@@ -287,7 +287,8 @@ _Keep every file you ever write in this subject._
 
 # Deliverables
 
-This section summarises the expectations for this practical.  
+This section summarises the expectations for this practical.
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
 **Files required:**
 
