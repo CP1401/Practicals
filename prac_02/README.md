@@ -61,10 +61,11 @@ Search for "PEP" and select "PEP 8 Coding Style Violation" then change the sever
 screenshot:
 ![Inspections settings in PyCharm](../images/PyCharm-Inspections.png)
 
+## Turn GenAI Off
 
 > [!WARNING]
 > We love being productive, and we don't want you to waste time, BUT...  
-> We're not just trying to get through this work as quickly as possible. What we really want is to learn.  
+> We're not just trying to get through this work as quickly as possible. What we really want is to **learn**.  
 > With this in mind, we are purposely choosing NOT to use AI in this subject at all.  
 > So, turn off PyCharm's very handy AI full line completion now.
 
@@ -383,7 +384,7 @@ Example, if the user enters 2.5 and 3, it would print:
 ...
 ```
 
-Use as many operators as you can - not just these ones.
+Use as many operators as you can - not just these.
 
 ## Number Conversions
 
@@ -391,7 +392,7 @@ Write as many programs as you can handle that convert values in one unit of meas
 reverse):
 
 - kilograms to pounds
-- fahrenheit to celsius
+- Fahrenheit to Celsius
 - feet and inches to metres and centimetres
 - currencies...
 

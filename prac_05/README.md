@@ -24,6 +24,11 @@ subject up to now.
 
 # Python Coding - Checkpoint
 
+> [!WARNING]
+> First, let's make sure you have configured PyCharm to turn GenAI off.  
+> If you are still getting overly-helpful prompts to autocomplete full lines of code, then:  
+> [Follow the steps from prac 2 to turn off Full Line completion suggestions](../prac_02/README.md#turn-genai-off)
+
 _How do you get better at programming?_  
 Write more (good) programs!  
 And watch/read/study more examples of good programs and programming.  

@@ -116,7 +116,8 @@ main_3()
 ``` 
 
 For each program, write what you found to be the **problem** (not the solution) in the provided section
-of `debugging,py`, then write the fixed, working, code (solution) in the section below that.
+of `debugging,py`, then write the fixed, working, code (solution) in the section **below** that.  
+Do not change the provided code, but rather, write new code below that solves the problem.
 
 ```
 # Problem(s) for program 1:
@@ -136,6 +137,13 @@ You do not need to explain your solutions, just fix the code and submit the fixe
 If you haven't already, copy the code from [p7debugging.py](./p7debugging.py) and get debugging!
 
 # Python Coding - Functions 2
+
+
+> [!WARNING]
+> One more time, let's make sure you have configured PyCharm to turn GenAI off.  
+> If you are still getting overly-helpful prompts to autocomplete full lines of code, then:  
+> [Follow the steps from prac 2 to turn off Full Line completion suggestions](../prac_02/README.md#turn-genai-off)
+
 
 ## Use Docstrings
 
