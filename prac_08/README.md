@@ -286,11 +286,11 @@ The trend is positive
 
 ## 3. Debugging Lists
 
-File: `debugging.py`
+File: `p8debugging.py`
 
 Similar to the previous practical's debugging exercises:
 
-- Copy the code from [debugging.py](./debugging.py)
+- Copy the code from [p8debugging.py](./p8debugging.py)
 - Run the code and see what problems you can find.
 - Complete the template in this file, adding comments to explain the **problems** (bugs) you find.
 - **Remember**: debugging is about finding bugs, not just generally improving code. We're not interested in formatting

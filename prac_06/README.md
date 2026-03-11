@@ -369,8 +369,8 @@ Weight (kg): 100
 This BMI is 44.44444444444444, which is considered obese
 ```
 
-If you don't have it completed from each of the steps above, [here is the complete p6example.py program](./p6example.py) for
-your reference.
+If you don't have it completed from each of the steps above, [here is the complete p6example.py program](./p6example.py)
+for your reference.
 
 ### Things to do
 
@@ -480,7 +480,8 @@ Now, that looks like the sort of thing we could use a function for in our code, 
 We _pass in_ a number like 2.5 and the function _returns_ a string like "normale".  
 This is a very common style of function, converting one value to another.
 
-**Write a second algorithm in pseudocode** (it will be very similar, so copy-and-paste then modify) for a **function** that takes in
+**Write a second algorithm in pseudocode** (it will be very similar, so copy-and-paste then modify) for a **function**
+that takes in
 ratio and returns the style.  
 Use the above examples as a reference. This is very much like the function for determining a weight category based on a
 BMI value.
@@ -596,7 +597,7 @@ Leave your test code for the first version and just add these new tests below th
 After you have written and tested the first two functions, write a third function that returns a Boolean (True or False)
 for whether the number passed into it **is odd**.    
 Recall from the lecture, that
-an [excellent and common convention for naming Boolean-returning functions](https://github.com/CP1404/Starter/wiki/Styles-and-Conventions#best-practice-suggestions)
+an [excellent and common convention for naming Boolean-returning functions](https://github.com/CP1404/Starter/wiki/Style-Guide#best-practice-suggestions)
 is to start their names with `is`.  
 Example, the built-in string method `isupper()` determines if a string is uppercase.  
 We can then use these functions in meaningful, easy-to-read code like the example below.  
@@ -663,9 +664,9 @@ shows the percentage score/result you need to get different grades:
 > Suppose you used 84 as your boundary, e.g., `if score > 84 then HD` Would that work?  
 > No, because what if the score were 84.1? That should be a D, but your code would make it an HD!  
 > This is where bugs come from :(  
-> Our [strong recommendation](https://github.com/CP1404/Starter/wiki/Programming-Patterns#boundary-conditions)
-> is that you always use the values in the question.  
-> In this case, use 50, 85, etc. not 49, 49.9, or whatever. This will help prevent mistakes.
+> Our **strong recommendation** is that you always use the values in the question.  
+> In this case, use 50, 85, etc. not 49, 49.9, or whatever. This will help prevent mistakes.  
+> [Read more about boundary conditions in our patterns guide](https://github.com/CP1404/Starter/wiki/Programming-Patterns#boundary-conditions)
 
 **Write a function that takes a subject total score and returns the corresponding JCU grade.**
 
