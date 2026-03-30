@@ -227,9 +227,9 @@ When you have this working, complete a more fulsome program that matches the fol
     Your speed in miles per hour: 55.1
     Speed limit in km/h: 80
     Your speed of 88.7 km/h was over the limit by 8.7 km/h.
-    Your fine will be $309.00
+    Your fine will be $322.00
     Enter your current bank balance: $22.35
-    Your bank balance after your fine will be $-286.65
+    Your bank balance after your fine will be $-299.65
     Don't speed again, OK?
     Farewell
 
