@@ -466,5 +466,5 @@ Exercises, each in their own file:
 
 - `random_numbers.py`
 - `test_scores.py` (with pseudocode)
-- `debugging.py`
+- `p8debugging.py`
 - `extract_data.py`
