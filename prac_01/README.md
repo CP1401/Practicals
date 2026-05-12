@@ -66,7 +66,7 @@ clear.
 Record your answers to the following questions in your text file called `p1questions.txt`. Use a heading for each one.
 
 > [!NOTE]
-> Please get familiar with, and follow, our [Pseudocode Guide](https://github.com/CP1404/Starter/wiki/Pseudocode-Guide)
+> Please get familiar with, and follow, our [Pseudocode Guide](https://github.com/CP1404/Starter/wiki/Pseudocode-Guide).  
 > For our first prac, we are focused on the logic of algorithms, rather than the exact pseudocode.  
 > You're not going to write computer programs for these tasks, so you just need to write clear understandable instructions.
 

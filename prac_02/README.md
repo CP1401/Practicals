@@ -154,7 +154,7 @@ E.g., We can easily calculate that 15% of 100 is 15, so a $100 meal with a 0.15 
 
 ```
 Original price: $100
-Surcharge % (e.g. 0.15 is 15%): 0.15
+Surcharge % (e.g., 0.15 is 15%): 0.15
 The total meal price is $115.0
 ```
 
@@ -212,7 +212,7 @@ Always test your programs after you modify them. You might have broken something
 
 We just added another name (the named constant), so check your existing names and see if you need to improve anything.  
 Remember to follow our teaching
-and [style guide for good naming](https://github.com/CP1404/Starter/wiki/Style-Guide#identifier-naming).
+and [Style Guide for good naming](https://github.com/CP1404/Starter/wiki/Style-Guide#identifier-naming).
 
 Now that you've started thinking about **constants**, you should consider using them appropriately. We won't always tell
 you when/if to use a constant,
@@ -236,7 +236,13 @@ press `Ctrl+/` (Windows) or `Cmd+/` (Mac).
 
 Joseph has recently moved to Australia from the United States. He understands that distances are given in kilometres
 rather than the miles he is used to.  
-**Write pseudocode** for a program that will request a distance in kilometres and output the same distance in miles.  
+
+**Write pseudocode** for a program that will request a distance in kilometres and output the same distance in miles.
+
+> [!IMPORTANT]
+> In this subject, you must follow the [Pseudocode Guide](https://github.com/CP1404/Starter/wiki/Pseudocode-Guide).  
+> You may have learned another way before, or you may find alternative pseudocode styles online, but other ways are not acceptable. Do what we teach.
+
 **Then, implement this algorithm in Python code.**
 
 - 1 mile = 1.60934 kilometres
