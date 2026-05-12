@@ -444,7 +444,12 @@ Can you improve your code?
 
 ## Reflection
 
-In `p3questions.txt`, answer the following questions based on your experiences in the subject so far:
+Copy the following questions into `p3questions.txt`, then answer them based on your experiences in the subject so far. This reflection is about your learning process, how you are going as a student, not about code.
+
+> [!IMPORTANT]
+> Take some time to think about these reflection questions.  
+> This is a university subject, and we expect university-level effort and quality.  
+> If your answers are very brief, not personal, or not focused on your learning process, then you have not completed this task to a satisfactory standard.
 
 1. What is something you have done well in this subject that you should **keep doing**?
 2. What is something you have **not** done well in this subject that you should **stop doing**?
