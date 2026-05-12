@@ -470,19 +470,18 @@ e.g., 2.5.
 
 (You may need to make some **assumptions** about interpreting the boundary conditions here.)
 
-**Write pseudocode for an algorithm** to determine the coffee "style" based on the brew ratio.  
-E.g., a ratio of 2.5 (1:2.5) would be a "normale".  
+**Write pseudocode for an algorithm** to determine the coffee "style" based on the brew ratio. Do not use a function for this version.  
+E.g., a ratio of 2.5 would be a "normale".  
 Note: We will consider anything outside the ranges defined above to match the nearest style,   
-E.g., 1:0.1 wouldn't be good coffee, but we'd call it a "ristretto" and 1:100 would be dishwater, but let's call it a "
-lungo".
+E.g., 0.1 wouldn't be good coffee, but we'd call it a "ristretto" and 100 would be like water, but let's call it a "lungo".
 
 Now, that looks like the sort of thing we could use a function for in our code, doesn't it?  
 We _pass in_ a number like 2.5 and the function _returns_ a string like "normale".  
 This is a very common style of function, converting one value to another.
 
-**Write a second algorithm in pseudocode** (it will be very similar, so copy-and-paste then modify) for a **function**
+**Write a second algorithm in pseudocode** for a **function**
 that takes in
-ratio and returns the style.  
+ratio and returns the style. It will be very similar, so copy-and-paste then modify.  
 Use the above examples as a reference. This is very much like the function for determining a weight category based on a
 BMI value.
 
@@ -491,7 +490,7 @@ BMI value.
 Next, like we did with the example, let's write another function to test it:
 
 ```python
-def check_coffee():
+def run_tests():
     style = determine_coffee_style(1)
     print(style)  # This should be ristretto
     style = determine_coffee_style(2)
@@ -500,31 +499,31 @@ def check_coffee():
     print(style)  # This should be lungo
 ``` 
 
-Notice that we tested at least one of each style and some boundary conditions. (You could do more complete testing if
-you want.)
+Notice that we tested at least one of each style and some boundary conditions. You could do more complete testing if
+you want.
 
 **Now write a main program** that asks the user for the dose and yield, works out the brew ratio then uses your function
 to determine the coffee style.  
-Remember that `main()` should always be your first function in any program file.
+Remember that **`main()` should always be your first function** in any program file.
 
 > [!NOTE]
 > `yield` is a Python statement keyword, so you can't use it as a variable.  
 > As a rule, never use Python builtin words as variables, even if you're allowed to
 (e.g., `sum` and `print` are Python functions that it's possible to use as variable names... but don't!)
 
-Sample:
+Sample Output:
 
 ```
 Dose: 18
 Yield: 36
-1:2.0 is considered normale
+2.0 is considered normale
 ```
 
 How did you go? Got it? Use the examples above and the teaching in the lectures if you get stuck on anything.  
 Ask for help if you still need more support.
 
 One more thing. In the BMI example program, we had a nice helpful function for getting a valid number.  
-Copy and paste this into your program (near the bottom) and then use it (call it) when you get the dose and yield. Use
+Copy and paste this into your program (near the bottom) and then use it when you get the dose and yield. Use
 estimates of maximum/high values, like 100. Or alternatively, you could rewrite the function to not take/check the
 maximum.
 
