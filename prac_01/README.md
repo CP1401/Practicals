@@ -116,12 +116,7 @@ soon.
 
 ### Algorithm with Repetition
 
-**Write an algorithm** to instruct a teenager how to clean their room. They have lots of things on the floor, and need
-to pick them up until there are no more things on the floor.
-
-Note: we are not trying to write code here, so just include simple instructions like you might say to a person or
-robotic assistant.  
-This algorithm should have included the **repetition** (or iteration or loop) control structure. We will learn more
+Now, let's write an algorithm using the **repetition** (or iteration or loop) control structure. We will learn more
 about that later, but for now, you can consider using words like `while` and `repeat`.  
 Here's a simple example for eating food:
 
@@ -134,6 +129,13 @@ do the dishes
 
 Notice how the repeated section is indented. We keep doing this "while still hungry" (or "until not hungry").  
 Notice how the last line is not indented. We know we only do the dishes when we've finished eating (repeating).
+
+**Write an algorithm** to instruct someone to paint a wall.  
+They need to get a paintbrush and open the paint tin. Then they need to dip the brush in the tin and wipe it on the wall repeatedly until the wall is fully covered in paint.   
+When they're finished, they should watch the paint dry.
+
+We are not going to turn this into code, so just write simple instructions like you might say to a person or
+robotic assistant. Our focus is on understanding the structure of pseudocode, including indenting.
 
 ## Problem Decomposition
 
@@ -157,8 +159,7 @@ Verbs = actions to do
    name and the date of the booking to make a unique booking id. The hourly charge, and number of hours will be entered,
    and the total charge and id code will be displayed.
 
-2. A road trip planning system will ask the user for the distance travelled (in km) and the travel time in minutes. The
-   user will then be shown the average speed (in km/hour) over the trip.
+2. A road trip planning system will ask the user for the distance travelled in kilometres and the travel time in minutes. The system will then display the average speed in kilometres per hour for the trip.
 
 **Write algorithms for each of these problems using pseudocode**.  
 At this stage, we're not worried about getting the details 'perfect', we just want to get used to problem solving
@@ -263,13 +264,13 @@ Now that you have the folder, drag your **hello.py** file into it.
 
 ### Example program
 
-For fun, let's now copy all of the code from
+For fun, let's now copy all the code from
 our [catering calculator example program](https://raw.githubusercontent.com/CP1401/subject/master/cateringcalculator.py)
 (Use Ctrl+click to open links in new tabs)  
 and paste that into a **new Python file** with the same name, `cateringcalculator.py`.
 
 **Run it**... play with it, change it, break it, see what happens...  
-(Don't worry if you don't understand it yet, we've still got a long way to go.)
+(Don't worry if you don't understand it yet; we've still got a long way to go.)
 
 ## Save your work
 
@@ -289,7 +290,7 @@ _Keep every file you ever write in this subject._
 # Deliverables
 
 This section summarises the expectations for this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work. Each week, submit your practical work according to these guidelines and requirements. 
 
 **Files required:**
 
