@@ -61,17 +61,18 @@ it out themselves and learn through the process.
 Note: record your answer for this question in your `p1questions.txt` file under the heading "Logic Exercise", so it's
 clear.
 
-## Algorithms
+## Algorithms (Pseudocode)
 
 Record your answers to the following questions in your text file called `p1questions.txt`. Use a heading for each one.
 
-The following exercises are focused on the logic of algorithms, rather than the exact pseudocode.  
-We're not going to write computer programs for these, so we are just focused on the basics of writing a set of
-understandable instructions.
+> [!NOTE]
+> Please get familiar with, and follow, our [Pseudocode Guide](https://github.com/CP1404/Starter/wiki/Pseudocode-Guide)
+> For our first prac, we are focused on the logic of algorithms, rather than the exact pseudocode.  
+> You're not going to write computer programs for these tasks, so you just need to write clear understandable instructions.
 
 ### Example
 
-Here's an example of an algorithm (written in simple pseudocode) to determine if it's safe to go out and play based on
+Here's an example of an algorithm written in pseudocode to determine if it's safe to go out and play based on
 the sun (uv index):
 
 ```
