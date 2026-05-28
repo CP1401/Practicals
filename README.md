@@ -39,9 +39,9 @@ the practice/extension section.
 
 ## Submission
 
-As of 2026, your weekly practical work will be submitted as a single 'portfolio' assessment item, as outlined in the
-subject documentation.
-Please submit your practical portfolio correctly, so that you can receive marks for your work.
+As of 2026, your weekly practical work will be marked as a single 'portfolio' assessment item, as outlined in the
+subject documentation.  
+Please submit your practicals correctly each week, so that you can receive marks for your work.
 
 - Do not zip up your files.
 - Submit your practical with each file attached to one submission.
