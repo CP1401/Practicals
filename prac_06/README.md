@@ -165,11 +165,12 @@ function determine_weight_category(bmi)
 > Since we are now using a function, the `el` or `else` could be considered redundant.   
 > If any one of these conditions is True, the function returns,
 > so we know it will only get to the next condition if the previous one was False.  
-> If we run `pylint` to check the code for the above algorithm, we would get a message like:
+> If we ran `pylint` to check the code for the above algorithm, we would get a message like:  
 > `Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)`  
-> We might change our design to achieve this by using "if, if, if", which would fix the linting error,
-> but that would make our code less readable. The standard "if, elif, else" structure best matches our logic.  
-> [Here's what a Google Testing Blog says about the issue - read it for more context and detail:](https://testing.googleblog.com/2023/09/else-nuances.html)
+> We might change our design to achieve this by using "if, if, if" (like a "guard"), 
+> which would fix the linting warning, but that would make our code less readable. 
+> The standard "if, elif, else" structure best matches our logic.  
+> [Here's what a Google Testing Blog says about the issue - read it for more context and detail](https://testing.googleblog.com/2023/09/else-nuances.html):  
 > _"A good rule of thumb is use a guard if it's a special case, use else if its core logic.  
 > Following these guidelines can improve code understandability by emphasizing the connections between different logical
 branches."_
