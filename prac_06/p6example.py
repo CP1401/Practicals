@@ -1,6 +1,36 @@
 """
 CP1401 - Example program for Practical 6 - Functions
 BMI calculation example
+
+Pseudocode
+
+function main()
+    height = get_valid_number("Height", 0, 3)
+    weight = get_valid_number("Weight", 0, 300)
+    bmi = calculate_bmi(height, weight)
+    category = determine_weight_category(bmi)
+    print bmi, category
+
+function get_valid_number(prompt, low, high)
+    print prompt
+    get number
+    while number < low or number > high
+        print error, prompt
+        get number
+    return number
+
+function calculate_bmi(height, weight)
+    return weight / (height ** 2)
+
+function determine_weight_category(bmi)
+    if bmi < 18.5
+        return underweight
+    else if bmi < 25
+        return normal
+    else if bmi < 30
+        return overweight
+    else
+        return obese
 """
 
 
@@ -27,15 +57,14 @@ def calculate_bmi(height, weight):
 
 
 def determine_weight_category(bmi):
-    # Note that we don't use the if, elif, else pattern here
-    # because we return, making "elif" and "else" redundant
     if bmi < 18.5:
         return "underweight"
-    if bmi < 25:
+    elif bmi < 25:
         return "normal"
-    if bmi < 30:
+    elif bmi < 30:
         return "overweight"
-    return "obese"
+    else:
+        return "obese"
 
 
 def run_tests():
@@ -51,7 +80,6 @@ def run_tests():
     print(height)
     weight = get_valid_number("Weight (kg): ", 0, 300)
     print(weight)
-
 
 # main()
 # run_tests()

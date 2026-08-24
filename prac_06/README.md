@@ -87,8 +87,8 @@ The rough weight group categories defined by BMI are:
 - Overweight: BMI is 25 to 29.9
 - Obese: BMI is 30 or more
 
-This list of categories was taken from the cancer.org website, but we understand boundary
-conditions and should write our conditions in a better way. E.g., what category should a BMI of 29.95 be?
+This list of categories was taken from the cancer.org website, but we understand boundary conditions and should write
+our conditions in a better way. E.g., what category should a BMI of 29.95 be?
 
 The client wants a program that will ask for a person's height and weight, then tell them their BMI and weight category.
 
@@ -146,10 +146,8 @@ function calculate_bmi(height, weight)
 The job of the `determine_weight_category` function is not to print, but to `return` the category that has been
 determined by the function.
 
-#### Upgraded pattern with functions
-
-For a situation like this, we want a single, mutually exclusive result, so it seems fine to use the usual if-elif-else
-decision structure:
+For a situation like this, we want a single, mutually exclusive result, so it is appropriate to use the usual
+if-elif-else decision structure:
 
 ```
 function determine_weight_category(bmi)
@@ -163,28 +161,23 @@ function determine_weight_category(bmi)
         return obese
 ```
 
-However, since we are now using a function, the "else" is redundant. If any one of these conditions is True, the
-function returns, so we know it will only get to the next condition if the previous one was False.  
-If we run `pylint` to check the code for the above algorithm, we would get the message:
+> [!NOTE]
+> Since we are now using a function, the `el` or `else` could be considered redundant.   
+> If any one of these conditions is True, the function returns,
+> so we know it will only get to the next condition if the previous one was False.  
+> If we run `pylint` to check the code for the above algorithm, we would get a message like:
+> `Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)`  
+> We might change our design to achieve this by using "if, if, if", which would fix the linting error,
+> but that would make our code less readable. The standard "if, elif, else" structure best matches our logic.  
+> [Here's what a Google Testing Blog says about the issue - read it for more context and detail:](https://testing.googleblog.com/2023/09/else-nuances.html)
+> _"A good rule of thumb is use a guard if it's a special case, use else if its core logic.  
+> Following these guidelines can improve code understandability by emphasizing the connections between different logical
+branches."_
 
-    Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 
-So, let's "upgrade" this pattern, noting that this ONLY makes sense for use within a function because of how `return`
-works:
-
-```
-function determine_weight_category(bmi)
-    if bmi < 18.5
-        return underweight
-    if bmi < 25
-        return normal
-    if bmi < 30
-        return overweight
-    return obese
-```
-
-We could "desk check" each of these pseudocode functions.  
-E.g., if we put a BMI value of 27 into the `determine_weight_category` function, we should get "overweight".
+We could now "desk check" each of these pseudocode functions.  
+E.g., if we put a BMI value of 27 into the `determine_weight_category` function, we should get "overweight".  
+If we did not, then we should change our algorithm - before committing to writing code.
 
 ### Code
 
@@ -205,8 +198,8 @@ def calculate_bmi(height, weight):
 Create a new Python file, `p6example.py` (File > New > Python File)    
 **Now, you type the above code (just the `calculate_bmi` function) in**, and **test it**...  
 But how do we test a function?  
-There are a number of ways, but what we will write a simple function with some tests in it to see what we get
-when we call our new calculation function.
+There are a number of ways, but what we will write a simple function with some tests in it to see what we get when we
+call our new calculation function.
 
 We'll do this for each of the functions, so follow along carefully, won't you?
 
@@ -237,8 +230,7 @@ Note that we did not write a complete program, getting valid user inputs and pro
 We don't care about that yet; we're focused on writing one good function.
 
 OK, now let's do the next one. **Type the following function in** (under the `calculate_bmi` function), paying attention
-to how it
-works and is designed. Notice also how similar it is to the algorithm.  
+to how it works and is designed. Notice also how similar it is to the algorithm.  
 Try and write simple and understandable algorithms that match the basic logic without too many extra words or weird
 things... and you'll find it easier to write simple effective code to match :).
 
@@ -267,8 +259,8 @@ Notice also that we tested a **boundary condition** (25) because that's what goo
 Of course, we should test ALL the conditions, so now...  
 **Write at least as many tests as there are different outputs.**
 
-How are you going? If any of this is not making sense, go back to the lectures and see what
-you might have missed in the teaching.
+How are you going? If any of this is not making sense, go back to the lectures and see what you might have missed in the
+teaching.
 
 Before we write our nicely reusable function for getting valid inputs, let's try a simple main program.  
 We'll then add that function as an enhancement.
@@ -334,9 +326,8 @@ not misleading name.
 Now, before we use this in our main program, we should... **test it!**  
 Change the last 2 lines of your program so `main()` is commented out and `run_tests()` is back in.
 
-Then add some tests. You should be able to do this yourself now.
-Write two calls to the function that get different values and save them into variables, then print those variables.
-E.g.,
+Then add some tests. You should be able to do this yourself now. Write two calls to the function that get different
+values and save them into variables, then print those variables. E.g.,
 
 ```python
 height = get_valid_number("Height (m): ", 0, 3)
@@ -379,11 +370,10 @@ Here are a few more things to extend it just a bit more:
 
 - Change the printing of BMI (NOT the calculation) in `main` so that it only shows 1 decimal place (e.g., `44.4` not
   `44.44444`... as above).
-- If you have not done so already, complete your `run_tests` function so that you test each possible weight category (
-  see note below).
+- If you have not done so already, complete your `run_tests` function so that you test each possible weight category
+  (see note below).
 - Add to your `main` to ask for the person's age using appropriate arguments for the `get_valid_number` function. Use
-  the
-  age in the final output of your program.
+  the age in the final output of your program.
 - Look at your code. Do you see any grey underlines in PyCharm? If you do, move your mouse over them (don't click, just
   move) and read the popup message. You might see a PEP8 warning - probably a missing line break or space. Press the
   shortcut key **Ctrl+Alt+L** (Windows) or **Cmd+Opt+L** (Mac) and watch all of your formatting problems get fixed!
@@ -443,7 +433,7 @@ def main():
     ...
 ``` 
 
-> [!NOTE]  
+> [!NOTE]
 > In any questions that ask you to write a function, you are expected to write test code to show that it works
 > as expected. In some cases, you will be told how to test, and in others it is assumed.  
 > Get used to writing simple tests, as in our example.
@@ -470,18 +460,19 @@ e.g., 2.5.
 
 (You may need to make some **assumptions** about interpreting the boundary conditions here.)
 
-**Write pseudocode for an algorithm** to determine the coffee "style" based on the brew ratio. Do not use a function for this version.  
+**Write pseudocode for an algorithm** to determine the coffee "style" based on the brew ratio. Do not use a function for
+this version.  
 E.g., a ratio of 2.5 would be a "normale".  
 Note: We will consider anything outside the ranges defined above to match the nearest style,   
-E.g., 0.1 wouldn't be good coffee, but we'd call it a "ristretto" and 100 would be like water, but let's call it a "lungo".
+E.g., 0.1 wouldn't be good coffee, but we'd call it a "ristretto" and 100 would be like water, but let's call it a
+"lungo".
 
 Now, that looks like the sort of thing we could use a function for in our code, doesn't it?  
 We _pass in_ a number like 2.5 and the function _returns_ a string like "normale".  
 This is a very common style of function, converting one value to another.
 
 **Write a second algorithm in pseudocode** for a **function**
-that takes in
-ratio and returns the style. It will be very similar, so copy-and-paste then modify.  
+that takes in ratio and returns the style. It will be very similar, so copy-and-paste then modify.  
 Use the above examples as a reference. This is very much like the function for determining a weight category based on a
 BMI value.
 
@@ -499,8 +490,8 @@ def run_tests():
     print(style)  # This should be lungo
 ``` 
 
-Notice that we tested at least one of each style and some boundary conditions. You could do more complete testing if
-you want.
+Notice that we tested at least one of each style and some boundary conditions. You could do more complete testing if you
+want.
 
 **Now write a main program** that asks the user for the dose and yield, works out the brew ratio then uses your function
 to determine the coffee style.  
@@ -508,8 +499,8 @@ Remember that **`main()` should always be your first function** in any program f
 
 > [!NOTE]
 > `yield` is a Python statement keyword, so you can't use it as a variable.  
-> As a rule, never use Python builtin words as variables, even if you're allowed to
-(e.g., `sum` and `print` are Python functions that it's possible to use as variable names... but don't!)
+> As a rule, never use Python builtin words as variables, even if you're allowed to (e.g., `sum` and `print` are Python
+functions that it's possible to use as variable names... but don't!)
 
 Sample Output:
 
@@ -523,9 +514,8 @@ How did you go? Got it? Use the examples above and the teaching in the lectures 
 Ask for help if you still need more support.
 
 One more thing. In the BMI example program, we had a nice helpful function for getting a valid number.  
-Copy and paste this into your program (near the bottom) and then use it when you get the dose and yield. Use
-estimates of maximum/high values, like 100. Or alternatively, you could rewrite the function to not take/check the
-maximum.
+Copy and paste this into your program (near the bottom) and then use it when you get the dose and yield. Use estimates
+of maximum/high values, like 100. Or alternatively, you could rewrite the function to not take/check the maximum.
 
 Your final program should look quite a lot like our BMI example. Don't forget that our examples are some of the most
 helpful resources you have. **Use them!**
@@ -578,8 +568,8 @@ So, it's useful to print the **expected results** as well as the **actual result
 
 Please note that we do NOT put the testing _inside_ the function.  
 The testing goes outside.  
-So, in the example output above, the actual value is printed by the function,
-the rest of the line is printing by the tests in `main`.
+So, in the example output above, the actual value is printed by the function, the rest of the line is printing by the
+tests in `main`.
 
 ### Part 2
 
@@ -625,7 +615,7 @@ When you have finished all 3 of these functions, review their names and see how 
 Are the names clear and unambiguous?  
 Would a programmer know how to use these functions based on their names?
 
-> [!NOTE]  
+> [!NOTE]
 > If you ever need to change names that you have used more than once, use PyCharm's excellent **refactoring**.
 > Don't just edit in multiple places (and maybe forget one) or use find-and-replace (and maybe change something else it
 > matches). Refactoring changes all the names correctly and is quick and safe.  
@@ -658,7 +648,7 @@ shows the percentage score/result you need to get different grades:
 - 75 up to but not including 85 = D
 - 85 and over = HD
 
-> [!NOTE]  
+> [!NOTE]
 > Think about the *boundary conditions* and don't miss anything. Remember to test your boundaries.  
 > Suppose you used 84 as your boundary, e.g., `if score > 84 then HD` Would that work?  
 > No, because what if the score were 84.1? That should be a D, but your code would make it an HD!  
@@ -717,7 +707,7 @@ In each case, think about what sections can logically become functions and what 
 In some cases, you may be able to reuse functions that you can share between programs in the same file.
 
 - [Calculate salary for worker level](https://github.com/CP1401/Practicals/tree/master/prac_04#1-error-checking)
-- [Print grid(rows, columns)](https://github.com/CP1401/Practicals/tree/master/prac_04#6-nested-loops)
+- [Print grid (rows, columns)](https://github.com/CP1401/Practicals/tree/master/prac_04#6-nested-loops)
 
 # Practice and Extension
 
@@ -765,8 +755,7 @@ Try and produce output like the following:
 Write a new version of
 the [Automated Steakhouse from prac 3](https://github.com/CP1401/Practicals/tree/master/prac_03#example) but:  
 Instead of asking the user for their steak style (e.g., medium rare), ask the chef for a number of minutes and print
-what
-the style will be (e.g., 1 minute is rare, 20 minutes is burned).  
+what the style will be (e.g., 1 minute is rare, 20 minutes is burned).  
 Think about the functions that make sense, including reusing your function for getting a number.
 
 ## iii. Tax Calculation
