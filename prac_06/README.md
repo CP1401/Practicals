@@ -494,9 +494,14 @@ def run_tests():
 Notice that we tested at least one of each style and some boundary conditions. You could do more complete testing if you
 want.
 
-**Now write a main program** that asks the user for the dose and yield, works out the brew ratio then uses your function
-to determine the coffee style.  
-Remember that **`main()` should always be your first function** in any program file.
+**Now write pseudocode for a main program** that asks the user for the dose and yield, 
+works out the brew ratio then uses your function to determine the coffee style.  
+Refer to the example or the 
+[Pseudocode Guide](https://github.com/CP1404/Starter/wiki/Pseudocode-Guide#function-definitions) 
+and notice that calling functions in pseudocode is just like Python.  
+
+**Now write the code for `main()`.**  
+Remember that **`main()` should _always_ be your first function** in any program file.
 
 > [!NOTE]
 > `yield` is a Python statement keyword, so you can't use it as a variable.  
