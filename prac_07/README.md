@@ -102,17 +102,17 @@ windows.
 
 ![PyCharm debugger screenshot](../images/debugger.png)
 
-There are four "main" programs in `p7debugging.py` for you to debug separately (use a new breakpoint at the start of each)
+There are four programs in `p7debugging.py` for you to debug separately (use a new breakpoint at the start of each)
 .  
 Test/debug each, one at a time.  
-When you've finished one, "comment out" its main call and "uncomment" the next one.  
-Example, when testing `main_3`, the bottom of your code would look like:
+When you've finished one, "comment out" its program call and "uncomment" the next one.  
+Example, when testing `program_3`, the bottom of your code would look like:
 
 ```python
-# main()
-# main_2()
-main_3()
-# main_4()
+# program_1()
+# program_2()
+program_3()
+# program_4()
 ``` 
 
 For each program, write what you found to be the **problem** (not the solution) in the provided section
@@ -120,6 +120,7 @@ of `debugging,py`, then write the fixed, working, code (solution) in the section
 Do not change the provided code, but rather, write new code below that solves the problem.
 
 ```
+# Your answers for program 1
 # Problem(s) for program 1:
 # ?
 

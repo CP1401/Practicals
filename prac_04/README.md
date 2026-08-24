@@ -489,8 +489,8 @@ for round_number in range(1, 4):
 Write a program that asks the user for a number of rows and columns, then prints the numbers to match, like:
 
 ```
-Rows: 3
-Columns: 7
+How many rows? 3
+How many columns? 7
 0 1 2 3 4 5 6 
 0 1 2 3 4 5 6 
 0 1 2 3 4 5 6 

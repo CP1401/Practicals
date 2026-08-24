@@ -1,17 +1,24 @@
 """CP1401 - Practical 7 - Debugging.
 The "demo" problem shows how the answers should be written.
 Follow the example and template to answer the questions (find and fix problems) below.
+Do not delete the questions.
+Just add your answers after the Answer headings.
 """
 
+
+# Demo question
 
 def demo():
     """Problematically do list duplication and reversing."""
     things = [1, 2, 3, 4]
     new_things = dupli_reversify(things)
     print(new_things)
+
+
 def dupli_reversify(x):
     """Create mirrored list from passed-in list, e.g., [0, 1] -> [0, 1, 1, 0]."""
     return x + x.reverse()
+
 
 # Problem(s) for demo program:
 # x.reverse() modifies the list in-place and evaluates to None (it does not evaluate to a list).
@@ -24,57 +31,70 @@ def dupli_reversify(x):
     return x[:] + x[::-1]
     # or
     # return x + list(reversed(x))
-# (Notice that the answer includes the whole fixed function. No style/naming issues have been improved.)
+
+
+# Please notice that the answer includes the whole fixed function and that no style/naming issues have been improved.
 
 # Questions start here:
-
-def main_1():
+# Problematic code for program 1
+def program_1():
     """Determine the parity of a user's number."""
     number = int(input("Enter number: "))
     parity = calculate_parity
     print(parity)
 
+
 def calculate_parity(number):
     """Calculate the parity (0 or 1) of number passed in."""
-    return (number%2)
+    return (number % 2)
 
+
+# Your answers for program 1
 # Problem(s) for program 1:
 # ?
 
 # Fixed code for program 1:
 
 
-def main_2():
+# Problematic code for program 2
+def program_2():
     """Print numbers from 0 up to the user's input multiplied by 2."""
     # E.g., if input is 13, should print 0 2 4 6 8 10 12 14 16 18 20 22 24 26
     numnums = input("How many: ")
     for i in numnums:
         print(i * 2)
 
+
+# Your answers for program 2
 # Problem(s) for program 2:
 # ?
 
 # Fixed code for program 2:
 
 
-def main_3():
+# Problematic code for program 3
+def program_3():
     """Determine the area of a rectangle."""
     length, width = 12, 10
     area = calculate_area(length, width)
     print(f"The area is {area}")
+
 
 def calculate_area(l, w):
     """Calculate the area of a rectangle from its dimensions."""
     result = l * w
     print(result)
 
+
+# Your answers for program 3
 # Problem(s) for program 3:
 # ?
 
 # Fixed code for program 3:
 
 
-def main_4():
+# Problematic code for program 4
+def program_4():
     """Show how old a person will be in the future."""
     increment = 10
     age = int(input("Age: "))
@@ -83,14 +103,16 @@ def main_4():
         age = int(input("Age: "))
     print(f"In {increment} years, you will be {age} years old!")
 
+
+# Your answers for program 4
 # Problem(s) for program 4:
 # ?
 
 # Fixed code for program 4:
 
-
+# Note: these are not good function names; just something to reduce the amount of copying we need to do
 demo()
-# main_1()
-# main_2()  # Note: these are not good names; just something to reduce the amount of copying we need to do
-# main_3()
-# main_4()
+# program_1()
+# program_2()
+# program_3()
+# program_4()
