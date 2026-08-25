@@ -220,6 +220,16 @@ but [you should understand how and when to use constants](https://github.com/CP1
 .  
 Use at least one more appropriate constant in your solutions for this practical!
 
+### Always Fix Your Formatting
+Look at your code (not comments). Do you see any grey underlines in PyCharm?  
+If you do, move your mouse over them (don't click, just hover) and read the popup message.  
+You might see a PEP8 warning - probably a missing line break or space.  
+Press the shortcut key **Ctrl+Alt+L** (Windows) or **Cmd+Opt+L** (Mac) or choose `Code > Reformat Code` from the menu 
+and watch all of your formatting problems get fixed!  
+Smile :)  
+Get used to what issues it corrects so you can type better code next time.  
+Always do this for all of your code. 
+
 ### Commenting Out Code
 
 Now that you want to move on to the next exercise, you _could_ start a new file, but instead please just keep using the
